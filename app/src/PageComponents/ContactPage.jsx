@@ -1,0 +1,24 @@
+import { DefaultHeroSection } from "../Components/DefaultHeroSection"
+import ContainerLayout from "../Layout/ContainerLayout"
+import bgImage from "../assets/img/ContactPage/contactBgImage.png"
+import { KnowUsSection } from "../Components/ContactPageComponents/KnowUsSection"
+import { NavBar } from '../Components/NavBar'
+import { Footer } from '../Components/Footer'
+import { MapSection } from "../Components/ContactPageComponents/MapSection"
+
+
+export const ContactPage = () => {
+
+
+  return (
+    <div>
+        <NavBar/>
+        <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"}/>
+        <ContainerLayout>
+            <KnowUsSection />
+            <MapSection />
+        </ContainerLayout>
+        <Footer/>
+    </div>
+  )
+}
