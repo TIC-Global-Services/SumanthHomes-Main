@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img1 from "../../assets/img/ArchitectureDesign/arielDay8k.jpg";
 import img2 from "../../assets/img/ArchitectureDesign/ArchitectureImage2.png";
 import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
+import { useRef } from 'react';
+import {gsap} from "gsap"
 
 export const ArchitectureDesignSection = () => {
+
+    const carouselRef = useRef(null);
+
+    useEffect(()=>{
+        const el = carouselRef.current;
+        
+        gsap.to(".carousel-card", {
+            x:"-=500",
+            repeat:-1,
+            duration:10
+    
+        })
+    },)
 
     const ArchitectureCards = [
         {
@@ -43,7 +58,7 @@ export const ArchitectureDesignSection = () => {
             <div className='text-left'>
 
                 <p className='
-                text-[#B50404]font-semibold
+                text-[#B50404] font-semibold
                 text-sm md:text-xs 
                 uppercase leading-8 tracking-widest'>ARCHITECTURE & DESIGN</p>
                 <h4 className='
@@ -71,16 +86,19 @@ export const ArchitectureDesignSection = () => {
         mt-8 xl:mt-12 
         gap-4 xl:gap-8' style={{
             scrollbarWidth:'none',
-        }}>
+        }}
+        >
 
             {
                 ArchitectureCards.map((card, _)=>[
 
-                    <div className='relative flex-shrink-0'>
+                    <div className='relative flex-shrink-0 carousel-card'>
                         
                         <img className='
-                        w-52 xl:w-[280px] 
-                        h-60 xl:h-[350px]' src={card.img}></img>
+                        aspect-[3/4]
+                        w-full xl:w-[280px] 
+                        h-[25rem] xl:h-[350px]
+                        ' src={card.img}></img>
                         <p className='
                         absolute 
                         bottom-8 xl:bottom-11 

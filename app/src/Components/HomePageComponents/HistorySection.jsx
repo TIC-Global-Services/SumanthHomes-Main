@@ -1,11 +1,14 @@
-import React from 'react'
+import {useRef, useEffect} from "react";
 
 export const HistorySection = () => {
+
   return (
     <div className='
+    relative
     flex justify-center items-center
-    mt-4 xl:mt-20 md:mt-14
-    mb-20 xl:mb-40 md:mb-28
+    xl:mt-20 md:mt-14
+    xl:mb-40 md:mb-28
+    py-14
     '>
 
         <div className='text-center'>
@@ -13,7 +16,7 @@ export const HistorySection = () => {
 
               <p className='
               font-extrabold text-[#B50404]
-              text-8xl xl:text-[14rem] md:text-9xl '>13</p>
+              text-9xl xl:text-[14rem] md:text-9xl '>13</p>
 
               <h2 className='
               flex align-center justify-center
@@ -27,6 +30,7 @@ export const HistorySection = () => {
                 <p className='
                 font-jakarta font-medium text-[#737373]
                 text-xs xl:text-xs
+                leading-4
                 w-[100%] xl:w-[50%] md:w-[80%] '>We are dedicated to crafting architectural and design experiences that not only serve a clear functional purpose but also elevate the spaces they inhabit through thoughtful, visually inspiring aesthetics. Our approach blends practicality with creativity, ensuring every environment we shape is as efficient as it is expressive.</p>
 
               </div>

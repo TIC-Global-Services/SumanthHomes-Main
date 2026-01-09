@@ -7,8 +7,8 @@ export const MapSection = () => {
   const MapAPIKey = 'AIzaSyCl9odnEmQrCWNDSDB63P_ZGqS_UgcUAao';
 
   const mapStyle = {
-    width:"90%",
-    height:"200px"
+    width:"100%",
+    height:"300px"
   }
 
   const PinPoint = {
@@ -20,7 +20,7 @@ export const MapSection = () => {
     <div>
 
         <div className='
-        flex justify-center
+        
         mb-4 xl:mb-4 md:mb-4'>
 
             <LoadScript googleMapsApiKey={MapAPIKey}>
@@ -40,16 +40,25 @@ export const MapSection = () => {
         </div>
 
         <div className='
-        flex items-center justify-center
+        flex items-center justify-center flex-wrap shirnk-0
         xl:gap-2 
-        mb-8 xl:mb-28 md:mb-28
+        mb-2 xl:mb-28 md:mb-28
         '>
-            <p className='
-            font-normal text-[#737373]
-            text-xs'>Studio. Showroom. Site Visits - drop by or get directions -</p>
+            <div className='
+            flex justify-center
+            w-[100%]
+            mb-1'>
+                <p className='
+                text-center
+                font-normal text-[#737373]
+                w-[70%]
+                text-xs md:text-xl xl:text-4xl'>Studio. Showroom. Site Visits  drop by or get directions </p>
+            </div>
+            
             <button className='
             text-[#B50404] font-semibold
-            text-xs 
+            w-[100%]
+            text-sm md:text-xl
             '>Get directions</button>
         </div>
 

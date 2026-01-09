@@ -5,9 +5,9 @@ export const MiniStatsSections = () => {
   return (
 
     <div className='
-    flex-col xl:flex xl:items-center xl:justify-evenly
-    justify-center
-    my-12'>
+    flex items-center justify-between flex-wrap
+    gap-1
+    my-16'>
 
         <Card2 Number='100+' titleText='Homes purchased' contentText='Trusted by hundreds of happy homeowners .' />
         <Card2 Number='20' titleText='Published properties' contentText='Sophisticated apartments with top amenities.' />

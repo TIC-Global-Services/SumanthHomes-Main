@@ -4,9 +4,11 @@ import missionImage from "../../assets/img/AboutSection/missionImage.png"
 
 export const VisionSection = () => {
   return (
-    <div className='flex justify-between items-center xl:gap-10 md:gap-3 xl:mb-10 md:mb-10'>
+    <div className='
+    flex justify-between items-center flex-wrap
+    xl:gap-10 md:gap-3 xl:mb-10 md:mb-10'>
 
-        <div className='xl:w-[50%]'>
+        <div className='md:w-[40%] xl:w-[40%]'>
 
             <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>OUR VISION</p>
 
@@ -22,7 +24,7 @@ export const VisionSection = () => {
 
         <div>
 
-            <img className='xl:h-[18rem] xl:w-[40rem]' src={visionImage}></img>
+            <img className=' md:h-[18%] md:w-[30%] xl:h-[18rem] xl:w-[40rem]' src={visionImage}></img>
 
         </div>
 

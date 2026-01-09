@@ -1,6 +1,25 @@
+import { LoadScriptNext } from '@react-google-maps/api'
+import { useState } from 'react'
 import React from 'react'
 
 export const VideoPlayerSection = () => {
+
+    const [index, setIndex ] = useState(0)
+
+    const next = () => {
+        setIndex(prev => (prev + 1) % data.length);
+    };
+
+    const prev = () => {
+         setIndex(prev => (prev - 1 + data.length) % data.length);
+       };
+
+    const data = [
+        {text:"Absolutely amazing theme, flexible and awesome design with possibilities. It's so very easy to use and to customize. Simply the great designs and best theme -",author:"Jonson donner"},
+        {text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor, malesuada et design -",author:"second memeber"},
+        {text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor, malesuada et design -",author:"third member"}
+    ]
+
   return (
     <div>
 
@@ -9,8 +28,10 @@ export const VideoPlayerSection = () => {
         mt-4 xl:mt-8 md:mt-8'>
 
             <iframe src='https://www.youtube.com/embed/AXNHQ5Pgeig' className='
+            aspect-[3/4]
             w-full
             xl:h-[25rem] md:h-[25rem]
+            mb-12
             '></iframe>
 
             <div className='
@@ -30,37 +51,61 @@ export const VideoPlayerSection = () => {
         </div>
 
         <div className='
-        justify-self-center 
         mt-6 xl:mt-16 md:mt-16'>
 
-            <div className='flex items-center justify-center xl:gap-5 md:gap-2 xl:mb-5 md:mb-3'>
-
-                <div>
-                    <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0013 6.75095C21.0013 6.55203 20.9223 6.36127 20.7817 6.22062C20.641 6.07997 20.4503 6.00095 20.2513 6.00095H2.56184L7.28234 1.28195C7.35207 1.21222 7.40739 1.12943 7.44513 1.03832C7.48286 0.947214 7.50229 0.849563 7.50229 0.750947C7.50229 0.652332 7.48286 0.554681 7.44513 0.463572C7.40739 0.372463 7.35207 0.289679 7.28234 0.219947C7.21261 0.150215 7.12983 0.0949012 7.03872 0.0571625C6.94761 0.0194239 6.84996 0 6.75134 0C6.65272 0 6.55507 0.0194239 6.46396 0.0571625C6.37286 0.0949012 6.29007 0.150215 6.22034 0.219947L0.220341 6.21995C0.150496 6.28962 0.0950815 6.37238 0.0572719 6.4635C0.0194622 6.55462 0 6.6523 0 6.75095C0 6.8496 0.0194622 6.94728 0.0572719 7.0384C0.0950815 7.12951 0.150496 7.21228 0.220341 7.28195L6.22034 13.2819C6.29007 13.3517 6.37286 13.407 6.46396 13.4447C6.55507 13.4825 6.65272 13.5019 6.75134 13.5019C6.84996 13.5019 6.94761 13.4825 7.03872 13.4447C7.12983 13.407 7.21261 13.3517 7.28234 13.2819C7.35207 13.2122 7.40739 13.1294 7.44513 13.0383C7.48286 12.9472 7.50229 12.8496 7.50229 12.7509C7.50229 12.6523 7.48286 12.5547 7.44513 12.4636C7.40739 12.3725 7.35207 12.2897 7.28234 12.2199L2.56184 7.50095H20.2513C20.4503 7.50095 20.641 7.42193 20.7817 7.28128C20.9223 7.14063 21.0013 6.94986 21.0013 6.75095Z" fill="#B50404"/>
-                    </svg>
-                </div>
+            <div className='
+            flex md:flex-row items-center justify-center md:justify-between flex-wrap
+            gap-2 md:gap-2 xl:gap-5 
+            xl:mb-5 md:mb-3
+            '>
                 
                 <div className='
                 text-center
-                w-64 xl:w-[40%] md:w-[70%]
-                text-sm
+                text-[#737373]
+                w-[90%] md:w-[70%] xl:w-[70%] 
+                text-sm md:text-xl xl:text-4xl
+                mb-2
                 '
                 > 
-                    Absolutely amazing theme, flexible and awesome design with
-                    possibilities. It's so very easy to use and to customize. Simply the
-                    great designs and best theme - Jonsan donner 
+                    {data[index].text} <span className='text-black'>{data[index].author}</span>
                 </div>
 
-                <div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z" fill="#B50404"/>
-                    </svg>
+
+                <div className='
+                md:order-first
+                flex-shrink-0
+                bg-white
+                p-2
+                rounded-full'>
+                    <div>
+                        <button onClick={prev}>
+                            <svg width="24" height="24" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0013 6.75095C21.0013 6.55203 20.9223 6.36127 20.7817 6.22062C20.641 6.07997 20.4503 6.00095 20.2513 6.00095H2.56184L7.28234 1.28195C7.35207 1.21222 7.40739 1.12943 7.44513 1.03832C7.48286 0.947214 7.50229 0.849563 7.50229 0.750947C7.50229 0.652332 7.48286 0.554681 7.44513 0.463572C7.40739 0.372463 7.35207 0.289679 7.28234 0.219947C7.21261 0.150215 7.12983 0.0949012 7.03872 0.0571625C6.94761 0.0194239 6.84996 0 6.75134 0C6.65272 0 6.55507 0.0194239 6.46396 0.0571625C6.37286 0.0949012 6.29007 0.150215 6.22034 0.219947L0.220341 6.21995C0.150496 6.28962 0.0950815 6.37238 0.0572719 6.4635C0.0194622 6.55462 0 6.6523 0 6.75095C0 6.8496 0.0194622 6.94728 0.0572719 7.0384C0.0950815 7.12951 0.150496 7.21228 0.220341 7.28195L6.22034 13.2819C6.29007 13.3517 6.37286 13.407 6.46396 13.4447C6.55507 13.4825 6.65272 13.5019 6.75134 13.5019C6.84996 13.5019 6.94761 13.4825 7.03872 13.4447C7.12983 13.407 7.21261 13.3517 7.28234 13.2819C7.35207 13.2122 7.40739 13.1294 7.44513 13.0383C7.48286 12.9472 7.50229 12.8496 7.50229 12.7509C7.50229 12.6523 7.48286 12.5547 7.44513 12.4636C7.40739 12.3725 7.35207 12.2897 7.28234 12.2199L2.56184 7.50095H20.2513C20.4503 7.50095 20.641 7.42193 20.7817 7.28128C20.9223 7.14063 21.0013 6.94986 21.0013 6.75095Z" fill="#B50404"/>
+                            </svg>  
+                        </button>
+                    </div>
+                        
                 </div>
+
+                <div className='
+                flex-shrink-0
+                bg-white
+                p-2
+                rounded-full'>
+                    <div >
+                        <button onClick={next}>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z" fill="#B50404"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
 
             </div>
 
-            <div className='flex items-center gap-1 justify-self-center'>
+            <div className='
+            hidden md:flex items-center gap-1 justify-self-center'>
 
                 <p> 02 </p>
                 

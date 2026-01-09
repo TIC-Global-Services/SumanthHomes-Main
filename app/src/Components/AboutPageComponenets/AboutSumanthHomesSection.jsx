@@ -1,51 +1,78 @@
-import React from 'react'
 import imageLeft from "../../assets/img/AboutSection/image-left.png"
 import imageMiddle from "../../assets/img/AboutSection/image-middle.png"
 import imageRight from "../../assets/img/AboutSection/image-right.png"
+import {gsap} from "gsap"
 
 export const AboutSumanthHomesSection = () => {
+
+  const handleHover = (e) =>{
+    const el = e.currentTarget;
+
+    gsap.to(el, {
+      scale:1.4,
+      duration:1,
+    })
+  }
+
+  const handleNotHover = (e) =>{
+    const el = e.currentTarget;
+
+    gsap.to(el,{
+      scale:1,
+    }
+    )
+  }
   return (
 
     <div className='
-    flex items-center
-    gap-2 md:gap-4 xl:gap-24 
+    flex items-center flex-wrap
+    gap-8 md:gap-12 xl:gap-24 
     mt-8 xl:mt-20 md:mt-14
-    mb-8 xl:mb-20 md:mb-12'>
+    mb-14 xl:mb-20 md:mb-12'>
 
         <div className='
         flex items-center relative
-        xl:gap-3 md:gap-2
+        gap-1 xl:gap-3 md:gap-2
         '>
 
             <img className='
-            w-[15rem] xl:w-[19rem] md:w-[29rem]
+            w-[17rem] xl:w-[19rem] md:w-[29rem]
             h-[8rem] xl:h-[16rem] md:h-[10rem]
             
-            ' src={imageLeft}></img>
+            ' src={imageLeft}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleNotHover}
+            ></img>
 
             <img className='
             absolute
-            top-[1rem] xl:top-[30%] md:top-[30%]
-            left-[2rem] xl:left-[25%] md:left-[25%]
-            w-[10rem] xl:w-[16rem] md:w-[12rem]
-            h-[8rem] xl:h-[15rem] md:h-[10rem]
+            top-[3rem] xl:top-[30%] md:top-[30%]
+            left-[2rem] md:left-[35%] xl:left-[25%]
+            w-[10rem] md:w-[15rem] xl:w-[16rem]
+            h-[8rem] md:h-[11rem] xl:h-[15rem] 
             ' 
-            src={imageMiddle}></img>
+            src={imageMiddle}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleNotHover}
+            ></img>
 
             <img className='
-            w-[40rem] xl:w-[20rem] md:w-[29rem]
+            w-[30rem] xl:w-[20rem] md:w-[29rem]
             h-[10rem] xl:h-[19rem] md:h-[13rem]
-             ' src={imageRight}></img>
+             ' src={imageRight}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleNotHover}
+             ></img>
 
         </div>
 
         <div className='
-        w-[30%] xl:w-[40%] md:w-[90%]
+        w-[100%] xl:w-[40%] md:w-[90%]
         '>
 
             <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>About Sumanth homes</p>
 
-            <h4 className='xl:mb-8 md:mb-4 font-manrope font-semibold xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
+            <h4 className='mb-2 xl:mb-8 md:mb-4 font-manrope font-semibold xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
 
             <p className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
               
@@ -55,7 +82,9 @@ export const AboutSumanthHomesSection = () => {
 
             <div className='flex gap-2 items-center '>
 
-                <p className='font-jakarta font-extrabold uppercase xl:text-xs md:text-xs'>Explore Services</p>
+                <p className='
+                font-extrabold uppercase 
+                text-xs md:text-xs xl:text-xs '>Explore Services</p>
 
                 <button>
 
