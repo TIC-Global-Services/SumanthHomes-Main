@@ -1,56 +1,67 @@
 import logo from "../assets/img/logos/sumanthHomesLogo.png";
 import { Link } from "react-router-dom"
 import { gsap } from "gsap"
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect} from "react";
 
 export const NavBar = () => {
 
   const [clicked, setClicked] = useState(false);
 
-  const navBarMenuBtn = useRef(null);
-  const navBarMenu = useRef(null)
+const navBarMenuBtn = useRef(null);
+const navBarMenu = useRef(null);
+const line1 = useRef(null);
+const line2 = useRef(null);
 
-  const handleHover = (e) =>{
+useEffect(() => {
+  gsap.set(line1.current, { y: -6 });
+  gsap.set(line2.current, { y: 6 });
+}, []);
 
-    let el = e.currentTarget;
+// Making navbar X
+useEffect(() => {
+  if (!line1.current || !line2.current) return;
 
-    gsap.to(el, {
-      scale:1.3,
-      color:'#B50404'
-    })
+  if (clicked) {
+    gsap.to(line1.current, { rotate: 45, y: 0, duration: 0.3 });
+    gsap.to(line2.current, { rotate: -45, y: 0, duration: 0.3 });
+  } else {
+    gsap.to(line1.current, { rotate: 0, y: -6, duration: 0.3 });
+    gsap.to(line2.current, { rotate: 0, y: 6, duration: 0.3 });
   }
+}, [clicked]);
 
-  const handleNotHover = (e) =>{
-    let el = e.currentTarget;
+const navMenu = () => {
+  setClicked(prev => !prev);
 
-    gsap.to(el, {
-      scale:1,
-      color:'black'
-    })
+  if (!clicked) {
+    navBarMenuBtn.current.style.display = "block";
+    navBarMenu.current.style.backgroundColor = "rgba(255,255,255,1)";
+  } else {
+    navBarMenuBtn.current.style.display = "none";
+    navBarMenu.current.style.backgroundColor = "rgba(255,255,255,0.2)";
   }
+};
 
-  const navMenu = ()=>{
 
-    console.log("nav menu trigger");
+const handleHover = (e) => {
+  gsap.to(e.currentTarget, {
+    scale: 1.3,
+    color: "#B50404",
+    duration: 0.2
+  });
+};
 
-    let elBtn = navBarMenuBtn.current;
-    let el = navBarMenu.current;
+const handleNotHover = (e) => {
+  gsap.to(e.currentTarget, {
+    scale: 1,
+    color: "black",
+    duration: 0.2
+  });
+};
 
-    if(clicked == false){
-      elBtn.style.setProperty('--display', 'block');
-      el.style.setProperty('bgcolor','rgba(255,255,255,1)')
-      setClicked(!clicked)
-    } else {
-      elBtn.style.setProperty('--display', 'none');
-      el.style.setProperty('bgcolor','rgba(255,255,255,0.2)')
-      setClicked(!clicked)
-    }
-    
-
-  }
 
   return (
-    <div>
+    <div >
     <nav className="
     fixed top-4 left-1/2 -translate-x-1/2
     flex items-center justify-between md:justify-center
@@ -80,36 +91,33 @@ export const NavBar = () => {
 
       </div>
 
-      <div ref={navBarMenu} className="
-      flex items-center justify-center
-      rounded-full
-      w-[19%]
-      aspect-[3/1]
-      md:hidden
-      z-40
-      "
-      style={{
-          backgroundColor:'var(--bgcolor, rgba(255,255,255,.2))'
-        }}
+      <div
+  ref={navBarMenu}
+  className="
+    relative
+    flex justify-center items-center
+    rounded-full
+    w-[19%]
+    aspect-[4/3]
+    md:hidden
+    z-40
+    bg-white/20
+  "
+  style={{
+    backgroundColor:"var(--bgcolor,rgba(255,255,255,0.2))"
+  }}
+  onClick={navMenu}
+>
+  <span
+    ref={line1}
+    className="absolute w-[40%] h-[2px] bg-black "
+  />
+  <span
+    ref={line2}
+    className="absolute w-[40%] h-[2px] bg-black "
+  />
+</div>
 
-      >
-
-        <div className="
-        border-black 
-        border-t-2 border-b-2
-        p-[.17rem]
-        my-4
-        w-[30%]
-        "
-
-        
-
-        onClick={navMenu}
-        >
-          
-        </div>
-
-      </div>
 
       <div className="hidden md:block">
 
@@ -143,8 +151,10 @@ export const NavBar = () => {
       top-0
       left-0
       z-30 
-      w-screen
-      h-screen"
+      w-full
+      min-h-dvh
+      bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100
+      "
       
       style={{
         display:'var(--display,none)'
@@ -152,25 +162,27 @@ export const NavBar = () => {
       >
 
         <ul className="
+        pt-40
         flex flex-col gap-16
         py-20
-        bg-black/90
+        
         text-white
+        text-4xl
         
         ">
 
           <Link to='/'><li className="
           pl-10
-          " onMouseEnter={handleHover} onMouseLeave={handleNotHover}>HOME</li></Link>
+          " >HOME</li></Link>
           <Link to='/about'><li className="
           pl-10
-          " onMouseEnter={handleHover} onMouseLeave={handleNotHover}>ABOUT</li></Link>
+          " >ABOUT</li></Link>
           <Link to='/projects'><li className="
           pl-10
-          " onMouseEnter={handleHover} onMouseLeave={handleNotHover}>PROJECTS</li></Link>
+          " >PROJECTS</li></Link>
           <Link to='/contact'><li className="
           pl-10
-          " onMouseEnter={handleHover} onMouseLeave={handleNotHover}>CONTACT</li></Link>          
+          " >CONTACT</li></Link>          
 
         </ul>
 

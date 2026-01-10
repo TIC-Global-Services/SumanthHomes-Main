@@ -1,44 +1,20 @@
 import React from 'react'
-import {GoogleMap, LoadScript, Marker} from "@react-google-maps/api"
+
 
 export const MapSection = () => {
 
-  // Warning: Hardcoded for now. The process issue needs to be resolved 
-  const MapAPIKey = 'AIzaSyCl9odnEmQrCWNDSDB63P_ZGqS_UgcUAao';
-
-  const mapStyle = {
-    width:"100%",
-    height:"300px"
-  }
-
-  const PinPoint = {
-    lat:13.6288,
-    lng:79.4192,
-  }
 
   return (
     <div>
 
-        <div className='
-        
-        mb-4 xl:mb-4 md:mb-4'>
-
-            <LoadScript googleMapsApiKey={MapAPIKey}>
-
-              <GoogleMap 
-              
-              mapContainerStyle={mapStyle}
-              center = {PinPoint}
-              zoom = {12}
-              >
-
-                <Marker position={PinPoint}></Marker>
-
-              </GoogleMap>
-
-            </LoadScript>
-        </div>
-
+      <iframe 
+      className='
+      aspect-[4/3] md:aspect-[3/1]
+      w-full
+      '
+      src="https://www.openstreetmap.org/export/embed.html?bbox=79.09950256347656%2C13.414333619316578%2C79.74220275878908%2C13.84141349246619&amp;layer=hot&amp;marker=13.627971281465944%2C79.42085266113281"
+ ></iframe><br/>
+      
         <div className='
         flex items-center justify-center flex-wrap shirnk-0
         xl:gap-2 

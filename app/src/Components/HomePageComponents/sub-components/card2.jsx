@@ -1,15 +1,42 @@
-import React from 'react'
+import { gsap, ScrollTrigger } from "gsap/all"
+import { useEffect, useRef } from "react"
 
-export const Card2 = ({Number, titleText, contentText}) => {
+gsap.registerPlugin(ScrollTrigger);
+
+export const Card2 = ({Number, titleText, contentText, plus=false}) => {
+    
+    const numberRef = useRef(null);
+
+    useEffect(()=>{
+        const obj = {value:0};
+
+        gsap.to(obj,{
+
+            value:Number,
+            duration:2,
+            ease:"power1.out",
+            onUpdate:()=>{
+                numberRef.current.textContent = Math.floor(obj.value);
+            },
+            scrollTrigger:{
+                trigger:numberRef.current,
+                start:"top 80%",
+                once:true,
+            }
+        }
+
+        )
+    },[Number])
+    
   return (
 
     <div className='
-    flex items-center justify-between
+    flex items-center justify-evenly 
     text-center
     w-[100%] md:w-[30%]
     bg-white 
     
-    gap-14 md:gap-20 xl:gap-10
+    gap-14 md:gap-20 xl:gap-16
     py-8 xl:py-10
     px-5 md:px-2
     mb-4
@@ -20,7 +47,8 @@ export const Card2 = ({Number, titleText, contentText}) => {
         w-[10%] md:w-[10%]
          bg-white'>
 
-            <h3 className='
+            <h3 ref={numberRef} className='
+            number
             font-manrope font-bold text-[#B50404]
             text-4xl xl:text-7xl md:text-5xl
             tracking-tighter'>{Number}</h3>

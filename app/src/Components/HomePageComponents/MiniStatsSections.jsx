@@ -9,7 +9,7 @@ export const MiniStatsSections = () => {
     gap-1
     my-16'>
 
-        <Card2 Number='100+' titleText='Homes purchased' contentText='Trusted by hundreds of happy homeowners .' />
+        <Card2 Number='100' plus={true} titleText='Homes purchased' contentText='Trusted by hundreds of happy homeowners .' />
         <Card2 Number='20' titleText='Published properties' contentText='Sophisticated apartments with top amenities.' />
         <Card2 Number='13' titleText='Years of experience' contentText='Built on years of trust and timeless craftsmanship.' />
 

@@ -5,7 +5,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
         
 
         <div className='
-        xl:flex-col 
+        md:flex 
         relative
         aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
         md:h-[390px] xl:h-[600px]
@@ -41,8 +41,9 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             
 
             <div className='
-            flex gap-0 items-end  
-            w-full 
+
+            hidden md:flex gap-0 items-end
+            w-full md:w-[50%] xl:w-full
             md:left-[20rem] xl:left-[52rem] 
             '>
                 

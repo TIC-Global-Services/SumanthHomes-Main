@@ -10,13 +10,14 @@ import heroImage from "../assets/img/AboutSection/aboutHeroImage.png"
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
-
+import { ScrollToTop } from "../utils/ScrollToTop"
 
 export const AboutPage = () => {
 
 
   return (
     <div>
+        <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={heroImage} mainText={"About SHs"} subText={"LET'S SEE WHO WE ARE"}/>
         <ContainerLayout>

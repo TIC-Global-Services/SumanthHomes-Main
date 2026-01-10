@@ -7,6 +7,7 @@ import { ExploreMoreSection } from "../Components/OurProjectsPageComponents/Expl
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from "../Layout/ContainerLayout"
+import { ScrollToTop } from "../utils/ScrollToTop"
 
 export const ProjectsPage = () => {
 
@@ -14,6 +15,7 @@ export const ProjectsPage = () => {
 
   return (
     <div>
+        <ScrollToTop/>
        <NavBar />
         <DefaultHeroSection bgImage={bgImage} mainText={"Our Projects"} subText={"Great Architecture Services"} />
         <ContainerLayout>

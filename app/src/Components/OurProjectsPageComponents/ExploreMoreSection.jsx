@@ -22,9 +22,9 @@ export const ExploreMoreSection = () => {
     ]
 
   return (
-    <div className='flex'>
+    <div className='flex justify-between'>
 
-        <div className='mx-12 mb-72'>
+        <div className='mb-72 gap-20'>
 
             <h4 className='xl:mb-12 xl:w-[80%] xl:text-3xl font-normal'>
                 Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world.

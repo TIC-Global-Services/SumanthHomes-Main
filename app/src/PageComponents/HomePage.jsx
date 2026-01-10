@@ -10,7 +10,7 @@ import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react';
-
+import { ScrollToTop } from "../utils/ScrollToTop"
 
 export const HomePage = () => {
 
@@ -34,6 +34,7 @@ export const HomePage = () => {
 
   return (
     <div>
+        <ScrollToTop/>
         <NavBar />
         <HeroSection/>
         <ContainerLayout>    
