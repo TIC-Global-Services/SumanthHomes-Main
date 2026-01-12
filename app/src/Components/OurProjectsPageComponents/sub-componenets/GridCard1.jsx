@@ -5,6 +5,7 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
 
   return (
     <div ref={refName}  className='
+    bg-black
     flex gap-2 md:block
     flex-shrink-0 flex-grow
      md:bg-transparent

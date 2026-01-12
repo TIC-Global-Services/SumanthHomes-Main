@@ -7,6 +7,10 @@ import Image5 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Im
 import Image6 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image6.jpg"
 
 export const CompletedProjectsSection = () => {
+
+  
+  
+  
   return (
     <div className='
     mt-8
@@ -18,7 +22,7 @@ export const CompletedProjectsSection = () => {
         font-semibold
         text-2xl md:text-4xl'>Completed Projects</h2>
 
-        <div className='
+        <div  className='
         overflow-scroll
         flex flex-nowrap md:grid grid-cols-3 md:gap-4'
         style={{

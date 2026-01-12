@@ -1,8 +1,29 @@
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap/gsap-core';
+import { ScrollTrigger } from 'gsap/all';
 
 export const Card2 = ({bgImage, Name, Position}) => {
+
+  gsap.registerPlugin(ScrollTrigger);
+  const cardRef = useRef(null);
+
+  useEffect(()=>{
+      const el = cardRef.current;
+  
+      gsap.to(el,{
+      x:"-=1000px",
+      repeat:-1,
+      duration:10,
+      ease:'sine',
+      scrollTrigger:{
+        trigger:el,
+        start:"top center"
+      }
+    })
+    },)
   return (
-    <div className='
+    <div ref={cardRef} className='
     flex 
     flex-shrink-0
     w-full

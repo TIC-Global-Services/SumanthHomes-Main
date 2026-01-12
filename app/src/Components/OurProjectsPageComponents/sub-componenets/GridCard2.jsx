@@ -1,11 +1,34 @@
 import { gsap } from "gsap/gsap-core"
-import { useEffect } from "react"
+import { ScrollTrigger } from 'gsap/all'
+import { useRef, useEffect } from 'react'
+
 
 export const GridCard2 = ({Image, mainText, subText}) => {
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  const cardRef = useRef(null);
+
+  useEffect(()=>{
+    if(window.outerWidth>700){
+      return
+    }
+    const el = cardRef.current;
+
+    gsap.to(el,{
+    x:"-=1000px",
+    repeat:-1,
+    duration:10,
+    ease:'sine',
+    scrollTrigger:{
+      trigger:el,
+      start:"top 30%"
+    }
+  })
+  },)
 
   return (
-    <div className='
+    <div ref={cardRef} className='
     card
     relative
     w-full

@@ -12,11 +12,54 @@ export const ArchitectureProcessSection = () => {
   const card4 = useRef(null);
 
   useEffect(()=>{
+
+    if(window.outerWidth>700){
+      return
+    }
     const tl = gsap.timeline();
     const el1 = card1.current;
     const el2 = card2.current;
     const el3 = card3.current;
     const el4 = card4.current;
+
+    
+    tl.to(el2,
+      {
+        xPercent:-100,
+        ease:'sine',
+        duration:4,
+        
+      }
+    )
+
+    tl.to(el3,
+      {
+        xPercent:-200,
+        ease:'sine',
+        duration:4,
+      }
+    )
+
+    tl.to(el4,
+      {
+        xPercent:-300,
+        ease:'sine',
+        duration:4,
+        
+      }
+    )
+
+    // ScrollTrigger.create({
+    //   animation:tl,
+    //   trigger:".card-container",
+    //   start:"top top",
+    //   end:"bottom top",
+    //   markers:true,
+    //   scrub:true,
+    //   pin:true,
+    //   pinSpacing:false,
+    //   anticipatePin:1,
+    // })
   }
   )
   
@@ -39,9 +82,10 @@ export const ArchitectureProcessSection = () => {
         </div>
 
         <div className='
+        card-container
         overflow-scroll md:overflow-hidden
         w-full md:w-[50%] xl:w-[50%] 
-        flex flex-nowrap gap-4 md:flex-wrap'
+        flex flex-nowrap md:gap-4 md:flex-wrap'
         
         style={{
           scrollbarWidth:'none',
