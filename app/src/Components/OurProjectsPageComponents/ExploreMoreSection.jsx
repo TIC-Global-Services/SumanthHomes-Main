@@ -22,15 +22,26 @@ export const ExploreMoreSection = () => {
     ]
 
   return (
-    <div className='flex justify-between'>
+    <div className='
+    flex justify-between
+    mb-4
+    mt-8
+    '>
 
-        <div className='mb-72 gap-20'>
+        <div className='xl:mb-72 gap-20'>
 
-            <h4 className='xl:mb-12 xl:w-[80%] xl:text-3xl font-normal'>
+            <h4 className='
+            font-normal
+            mb-4 xl:mb-12
+            xl:w-[80%] 
+            xl:text-3xl 
+            '>
                 Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world.
             </h4>
 
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='
+            grid grid-cols-2 md:grid-cols-3 gap-4
+            w-full md:w-[80%]'>
 
                 {
                     data.map((t, _ )=>(
@@ -42,7 +53,11 @@ export const ExploreMoreSection = () => {
 
         </div>
 
-        <div className='xl:w-[40%] relative'>
+        <div className='
+        hidden md:block
+        relative
+        xl:w-[40%] 
+        '>
 
             <img src={image2} className='xl:w-[25rem] xl:h-[25rem] xl:right-8 absolute'></img>
             <img src={image1} className='xl:w-[18rem] xl:h-[20rem] xl:top-44 xl:right-40 absolute'></img>

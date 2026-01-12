@@ -4,7 +4,7 @@ export const KnowUsSection = () => {
   return (
     <div className='
     flex justify-between items-end flex-wrap gap-4
-    xl:mb-20'>
+    mb-16 xl:mb-20'>
 
         <div className='xl:w-[30%]'>
 

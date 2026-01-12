@@ -4,7 +4,8 @@ import image2 from "../../assets/img/AboutSection/shvalueImage2.png"
 
 export const SHValues = () => {
   return (
-    <div className='flex xl:gap-3 xl:mb-28'>
+    <div className='flex xl:gap-3 
+    mb-14 xl:mb-28'>
 
         <div className=' xl:w-[80%]'>
 
@@ -16,15 +17,17 @@ export const SHValues = () => {
 
         </div>
 
-        <div>
+        <div className='hidden xl:block'>
 
-            <img className='xl:w-[70rem] xl:h-[27rem] md:h-[12rem]' src={image1} />
+            <img className='
+            xl:w-[70rem]
+            xl:h-[27rem] md:h-[12rem]' src={image1} />
 
             <p className='xl:mt-1 md:mt-1'>Timeless Design</p>
 
         </div>
 
-        <div>
+        <div className='hidden xl:block'>
 
             <img className='xl:w-[70rem] xl:h-[20rem] md:h-[12rem]' src={image2} />
 

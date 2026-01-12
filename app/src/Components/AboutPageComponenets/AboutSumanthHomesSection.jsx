@@ -4,29 +4,11 @@ import imageRight from "../../assets/img/AboutSection/image-right.png"
 import {gsap} from "gsap"
 
 export const AboutSumanthHomesSection = () => {
-
-  const handleHover = (e) =>{
-    const el = e.currentTarget;
-
-    gsap.to(el, {
-      scale:1.4,
-      duration:1,
-    })
-  }
-
-  const handleNotHover = (e) =>{
-    const el = e.currentTarget;
-
-    gsap.to(el,{
-      scale:1,
-    }
-    )
-  }
   return (
 
     <div className='
     flex items-center flex-wrap
-    gap-8 md:gap-12 xl:gap-24 
+    gap-8 md:gap-12 xl:gap-16
     mt-8 xl:mt-20 md:mt-14
     mb-14 xl:mb-20 md:mb-12'>
 
@@ -40,8 +22,7 @@ export const AboutSumanthHomesSection = () => {
             h-[8rem] xl:h-[16rem] md:h-[10rem]
             
             ' src={imageLeft}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleNotHover}
+            
             ></img>
 
             <img className='
@@ -52,16 +33,14 @@ export const AboutSumanthHomesSection = () => {
             h-[8rem] md:h-[11rem] xl:h-[15rem] 
             ' 
             src={imageMiddle}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleNotHover}
+            
             ></img>
 
             <img className='
             w-[30rem] xl:w-[20rem] md:w-[29rem]
             h-[10rem] xl:h-[19rem] md:h-[13rem]
              ' src={imageRight}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleNotHover}
+            
              ></img>
 
         </div>

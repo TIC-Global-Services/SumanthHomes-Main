@@ -5,8 +5,8 @@ export const CurrentStatsSection = () => {
   return (
 
     <div className='
-    flex justify-evenly flex-wrap
-    gap-10 md:gap-10 
+    flex justify-evenly md:justify-between flex-wrap
+    gap-10 md:gap-2
     md:mt-4 xl:mt-4 
     mb-14 md:mb-20 xl:mb-20 '>
 

@@ -31,23 +31,24 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
   return (
 
     <div className='
-    flex items-center justify-evenly 
+    bg-white
+    flex items-center 
     text-center
     w-[100%] md:w-[30%]
-    bg-white 
     
-    gap-14 md:gap-20 xl:gap-16
+    gap-14 md:gap-20 xl:gap-2
     py-8 xl:py-10
     px-5 md:px-2
     mb-4
     '>
         
         <div className='
+        w-[10%] md:w-[10%] xl:w-[40%]
         text-right
-        w-[10%] md:w-[10%]
-         bg-white'>
+        '>
 
             <h3 ref={numberRef} className='
+            ml-auto
             number
             font-manrope font-bold text-[#B50404]
             text-4xl xl:text-7xl md:text-5xl

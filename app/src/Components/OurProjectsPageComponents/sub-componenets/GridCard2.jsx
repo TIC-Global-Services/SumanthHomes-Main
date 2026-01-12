@@ -1,19 +1,37 @@
-import React from 'react'
+import { gsap } from "gsap/gsap-core"
+import { useEffect } from "react"
 
 export const GridCard2 = ({Image, mainText, subText}) => {
+
+
   return (
-    <div>
+    <div className='
+    card
+    relative
+    w-full
+    flex-shrink-0
+    '>
 
-        <img src={Image} className='xl:h-[20rem] xl:w-[100%]'></img>
+        <img src={Image} className='
+        w-full
+        h-full md:h-[20rem] xl:h-[27rem]
+        '></img>
 
-        <div className='flex justify-center items-center xl:mt-4 xl:mb-8'>
+        <div className='
+        text-center 
+        absolute md:relative
+        bottom-0
+        w-full
+        flex-col md:flex-row justify-normal items-center
+        pb-4
+        xl:mt-4 xl:mb-8'>
 
-            <h4 className='font-medium text-xl'>{mainText}</h4>
-            <div className='xl:h-[2px] xl:w-10 xl:mx-4 bg-[#737373]'></div>
+            <h4 className='font-medium text-xl text-white md:text-black'>{mainText}</h4>
+            
             <p className='font-normal text-[#737373] text-xl'>{subText}</p>
 
         </div>
 
     </div>
-  )
+  ) 
 }

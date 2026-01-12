@@ -1,6 +1,6 @@
 export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, description }) => {
   return (
-    <div className='xl:mb-10'>
+    <div className='mb-4 xl:mb-10'>
 
         
 
@@ -45,6 +45,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             hidden md:flex gap-0 items-end
             w-full md:w-[50%] xl:w-full
             md:left-[20rem] xl:left-[52rem] 
+            md:ml-auto
             '>
                 
                 <div className='ml-auto'>

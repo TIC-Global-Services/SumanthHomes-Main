@@ -1,10 +1,34 @@
-import React from 'react'
 
-export const GridCard1 = ({number, mainText, subText}) => {
+
+
+export const GridCard1 = ({number, mainText, subText, refName=null}) => {
+
   return (
-    <div className='col-span-1 relative xl:mx-14 xl:mb-24'>
+    <div ref={refName}  className='
+    flex gap-2 md:block
+    flex-shrink-0 flex-grow
+     md:bg-transparent
+    w-full md:w-[40%] xl:w-[40%]
+    relative  
+    '
+    >
 
-        <h2 className='xl:text-8xl xl:w-[15rem]'>0{number}</h2>
+        <h2 className='xl:text-8xl xl:w-[15rem]'>
+          <svg width="120" height="140" viewBox="0 0 120 140">
+            <text
+               x="10"
+               y="110"
+               font-size="96"
+               font-family="manrope"
+               fill="none"
+               stroke="rgba(181,4,4,0.4)"
+               stroke-width="3"
+               stroke-linejoin="round"
+               >
+                {0+number}
+            </text>
+          </svg>
+        </h2>
 
         <div className='xl:top-16 xl:left-4 absolute'>
             <h4 className='xl:text-2xl'>{mainText}</h4>

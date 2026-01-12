@@ -8,14 +8,32 @@ import award4 from "../../assets/img/AboutSection/award4.png";
 
 export const SHSTeamSection = () => {
   return (
-    <div className=' xl:mb-14 '>
+    <div className='mb-14 xl:mb-14 '>
 
-        <div className='justify-self-center text-center xl:mb-5 md:mb-3'>
-            <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>SHS TEAM</p>
-            <h2 className='xl:mb-8 md:mb-4 font-manrope font-semibold xl:text-4xl md:text-xl'>Studio leaders</h2>
+        <div className='
+        justify-self-center
+        text-center
+        xl:mb-5 md:mb-3'>
+            <p className='
+            xl:mb-4 md:mb-1
+            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
+             text-[rgb(181,4,4)]
+              text-xs'>SHS TEAM</p>
+            <h2 className='
+            xl:mb-8 md:mb-4
+            font-manrope font-semibold
+            xl:text-4xl md:text-xl'>Studio leaders</h2>
         </div>
 
-        <div className='flex gap-10 xl:mb-14'>
+        <div className='
+        overflow-scroll
+        flex gap-10
+        xl:mb-14'
+        
+        style={{
+          scrollbarWidth:'none'
+        }}
+        >
 
             <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />
             <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />

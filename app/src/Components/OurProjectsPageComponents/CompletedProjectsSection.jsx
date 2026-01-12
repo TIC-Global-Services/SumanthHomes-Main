@@ -8,11 +8,22 @@ import Image6 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Im
 
 export const CompletedProjectsSection = () => {
   return (
-    <div className='xl:mb-28'>
+    <div className='
+    mt-8
+     xl:mb-28'>
 
-        <h2 className='text-center xl:mb-12 font-semibold text-4xl'>Completed Projects</h2>
+        <h2 className='
+        text-center
+        mb-4 xl:mb-12
+        font-semibold
+        text-2xl md:text-4xl'>Completed Projects</h2>
 
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='
+        overflow-scroll
+        flex flex-nowrap md:grid grid-cols-3 md:gap-4'
+        style={{
+          scrollbarWidth:'none'
+        }}>
 
             <GridCard2 Image={Image1} mainText={'Pearl Abode'} subText={'Apartments'} />
             <GridCard2 Image={Image2} mainText={'Lotus Serene Villas'} subText={'Villa'} />
@@ -23,7 +34,10 @@ export const CompletedProjectsSection = () => {
 
         </div>
 
-        <div className='flex justify-center items-center'>
+        <div className='
+        flex justify-center items-center
+        mt-4
+        '>
             <button className='text-[rgb(181,4,4)] font-medium'>-EXPLORE MORE-</button>
         </div>
 

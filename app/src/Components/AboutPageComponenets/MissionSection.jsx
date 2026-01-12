@@ -3,15 +3,20 @@ import missionImage from "../../assets/img/AboutSection/missionImage.png"
 
 export const MissionSection = () => {
   return (
-    <div className='flex justify-between items-center xl:gap-10 md:gap-3  xl:mt-4 md:mt-4 xl:mb-20 md:mb-14'>
+    <div className='
+    flex flex-col md:flex-row justify-between items-center
+    xl:gap-10 md:gap-3  xl:mt-4 md:mt-4
+    mb-14 xl:mb-20 md:mb-14'>
 
-        <div>
+        <div className='order-2 md:order-1'>
 
-            <img className='xl:h-[18rem] xl:w-[40rem]' src={missionImage}></img>
+            <img className='
+            xl:h-[18rem]
+            xl:w-[40rem]' src={missionImage}></img>
 
         </div>
 
-        <div className='xl:w-[50%]'>
+        <div className='xl:w-[50%] order-1 md:order-2'>
 
             <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>OUR MISSION</p>
 
