@@ -74,7 +74,10 @@ export const ArchitectureProcessSection = () => {
         mb-4'>
 
             <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
-            <h2 className='xl:mb-8 md:mb-4 font-manrope font-semibold xl:text-4xl md:text-xl'>From Concept to Completion</h2>
+            <h2 className='
+            mb-4 xl:mb-8 md:mb-4
+            font-manrope font-semibold
+            text-3xl xl:text-4xl md:text-xl'>From Concept to Completion</h2>
             <p className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
               At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
             </p>

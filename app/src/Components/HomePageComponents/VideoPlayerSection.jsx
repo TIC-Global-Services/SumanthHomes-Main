@@ -96,7 +96,7 @@ export const VideoPlayerSection = () => {
                 text-center
                 text-[#737373]
                 w-[90%] md:w-[70%] xl:w-[70%] 
-                text-sm md:text-xl xl:text-4xl
+                 md:text-xl xl:text-4xl
                 mb-2
                 '
                 > 

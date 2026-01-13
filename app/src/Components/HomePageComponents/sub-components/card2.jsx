@@ -62,13 +62,13 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
             <h5 className='
             font-medium text-black 
-            md:text-sm xl:text-sm
+            text-xl md:text-sm xl:text-sm
             md:text-left xl:text-left
             md:tracking-tighter xl:tracking-tight 
             '>{titleText}</h5>
             <p className='
             text-[#464851] 
-            text-xs md:text-xs 
+             md:text-xs 
             md:text-left xl:text-left 
             xl:text-xs
             font-normal 

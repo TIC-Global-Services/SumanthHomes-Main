@@ -35,7 +35,7 @@ export const CompletedProjectsSection = () => {
         text-center
         mb-4 xl:mb-12
         font-semibold
-        text-2xl md:text-4xl'>Completed Projects</h2>
+        text-3xl md:text-4xl'>Completed Projects</h2>
 
         <div
 

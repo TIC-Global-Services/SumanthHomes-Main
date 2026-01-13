@@ -59,11 +59,11 @@ export const ArchitectureDesignSection = () => {
 
                 <p className='
                 text-[#B50404] font-semibold
-                text-sm md:text-xs 
+                text-xs md:text-xs 
                 uppercase leading-8 tracking-widest'>ARCHITECTURE & DESIGN</p>
                 <h4 className='
                 font-bold
-                text-xl xl:text-4xl md:text-2xl
+                text-3xl xl:text-4xl md:text-2xl
                 mb-4
                 xl:leading-10
                 tracking-tight'>Crafting modern buildings where style meets purpose.</h4>
@@ -75,7 +75,7 @@ export const ArchitectureDesignSection = () => {
                 <p className='
                 font-normal 
                 xl:leading-5 
-                text-xs xl:text-sm'>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
+                xl:text-sm'>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
             </div>
 
@@ -104,7 +104,7 @@ export const ArchitectureDesignSection = () => {
                         bottom-8 xl:bottom-11 
                         font-jakarta font-medium text-white text-center
                         justify-self-center
-                        text-sm xl:text-xl 
+                        text-xl xl:text-xl 
                         '>{card.text}</p>
                 
                     </div>

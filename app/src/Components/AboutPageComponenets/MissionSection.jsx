@@ -18,9 +18,16 @@ export const MissionSection = () => {
 
         <div className='xl:w-[50%] order-1 md:order-2'>
 
-            <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>OUR MISSION</p>
+            <p className='
+            xl:mb-4 md:mb-1
+            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
+            text-[rgb(181,4,4)]
+            text-xs'>OUR MISSION</p>
 
-            <h2 className='xl:mb-8 md:mb-4 font-manrope font-semibold xl:text-4xl md:text-xl'>Designs that Inspire Living</h2>
+            <h2 className='
+            mb-4 xl:mb-8 md:mb-4
+            font-manrope font-semibold
+            text-3xl xl:text-4xl md:text-xl'>Designs that Inspire Living</h2>
 
             <p className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
 

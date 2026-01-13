@@ -49,9 +49,16 @@ export const AboutSumanthHomesSection = () => {
         w-[100%] xl:w-[40%] md:w-[90%]
         '>
 
-            <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>About Sumanth homes</p>
+            <p className='
+            xl:mb-4 md:mb-1
+            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
+            text-[rgb(181,4,4)]
+            text-xs'>About Sumanth homes</p>
 
-            <h4 className='mb-2 xl:mb-8 md:mb-4 font-manrope font-semibold xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
+            <h4 className='
+            mb-4 xl:mb-8 md:mb-4
+            font-manrope font-semibold
+            text-3xl xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
 
             <p className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
               

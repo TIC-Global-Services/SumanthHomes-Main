@@ -35,7 +35,7 @@ export const MapSection = () => {
             <button className='
             text-[#B50404] font-semibold
             w-[100%]
-            text-sm md:text-xl
+             md:text-xl
             '>Get directions</button>
         </div>
 

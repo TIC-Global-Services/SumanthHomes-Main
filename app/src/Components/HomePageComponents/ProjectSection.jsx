@@ -12,7 +12,7 @@ export const ProjectSection = () => {
 
         <div className='
         text-center font-manrope font-semibold text-[#B50404]
-        xl:text-2xl md:text-2xl
+        text-3xl xl:text-2xl md:text-2xl
         xl:mb-5 md:mb-5
         py-10
          '>

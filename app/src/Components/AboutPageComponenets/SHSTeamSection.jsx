@@ -34,8 +34,8 @@ export const SHSTeamSection = () => {
     <div className='mb-14 xl:mb-14 '>
 
         <div className='
-        justify-self-center
-        text-center
+        md:justify-self-center
+        md:text-center
         xl:mb-5 md:mb-3'>
             <p className='
             xl:mb-4 md:mb-1
@@ -43,9 +43,9 @@ export const SHSTeamSection = () => {
              text-[rgb(181,4,4)]
               text-xs'>SHS TEAM</p>
             <h2 className='
-            xl:mb-8 md:mb-4
+            mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
-            xl:text-4xl md:text-xl'>Studio leaders</h2>
+            text-3xl xl:text-4xl md:text-xl'>Studio leaders</h2>
         </div>
 
         <div  className='
