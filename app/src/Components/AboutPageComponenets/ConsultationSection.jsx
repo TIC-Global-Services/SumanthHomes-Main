@@ -9,7 +9,7 @@ export const ConsultationSection = () => {
     aspect-[3/4]
     md:aspect-auto
     xl:h-[25rem] md:h-[15rem]
-    xl:mb-36 md:mb-14
+    mb-20 xl:mb-36 md:mb-14
     ' 
       style={{
 
@@ -38,7 +38,7 @@ export const ConsultationSection = () => {
 
             <p className='
             font-normal text-white
-            text-sm md:text-xs xl:text-sm
+             md:text-xs xl:text-sm
             xl:mb-3
             md:leading-5
             md:mb-1'>

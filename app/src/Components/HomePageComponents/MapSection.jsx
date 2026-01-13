@@ -5,7 +5,7 @@ export const MapSection = () => {
 
 
   return (
-    <div>
+    <div className='mb-20'>
 
       <iframe 
       className='

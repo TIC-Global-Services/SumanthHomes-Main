@@ -24,7 +24,7 @@ export const ExploreMoreSection = () => {
   return (
     <div className='
     flex justify-between
-    mb-4
+    mb-20
     mt-8
     '>
 
