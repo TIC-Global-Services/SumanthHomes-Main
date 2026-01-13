@@ -104,6 +104,8 @@ export const VideoPlayerSection = () => {
                 </div>
 
 
+                {/* Buttons */}
+
                 <div className='
                 flex items-center justify-center
                 md:order-first

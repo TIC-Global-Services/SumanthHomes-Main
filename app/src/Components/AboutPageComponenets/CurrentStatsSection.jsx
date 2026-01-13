@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card1 } from './sub-componenets/card1'
+import { Card1 } from './sub-componenets/Card1'
 
 export const CurrentStatsSection = () => {
   return (

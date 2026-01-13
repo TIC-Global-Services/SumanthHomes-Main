@@ -2,9 +2,12 @@
 export const MapSection = () => {
 
   return (
-    <div className="relative h-[60rem] md:h-[90rem] xl:h-[70rem]">
+    <div className="relative h-[70rem] md:h-[90rem] xl:h-[70rem]">
 
         <iframe 
+        style={{
+          pointerEvents:false,
+        }}
       className='
       aspect-[4/3] md:aspect-[3/1]
       w-full

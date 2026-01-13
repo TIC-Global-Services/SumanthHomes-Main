@@ -8,7 +8,7 @@ export const KnowUsSection = () => {
 
         <div className='xl:w-[30%]'>
 
-            <p className='font-semibold tracking-widest uppercase [word-spacing:5px] text-[#B50404] text-xs'>Get to know us</p>
+            <p className='font-semibold tracking-widest uppercase [word-spacing:5px] text-[#B50404] text-xs mb-2'>Get to know us</p>
             <h2 className='font-manrope font-semibold text-3xl'>Reach Out to Our Team and Office</h2>
 
         </div>

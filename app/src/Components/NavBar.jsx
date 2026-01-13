@@ -153,7 +153,7 @@ const handleNotHover = (e) => {
       z-30 
       w-full
       min-h-dvh
-      bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100
+    bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-lg bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100
       "
       
       style={{
@@ -166,7 +166,7 @@ const handleNotHover = (e) => {
         flex flex-col gap-16
         py-20
         
-        text-white
+        text-black
         text-4xl
         
         ">
