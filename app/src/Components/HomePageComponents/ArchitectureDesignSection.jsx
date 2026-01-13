@@ -89,7 +89,7 @@ export const ArchitectureDesignSection = () => {
 
         </div>
 
-        <div className='w-full  overflow-scroll'>
+        <div className='w-full  overflow-hidden'>
         <div ref={CardRef} className='
         flex
         mt-8 xl:mt-12 
