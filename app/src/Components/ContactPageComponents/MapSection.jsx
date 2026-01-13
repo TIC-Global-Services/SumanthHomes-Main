@@ -5,10 +5,8 @@ export const MapSection = () => {
     <div className="relative h-[70rem] md:h-[90rem] xl:h-[70rem]">
 
         <iframe 
-        style={{
-          pointerEvents:false,
-        }}
       className='
+      pointer-events-none
       aspect-[4/3] md:aspect-[3/1]
       w-full
       '
