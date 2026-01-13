@@ -9,6 +9,7 @@ export const MapSection = () => {
 
       <iframe 
       className='
+      pointer-events-none
       aspect-[4/3] md:aspect-[3/1]
       w-full
       '
