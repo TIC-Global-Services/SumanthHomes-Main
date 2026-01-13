@@ -48,7 +48,10 @@ export const MapSection = () => {
                 text-sm md:text-xl
                 font-normal
                 ">YOUR NAME*</h4>
-                <div className="flex items-center justify-between">
+                <div className="
+                flex items-center justify-between
+                mb-4
+                ">
                   <label className="font-normal text-xs md:text-xl
                   ">What's your good name?</label>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +77,10 @@ export const MapSection = () => {
                 font-normal
                 "
                 >YOUR EMAIL ADDRESS*</h4>
-                <div className="flex items-center justify-between">
+                <div className="
+                flex items-center justify-between
+                mb-4
+                ">
                   <label className="
                   font-normal text-xs md:text-xl
                   ">Enter your email address</label>
@@ -93,7 +99,9 @@ export const MapSection = () => {
 
             </div>
 
-            <div className="flex items-center gap-8 flex-wrap
+            <div className="
+            flex items-center gap-8 flex-wrap
+            mb-4
             ">
 
               <div className="flex-grow">
@@ -104,7 +112,9 @@ export const MapSection = () => {
                 text-sm md:text-xl
                 md:mb-4
                 ">YOUR PHONE NUMBER</h4>
-                <div className="flex items-center justify-between">
+                <div className="
+                flex items-center justify-between
+                mb-4">
                   <label className="
                   font-normal
                   text-xs md:text-xl
@@ -132,7 +142,10 @@ export const MapSection = () => {
                 text-sm md:text-xl
                 "
                 >YOUR SUBJECT</h4>
-                <div className="flex items-center justify-between">
+                <div className="
+                flex items-center justify-between
+                mb-4
+                ">
                   <label className="
                   font-normal text-xs md:text-xl
                   ">How can we help you?</label>
