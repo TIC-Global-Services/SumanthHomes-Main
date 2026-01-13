@@ -11,17 +11,21 @@ import { gsap } from 'gsap/gsap-core'
 export const CompletedProjectsSection = () => {
 
   const cardSectionRef = useRef(null);
-  const screenWidth = window.outerWidth;
+  
 
   const prev = () =>{
+    const el = cardSectionRef.current;
+    const elWidth = el.offsetWidth +20;
     gsap.to(cardSectionRef.current, {
-      x:`+=${screenWidth}`,
+      x:`+=${elWidth}`,
       ease:'power3',
     })
   }
   const next = () =>{
+    const el = cardSectionRef.current;
+    const elWidth = el.offsetWidth +20;
     gsap.to(cardSectionRef.current, {
-      x:`-=${screenWidth}`,
+      x:`-=${elWidth}`,
       ease:'power3'
     })
   }
@@ -47,7 +51,7 @@ export const CompletedProjectsSection = () => {
         >
 
           <div ref={cardSectionRef}  className='
-        flex flex-nowrap gap-4 md:grid grid-cols-3 md:gap-4'
+        flex flex-nowrap gap-5 md:grid grid-cols-3 md:gap-4'
 
         >
 
