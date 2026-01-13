@@ -89,13 +89,16 @@ export const ArchitectureDesignSection = () => {
 
         </div>
 
-        <div className='w-full  overflow-hidden'>
+        <div 
+        className='w-full  overflow-hidden md:overflow-scroll'
+        style={{
+            scrollbarWidth:'none',
+        }}
+        >
         <div ref={CardRef} className='
         flex
         mt-8 xl:mt-12 
-        gap-4 xl:gap-8' style={{
-            scrollbarWidth:'none',
-        }}
+        gap-4 xl:gap-8'
         >
 
             {
@@ -103,7 +106,7 @@ export const ArchitectureDesignSection = () => {
 
                     <div className='
                     relative flex-shrink-0 carousel-card
-                    w-full
+                    w-full md:w-auto
                     '>
                         
                         <img className='
