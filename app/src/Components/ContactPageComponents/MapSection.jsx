@@ -19,7 +19,7 @@ export const MapSection = () => {
         left-[5%]
         bg-[#E7E7E7]
         px-8 md:px-20
-        py-4 md:py-10
+        py-10 md:py-10
         justify-self-center
         w-[90%]
         ">
