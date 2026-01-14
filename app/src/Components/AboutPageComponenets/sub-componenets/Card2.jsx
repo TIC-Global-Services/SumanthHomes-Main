@@ -25,7 +25,8 @@ export const Card2 = ({bgImage, Name, Position}) => {
         position:'center'
     }}>
 
-        <div className='mt-auto mb-8 ml-10
+        <div className='
+        mt-auto mb-8 ml-10
         '>
 
             <h2 className='

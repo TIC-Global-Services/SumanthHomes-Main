@@ -22,8 +22,8 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             absolute
             flex justify-center items-center
             bg-[#B50404]
-            w-6 md:w-10 xl:w-10
-            h-32 md:h-32 xl:h-52
+            w-10 md:w-10 xl:w-10
+            h-48 md:h-32 xl:h-52
             
            
             '>
@@ -33,7 +33,8 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                 text-white
                 font-manrope font-bold
                 rotate-[270deg]
-                text-[.6rem] md:text-xs xl:text-xs 
+                md:text-xs xl:text-xs
+                 
                '>RECENT PROJECTS</h4>
 
             </div>
