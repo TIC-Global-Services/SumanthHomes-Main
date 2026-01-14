@@ -37,7 +37,7 @@ export const ArchitectureProcessSection = () => {
         card-container
         md:overflow-hidden
         w-full md:w-[50%] xl:w-[50%] 
-        flex flex-wrap gap-2 md:gap-4 '
+        flex flex-wrap gap-4 md:gap-4 '
         
         style={{
           scrollbarWidth:'none',
