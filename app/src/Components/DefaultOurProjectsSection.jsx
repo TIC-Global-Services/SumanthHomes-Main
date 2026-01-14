@@ -83,14 +83,14 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                         <h4 className='
                         font-semibold
-                        text-[.6rem] md:text-xs xl:text-sm 
+                        text-sm md:text-xs xl:text-sm 
                         py-2'>
                             {miniHeader}</h4>
 
                         <h2 className='
                         font-manrope font-semibold
                         xl:pb-4
-                        text-xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
+                        text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
 
                     </div>
 
@@ -102,7 +102,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                         font-normal
                         md:w-[100%] xl:w-[60%]
                         py-4 md:py-2
-                        text-sm md:text-xs'>{description}</p>
+                        md:text-xs'>{description}</p>
 
 
                        <div className='
@@ -111,7 +111,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                         
                             <h4 className='
                             font-bold
-                            text-[.55rem] md:text-xs xl:text-sm 
+                            md:text-xs xl:text-sm 
                             '>EXPLORE PROJECT</h4>
 
                             <button>
@@ -149,14 +149,14 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                     <h4 className='
                     font-semibold
-                    text-[.6rem] md:text-xs xl:text-sm 
+                    text-sm md:text-xs xl:text-sm 
                     py-2'>
                         {miniHeader}</h4>
 
                     <h2 className='
                     font-manrope font-semibold
                     xl:pb-4
-                    text-xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
+                    text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
 
                 </div>
 
@@ -167,7 +167,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                     text-[#737373] 
                     font-normal
                     py-4
-                    text-sm md:text-xs'>{description}</p>
+                     md:text-xs'>{description}</p>
 
 
                     <div className='
@@ -176,7 +176,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                         
                         <h4 className='
                         font-bold
-                        text-xs md:text-xs xl:text-sm 
+                         md:text-xs xl:text-sm 
                         '>EXPLORE PROJECT</h4>
 
                         <button>

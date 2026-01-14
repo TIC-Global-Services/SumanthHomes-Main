@@ -13,7 +13,7 @@ export const VisionSection = () => {
         md:w-[40%] xl:w-[40%]'>
 
             <p className='
-            xl:mb-4 md:mb-1
+            mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
             text-[rgb(181,4,4)]
             text-xs'>OUR VISION</p>

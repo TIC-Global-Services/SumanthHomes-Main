@@ -73,7 +73,7 @@ export const ArchitectureProcessSection = () => {
         w-full md:w-[40%] xl:w-[40%]
         mb-4'>
 
-            <p className='xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
+            <p className='mb-1 xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
             <h2 className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold

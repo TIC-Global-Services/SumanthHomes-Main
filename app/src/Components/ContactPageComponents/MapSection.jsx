@@ -27,7 +27,7 @@ export const MapSection = () => {
           <h2 className="
           text-xl md:text-5xl
           font-manrope font-semibold
-          mb-16
+          mb-10
           ">Let's talk. <span className="text-[#B50404]
           
           ">Have a project in mind?</span></h2>
