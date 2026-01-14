@@ -5,12 +5,21 @@ import gsap from 'gsap'
 export const VideoPlayerSection = () => {
     const gsapTimeline = gsap.timeline();
 
+    const data = [
+        {text:"Absolutely amazing theme, flexible and awesome design with possibilities. It's so very easy to use and to customize. Simply the great designs and best theme -",author:"Jonson donner"},
+        {text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor, malesuada et design -",author:"second memeber"},
+        {text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor, malesuada et design -",author:"third member"}
+    ]
+
     const [index, setIndex ] = useState(0);
     const cardRef = useRef(null);
+    const maxIndex = data.length;
 
     const next = () =>{
-        const card = cardRef.current;
+        if(index < maxIndex){
         
+        const card = cardRef.current;
+
         gsapTimeline.to(card, {
             opacity:0,
             duration:0.6,
@@ -25,7 +34,7 @@ export const VideoPlayerSection = () => {
                 duration:0.6,
             }
         )
-
+    }
     }
 
 
@@ -47,11 +56,7 @@ export const VideoPlayerSection = () => {
          )
        };
 
-    const data = [
-        {text:"Absolutely amazing theme, flexible and awesome design with possibilities. It's so very easy to use and to customize. Simply the great designs and best theme -",author:"Jonson donner"},
-        {text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor, malesuada et design -",author:"second memeber"},
-        {text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor, malesuada et design -",author:"third member"}
-    ]
+    
 
   return (
     <div>
@@ -152,14 +157,14 @@ export const VideoPlayerSection = () => {
             <div className='
             hidden md:flex items-center gap-1 justify-self-center'>
 
-                <p> 02 </p>
+                <p> 0{index+1} </p>
                 
                 <svg width="220" height="1" viewBox="0 0 220 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="220" height="1" fill="#737373"/>
-                    <rect width="146.67" height="1" fill="#B50404"/>
+                    <rect width={`${((index+1)/maxIndex)*100}%`} height="1" fill="#B50404"/>
                 </svg>
 
-                <p>03</p>
+                <p>0{maxIndex}</p>
 
             </div>
 
