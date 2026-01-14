@@ -11,24 +11,66 @@ import { CardButtons } from '../../sub-components/CardButtons'
 
 export const CompletedProjectsSection = () => {
 
-  const cardSectionRef = useRef(null);
-  
+  const tl = gsap.timeline();
+  const cardSectionRef = useRef(null);  
+
+  const CompletedProjectsCards=[
+    {
+      mainText :"Pearl Abode",
+      subText :"Apartments",
+      image :Image1,
+    },
+    {
+      mainText :"Lotus Serene Villas",
+      subText :"Villa",
+      image :Image2,
+    },
+    {
+      mainText :"Garuda Gateway",
+      subText :"Commercial",
+      image :Image3,
+    },
+    {
+      mainText :"Garuda Gateway",
+      subText :"Residential",
+      image :Image4,
+    },
+    {
+      mainText :"MN Sri Padmavati Gardens",
+      subText :"Villa",
+      image :Image5,
+    },
+    {
+      mainText :"KBR Brindavanam",
+      subText :"Villa",
+      image :Image6,
+    },
+  ]
+
+  let frame = 1;
+  const maxFrame = CompletedProjectsCards.length-1;
 
   const prev = () =>{
+    if(frame>1){
+      frame--;
     const el = cardSectionRef.current;
     const elWidth = el.offsetWidth +20;
-    gsap.to(cardSectionRef.current, {
+    tl.to(cardSectionRef.current, {
       x:`+=${elWidth}`,
       ease:'power3',
     })
   }
+  }
   const next = () =>{
+    if(frame<maxFrame){
+      frame++;
     const el = cardSectionRef.current;
     const elWidth = el.offsetWidth +20;
-    gsap.to(cardSectionRef.current, {
+    tl.to(cardSectionRef.current, {
       x:`-=${elWidth}`,
       ease:'power3'
     })
+  }
   }
 
   return (
@@ -56,12 +98,11 @@ export const CompletedProjectsSection = () => {
 
         >
 
-            <GridCard2 Image={Image1} mainText={'Pearl Abode'} subText={'Apartments'} />
-            <GridCard2 Image={Image2} mainText={'Lotus Serene Villas'} subText={'Villa'} />
-            <GridCard2 Image={Image3} mainText={'Garuda Gateway'} subText={'Commercial'} />
-            <GridCard2 Image={Image4} mainText={'Garuda Gateway'} subText={'Residential'} />
-            <GridCard2 Image={Image5} mainText={'MN Sri Padmavati Gardens'} subText={'Villa'} />
-            <GridCard2 Image={Image6} mainText={'KBR Brindavanam'} subText={'Villa'} />
+          {
+            CompletedProjectsCards.map((data, _)=>(
+              <GridCard2 mainText={data.mainText} subText={data.subText} Image={data.image} />
+            ))
+          }
 
           </div>
 

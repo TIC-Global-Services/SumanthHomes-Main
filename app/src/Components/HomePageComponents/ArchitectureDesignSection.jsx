@@ -9,26 +9,9 @@ import { CardButtons } from '../../sub-components/CardButtons';
 
 export const ArchitectureDesignSection = () => {
 
+    const tl = gsap.timeline(); 
+
     const CardRef = useRef(null);
-
-    const prev = ()=>{
-        const el = CardRef.current;
-        const containerWidth = el.offsetWidth + 16;
-        gsap.to(el,{
-            x:`+=${containerWidth}`,
-            ease:'expo'
-        })  
-
-    }
-    const next = ()=>{
-        const el = CardRef.current;
-        const containerWidth = el.offsetWidth + 16;
-        gsap.to(el,{
-            x:`-=${containerWidth}`,
-            ease:'expo'
-        })  
-    }
-
 
     const ArchitectureCards = [
         {
@@ -56,6 +39,36 @@ export const ArchitectureDesignSection = () => {
             text:'Commercial Space'
         }
     ]
+
+    let frame = 0;
+    const maxFrame = (ArchitectureCards.length-1);
+    
+    const prev = ()=>{
+        if((frame) > 0){
+            frame = frame-1;
+            const el = CardRef.current;
+            const containerWidth = el.offsetWidth + 16;
+            tl.to(el,{
+                x:`+=${containerWidth}`,
+                ease:'expo'
+            })  
+    } 
+
+    }
+    const next = ()=>{
+        if((frame) < maxFrame){
+            frame = frame+1;
+            const el = CardRef.current;
+            const containerWidth = el.offsetWidth + 16;
+            tl.to(el,{
+                x:`-=${containerWidth}`,
+                ease:'expo'
+            })  
+    }
+    }
+
+
+    
 
   return (
     <div className=' my-20'>

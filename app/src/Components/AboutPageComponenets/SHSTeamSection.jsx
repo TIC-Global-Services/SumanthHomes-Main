@@ -10,25 +10,64 @@ import { CardButtons } from '../../sub-components/CardButtons';
 
 export const SHSTeamSection = () => {
 
+  const tl = gsap.timeline();
+
   // References the studio leaders section 
   const cardSectionRef = useRef(null);
   const screenWidth = window.outerWidth;
 
+  const TeamCards = [
+    {
+      name:'Jeremy dupont',
+      position:'Director',
+      bgImage:bgImage,
+    },
+    {
+      name:'Jeremy dupont',
+      position:'',
+      bgImage:bgImage,
+    },
+    {
+      name:'Jeremy dupont',
+      position:'Director',
+      bgImage:bgImage,
+    },
+    {
+      name:'Jeremy dupont',
+      position:'Director',
+      bgImage:bgImage,
+    },
+    {
+      name:'Jeremy dupont',
+      position:'Director',
+      bgImage:bgImage,
+    },
+  ]
+
+  let frame = 1;
+  const maxFrame = TeamCards.length-1;
+
+
   const prev = () =>{
-    const el = cardSectionRef.current;
-    gsap.to(el, {
-      x:`+=${screenWidth}`,
-      ease:'power2.in'
-    })
+    if(frame>1){
+      frame--;
+      const el = cardSectionRef.current;
+      tl.to(el, {
+        x:`+=${screenWidth}`,
+        ease:'power2.in'
+       })
+  }
 
   }
   const next = () =>{
-    const el = cardSectionRef.current;
-    gsap.to(el, {
-      x:`-=${screenWidth}`,
-      ease:'power2.in'
-    })
-
+    if(frame<maxFrame){
+      frame++;
+      const el = cardSectionRef.current;
+      tl.to(el, {
+        x:`-=${screenWidth}`,
+        ease:'power2.in'
+      })
+  }
   }
 
   return (
@@ -59,12 +98,11 @@ export const SHSTeamSection = () => {
         }}
         >
           <div ref={cardSectionRef} className='flex gap-10'>
-
-              <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />
-              <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />
-              <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />
-              <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />
-              <Card2 bgImage={bgImage} Name={"Jeremy dupont"} Position={"Director"} />
+              {
+                TeamCards.map((data, _)=>(
+                  <Card2 Name={data.name} Position={data.position} bgImage={data.bgImage}/>
+                ))
+              }
           </div>
 
         </div>
