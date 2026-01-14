@@ -70,7 +70,7 @@ export const AboutSumanthHomesSection = () => {
 
                 <p className='
                 font-extrabold uppercase 
-                text-xs md:text-xs xl:text-xs '>Explore Services</p>
+                 '>Explore Services</p>
 
                 <button>
 
