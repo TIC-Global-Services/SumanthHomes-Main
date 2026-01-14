@@ -14,17 +14,17 @@ export const NotFound404 = () => {
       '>
 
         <h2 className='
-        text-9xl
+        text-7xl md:text-9xl
         font-extrabold
         text-transparent
         bg-clip-text
         bg-gradient-to-tr from-[#B50404] to-[#e47979]
         mx-auto
-        mb-10
+        mb-4 md:mb-10
         '>Oops!</h2>
 
         <h2 className='
-        text-4xl
+        text-2xl md:text-4xl
         mb-4
         font-medium
         uppercase
@@ -32,7 +32,7 @@ export const NotFound404 = () => {
         >404 - PAGE NOT FOUND</h2>
 
         <p className='
-        w-[50%]
+        w-[90%] md:w-[50%]
         mx-auto
         text-xl
         mb-4
@@ -42,11 +42,11 @@ export const NotFound404 = () => {
 
         <Link to="/">
             <button className='
-            text-xl
+            text-sm md:text-xl
           bg-[#6a0404]
           hover:bg-[#B50404]
-            py-4
-            px-10
+            py-4 md:py-4
+            px-4 md:px-10
             rounded-full
             text-white
         '
