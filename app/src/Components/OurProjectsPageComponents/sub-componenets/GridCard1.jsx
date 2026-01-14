@@ -5,7 +5,6 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
 
   return (
     <div ref={refName}  className='
-    bg-black
     flex gap-2 md:block
     flex-shrink-0 flex-grow
      md:bg-transparent
@@ -31,8 +30,8 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
           </svg>
         </h2>
 
-        <div className='xl:top-16 xl:left-4 absolute'>
-            <h4 className='xl:text-2xl'>{mainText}</h4>
+        <div className='xl:top-16 xl:left-4 bottom-[-40px] absolute'>
+            <h4 className='text-2xl xl:text-2xl'>{mainText}</h4>
              <p className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>{subText}</p>
         </div>
         

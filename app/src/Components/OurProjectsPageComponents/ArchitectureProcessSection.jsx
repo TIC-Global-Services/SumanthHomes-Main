@@ -11,67 +11,16 @@ export const ArchitectureProcessSection = () => {
   const card3 = useRef(null);
   const card4 = useRef(null);
 
-  useEffect(()=>{
-
-    if(window.outerWidth>700){
-      return
-    }
-    const tl = gsap.timeline();
-    const el1 = card1.current;
-    const el2 = card2.current;
-    const el3 = card3.current;
-    const el4 = card4.current;
-
-    
-    tl.to(el2,
-      {
-        xPercent:-100,
-        ease:'sine',
-        duration:4,
-        
-      }
-    )
-
-    tl.to(el3,
-      {
-        xPercent:-200,
-        ease:'sine',
-        duration:4,
-      }
-    )
-
-    tl.to(el4,
-      {
-        xPercent:-300,
-        ease:'sine',
-        duration:4,
-        
-      }
-    )
-
-    // ScrollTrigger.create({
-    //   animation:tl,
-    //   trigger:".card-container",
-    //   start:"top top",
-    //   end:"bottom top",
-    //   markers:true,
-    //   scrub:true,
-    //   pin:true,
-    //   pinSpacing:false,
-    //   anticipatePin:1,
-    // })
-  }
-  )
   
   return (
     <div className='
     flex items-start justify-between flex-wrap 
     xl:mt-20
-    mb-14 xl:mb-24'>
+    mb-20 xl:mb-24'>
 
         <div className='
         w-full md:w-[40%] xl:w-[40%]
-        mb-4'>
+        md:mb-4'>
 
             <p className='mb-1 xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
             <h2 className='
@@ -86,9 +35,9 @@ export const ArchitectureProcessSection = () => {
 
         <div className='
         card-container
-        overflow-scroll md:overflow-hidden
+        md:overflow-hidden
         w-full md:w-[50%] xl:w-[50%] 
-        flex flex-nowrap md:gap-4 md:flex-wrap'
+        flex flex-wrap gap-2 md:gap-4 '
         
         style={{
           scrollbarWidth:'none',
