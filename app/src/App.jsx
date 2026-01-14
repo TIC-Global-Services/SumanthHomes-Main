@@ -6,6 +6,7 @@ import { AboutPage } from "./PageComponents/AboutPage"
 import { ProjectsPage } from "./PageComponents/ProjectsPage"
 import { ContactPage } from "./PageComponents/ContactPage"
 import {createBrowserRouter, RouterProvider} from "react-router"
+import { NotFound404 } from "./PageComponents/NotFound404"
 
 
 
@@ -16,18 +17,22 @@ function App() {
     {
       path:'/',
       element:<HomePage/>,
+      errorElement: <NotFound404/>
     }, 
     {
       path:'/about',
-      element:<AboutPage/>
+      element:<AboutPage/>,
+      errorElement: <NotFound404/>
     },
     {
       path:'/projects',
-      element:<ProjectsPage/>
+      element:<ProjectsPage/>,
+      errorElement: <NotFound404/>
     },
     {
       path:"/contact",
-      element:<ContactPage/>
+      element:<ContactPage/>,
+      errorElement: <NotFound404/>
     }
    ])
 
