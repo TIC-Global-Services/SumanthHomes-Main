@@ -32,7 +32,7 @@ function App() {
     {
       path:"/contact",
       element:<ContactPage/>,
-      errorElement: <NotFound404/>
+      errorElement: <NotFound404/> 
     }
    ])
 

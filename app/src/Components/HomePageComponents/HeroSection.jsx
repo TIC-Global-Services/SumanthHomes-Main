@@ -4,7 +4,11 @@ import bgimage from "../../assets/img/heroSection/heroSectionImage.jpg";
 export const HeroSection = () => {
 
   return (
-    <div className="relative w-full min-h-screen hero-section" style={{
+    <div className="
+    relative
+    w-full
+    min-h-[100dvh]
+    hero-section" style={{
         backgroundImage:`url(${bgimage})`,
         backgroundSize:'cover',
         backgroundPosition:'center',
