@@ -5,12 +5,13 @@ import Image3 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Im
 import Image4 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image4.jpg"
 import Image5 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image5.jpg"
 import Image6 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image6.jpg"
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap/gsap-core'
 import { CardButtons } from '../../sub-components/CardButtons'
 
 export const CompletedProjectsSection = () => {
 
+  let elWidth = 0;
   const tl = gsap.timeline();
   const cardSectionRef = useRef(null);  
 
@@ -53,8 +54,6 @@ export const CompletedProjectsSection = () => {
   const prev = () =>{
     if(frame>1){
       frame--;
-    const el = cardSectionRef.current;
-    const elWidth = el.offsetWidth +20;
     tl.to(cardSectionRef.current, {
       x:`+=${elWidth}`,
       ease:'power3',
@@ -64,14 +63,17 @@ export const CompletedProjectsSection = () => {
   const next = () =>{
     if(frame<maxFrame){
       frame++;
-    const el = cardSectionRef.current;
-    const elWidth = el.offsetWidth +20;
     tl.to(cardSectionRef.current, {
       x:`-=${elWidth}`,
       ease:'power3'
     })
   }
   }
+
+  useEffect(()=>{
+    const el = cardSectionRef.current;
+    elWidth = el.offsetWidth +20;
+  },[])
 
   return (
     <div className='

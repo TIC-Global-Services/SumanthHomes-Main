@@ -9,6 +9,8 @@ import { CardButtons } from '../../sub-components/CardButtons';
 
 export const ArchitectureDesignSection = () => {
 
+    let containerWidth = 0;
+
     const tl = gsap.timeline(); 
 
     const CardRef = useRef(null);
@@ -40,34 +42,38 @@ export const ArchitectureDesignSection = () => {
         }
     ]
 
+
     let frame = 0;
     const maxFrame = (ArchitectureCards.length-1);
-    
-    const prev = ()=>{
-        if((frame) > 0){
-            frame = frame-1;
-            const el = CardRef.current;
-            const containerWidth = el.offsetWidth + 16;
-            tl.to(el,{
-                x:`+=${containerWidth}`,
-                ease:'expo'
-            })  
-    } 
 
-    }
+    useEffect(()=>{
+        
+        const el = CardRef.current;
+        containerWidth = el.offsetWidth + 16;
+
+    },[])
+
+
+    const prev = ()=>{
+            if((frame) > 0){
+                frame = frame-1;
+                const el = CardRef.current;
+                tl.to(el,{
+                    x:`+=${containerWidth}`,
+                    ease:'expo'
+                })  
+            } 
+        }
+
     const next = ()=>{
         if((frame) < maxFrame){
             frame = frame+1;
             const el = CardRef.current;
-            const containerWidth = el.offsetWidth + 16;
             tl.to(el,{
                 x:`-=${containerWidth}`,
                 ease:'expo'
             })  
-    }
-    }
-
-
+        }}
     
 
   return (
