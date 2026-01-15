@@ -5,7 +5,12 @@ import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
 import { useRef } from 'react';
 import {gsap} from "gsap/gsap-core"
+import { TextPlugin, ScrollTrigger } from 'gsap/all'; 
 import { CardButtons } from '../../sub-components/CardButtons';
+
+
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const ArchitectureDesignSection = () => {
 
@@ -13,6 +18,7 @@ export const ArchitectureDesignSection = () => {
 
     const tl = gsap.timeline(); 
 
+    const titleRef = useRef(null);
     const CardRef = useRef(null);
 
     const ArchitectureCards = [
@@ -51,6 +57,21 @@ export const ArchitectureDesignSection = () => {
         const el = CardRef.current;
         containerWidth = el.offsetWidth + 16;
 
+        const titleEl = titleRef.current;
+        gsap.to(titleEl, {
+            duration:2, 
+            color:"#000",
+            scrollTrigger:{
+                trigger:titleEl,
+                start:"top 80%"
+            },
+            text:{
+                value:"Crafting modern buildings where style meets purpose.",
+                oldClass:'start',
+                newClass:'end'
+            }
+        })
+
     },[])
 
 
@@ -85,16 +106,35 @@ export const ArchitectureDesignSection = () => {
 
             <div className='text-left'>
 
+                <style>
+                    {
+                    `
+                    .start{
+                        color:#B40505;
+                    }
+                    .end{
+                        color:#000;
+                    }
+                
+                    `
+                    }
+                </style>
+
                 <p className='
                 text-[#B50404] font-semibold
                 text-xs md:text-xs 
                 uppercase leading-8 tracking-widest'>ARCHITECTURE & DESIGN</p>
-                <h4 className='
+                <h4
+                ref={titleRef}
+                className='
+                text-[#B40505]
                 font-bold
                 text-3xl xl:text-4xl md:text-2xl
                 mb-4
                 xl:leading-10
-                tracking-tight'>Crafting modern buildings where style meets purpose.</h4>
+                tracking-tight'>
+                    Crafting modern buildings where style meets purpose.
+                </h4>
 
             </div>
 
