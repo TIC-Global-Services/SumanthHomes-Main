@@ -17,22 +17,22 @@ export const GridCard2 = ({Image, mainText, subText}) => {
         '></img>
 
         <div className="
-        absolute md:relative
+        absolute 
         flex-col md:flex-row justify-normal items-center
         text-center 
         w-full
-        bottom-0
-        bg-gradient-to-t from-black/60 to-black/40
-        xl:mt-4 xl:mb-8">
+        bottom-0 
+        bg-gradient-to-t from-white/70 to-white/30
+        ">
 
             <div className='
             relative
             pb-4
             '>
 
-            <h4 className='font-medium text-xl text-white md:text-black'>{mainText}</h4>
+            <h4 className='font-medium text-xl text-black'>{mainText}</h4>
             
-            <p className='font-normal text-[#b0afaf] text-xl'>{subText}</p>
+            <p className='font-normal text-[#000000b9] text-xl'>{subText}</p>
 
             </div>
         </div>
