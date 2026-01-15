@@ -60,7 +60,6 @@ export const ArchitectureDesignSection = () => {
         const titleEl = titleRef.current;
         gsap.to(titleEl, {
             duration:2, 
-            color:"#000",
             scrollTrigger:{
                 trigger:titleEl,
                 start:"top 80%"

@@ -1,7 +1,11 @@
 import { useRef, useEffect } from "react";
 import bgimage from "../../assets/img/heroSection/heroSectionImage.jpg";
+import { gsap, TextPlugin} from "gsap/all";
+
+gsap.registerPlugin(TextPlugin);
 
 export const HeroSection = () => {
+
 
   return (
     <div className="
@@ -16,9 +20,10 @@ export const HeroSection = () => {
         opacity:1,
     }}>
 
+
     <h2 className='
     absolute
-    text-[#F7F7F2] font-manrope font-bold
+    text-white font-manrope font-bold
     bottom-0 left-0
     w-[80%] md:w-[70%] lg:w-[70%] xl:w-[60%] 
     pl-4 xl:pl-20 md:pl-10

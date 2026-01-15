@@ -1,6 +1,33 @@
-import React from 'react'
+import { useEffect, useRef } from "react"
 
 export const Footer = () => {
+
+    const textMaskRef = useRef(null);
+
+
+        
+
+        const handleMouseEnter = (e) =>{
+
+            const el = textMaskRef.current;
+            const rect = el.getBoundingClientRect();
+            
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            el.style.setProperty('--x', `${x}px`);
+            el.style.setProperty('--y', `${y}px`);
+            el.style.setProperty('--opacity', 1);
+        }
+    
+    const handleMouseLeave = (e) =>{
+
+        const el = textMaskRef.current;
+
+        el.style.setProperty('--opacity', 0);
+    }
+
+    
   return (
 <div>
     <div className='flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1]'>
@@ -12,15 +39,36 @@ export const Footer = () => {
         mx-2 md:mx-8
         '>
 
-            <div className='text-center
-             mb-8 
+            <div className='
+            relative
+            text-center
+            mb-8 
              '>
+                <h2
+                ref={textMaskRef}
+                onMouseMove={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                    WebkitMaskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.7) 1%, transparent)',
+                    maskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.7) 1%, transparent)',
+                    opacity:'var(--opacity, 0)'
+                }}
+                className='
+                    absolute
+                    md:left-[30px] xl:left-[153px]
+                    bg-gradient-to-tr from-[#B40505] to-[#da4949]
+                    bg-clip-text
+                    font-extrabold text-transparent 
+                    text-6xl xl:text-9xl md:text-7xl 
+                    '> SUMANTH HOMES 
+                </h2>
 
                 <h2 className='
                     font-extrabold text-[#A7A7A7] 
                     text-6xl xl:text-9xl md:text-7xl 
                     '> SUMANTH HOMES 
                 </h2>
+                
 
             </div>
 
