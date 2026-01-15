@@ -1,18 +1,21 @@
-import {gsap, ScrollTrigger} from "gsap/all"
+import {gsap, TextPlugin} from "gsap/all"
 import { useEffect, useRef } from "react";
 
-export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
 
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
+
+export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
+  
   const textRef = useRef(null);
 
   useEffect(()=>{
     let el = textRef.current;
-    gsap.fromTo(el,{
-      skewX:30,
-      duration:1,
-    },{
-      skewX:0,
+    gsap.to(el,{
+      duration:2,
+      color:"#B50404",
+      text:{
+        value:subText,
+      }
     })
   },)
   
@@ -39,11 +42,11 @@ export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
 
             <p className='
             font-jakarta font-semibold
-            tracking-widest uppercase [word-spacing:5px] text-[#B50404] 
+            tracking-widest uppercase [word-spacing:5px] text-black 
             text-[.8rem] md:text-xs xl:text-xs'
             
             ref={textRef}
-            >{subText}</p>
+            ></p>
 
         </div>
 
