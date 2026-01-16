@@ -16,12 +16,12 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
         <h2 className='
         xl:w-[15rem]'
         >
-          <svg width="200" height="140" viewBox="0 0 120 140">
+          <svg width="200" height="140" viewBox="0 0 200 140">
             <text
             className="
             font-jakarta font-extrabold
             "
-               x="10"
+               x="0"
                y="110"
                font-size="96"
                fill="none"
@@ -35,7 +35,7 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
         </h2>
 
         <div className='
-        top-22 left-20
+        top-22 left-8
         bottom-[-40px]
         absolute'>
             <h4 className='text-2xl xl:text-2xl'>{mainText}</h4>
