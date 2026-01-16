@@ -1,4 +1,29 @@
+import { useRef, useEffect } from "react"
+import { ScrollTrigger, gsap } from "gsap/all"
+import { TextSlideInAnimation } from "../utils/TextSlideInAnimation";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, description }) => {
+
+    const titleRef = useRef(null);
+    const contentRef = useRef(null);
+    const containerRef = useRef(null);
+
+    const windowTitleRef = useRef(null);
+    const windowContentRef = useRef(null);
+    const windowContainerRef = useRef(null);
+
+    useEffect(()=>{
+        if(window.outerWidth>600){
+            TextSlideInAnimation(windowTitleRef, windowContentRef, windowContainerRef)
+            return
+        }
+        
+        TextSlideInAnimation(titleRef, contentRef, containerRef);
+        
+    },[])
+
   return (
     <div className='mb-4 xl:mb-10'>
 
@@ -71,7 +96,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                 </div>
  
-                <div className="
+                <div ref={windowContainerRef} className="
                 bg-white
                 pl-4
                 pr-2
@@ -80,7 +105,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                 xl:w-[50%]
                 ">
 
-                    <div > 
+                    <div ref={windowTitleRef}> 
 
                         <h4 className='
                         font-semibold
@@ -95,7 +120,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                     </div>
 
-                    <div>
+                    <div ref={windowContentRef}>
 
                         <p className='
                         mb-2
@@ -133,7 +158,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
         </div>
 
-        <div className='
+        <div ref={containerRef} className='
             md:hidden
             bg-white
             pl-4
@@ -146,7 +171,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             md:left-[20rem] xl:left-[52rem] 
             '>
 
-                <div > 
+                <div ref={titleRef}> 
 
                     <h4 className='
                     font-semibold
@@ -161,7 +186,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                 </div>
 
-                <div>
+                <div ref={contentRef}>
 
                     <p className='
                     mb-2
