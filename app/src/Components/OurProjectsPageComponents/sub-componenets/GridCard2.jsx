@@ -22,7 +22,7 @@ export const GridCard2 = ({Image, mainText, subText}) => {
         text-center 
         w-full
         bottom-0 
-        bg-gradient-to-t from-white/70 to-white/30
+        bg-gradient-to-t from-black  via-black/90  to-transparent
         ">
 
             <div className='
@@ -30,9 +30,9 @@ export const GridCard2 = ({Image, mainText, subText}) => {
             pb-4
             '>
 
-            <h4 className='font-medium text-xl text-black'>{mainText}</h4>
+            <h4 className='font-medium text-xl text-white'>{mainText}</h4>
             
-            <p className='font-normal text-[#000000b9] text-xl'>{subText}</p>
+            <p className='font-normal text-[#737373] text-xl'>{subText}</p>
 
             </div>
         </div>
