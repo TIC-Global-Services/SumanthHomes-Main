@@ -6,10 +6,32 @@ import Image4 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Im
 import Image5 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image5.jpg"
 import Image6 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image6.jpg"
 import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap/gsap-core'
+import { ScrollTrigger, gsap, TextPlugin } from 'gsap/all'
 import { CardButtons } from '../../sub-components/CardButtons'
+import '../../assets/styles/titleStyle.css';
+
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const CompletedProjectsSection = () => {
+
+  const titleRef = useRef(null);
+  useEffect(()=>{
+          const el = titleRef.current;
+          
+          gsap.to(el, {
+              duration:2,
+              text:{
+                  value:'Completed Projects',
+                  oldClass:'start',
+                  newClass:'end',
+              },
+              scrollTrigger:{
+                  trigger:el,
+                  start:"top center"
+              }
+          })
+      },[])
 
   let elWidth = 0;
   const tl = gsap.timeline();
@@ -80,7 +102,9 @@ export const CompletedProjectsSection = () => {
     mt-8
      xl:mb-28'>
 
-        <h2 className='
+        <h2 
+        ref={titleRef}
+        className='
         text-center
         mb-4 xl:mb-12
         font-semibold

@@ -4,11 +4,36 @@ import award1 from "../../assets/img/AboutSection/award1.png";
 import award2 from "../../assets/img/AboutSection/award2.png";
 import award3 from "../../assets/img/AboutSection/award3.png";
 import award4 from "../../assets/img/AboutSection/award4.png";
-import { useRef} from 'react';
-import { gsap } from 'gsap/gsap-core';
 import { CardButtons } from '../../sub-components/CardButtons';
+import { useRef, useEffect} from 'react';
+import { gsap } from 'gsap/gsap-core';
+import { TextPlugin, ScrollTrigger } from 'gsap/all';
+import '../../assets/styles/titleStyle.css';
+
+
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const SHSTeamSection = () => {
+
+  const titleRef = useRef(null);
+      
+      useEffect(()=>{
+          const el = titleRef.current;
+          
+          gsap.to(el, {
+              duration:2,
+              text:{
+                  value:'Studio leaders',
+                  oldClass:'start',
+                  newClass:'end',
+              },
+              scrollTrigger:{
+                  trigger:el,
+                  start:"top center"
+              }
+          })
+      },[])
 
   const tl = gsap.timeline();
 
@@ -82,7 +107,9 @@ export const SHSTeamSection = () => {
             font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
              text-[rgb(181,4,4)]
               text-xs'>SHS TEAM</p>
-            <h2 className='
+            <h2
+            ref={titleRef}
+            className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
             text-3xl xl:text-4xl md:text-xl'>Studio leaders</h2>

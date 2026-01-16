@@ -1,6 +1,29 @@
-import React from 'react'
+import { useRef, useEffect } from "react"
+import { TextPlugin, gsap, ScrollTrigger } from "gsap/all"
+
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const Card1 = ({number, content, pageNo}) => {
+
+  const numberRef = useRef(null);
+
+  useEffect(()=>{
+    const el = numberRef.current;
+
+    gsap.to(el, {
+      duration:1,
+      color:'#B40505',
+      text:{
+        value:number,
+      },
+      scrollTrigger:{
+        trigger:el,
+        start:"top 80%"
+      }
+    })
+  },[])
+
   return (
 
 
@@ -14,7 +37,7 @@ export const Card1 = ({number, content, pageNo}) => {
 
         <div className='md:w-[60%] xl:w-[60%] '>
 
-            <p className='font-normal tracking-wide'> <span className='text-[#B50404]'>{number}</span> {content}</p>
+            <p className='font-normal tracking-wide'> <span ref={numberRef} className='text-black'>{number}</span> {content}</p>
 
         </div>
 

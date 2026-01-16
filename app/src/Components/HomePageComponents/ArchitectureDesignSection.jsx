@@ -62,7 +62,7 @@ export const ArchitectureDesignSection = () => {
             duration:2, 
             scrollTrigger:{
                 trigger:titleEl,
-                start:"top 80%"
+                start:"top center"
             },
             text:{
                 value:"Crafting modern buildings where style meets purpose.",

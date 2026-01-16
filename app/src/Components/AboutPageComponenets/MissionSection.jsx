@@ -1,7 +1,32 @@
-import React from 'react'
+import { useRef, useEffect } from "react";
+import { gsap, ScrollTrigger, TextPlugin } from "gsap/all";
+import '../../assets/styles/titleStyle.css';
 import missionImage from "../../assets/img/AboutSection/missionImage.png"
 
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
+
 export const MissionSection = () => {
+
+    const titleRef = useRef(null);
+    
+    useEffect(()=>{
+        const el = titleRef.current;
+        
+        gsap.to(el, {
+            duration:2,
+            text:{
+                value:'Designs that Inspire Living',
+                oldClass:'start',
+                newClass:'end',
+            },
+            scrollTrigger:{
+                trigger:el,
+                start:"top center"
+            }
+        })
+    },[])
+
   return (
     <div className='
     flex flex-col md:flex-row justify-between items-center
@@ -24,7 +49,9 @@ export const MissionSection = () => {
             text-[rgb(181,4,4)]
             text-xs'>OUR MISSION</p>
 
-            <h2 className='
+            <h2
+            ref={titleRef}
+            className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
             text-3xl xl:text-4xl md:text-xl'>Designs that Inspire Living</h2>

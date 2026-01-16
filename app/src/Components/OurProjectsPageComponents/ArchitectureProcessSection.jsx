@@ -1,17 +1,33 @@
 import { GridCard1 } from './sub-componenets/GridCard1'
 import {gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger, TextPlugin } from 'gsap/all';
 import { useRef, useEffect } from 'react';
+import '../../assets/styles/titleStyle.css';
 
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const ArchitectureProcessSection = () => {
 
-  const card1 = useRef(null);
-  const card2 = useRef(null);
-  const card3 = useRef(null);
-  const card4 = useRef(null);
+  const titleRef = useRef(null);
+      
+      useEffect(()=>{
+          const el = titleRef.current;
+          
+          gsap.to(el, {
+              duration:2,
+              text:{
+                  value:'From Concept to Completion',
+                  oldClass:'start',
+                  newClass:'end',
+              },
+              scrollTrigger:{
+                  trigger:el,
+                  start:"top center"
+              }
+          })
+      },[])
 
-  
   return (
     <div className='
     flex items-start justify-between flex-wrap 
@@ -23,7 +39,9 @@ export const ArchitectureProcessSection = () => {
         md:mb-4'>
 
             <p className='mb-1 xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
-            <h2 className='
+            <h2 
+            ref={titleRef}
+            className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
             text-3xl xl:text-4xl md:text-xl'>From Concept to Completion</h2>
@@ -44,10 +62,10 @@ export const ArchitectureProcessSection = () => {
         }}
         >
                      
-           <GridCard1 refName={card1} number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
-           <GridCard1 refName={card2}  number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
-           <GridCard1 refName={card3} number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
-           <GridCard1 refName={card4} number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+           <GridCard1 number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
+           <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+           <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+           <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
 
         </div>
 

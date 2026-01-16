@@ -1,8 +1,34 @@
 import Prj1BgImage from "../../assets/img/OurProjectsSection/arialDayView.jpg"
 import Prj2BgImage from "../../assets/img/OurProjectsPage/elevation8k.jpg"
 import { DefaultOurProjects } from "../DefaultOurProjectsSection"
+import { useRef, useEffect } from "react"
+import { gsap ,ScrollTrigger, TextPlugin } from "gsap/all"
+import '../../assets/styles/titleStyle.css';
+
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const OurProjectsSection = () => {
+
+  const titleRef = useRef(null);
+      
+      useEffect(()=>{
+          const el = titleRef.current;
+          
+          gsap.to(el, {
+              duration:2,
+              text:{
+                  value:'Ongoing Projects',
+                  oldClass:'start',
+                  newClass:'end',
+              },
+              scrollTrigger:{
+                  trigger:el,
+                  start:"top center"
+              }
+          })
+      },[])
+
   return (
     <div>
 
@@ -13,7 +39,9 @@ export const OurProjectsSection = () => {
             font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
             text-[rgb(181,4,4)]
             text-xs'>DREAMS IN CONCRETE</p>
-            <h2 className='
+            <h2 
+            ref={titleRef}
+            className='
             text-center font-manrope font-semibold
           text-black
             text-3xl xl:text-4xl xl:mb-5 md:text-2xl md:mb-5 '>Ongoing Projects</h2>

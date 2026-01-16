@@ -1,8 +1,33 @@
-import React from 'react'
 import image1 from "../../assets/img/AboutSection/shvalueImage1.png"
 import image2 from "../../assets/img/AboutSection/shvalueImage2.png"
+import { useRef, useEffect } from "react";
+import { gsap, TextPlugin, ScrollTrigger } from "gsap/all";
+import '../../assets/styles/titleStyle.css'
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 export const SHValues = () => {
+
+  const titleRef = useRef(null);
+      
+      useEffect(()=>{
+          const el = titleRef.current;
+          
+          gsap.to(el, {
+              duration:2,
+              text:{
+                  value:'What We Stand For',
+                  oldClass:'start',
+                  newClass:'end',
+              },
+              scrollTrigger:{
+                  trigger:el,
+                  start:"top center"
+              }
+          })
+      },[])
+
   return (
     <div className='flex xl:gap-3 
     mb-14 xl:mb-28'>
@@ -15,7 +40,9 @@ export const SHValues = () => {
             text-[rgb(181,4,4)]
             text-xs'>SH VALUES</p>
 
-            <h2 className='
+            <h2 
+            ref={titleRef}
+            className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold 
             text-3xl xl:text-4xl md:text-xl'>What We Stand For</h2>

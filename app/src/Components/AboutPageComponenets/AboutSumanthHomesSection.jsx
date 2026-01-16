@@ -1,9 +1,34 @@
 import imageLeft from "../../assets/img/AboutSection/image-left.png"
 import imageMiddle from "../../assets/img/AboutSection/image-middle.png"
 import imageRight from "../../assets/img/AboutSection/image-right.png"
-import {gsap} from "gsap"
+import { useEffect, useRef } from "react"
+import { gsap, ScrollTrigger, TextPlugin } from "gsap/all";
+import '../../assets/styles/titleStyle.css';
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 export const AboutSumanthHomesSection = () => {
+
+  const titleRef = useRef(null);
+
+  useEffect(()=>{
+
+    const el = titleRef.current;
+
+    gsap.to(el, {
+      duration:2,
+      text:{
+        value:'Crafting contemporary buildings with elegance.',
+        oldClass:'start',
+        newClass:'end',
+      },
+      scrollTrigger:{
+        trigger:el,
+        start:"top center"
+      }
+    })
+  },[])
   return (
 
     <div className='
@@ -55,7 +80,8 @@ export const AboutSumanthHomesSection = () => {
             text-[rgb(181,4,4)]
             text-xs'>About Sumanth homes</p>
 
-            <h4 className='
+
+            <h4 ref={titleRef} className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
             text-3xl xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
