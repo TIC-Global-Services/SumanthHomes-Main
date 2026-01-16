@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react'
 import img1 from "../../assets/img/ArchitectureDesign/arielDay8k.jpg";
 import img2 from "../../assets/img/ArchitectureDesign/ArchitectureImage2.png";
 import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import {gsap} from "gsap/gsap-core"
 import { TextPlugin, ScrollTrigger } from 'gsap/all'; 
 import { CardButtons } from '../../sub-components/CardButtons';
-
+import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +19,12 @@ export const ArchitectureDesignSection = () => {
 
     const titleRef = useRef(null);
     const CardRef = useRef(null);
+    const contentRef = useRef(null);
+    const containerRef = useRef(null);
+
+    useEffect(()=>{
+        TextSlideInAnimation(titleRef, contentRef, containerRef);
+    },[])
 
     const ArchitectureCards = [
         {
@@ -78,13 +83,13 @@ export const ArchitectureDesignSection = () => {
     
 
   return (
-    <div className=' my-20'>
+    <div ref={containerRef} className=' my-20'>
 
         <div className='
         xl:flex items-end justify-between 
         xl:gap-96'>
 
-            <div className='text-left'>
+            <div ref={titleRef} className='text-left'>
 
                 <style>
                     {
@@ -105,7 +110,7 @@ export const ArchitectureDesignSection = () => {
                 text-xs md:text-xs 
                 uppercase leading-8 tracking-widest'>ARCHITECTURE & DESIGN</p>
                 <h4
-                ref={titleRef}
+                
                 className='
                 text-black
                 font-bold
@@ -118,7 +123,7 @@ export const ArchitectureDesignSection = () => {
 
             </div>
 
-            <div className='xl:w-[50%] md:pt-2'>
+            <div ref={contentRef} className='xl:w-[50%] md:pt-2'>
 
                 <p className='
                 font-normal 

@@ -3,6 +3,7 @@ import {gsap } from "gsap"
 import { ScrollTrigger, TextPlugin } from 'gsap/all';
 import { useRef, useEffect } from 'react';
 import '../../assets/styles/titleStyle.css';
+import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -10,26 +11,15 @@ gsap.registerPlugin(ScrollTrigger);
 export const ArchitectureProcessSection = () => {
 
   const titleRef = useRef(null);
+  const contentRef = useRef(null);
+  const containerRef = useRef(null);
       
       useEffect(()=>{
-          const el = titleRef.current;
-          
-          gsap.to(el, {
-              duration:2,
-              text:{
-                  value:'From Concept to Completion',
-                  oldClass:'start',
-                  newClass:'end',
-              },
-              scrollTrigger:{
-                  trigger:el,
-                  start:"top center"
-              }
-          })
+          TextSlideInAnimation(titleRef, contentRef, containerRef);
       },[])
 
   return (
-    <div className='
+    <div ref={containerRef} className='
     flex items-start justify-between flex-wrap 
     xl:mt-20
     mb-20 xl:mb-24'>
@@ -38,14 +28,17 @@ export const ArchitectureProcessSection = () => {
         w-full md:w-[40%] xl:w-[40%]
         md:mb-4'>
 
+            <div ref={titleRef}>
             <p className='mb-1 xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
             <h2 
-            ref={titleRef}
+            
             className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
             text-3xl xl:text-4xl md:text-xl'>From Concept to Completion</h2>
-            <p className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
+            </div>
+
+            <p ref={contentRef} className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
               At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
             </p>
 

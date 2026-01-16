@@ -3,6 +3,7 @@ import imageMiddle from "../../assets/img/AboutSection/image-middle.png"
 import imageRight from "../../assets/img/AboutSection/image-right.png"
 import { useEffect, useRef } from "react"
 import { gsap, ScrollTrigger, TextPlugin } from "gsap/all";
+import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import '../../assets/styles/titleStyle.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,27 +12,16 @@ gsap.registerPlugin(TextPlugin);
 export const AboutSumanthHomesSection = () => {
 
   const titleRef = useRef(null);
+  const contentRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(()=>{
-
-    const el = titleRef.current;
-
-    gsap.to(el, {
-      duration:2,
-      text:{
-        value:'Crafting contemporary buildings with elegance.',
-        oldClass:'start',
-        newClass:'end',
-      },
-      scrollTrigger:{
-        trigger:el,
-        start:"top center"
-      }
-    })
+    TextSlideInAnimation(titleRef, contentRef, containerRef);
   },[])
+
   return (
 
-    <div className='
+    <div ref={containerRef} className='
     flex items-center flex-wrap
     gap-8 md:gap-12 xl:gap-16
     mt-8 xl:mt-20 md:mt-14
@@ -74,6 +64,7 @@ export const AboutSumanthHomesSection = () => {
         w-[100%] xl:w-[40%] md:w-[90%]
         '>
 
+          <div ref={titleRef}>
             <p className='
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
@@ -81,12 +72,16 @@ export const AboutSumanthHomesSection = () => {
             text-xs'>About Sumanth homes</p>
 
 
-            <h4 ref={titleRef} className='
+            <h4 className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold
             text-3xl xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
 
-            <p className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
+          </div>
+
+            <p
+            ref={contentRef}
+            className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
               
               Established in 2013, Sumanth Homes is a partnership firm specializing in high-quality residential and commercial projects. With over 30 years of experience, Managing Partner Manohar Katta brings deep industry expertise and traditional values, while the other partners contribute modern technologies and advanced quality control practices.
 
