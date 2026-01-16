@@ -15,8 +15,26 @@ export const AboutSumanthHomesSection = () => {
   const contentRef = useRef(null);
   const containerRef = useRef(null);
 
+  const imageRef = useRef(null);
+
   useEffect(()=>{
     TextSlideInAnimation(titleRef, contentRef, containerRef);
+
+    gsap.fromTo(imageRef.current, {
+          x:-100,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset",
+        }
+        },
+        {
+          x:0,
+          duration:.5,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset"
+          }
+        })
   },[])
 
   return (
@@ -27,7 +45,7 @@ export const AboutSumanthHomesSection = () => {
     mt-8 xl:mt-20 md:mt-14
     mb-14 xl:mb-20 md:mb-12'>
 
-        <div className='
+        <div ref={imageRef} className='
         flex items-center relative
         gap-1 xl:gap-3 md:gap-2
         '>

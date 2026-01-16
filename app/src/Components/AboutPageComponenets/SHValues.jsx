@@ -13,9 +13,44 @@ export const SHValues = () => {
   const titleRef = useRef(null);
   const contentRef = useRef(null);
   const containerRef = useRef(null);
+
+  const image1Ref = useRef(null);
+  const image2Ref = useRef(null);
       
       useEffect(()=>{
         TextSlideInAnimation(titleRef, contentRef, containerRef);
+
+        gsap.fromTo(image1Ref.current, {
+          y:100,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset",
+        }
+        },
+        {
+          y:0,
+          duration:2,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset"
+          }
+        })
+
+        gsap.fromTo(image2Ref.current, {
+          y:100,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset",
+        }
+        },
+        {
+          y:0,
+          duration:2,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset"
+          }
+        })
       },[])
 
   return (
@@ -44,7 +79,7 @@ export const SHValues = () => {
 
         </div>
 
-        <div className='hidden xl:block'>
+        <div ref={image1Ref} className='hidden xl:block'>
 
             <img className='
             xl:w-[70rem]
@@ -54,7 +89,7 @@ export const SHValues = () => {
 
         </div>
 
-        <div className='hidden xl:block'>
+        <div ref={image2Ref} className='hidden xl:block'>
 
             <img className='xl:w-[70rem] xl:h-[20rem] md:h-[12rem]' src={image2} />
 

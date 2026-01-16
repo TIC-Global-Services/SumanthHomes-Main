@@ -17,6 +17,22 @@ export const VisionSection = () => {
     
     useEffect(()=>{
         TextSlideInAnimation(titleRef, contentRef, containerRef);
+
+        gsap.fromTo(imageRef.current, {
+          x:100,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset",
+        }
+        },
+        {
+          x:0,
+          duration:.5,
+          scrollTrigger:{
+            trigger:containerRef.current,
+            toggleActions:"play none none reset"
+          }
+        })
     },[])
 
 

@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Card1 = ({number, content, pageNo}) => {
 
   const numberRef = useRef(null);
+  const cardRef = useRef(null);
 
   useEffect(()=>{
     const el = numberRef.current;
@@ -22,12 +23,29 @@ export const Card1 = ({number, content, pageNo}) => {
         start:"top 80%"
       }
     })
+
+    gsap.fromTo(cardRef.current, {
+          y:100,
+          scrollTrigger:{
+            trigger:cardRef.current,
+            toggleActions:"play none none reset",
+        }
+        },
+        {
+          y:0,
+          duration:.5,
+          scrollTrigger:{
+            trigger:cardRef.current,
+            toggleActions:"play none none reset"
+          }
+        })
+
   },[])
 
   return (
 
 
-    <div className='
+    <div ref={cardRef} className='
     
     flex items-center justify-between
     md:gap-5 border-t-2
