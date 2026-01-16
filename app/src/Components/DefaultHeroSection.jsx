@@ -6,18 +6,7 @@ gsap.registerPlugin(TextPlugin);
 
 export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
   
-  const textRef = useRef(null);
 
-  useEffect(()=>{
-    let el = textRef.current;
-    gsap.to(el,{
-      duration:2,
-      color:"#B50404",
-      text:{
-        value:subText,
-      }
-    })
-  },)
   
 
   return (
@@ -42,11 +31,10 @@ export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
 
             <p className='
             font-jakarta font-semibold
-            tracking-widest uppercase [word-spacing:5px] text-black 
+            tracking-widest uppercase [word-spacing:5px] text-[#B40505]
             text-[.8rem] md:text-xs xl:text-xs'
             
-            ref={textRef}
-            ></p>
+            >{subText}</p>
 
         </div>
 

@@ -1,33 +1,11 @@
 import {useRef, useEffect} from "react";
-import { gsap } from "gsap/gsap-core";
-import { TextPlugin, ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(ScrollTrigger);
 
 export const HistorySection = () => {
 
-  const mainContainer = useRef(null);
-  const subText = useRef(null);
-
-  useEffect(()=>{
-
-
-    const el = subText.current;
-    gsap.to(el, {
-      duration:2,
-      scrollTrigger:{
-        trigger:el,
-      },
-      text:{
-        value:"Years Of Excellence"
-      }
-    })
-  },[])
+  
 
   return (
     <div 
-    ref={mainContainer}
     className='
     relative
     flex justify-center items-center
@@ -43,12 +21,14 @@ export const HistorySection = () => {
               font-extrabold text-[#B50404]
               text-9xl xl:text-[14rem] md:text-9xl '>13</p>
 
-              <h2 ref={subText} className='
+              <h2 className='
               flex align-center justify-center
               font-urbanist font-medium 
               text-3xl xl:text-8xl md:text-5xl
               tracking-tight xl:tracking-[-2px] 
-              mb-3'></h2>
+              mb-3'>
+                Years Of Excellence
+              </h2>
 
               <div className='flex items-center justify-center'>
 

@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react"
-import { NavBar } from "./Components/NavBar"
-import { Footer } from "./Components/Footer"
 import { HomePage } from "./PageComponents/HomePage"
 import { AboutPage } from "./PageComponents/AboutPage"
 import { ProjectsPage } from "./PageComponents/ProjectsPage"

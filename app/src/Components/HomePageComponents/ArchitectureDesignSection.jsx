@@ -52,26 +52,7 @@ export const ArchitectureDesignSection = () => {
     let frame = 0;
     const maxFrame = (ArchitectureCards.length-1);
 
-    useEffect(()=>{
-        
-        const el = CardRef.current;
-        containerWidth = el.offsetWidth + 16;
 
-        const titleEl = titleRef.current;
-        gsap.to(titleEl, {
-            duration:2, 
-            scrollTrigger:{
-                trigger:titleEl,
-                start:"top center"
-            },
-            text:{
-                value:"Crafting modern buildings where style meets purpose.",
-                oldClass:'start',
-                newClass:'end'
-            }
-        })
-
-    },[])
 
 
     const prev = ()=>{
@@ -126,7 +107,7 @@ export const ArchitectureDesignSection = () => {
                 <h4
                 ref={titleRef}
                 className='
-                text-[#B40505]
+                text-black
                 font-bold
                 text-3xl xl:text-4xl md:text-2xl
                 mb-4
