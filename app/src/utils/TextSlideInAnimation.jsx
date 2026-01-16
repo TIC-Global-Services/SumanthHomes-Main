@@ -38,7 +38,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
     },
     {
       y:0,
-      opacity:.5,
+      opacity:1,
       delay:.3,
       scrollTrigger:{
         trigger:containerRef.current,

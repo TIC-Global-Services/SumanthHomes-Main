@@ -1,19 +1,34 @@
-import React from 'react'
+import { useEffect, useRef } from "react"
+import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
+import { ScrollTrigger, gsap } from "gsap/all"
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const KnowUsSection = () => {
+
+    const titleRef = useRef(null);
+    const contentRef = useRef(null);
+    const containerRef = useRef(null);
+
+    useEffect(()=>{
+        TextSlideInAnimation(titleRef, contentRef, containerRef);
+    },[])
+
   return (
-    <div className='
+    <div
+    ref={containerRef}
+    className='
     flex justify-between items-end flex-wrap gap-4
     mb-16 xl:mb-20'>
 
-        <div className='xl:w-[30%]'>
+        <div ref={titleRef} className='xl:w-[30%]'>
 
             <p className='font-semibold tracking-widest uppercase [word-spacing:5px] text-[#B50404] text-xs mb-2'>Get to know us</p>
             <h2 className='font-manrope font-semibold text-3xl'>Reach Out to Our Team and Office</h2>
 
         </div>
 
-        <div className='flex gap-2 items-center xl:w-[30%] '>
+        <div ref={contentRef} className='flex gap-2 items-center xl:w-[30%] '>
 
             <svg width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M41.5013 48.4167C49.1304 48.4167 55.3346 42.2124 55.3346 34.5833C55.3346 26.9542 49.1304 20.75 41.5013 20.75C33.8722 20.75 27.668 26.9542 27.668 34.5833C27.668 42.2124 33.8722 48.4167 41.5013 48.4167ZM41.5013 27.6667C45.3158 27.6667 48.418 30.7688 48.418 34.5833C48.418 38.3979 45.3158 41.5 41.5013 41.5C37.6868 41.5 34.5846 38.3979 34.5846 34.5833C34.5846 30.7688 37.6868 27.6667 41.5013 27.6667Z" fill="#B50404"/>
