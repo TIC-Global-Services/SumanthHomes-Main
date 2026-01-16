@@ -1,13 +1,18 @@
 import { gsap, ScrollTrigger } from "gsap/all"
 import { useEffect, useRef } from "react"
+import { TextSlideInAnimation } from "../../../utils/TextSlideInAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Card2 = ({Number, titleText, contentText, plus=false}) => {
     
     const numberRef = useRef(null);
+    const titleRef = useRef(null);
+    const contentRef = useRef(null);
+    const containerRef = useRef(null);
 
     useEffect(()=>{
+
         const obj = {value:0};
 
         gsap.to(obj,{
@@ -19,7 +24,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
                 numberRef.current.textContent = Math.floor(obj.value);
             },
             scrollTrigger:{
-                trigger:numberRef.current,
+                trigger:containerRef.current,
                 start:"top 80%",
                 once:true,
             }
@@ -27,10 +32,14 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
         )
     },[Number])
+
+    useEffect(()=>{
+        TextSlideInAnimation(titleRef, contentRef, containerRef);
+    },[])
     
   return (
 
-    <div className='
+    <div ref={containerRef} className='
     bg-white
     flex items-center 
     text-center
@@ -42,7 +51,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
     mb-4
     '>
         
-        <div className='
+        <div  className='
         w-[10%] md:w-[10%] xl:w-[40%]
         text-right
         '>
@@ -56,17 +65,17 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
         </div>
 
-        <div className='
+        <div  className='
         text-left
         w-[90%] md:w-[90%] xl:w-[60%]'> 
 
-            <h5 className='
+            <h5 ref={titleRef} className='
             font-medium text-black 
             text-xl md:text-sm xl:text-sm
             md:text-left xl:text-left
             md:tracking-tighter xl:tracking-tight 
             '>{titleText}</h5>
-            <p className='
+            <p ref={contentRef} className='
             text-[#464851] 
              md:text-xs 
             md:text-left xl:text-left 
