@@ -12,6 +12,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       opacity:0,
       scrollTrigger:{
         trigger:containerRef.current,
+        start:"top 80%",
         toggleActions:"play none none reset",
       }
     },
@@ -22,6 +23,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       
       scrollTrigger:{
         trigger:containerRef.current,
+        start:"top 80%",
         toggleActions:"play none none reset",
       }
     }
@@ -33,6 +35,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       opacity:0,
       scrollTrigger:{
         trigger:containerRef.current,
+        start:"top 80%",
         toggleActions:"play none none reset"
       }
     },
@@ -42,6 +45,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       delay:.3,
       scrollTrigger:{
         trigger:containerRef.current,
+        start:"top 80%",
         toggleActions:"play none none reset",
       }
     }

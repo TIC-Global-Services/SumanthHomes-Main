@@ -5,16 +5,21 @@ import { gsap, TextPlugin, ScrollTrigger } from "gsap/all";
 import '../../assets/styles/titleStyle.css'
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const VisionSection = () => {
 
     const titleRef = useRef(null);
     const subtitleRef = useRef(null)
     const contentRef = useRef(null);
     const containerRef = useRef(null);
+    const imageRef = useRef(null);
     
     useEffect(()=>{
         TextSlideInAnimation(titleRef, contentRef, containerRef);
     },[])
+
+
 
   return (
     <div ref={containerRef} className='
@@ -50,7 +55,7 @@ export const VisionSection = () => {
 
         <div className=' md:w-[50%]'>
 
-            <img className=' md:h-[18%] md:w-full xl:h-[18rem] xl:w-[40rem]' src={visionImage}></img>
+            <img ref={imageRef} className=' md:h-[18%] md:w-full xl:h-[18rem] xl:w-[40rem]' src={visionImage}></img>
 
         </div>
 
