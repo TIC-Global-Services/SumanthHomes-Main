@@ -5,12 +5,17 @@ import { useRef, useState, useEffect} from "react";
 
 export const NavBar = () => {
 
+  const tl = gsap.timeline();
   const [clicked, setClicked] = useState(false);
 
 const navBarMenuBtn = useRef(null);
 const navBarMenu = useRef(null);
 const line1 = useRef(null);
 const line2 = useRef(null);
+const homeOption = useRef(null);
+const aboutOption = useRef(null);
+const projectOption = useRef(null);
+const contactOption = useRef(null);
 
 useEffect(() => {
   gsap.set(line1.current, { y: -6 });
@@ -36,6 +41,50 @@ const navMenu = () => {
   if (!clicked) {
     navBarMenuBtn.current.style.display = "block";
     navBarMenu.current.style.backgroundColor = "rgba(255,255,255,1)";
+
+    tl.fromTo(navBarMenuBtn.current, {
+      opacity:0,
+    }, {
+      opacity:1,
+      duration:.5,
+    })
+
+    tl.fromTo(homeOption.current, {
+      x:-100,
+      opacity:0,
+    }, {
+      x:0,
+      opacity:1,
+      duration:.1,
+    })
+
+    tl.fromTo(aboutOption.current, {
+      x:-100,
+      opacity:0,
+    }, {
+      x:0,
+      opacity:1,
+      duration:.1,
+    })
+
+    tl.fromTo(projectOption.current, {
+      x:-100,
+      opacity:0,
+    }, {
+      x:0,
+      opacity:1,
+      duration:.1,
+    })
+
+    tl.fromTo(contactOption.current, {
+      x:-100,
+      opacity:0,
+    }, {
+      x:0,
+      opacity:1,
+      duration:.1,
+    })
+
   } else {
     navBarMenuBtn.current.style.display = "none";
     navBarMenu.current.style.backgroundColor = "rgba(255,255,255,0.2)";
@@ -171,16 +220,17 @@ const handleNotHover = (e) => {
         
         ">
 
-          <Link to='/'><li className="
+          <Link to='/'><li ref={homeOption} className="
           pl-10
+          
           " >HOME</li></Link>
-          <Link to='/about'><li className="
+          <Link to='/about'><li ref={aboutOption} className="
           pl-10
           " >ABOUT</li></Link>
-          <Link to='/projects'><li className="
+          <Link to='/projects'><li ref={projectOption} className="
           pl-10
           " >PROJECTS</li></Link>
-          <Link to='/contact'><li className="
+          <Link to='/contact'><li ref={contactOption} className="
           pl-10
           " >CONTACT</li></Link>          
 
