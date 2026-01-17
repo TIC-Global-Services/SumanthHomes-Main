@@ -36,7 +36,9 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       scrollTrigger:{
         trigger:containerRef.current,
         start:"top 90%",
-        toggleActions:"play none none reset"
+        bottom:"bottom 90%",
+        toggleActions:"play none none reset",
+        markers:true,
       }
     },
     {
@@ -46,6 +48,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       scrollTrigger:{
         trigger:containerRef.current,
         start:"top 90%",
+        bottom:"bottom 90%",
         toggleActions:"play none none reset",
       }
     }
