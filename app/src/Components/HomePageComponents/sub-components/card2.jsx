@@ -35,6 +35,13 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
     useEffect(()=>{
         TextSlideInAnimation(titleRef, contentRef, containerRef);
+
+        const onLoad = ()=>{ScrollTrigger.refresh(true);}
+        window.addEventListener("load",onLoad);
+
+        return(
+            ()=>{window.removeEventListener("load", onLoad)}
+        )
     },[])
     
   return (

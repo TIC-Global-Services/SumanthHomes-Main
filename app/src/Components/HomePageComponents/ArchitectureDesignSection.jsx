@@ -23,6 +23,7 @@ export const ArchitectureDesignSection = () => {
     const containerRef = useRef(null);
 
     useEffect(()=>{
+        containerWidth = CardRef.current.offsetWidth + 16;
         TextSlideInAnimation(titleRef, contentRef, containerRef);
     },[])
 
@@ -73,6 +74,7 @@ export const ArchitectureDesignSection = () => {
 
     const next = ()=>{
         if((frame) < maxFrame){
+            console.log("next button is being fired!");
             frame = frame+1;
             const el = CardRef.current;
             tl.to(el,{

@@ -14,6 +14,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
         trigger:containerRef.current,
         start:"top 90%",
         toggleActions:"play none none reset",
+        invalidateOnRefresh:true,
       }
     },
     {
@@ -25,6 +26,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
         trigger:containerRef.current,
         start:"top 90%",
         toggleActions:"play none none reset",
+        invalidateOnRefresh:true,
       }
     }
   )
@@ -37,6 +39,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
         trigger:containerRef.current,
         start:"top 90%",
         bottom:"bottom 90%",
+        invalidateOnRefresh:true,
         toggleActions:"play none none reset",
       }
     },
@@ -49,6 +52,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
         start:"top 90%",
         bottom:"bottom 90%",
         toggleActions:"play none none reset",
+        invalidateOnRefresh:true,
       }
     }
   )
