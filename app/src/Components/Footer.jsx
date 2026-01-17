@@ -55,7 +55,7 @@ export const Footer = () => {
                 }}
                 className='
                     absolute
-                    md:left-[30px] xl:left-[153px]
+                    top-0 left-0 w-full
                     bg-gradient-to-tr from-[#B40505] to-[#da4949]
                     bg-clip-text
                     font-extrabold text-transparent 
