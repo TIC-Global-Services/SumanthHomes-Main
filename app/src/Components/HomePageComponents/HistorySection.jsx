@@ -48,8 +48,7 @@ export const HistorySection = () => {
                 <div className='flex items-center justify-center'>
 
                   <p className='
-                  font-jakarta font-medium text-[#737373]
-                   xl:text-xs
+                  font-medium text-[#737373]
                   leading-4
                   w-[100%] xl:w-[50%] md:w-[80%] '>We are dedicated to crafting architectural and design experiences that not only serve a clear functional purpose but also elevate the spaces they inhabit through thoughtful, visually inspiring aesthetics. Our approach blends practicality with creativity, ensuring every environment we shape is as efficient as it is expressive.</p>
 
