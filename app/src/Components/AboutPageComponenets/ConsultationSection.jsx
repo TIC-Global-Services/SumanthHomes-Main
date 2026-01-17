@@ -1,7 +1,14 @@
-import React from 'react'
-import bgImage from "../../assets/img/AboutSection/consultationBgImage.png"
+import bgImage from "../../assets/img/AboutSection/consultationBgImage.png";
+import { useNavigate } from "react-router-dom";
 
 export const ConsultationSection = () => {
+
+  const navigate = useNavigate();
+    
+  const handleClick = () =>{
+    navigate('/contact');
+  }
+
   return (
     <div className='
     flex 
@@ -49,7 +56,7 @@ export const ConsultationSection = () => {
           </div>
 
           <div className=''>
-            <button className='
+            <button onClick={handleClick} className='
             bg-[#B50404] font-manrope font-bold tracking-wide rounded-md
              px-4 md:px-8 xl:px-14
              py-2 md:py-2 xl:py-4 
