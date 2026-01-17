@@ -39,6 +39,7 @@ export const VisionSection = () => {
 
   return (
     <div ref={containerRef} className='
+    overflow-hidden
     flex justify-between items-center flex-wrap
     xl:gap-10 md:gap-3
     mb-14 xl:mb-10 md:mb-10'>

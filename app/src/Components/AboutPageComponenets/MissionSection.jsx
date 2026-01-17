@@ -38,6 +38,7 @@ export const MissionSection = () => {
 
   return (
     <div  ref={containerRef} className='
+    overflow-hidden
     flex flex-col md:flex-row justify-between items-center
     xl:gap-10 md:gap-3  xl:mt-4 md:mt-4
     mb-14 xl:mb-20 md:mb-14'>
