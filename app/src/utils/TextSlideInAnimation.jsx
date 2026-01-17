@@ -1,10 +1,7 @@
 import { ScrollTrigger, gsap } from "gsap/all";
-    
-gsap.registerPlugin(ScrollTrigger);
-
+    gsap.registerPlugin(ScrollTrigger);
 export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
 
-  ScrollTrigger.config({ignoreMobileResize:true})
 
 
     const title = titleRef.current;
@@ -15,7 +12,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       opacity:0,
       scrollTrigger:{
         trigger:containerRef.current,
-        start:"top bottom",
+        start:"top 90%",
         toggleActions:"play none none reset",
       }
     },
@@ -26,7 +23,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       
       scrollTrigger:{
         trigger:containerRef.current,
-        start:"top bottom",
+        start:"top 90%",
         toggleActions:"play none none reset",
       }
     }
@@ -38,8 +35,8 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       opacity:0,
       scrollTrigger:{
         trigger:containerRef.current,
-        start:"top bottom",
-        toggleActions:"play none none reset",
+        start:"top 90%",
+        toggleActions:"play none none reset"
       }
     },
     {
@@ -48,7 +45,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       delay:.3,
       scrollTrigger:{
         trigger:containerRef.current,
-        start:"top bottom",
+        start:"top 90%",
         toggleActions:"play none none reset",
       }
     }
