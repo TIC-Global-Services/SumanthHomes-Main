@@ -5,8 +5,8 @@ import { useRef, useState, useEffect} from "react";
 
 export const NavBar = () => {
 
-  const tl = gsap.timeline();
-  const [clicked, setClicked] = useState(false);
+const tl = gsap.timeline();
+const [clicked, setClicked] = useState(false);
 
 const navBarMenuBtn = useRef(null);
 const navBarMenu = useRef(null);
@@ -24,15 +24,25 @@ useEffect(() => {
 
 // Making navbar X
 useEffect(() => {
+
   if (!line1.current || !line2.current) return;
 
-  if (clicked) {
+  const ctx = gsap.context(()=>{
+
+    if (clicked) {
     gsap.to(line1.current, { rotate: 45, y: 0, duration: 0.3 });
     gsap.to(line2.current, { rotate: -45, y: 0, duration: 0.3 });
+
   } else {
+    
     gsap.to(line1.current, { rotate: 0, y: -6, duration: 0.3 });
     gsap.to(line2.current, { rotate: 0, y: 6, duration: 0.3 });
   }
+  })
+
+  return(
+    ()=>{ctx.revert()}
+  )
 }, [clicked]);
 
 const navMenu = () => {

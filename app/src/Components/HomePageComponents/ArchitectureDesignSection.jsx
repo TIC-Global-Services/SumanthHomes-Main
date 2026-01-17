@@ -23,8 +23,10 @@ export const ArchitectureDesignSection = () => {
     const containerRef = useRef(null);
 
     useEffect(()=>{
+
         containerWidth = CardRef.current.offsetWidth + 16;
         TextSlideInAnimation(titleRef, contentRef, containerRef);
+        
     },[])
 
     const ArchitectureCards = [
