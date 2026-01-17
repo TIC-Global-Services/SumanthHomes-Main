@@ -38,7 +38,6 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
         start:"top 90%",
         bottom:"bottom 90%",
         toggleActions:"play none none reset",
-        markers:true,
       }
     },
     {
