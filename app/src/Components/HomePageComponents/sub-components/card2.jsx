@@ -37,21 +37,21 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
     //     })
     // },[Number])
 
-    // useEffect(()=>{
+    useEffect(()=>{
         
 
-    //     const ctx = gsap.context(()=>{
-    //         TextSlideInAnimation(titleRef, contentRef, containerRef);
-    //     }, containerRef)
+        const ctx = gsap.context(()=>{
+            TextSlideInAnimation(titleRef, contentRef, containerRef);
+        }, containerRef)
 
-    //     ScrollTrigger.refresh();
+        ScrollTrigger.refresh();
         
-    //     return(
-    //         ()=>{
-    //             ctx.revert();
-    //         }
-    //     )
-    // },[])
+        return(
+            ()=>{
+                ctx.revert();
+            }
+        )
+    },[])
     
   return (
 
