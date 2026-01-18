@@ -1,6 +1,7 @@
 import { gsap, ScrollTrigger } from "gsap/all"
 import { useEffect, useRef } from "react"
 import { TextSlideInAnimation } from "../../../utils/TextSlideInAnimation";
+import { motion } from "motion/react"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,25 +38,31 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
     //     })
     // },[Number])
 
-    useEffect(()=>{
+    // useEffect(()=>{
         
 
-        const ctx = gsap.context(()=>{
-            TextSlideInAnimation(titleRef, contentRef, containerRef);
-        }, containerRef)
+    //     const ctx = gsap.context(()=>{
+    //         TextSlideInAnimation(titleRef, contentRef, containerRef);
+    //     }, containerRef)
 
-        ScrollTrigger.refresh();
+    //     ScrollTrigger.refresh();
         
-        return(
-            ()=>{
-                ctx.revert();
-            }
-        )
-    },[])
+    //     return(
+    //         ()=>{
+    //             ctx.revert();
+    //         }
+    //     )
+    // },[])
     
   return (
 
-    <div ref={containerRef} className='
+        <motion.div
+          initial={{opacity:0, y:50}}
+          whileInView={{opacity:1, y:0}}
+          viewport={{once:false}}
+          transition={{duration:0.5}}
+
+          ref={containerRef} className='
     bg-white
     flex items-center 
     text-center
@@ -101,7 +108,8 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
         </div>
 
-    </div>
+    </motion.div>
+    
 
 
 )
