@@ -1,58 +1,35 @@
 import { gsap, ScrollTrigger } from "gsap/all"
-import { useEffect, useRef } from "react"
+import { useEffect, useState, useRef } from "react"
 import { TextSlideInAnimation } from "../../../utils/TextSlideInAnimation";
 import { motion } from "motion/react"
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Card2 = ({Number, titleText, contentText, plus=false}) => {
-    
-    const numberRef = useRef(null);
-    const titleRef = useRef(null);
-    const contentRef = useRef(null);
+
+    const [currentNumber, setCurrentNumber] = useState(0);
     const containerRef = useRef(null);
 
-    // useEffect(()=>{
-    //     const obj = {value:0};
 
-    //     const ctx1 = gsap.context(()=>{
-    //         gsap.to(obj,{
+    const updateNumber = ()=>{
+        setCurrentNumber(currentNumber+1);
+    }
 
-    //         value:Number,
-    //         duration:2,
-    //         ease:"power1.out",
-    //         onUpdate:()=>{
-    //             numberRef.current.textContent = Math.floor(obj.value);
-    //         },
-    //         scrollTrigger:{
-    //             trigger:containerRef.current,
-    //             start:"top 80%",
-    //             once:true,
-    //         }
-    //     }
-    //     )
-    //     })
-        
-    //     return(()=>{
-    //         ctx1.revert();
-    //     })
-    // },[Number])
+    useEffect(()=>{
+        gsap.to(containerRef.current, {
+            scrollTrigger:{
+                trigger:containerRef.current,
+                once:true,
+            },
+            onComplete:()=>{setCurrentNumber(1)}
+        })
+    },[])
 
-    // useEffect(()=>{
-        
-
-    //     const ctx = gsap.context(()=>{
-    //         TextSlideInAnimation(titleRef, contentRef, containerRef);
-    //     }, containerRef)
-
-    //     ScrollTrigger.refresh();
-        
-    //     return(
-    //         ()=>{
-    //             ctx.revert();
-    //         }
-    //     )
-    // },[])
+     useEffect(()=>{
+            if(currentNumber != Number && currentNumber != 0){
+                setTimeout(updateNumber, 40);
+            }
+        }, [currentNumber])
     
   return (
 
@@ -62,7 +39,9 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
           viewport={{once:false}}
           transition={{duration:0.5}}
 
-          ref={containerRef} className='
+          ref={containerRef}
+
+         className='
     bg-white
     flex items-center 
     text-center
@@ -80,19 +59,19 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
         '>
 
             <h3
-            
 
-            ref={numberRef} className='
+             className='
             ml-auto
             number
             font-manrope font-bold text-[#B50404]
             text-4xl xl:text-7xl md:text-5xl
-            tracking-tighter'>{Number}
+            tracking-tighter'>{currentNumber}
             </h3>
 
         </div>
 
-        <div  className='
+        <div
+        className='
         text-left
         w-[90%] md:w-[90%] xl:w-[60%]'> 
 
@@ -102,7 +81,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             viewport={{once:false}}
             transition={{duration:0.5}}
             
-            ref={titleRef} className='
+             className='
             w-full
             font-medium text-black 
             text-xl md:text-sm xl:text-sm
@@ -116,7 +95,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
              viewport={{once:false}}
              transition={{duration:0.5}}
 
-             ref={contentRef} className='
+             className='
             text-[#464851] 
              md:text-xs 
             md:text-left xl:text-left 
