@@ -79,12 +79,16 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
         text-right
         '>
 
-            <h3 ref={numberRef} className='
+            <h3
+            
+
+            ref={numberRef} className='
             ml-auto
             number
             font-manrope font-bold text-[#B50404]
             text-4xl xl:text-7xl md:text-5xl
-            tracking-tighter'>{Number}</h3>
+            tracking-tighter'>{Number}
+            </h3>
 
         </div>
 
@@ -92,19 +96,34 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
         text-left
         w-[90%] md:w-[90%] xl:w-[60%]'> 
 
-            <h5 ref={titleRef} className='
+            <motion.h5
+            initial={{opacity:0, y:40}}
+            whileInView={{opacity:1, y:0}}
+            viewport={{once:false}}
+            transition={{duration:0.5}}
+            
+            ref={titleRef} className='
             w-full
             font-medium text-black 
             text-xl md:text-sm xl:text-sm
             md:text-left xl:text-left
-            '>{titleText}</h5>
-            <p ref={contentRef} className='
+            '>{titleText}
+            </motion.h5>
+
+            <motion.p
+             initial={{opacity:0, y:40}}
+             whileInView={{opacity:1, y:0}}
+             viewport={{once:false}}
+             transition={{duration:0.5}}
+
+             ref={contentRef} className='
             text-[#464851] 
              md:text-xs 
             md:text-left xl:text-left 
             xl:text-xs
             font-normal 
-            '>{contentText}</p>
+            '>{contentText}
+            </motion.p>
 
         </div>
 
