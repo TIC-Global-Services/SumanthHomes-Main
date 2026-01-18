@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
 import { ScrollTrigger, gsap } from "gsap/all"
+import { motion } from "motion/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,12 +38,18 @@ export const KnowUsSection = () => {
 
 
 
-            <div>
+            <motion.div
+
+            initial={{opacity:0, y:100}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.2}}
+            viewport={{once:false}}
+            >
 
                 <p className='font-semibold'>India</p>
                 <p className='font-normal'>Villa No.3, Lotus Serene Villas,Near Autonagar, Renigunta Road, Tirupati </p>
 
-            </div>
+            </motion.div>
 
         </div>
 
