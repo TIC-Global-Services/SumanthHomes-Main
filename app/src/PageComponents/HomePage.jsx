@@ -39,7 +39,7 @@ export const HomePage = () => {
         <HeroSection/>
         <ContainerLayout>    
             <HistorySection/>
-            <ProjectSection/>
+            <ProjectSection/> 
             <ArchitectureDesignSection/>
             <VideoPlayerSection />
             <MiniStatsSections/>

@@ -11,38 +11,47 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
     const contentRef = useRef(null);
     const containerRef = useRef(null);
 
-    useEffect(()=>{
+    // useEffect(()=>{
+    //     const obj = {value:0};
 
-        const obj = {value:0};
+    //     const ctx1 = gsap.context(()=>{
+    //         gsap.to(obj,{
 
-        gsap.to(obj,{
+    //         value:Number,
+    //         duration:2,
+    //         ease:"power1.out",
+    //         onUpdate:()=>{
+    //             numberRef.current.textContent = Math.floor(obj.value);
+    //         },
+    //         scrollTrigger:{
+    //             trigger:containerRef.current,
+    //             start:"top 80%",
+    //             once:true,
+    //         }
+    //     }
+    //     )
+    //     })
+        
+    //     return(()=>{
+    //         ctx1.revert();
+    //     })
+    // },[Number])
 
-            value:Number,
-            duration:2,
-            ease:"power1.out",
-            onUpdate:()=>{
-                numberRef.current.textContent = Math.floor(obj.value);
-            },
-            scrollTrigger:{
-                trigger:containerRef.current,
-                start:"top 80%",
-                once:true,
-            }
-        }
+    // useEffect(()=>{
+        
 
-        )
-    },[Number])
+    //     const ctx = gsap.context(()=>{
+    //         TextSlideInAnimation(titleRef, contentRef, containerRef);
+    //     }, containerRef)
 
-    useEffect(()=>{
-        TextSlideInAnimation(titleRef, contentRef, containerRef);
-
-        const onLoad = ()=>{ScrollTrigger.refresh(true);}
-        window.addEventListener("load",onLoad);
-
-        return(
-            ()=>{window.removeEventListener("load", onLoad)}
-        )
-    },[])
+    //     ScrollTrigger.refresh();
+        
+    //     return(
+    //         ()=>{
+    //             ctx.revert();
+    //         }
+    //     )
+    // },[])
     
   return (
 
@@ -50,11 +59,11 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
     bg-white
     flex items-center 
     text-center
-    w-[100%] md:w-[30%]
+    w-[100%] md:w-[30%] xl:w-[30%]
     
-    gap-14 md:gap-20 xl:gap-2
+    gap-14 md:gap-20 xl:gap-20
     py-8 xl:py-10
-    px-5 md:px-2
+    px-5 md:px-2 
     mb-4
     '>
         
@@ -77,10 +86,10 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
         w-[90%] md:w-[90%] xl:w-[60%]'> 
 
             <h5 ref={titleRef} className='
+            w-full
             font-medium text-black 
             text-xl md:text-sm xl:text-sm
             md:text-left xl:text-left
-            md:tracking-tighter xl:tracking-tight 
             '>{titleText}</h5>
             <p ref={contentRef} className='
             text-[#464851] 
@@ -88,8 +97,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             md:text-left xl:text-left 
             xl:text-xs
             font-normal 
-            xl:tracking-tighter
-             xl:leading-5'>{contentText}</p>
+            '>{contentText}</p>
 
         </div>
 

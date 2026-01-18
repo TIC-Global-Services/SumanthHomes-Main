@@ -1,8 +1,7 @@
 import { ScrollTrigger, gsap } from "gsap/all";
-    gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+
 export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
-
-
 
     const title = titleRef.current;
     const content = contentRef.current;
@@ -10,11 +9,13 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
     gsap.fromTo(title, {
       y:200,
       opacity:0,
+
       scrollTrigger:{
         trigger:containerRef.current,
         start:"top 90%",
-        toggleActions:"play none none reset",
+        toggleActions:"play reverse play reverse",
         invalidateOnRefresh:true,
+        immediateRender:false,
       }
     },
     {
@@ -25,7 +26,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       scrollTrigger:{
         trigger:containerRef.current,
         start:"top 90%",
-        toggleActions:"play none none reset",
+        toggleActions:"play reverse play reverse",
         invalidateOnRefresh:true,
       }
     }
@@ -38,9 +39,9 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       scrollTrigger:{
         trigger:containerRef.current,
         start:"top 90%",
-        bottom:"bottom 90%",
         invalidateOnRefresh:true,
-        toggleActions:"play none none reset",
+        immediateRender:false,
+        toggleActions:"play reverse play reverse",
       }
     },
     {
@@ -50,8 +51,7 @@ export const TextSlideInAnimation = (titleRef, contentRef, containerRef) => {
       scrollTrigger:{
         trigger:containerRef.current,
         start:"top 90%",
-        bottom:"bottom 90%",
-        toggleActions:"play none none reset",
+        toggleActions:"play reverse play reverse",
         invalidateOnRefresh:true,
       }
     }

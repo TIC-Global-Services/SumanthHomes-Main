@@ -7,6 +7,7 @@ export const MobileNavBar = () => {
 
     const tl = gsap.timeline();
     const [clicked, setClicked] = useState(false);
+    
     const navBarMenuBtn = useRef(null);
     const navBarMenu = useRef(null);
     const line1 = useRef(null);
