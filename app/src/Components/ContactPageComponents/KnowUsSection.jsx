@@ -38,22 +38,23 @@ export const KnowUsSection = () => {
 
 
 
-            <motion.div
-
-            initial={{opacity:0, y:100}}
-            whileInView={{opacity:1, y:0}}
-            transition={{duration:0.2}}
-            viewport={{once:false}}
-            >
+            <div>
 
                 <p className='font-semibold'>India</p>
                 <p className='font-normal'>Villa No.3, Lotus Serene Villas,Near Autonagar, Renigunta Road, Tirupati </p>
 
-            </motion.div>
+            </div>
 
         </div>
 
-        <div className='order-2 '>
+        <motion.div 
+        
+        initial={{opacity:0, y:100}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.4}}
+        viewport={{once:false}}
+
+        className='order-2 '>
 
             <div className='flex gap-2 items-center justify-center '>
 
@@ -77,7 +78,7 @@ export const KnowUsSection = () => {
                 
             </div>
 
-        </div>
+        </motion.div>
 
 
     </div>
