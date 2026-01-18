@@ -4,6 +4,7 @@ import { Card3 } from './sub-componenets/Card3'
 import { useRef, useEffect } from 'react'
 import { ScrollTrigger, gsap } from "gsap/all"
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
+import { motion } from "motion/react"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,25 +15,6 @@ export const ExploreMoreSection = () => {
     const containerRef = useRef(null);
     const imageRef = useRef(null);
 
-    useEffect(()=>{
-        TextSlideInAnimation(titleRef, contentRef, containerRef);
-
-        gsap.fromTo(imageRef.current, {
-          x:100,
-          scrollTrigger:{
-            trigger:containerRef.current,
-            toggleActions:"play none none reset",
-        }
-        },
-        {
-          x:0,
-          duration:.5,
-          scrollTrigger:{
-            trigger:containerRef.current,
-            toggleActions:"play none none reset"
-          }
-        })
-    },[])
 
     const data = [
         'Structural design',
@@ -56,18 +38,36 @@ export const ExploreMoreSection = () => {
     mt-8
     '>
 
-        <div className='xl:mb-72 gap-20'>
+        <div
+          
+          
+        
+          className='xl:mb-72 gap-20'>
 
-            <h4 ref={titleRef} className='
+            <motion.h4
+
+            initial={{opacity:0, y:100}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.2}}
+            viewport={{once:false}}
+
+            ref={titleRef} className='
             font-normal
             mb-4 xl:mb-12
             xl:w-[80%] 
             xl:text-3xl 
             '>
                 Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world.
-            </h4>
+            </motion.h4>
 
-            <div ref={contentRef} className='
+            <motion.div
+            
+              initial={{opacity:0, y:100}}
+              whileInView={{opacity:1, y:0}}
+              transition={{duration:0.2}}
+              viewport={{once:false}}
+            
+            className='
             grid grid-cols-2 md:grid-cols-3 gap-4
             w-full md:w-[80%]'>
 
@@ -77,11 +77,18 @@ export const ExploreMoreSection = () => {
                     ))
                 }
 
-            </div>
+            </motion.div>
 
         </div>
 
-        <div ref={imageRef} className='
+        <motion.div
+
+          initial={{opacity:0, x:100}}
+          whileInView={{opacity:1, x:0}}
+          transition={{duration:0.5}}
+          viewport={{once:false}}
+        
+        className='
         hidden md:block
         relative
         xl:w-[40%] 
@@ -91,7 +98,7 @@ export const ExploreMoreSection = () => {
             <img src={image1} className='xl:w-[18rem] xl:h-[20rem] xl:top-44 xl:right-40 absolute'></img>
             
 
-        </div>
+        </motion.div>
 
     </div>
   )
