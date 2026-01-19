@@ -49,8 +49,8 @@ export const Footer = () => {
                 onMouseMove={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={{
-                    WebkitMaskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.7) 1%, transparent)',
-                    maskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.7) 1%, transparent)',
+                    WebkitMaskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, .9) 1%, transparent 10%)',
+                    maskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.9) 1%, transparent 10%)',
                     opacity:'var(--opacity, 0)'
                 }}
                 className='
