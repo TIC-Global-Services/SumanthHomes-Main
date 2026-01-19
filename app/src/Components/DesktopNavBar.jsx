@@ -1,35 +1,21 @@
 import logo from "../assets/img/logos/sumanthHomesLogo.png";
-import { Link } from "react-router-dom"
-import { gsap } from "gsap"
+import { NavLink } from "react-router-dom"
+
 
 
 export const DesktopNavBar = () => {
 
-const handleHover = (e) => {
-  gsap.to(e.currentTarget, {
-    scale: 1.3,
-    color: "#B50404",
-    duration: 0.2
-  });
-};
-
-const handleNotHover = (e) => {
-  gsap.to(e.currentTarget, {
-    scale: 1,
-    color: "black",
-    duration: 0.2
-  });
-};
-
+  const navLinkAnimation = "hover:text-[#B40505] hover:scale-125 hover:duration-200";
+  const currentLinkAnimation = "text-[#B40505] scale-125 ";
 
   return (
     <div >
-    <nav className="
-    fixed top-4 left-1/2 -translate-x-1/2
-    flex items-center justify-between md:justify-center
-    gap-2
-    w-[90%] sm:w-[70%] md:w-[90%] lg:w-[90%] xl:w-[50%]
-    z-50">
+      <nav className="
+      fixed top-4 left-1/2 -translate-x-1/2
+      flex items-center justify-between md:justify-center
+      gap-2
+      w-[50%]
+      z-50">
 
 
       <div className="
@@ -67,10 +53,10 @@ const handleNotHover = (e) => {
         font-manrope font-extrabold 
         text-[.6rem] xl:text-sm sm:text-xs 2xl:text-xl md:text-sm">
 
-          <Link to='/'><li onMouseEnter={handleHover} onMouseLeave={handleNotHover}>HOME</li></Link>
-          <Link to='/about'><li onMouseEnter={handleHover} onMouseLeave={handleNotHover}>ABOUT</li></Link>
-          <Link to='/projects'><li onMouseEnter={handleHover} onMouseLeave={handleNotHover}>PROJECTS</li></Link>
-          <Link to='/contact'><li onMouseEnter={handleHover} onMouseLeave={handleNotHover}>CONTACT</li></Link>
+          <li className={navLinkAnimation}><NavLink to='/' className={({isActive})=>(isActive?currentLinkAnimation:"")}>HOME</NavLink></li>
+          <li className={navLinkAnimation}><NavLink to='/about' className={({isActive})=>(isActive?currentLinkAnimation:"")}>ABOUT</NavLink></li>
+          <li className={navLinkAnimation}><NavLink to='/projects' className={({isActive})=>(isActive?currentLinkAnimation:"")}>PROJECTS</NavLink></li>
+          <li className={navLinkAnimation}><NavLink to='/contact' className={({isActive})=>(isActive?currentLinkAnimation:"")}>CONTACT</NavLink></li>
 
         </ul>
 
