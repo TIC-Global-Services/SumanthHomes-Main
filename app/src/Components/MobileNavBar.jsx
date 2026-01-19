@@ -2,20 +2,25 @@ import { useRef, useState, useEffect} from "react";
 import { Link } from "react-router-dom"
 import { gsap } from "gsap"
 import { Logo } from "../sub-components/logo";
+import { motion } from "motion/react";
 
 export const MobileNavBar = () => {
 
     const tl = gsap.timeline();
     const [clicked, setClicked] = useState(false);
+
+    const linkAnimation = {
+      initial : {opacity:0, x:-100},
+      whileInView : {opacity:1, x:0},
+      transition: {duration:1},
+      viewport : {once:false},
+    }
     
     const navBarMenuBtn = useRef(null);
     const navBarMenu = useRef(null);
     const line1 = useRef(null);
     const line2 = useRef(null);
-    const homeOption = useRef(null);
-    const aboutOption = useRef(null);
-    const projectOption = useRef(null);
-    const contactOption = useRef(null);
+
 
     useEffect(() => {
         gsap.set(line1.current, { y: -6 });
@@ -56,41 +61,6 @@ export const MobileNavBar = () => {
       duration:.5,
     })
 
-    tl.fromTo(homeOption.current, {
-      x:-100,
-      opacity:0,
-    }, {
-      x:0,
-      opacity:1,
-      duration:.1,
-    })
-
-    tl.fromTo(aboutOption.current, {
-      x:-100,
-      opacity:0,
-    }, {
-      x:0,
-      opacity:1,
-      duration:.1,
-    })
-
-    tl.fromTo(projectOption.current, {
-      x:-100,
-      opacity:0,
-    }, {
-      x:0,
-      opacity:1,
-      duration:.1,
-    })
-
-    tl.fromTo(contactOption.current, {
-      x:-100,
-      opacity:0,
-    }, {
-      x:0,
-      opacity:1,
-      duration:.1,
-    })
 
   } else {
     navBarMenuBtn.current.style.display = "none";
@@ -183,10 +153,38 @@ export const MobileNavBar = () => {
                 text-4xl
             ">
 
-                <Link to='/'><li ref={homeOption} className="pl-10">HOME</li></Link>
-                <Link to='/about'><li ref={aboutOption} className="pl-10" >ABOUT</li></Link>
-                <Link to='/projects'><li ref={projectOption} className="pl-10" >PROJECTS</li></Link>
-                <Link to='/contact'><li ref={contactOption} className="pl-10" >CONTACT</li></Link>          
+                <motion.li
+                initial={linkAnimation.initial}
+                whileInView={linkAnimation.whileInView}
+                transition={linkAnimation.transition}
+                viewport={linkAnimation.viewport}
+
+                className="pl-10"><Link to='/'>HOME</Link></motion.li>
+
+                <motion.li
+                initial={linkAnimation.initial}
+                whileInView={linkAnimation.whileInView}
+                transition={linkAnimation.transition}
+                viewport={linkAnimation.viewport}
+
+                className="pl-10" ><Link to='/about'>ABOUT</Link></motion.li>
+
+                <motion.li
+                initial={linkAnimation.initial}
+                whileInView={linkAnimation.whileInView}
+                transition={linkAnimation.transition}
+                viewport={linkAnimation.viewport}
+                
+                className="pl-10" ><Link to='/projects'>PROJECTS</Link></motion.li>
+
+                <motion.li 
+                
+                initial={linkAnimation.initial}
+                whileInView={linkAnimation.whileInView}
+                transition={linkAnimation.transition}
+                viewport={linkAnimation.viewport}
+                
+                className="pl-10" ><Link to='/contact'>CONTACT</Link> </motion.li>         
 
             </ul>
       </div>
