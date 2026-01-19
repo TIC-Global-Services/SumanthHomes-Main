@@ -1,8 +1,4 @@
-import { useRef, useEffect } from "react";
 import bgimage from "../../assets/img/heroSection/heroSectionImage.jpg";
-import { gsap, TextPlugin} from "gsap/all";
-
-gsap.registerPlugin(TextPlugin);
 
 export const HeroSection = () => {
 

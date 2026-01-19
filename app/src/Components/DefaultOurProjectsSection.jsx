@@ -14,15 +14,22 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
     const windowContentRef = useRef(null);
     const windowContainerRef = useRef(null);
 
-    useEffect(()=>{
-        if(window.outerWidth>600){
-            TextSlideInAnimation(windowTitleRef, windowContentRef, windowContainerRef)
-            return
-        }
+    // useEffect(()=>{
+    //     if(window.outerWidth>600){
+    //         const ctx = gsap.context(()=>{
+    //             TextSlideInAnimation(windowTitleRef, windowContentRef, windowContainerRef)
+    //         })
+
+    //         return(()=>ctx.revert())
+    //     }
         
-        TextSlideInAnimation(titleRef, contentRef, containerRef);
+    //     const ctx = gsap.context(()=>{
+    //         TextSlideInAnimation(titleRef, contentRef, containerRef);
+    //     })
+
+    //     return(()=>ctx.revert())
         
-    },[])
+    // },[])
 
   return (
     <div className='mb-4 xl:mb-10'>
@@ -67,8 +74,8 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             
 
             <div className='
-
-            hidden md:flex gap-0 items-end
+            hidden md:absolute bottom-0 right-0
+            md:flex gap-0 items-end
             w-full md:w-[50%] xl:w-full
             md:left-[20rem] xl:left-[52rem] 
             md:ml-auto
@@ -77,7 +84,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                 <div className='ml-auto'>
 
                 <button className='
-                flex justify-center items-center
+                hidden md:flex justify-center items-center
                 bg-[#191919] box-border
                 w-7 md:w-10 xl:w-16
                 h-7 md:h-10 xl:h-16
@@ -87,7 +94,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                 </button>
 
                 <button className='
-                flex justify-center items-center
+                hidden md:flex justify-center items-center
                 bg-[#191919] box-border
                 w-7 md:w-10 xl:w-16
                 h-7 md:h-10 xl:h-16  
@@ -158,7 +165,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
         </div>
 
-        <div ref={containerRef} className='
+        <div className='
             md:hidden
             bg-white
             pl-4

@@ -1,25 +1,17 @@
-import {useRef, useEffect} from "react";
-import { ScrollTrigger, gsap } from "gsap/all";
-import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "motion/react";
 
 export const HistorySection = () => {
 
-  const tl = gsap.timeline();
-
-  const titleRef = useRef(null);
-  const contentRef = useRef(null);
-  const containerRef = useRef(null);
-
-  useEffect(()=>{
-    TextSlideInAnimation(titleRef, contentRef, containerRef);
-  })
-  
+  const slideUpAnimation = {
+    initial : {opacity:0, y:100},
+    whileInView : {opacity:1, y:0},
+    transition : {duration:0.5},
+    viewport : {once:false}
+  }
 
   return (
     <div 
-    ref={containerRef}
+  
     className='
     relative
     flex justify-center items-center
@@ -31,11 +23,22 @@ export const HistorySection = () => {
         <div className='text-center'>
 
 
-              <p ref={titleRef} className='
+              <motion.p
+              initial={slideUpAnimation.initial}
+              whileInView={slideUpAnimation.whileInView}
+              transition={slideUpAnimation.transition}
+              viewport={slideUpAnimation.viewport}
+              
+              className='
               font-extrabold text-[#B50404]
-              text-9xl xl:text-[14rem] md:text-9xl '>13</p>
+              text-9xl xl:text-[14rem] md:text-9xl '>13</motion.p>
 
-              <div ref={contentRef}>
+              <motion.div
+              initial={slideUpAnimation.initial}
+              whileInView={slideUpAnimation.whileInView}
+              transition={slideUpAnimation.transition}
+              viewport={slideUpAnimation.viewport}
+              >
                 <h2  className='
                 flex align-center justify-center
                 font-urbanist font-medium 
@@ -53,7 +56,7 @@ export const HistorySection = () => {
                   w-[100%] xl:w-[50%] md:w-[80%] '>We are dedicated to crafting architectural and design experiences that not only serve a clear functional purpose but also elevate the spaces they inhabit through thoughtful, visually inspiring aesthetics. Our approach blends practicality with creativity, ensuring every environment we shape is as efficient as it is expressive.</p>
 
                 </div>
-              </div>
+              </motion.div>
               
 
 

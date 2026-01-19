@@ -21,16 +21,38 @@ export const MobileNavBar = () => {
     const line1 = useRef(null);
     const line2 = useRef(null);
 
+    let navBtnStyle = `
+            absolute
+            top-4
+            right-2
+            flex justify-center items-center
+            rounded-full
+            w-[19%]
+            aspect-[4/3]
+            md:hidden
+            z-40
+            bg-white/20
+          `
 
     useEffect(() => {
+      const ctx = gsap.context(()=>{
+
         gsap.set(line1.current, { y: -6 });
         gsap.set(line2.current, { y: 6 });
+
+      })
+        
+      return(()=>ctx.revert())
     }, []);
 
     // Making navbar X
     useEffect(() => {
         
         if (!line1.current || !line2.current) return;
+
+        if(clicked){
+          navBtnStyle = navBtnStyle + ""
+        }
         
         const ctx = gsap.context(()=>{
             
@@ -45,6 +67,8 @@ export const MobileNavBar = () => {
         return(
             ()=>{ctx.revert()}
         )
+
+        
     }, [clicked]);
 
     const navMenu = () => {
@@ -52,14 +76,13 @@ export const MobileNavBar = () => {
 
   if (!clicked) {
     navBarMenuBtn.current.style.display = "block";
-    navBarMenu.current.style.backgroundColor = "rgba(255,255,255,1)";
 
     tl.fromTo(navBarMenuBtn.current, {
       opacity:0,
     }, {
       opacity:1,
       duration:.5,
-    })
+    }).revert()
 
 
   } else {
@@ -95,23 +118,10 @@ export const MobileNavBar = () => {
         
         </div>
         
-        <div
+        <button
             ref={navBarMenu}
-            className="
-            absolute
-            top-4
-            right-2
-            flex justify-center items-center
-            rounded-full
-            w-[19%]
-            aspect-[4/3]
-            md:hidden
-            z-40
-            bg-white/20
-          "
-          style={{
-            backgroundColor:"var(--bgcolor,rgba(255,255,255,0.2))"
-          }}
+            className={navBtnStyle}
+
           onClick={navMenu}
         >
             <span
@@ -123,13 +133,12 @@ export const MobileNavBar = () => {
             ref={line2}
             className="absolute w-[40%] h-[2px] bg-black "
         /> 
-        </div>
+        </button>
 
         
 
         <div
-            ref={navBarMenuBtn}
-        
+        ref={navBarMenuBtn}
             className="
                 fixed
                 top-0
@@ -139,7 +148,6 @@ export const MobileNavBar = () => {
                 min-h-dvh
               bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-lg bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100
               "
-      
             style={{
                 display:'var(--display,none)'
             }}
