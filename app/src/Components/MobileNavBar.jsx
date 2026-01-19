@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect} from "react";
 import { Link } from "react-router-dom"
 import { gsap } from "gsap"
-import logo from "../assets/img/logos/sumanthHomesLogo.png";
+import { Logo } from "../sub-components/logo";
 
 export const MobileNavBar = () => {
 
@@ -121,13 +121,7 @@ export const MobileNavBar = () => {
             z-40
             ">
         
-            <img 
-                src={logo}
-                className="
-                w-full
-                h-full 
-                object-fill"
-                ></img>
+            <Logo/>
         
         </div>
         

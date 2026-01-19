@@ -1,5 +1,5 @@
-import logo from "../assets/img/logos/sumanthHomesLogo.png";
 import { NavLink } from "react-router-dom"
+import { Logo } from "../sub-components/logo";
 
 
 
@@ -29,15 +29,11 @@ export const DesktopNavBar = () => {
       z-40
       ">
 
-        <img 
-        src={logo}
-        className="
-        w-full
-        h-full 
-        object-fill"
-        ></img>
+        <Logo/>
+        
 
       </div>
+      
 
 
 
