@@ -1,10 +1,16 @@
 import bgimage from "../../assets/img/heroSection/heroSectionImage.jpg";
+import { motion } from "motion/react";
 
 export const HeroSection = () => {
 
 
   return (
-    <div className="
+    <motion.div
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:0.3}}
+    viewport={{once:false}}
+    className="
     relative
     w-full
     min-h-[100svh]
@@ -30,6 +36,6 @@ export const HeroSection = () => {
             Elevating Every Space with Purpose and Precision
     </h2>
 
-    </div>
+    </motion.div>
   )
 }

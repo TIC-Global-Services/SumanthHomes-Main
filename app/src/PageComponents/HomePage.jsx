@@ -14,24 +14,6 @@ import { ScrollToTop } from "../utils/ScrollToTop"
 
 export const HomePage = () => {
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useEffect(()=>{
-
-    gsap.to('.hero-section',{
-    scrollTrigger:{
-      trigger:'.hero-section',
-      start:'60% top',
-      toggleActions:"play pause reverse reverse",
-    },
-    opacity:0,
-    ease:'slow',
-    duration:1,
-  }
-  )
-  },[])
-  
-
   return (
     <div>
         <ScrollToTop/>
