@@ -20,6 +20,7 @@ export const KnowUsSection = () => {
     ref={containerRef}
     className='
     flex justify-between items-end flex-wrap gap-4
+     mt-8 xl:mt-20 md:mt-14
     mb-16 xl:mb-20'>
 
         <div ref={titleRef} className='xl:w-[30%]'>
