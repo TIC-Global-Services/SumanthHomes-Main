@@ -9,6 +9,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
     const [currentNumber, setCurrentNumber] = useState(0);
     const containerRef = useRef(null);
+    let timer = Number>50 ? 20 : 40; 
 
 
     const updateNumber = ()=>{
@@ -27,7 +28,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
      useEffect(()=>{
             if(currentNumber != Number && currentNumber != 0){
-                setTimeout(updateNumber, 40);
+                setTimeout(updateNumber, timer);
             }
         }, [currentNumber])
     
@@ -65,7 +66,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             number
             font-manrope font-bold text-[#B50404]
             text-4xl xl:text-7xl md:text-5xl
-            tracking-tighter'>{currentNumber}
+            tracking-tighter'>{currentNumber}{plus ? "+" : null}
             </h3>
 
         </div>
