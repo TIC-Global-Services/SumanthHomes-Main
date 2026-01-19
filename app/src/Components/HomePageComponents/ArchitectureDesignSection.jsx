@@ -4,30 +4,20 @@ import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
 import { useRef, useEffect } from 'react';
 import {gsap} from "gsap/gsap-core"
-import { TextPlugin, ScrollTrigger } from 'gsap/all'; 
 import { CardButtons } from '../../sub-components/CardButtons';
-import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
-
-gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "motion/react"
 
 export const ArchitectureDesignSection = () => {
 
-    let containerWidth = 0;
-
-    const tl = gsap.timeline(); 
-
-    const titleRef = useRef(null);
+    let cardWidth = useRef(0);
+    
     const CardRef = useRef(null);
-    const contentRef = useRef(null);
-    const containerRef = useRef(null);
-
-    useEffect(()=>{
-
-        containerWidth = CardRef.current.offsetWidth + 16;
-        TextSlideInAnimation(titleRef, contentRef, containerRef);
-        
-    },[])
+    const slideUpAnimation = {
+        initial: {opacity:0, y:100},
+        whileInView: {opacity:1, y:0},
+        transition:{duration:0.3},
+        viewport:{once:false} 
+    }
 
     const ArchitectureCards = [
         {
@@ -57,57 +47,53 @@ export const ArchitectureDesignSection = () => {
     ]
 
 
-    let frame = 0;
+    let frame = useRef(0);
     const maxFrame = (ArchitectureCards.length-1);
 
 
-
-
     const prev = ()=>{
-            if((frame) > 0){
-                frame = frame-1;
+            if((frame.current) > 0){
+
+                frame.current = frame.current-1;
                 const el = CardRef.current;
-                tl.to(el,{
-                    x:`+=${containerWidth}`,
+                gsap.to(el,{
+                    x:`+=${cardWidth.current}`,
                     ease:'expo'
-                })  
+                })
             } 
         }
 
     const next = ()=>{
-        if((frame) < maxFrame){
-            console.log("next button is being fired!");
-            frame = frame+1;
+        if((frame.current) < maxFrame){
+
+            frame.current = frame.current+1;
             const el = CardRef.current;
-            tl.to(el,{
-                x:`-=${containerWidth}`,
+            gsap.to(el,{
+                x:`-=${cardWidth.current}`,
                 ease:'expo'
-            })  
+            })
         }}
-    
+
+    useEffect(()=>{
+
+        cardWidth.current = CardRef.current.offsetWidth + 16; //width + 16 ( the gap between cards in pixels )
+        
+    },[])
 
   return (
-    <div ref={containerRef} className=' my-20'>
+    <div className=' my-20'>
 
         <div className='
         xl:flex items-end justify-between 
         xl:gap-96'>
 
-            <div ref={titleRef} className='text-left'>
-
-                <style>
-                    {
-                    `
-                    .start{
-                        color:#B40505;
-                    }
-                    .end{
-                        color:#000;
-                    }
-                
-                    `
-                    }
-                </style>
+            <motion.div
+            initial={slideUpAnimation.initial}
+            whileInView={slideUpAnimation.whileInView}
+            transition={slideUpAnimation.transition}
+            viewport={slideUpAnimation.viewport}
+            
+            className='text-left'>
 
                 <p className='
                 text-[#B50404] font-semibold
@@ -125,21 +111,27 @@ export const ArchitectureDesignSection = () => {
                     Crafting modern buildings where style meets purpose.
                 </h4>
 
-            </div>
+            </motion.div>
 
-            <div ref={contentRef} className='xl:w-[50%] md:pt-2'>
+            <motion.div
+            initial={slideUpAnimation.initial}
+            whileInView={slideUpAnimation.whileInView}
+            transition={slideUpAnimation.transition}
+            viewport={slideUpAnimation.viewport}
+
+            className='xl:w-[50%] md:pt-2'>
 
                 <p className='
                 font-normal 
                 xl:leading-5 
                 xl:text-sm'>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
-            </div>
+            </motion.div>
 
         </div>
 
         <div 
-        className='w-full  overflow-hidden md:overflow-scroll'
+        className='w-full overflow-hidden md:overflow-scroll'
         style={{
             scrollbarWidth:'none',
         }}
@@ -151,9 +143,9 @@ export const ArchitectureDesignSection = () => {
         >
 
             {
-                ArchitectureCards.map((card, _)=>[
+                ArchitectureCards.map((card, i)=>(
 
-                    <div className='
+                    <div key={i} className='
                     relative flex-shrink-0 carousel-card
                     w-full md:w-auto
                     '>
@@ -172,7 +164,7 @@ export const ArchitectureDesignSection = () => {
                         '>{card.text}</p>
                 
                     </div>
-                ])
+                ))
             }
                 
             
