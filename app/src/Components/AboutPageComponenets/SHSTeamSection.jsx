@@ -49,7 +49,7 @@ export const SHSTeamSection = () => {
     },
     {
       name:'Jeremy dupont',
-      position:'',
+      position:'Director',
       bgImage:bgImage,
     },
     {

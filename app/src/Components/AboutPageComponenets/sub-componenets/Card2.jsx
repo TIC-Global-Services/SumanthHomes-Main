@@ -27,14 +27,16 @@ export const Card2 = ({bgImage, Name, Position}) => {
 
         <div className='
         mt-auto mb-8 ml-10
+        bg-gradient-to-t from-black  via-black/90  to-transparent
         '>
 
             <h2 className='
             font-medium
+            text-white
             xl:text-xl md:text-xl 
           '>{Name}</h2>
 
-            <h4 className='font-normal  md:text-sm'>{Position}</h4>
+            <h4 className='font-normal text-white md:text-sm'>{Position}</h4>
      
         </div>        
     </div>
