@@ -204,14 +204,15 @@ export const MapSection = () => {
 
           </div>
 
-          <div className="flex items-center justify-between flex-wrap">
+          <div className="flex flex-col xl:flex-row md:items-center  justify-between flex-wrap">
 
             <div className="
-            md:w-[50%]
+            md:w-[90%] xl:w-[50%]
+            md:text-center xl:text-left
             mt-6
-            mb-3
+            mb-3 md:mb-6
             font-normal
-            text-sm md:text-xl
+            text-sm  xl:text-xl
             ">
               <p>We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
             </div>
