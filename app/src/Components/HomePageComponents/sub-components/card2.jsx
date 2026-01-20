@@ -43,20 +43,19 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
           ref={containerRef}
 
          className='
-    bg-white
-    flex items-center 
-    text-center
-    w-[100%] md:w-[30%] xl:w-[30%]
-    
-    gap-14 md:gap-20 xl:gap-20
-    py-8 xl:py-10
-    px-5 md:px-2 
-    mb-4
+         w-[100%] md:w-[85%] xl:w-[30%]
+         flex items-center gap-14 md:gap-20 xl:gap-24
+         bg-white
+         text-center
+         md:mx-auto
+         mb-4
+         py-8 xl:py-10
+         px-5 md:px-auto
+         
     '>
         
         <div  className='
-        w-[10%] md:w-[10%] xl:w-[40%]
-        text-right
+        w-[10%] md:w-[35%] xl:w-[20%]
         '>
 
             <h3
@@ -64,8 +63,9 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
              className='
             ml-auto
             number
+            text-right md:text-center
             font-manrope font-bold text-[#B50404]
-            text-4xl xl:text-7xl md:text-5xl
+            text-4xl xl:text-7xl md:text-7xl
             tracking-tighter'>{currentNumber}{plus ? "+" : null}
             </h3>
 
@@ -73,8 +73,8 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
         <div
         className='
-        text-left
-        w-[90%] md:w-[90%] xl:w-[60%]'> 
+        
+        w-[90%] md:w-[65%] xl:w-[70%] xl:ml-auto'> 
 
             <motion.h5
             initial={{opacity:0, y:40}}
@@ -84,8 +84,9 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             
              className='
             w-full
+            text-left
             font-medium text-black 
-            text-xl md:text-sm xl:text-sm
+            text-xl  md:text-3xl xl:text-xl
             md:text-left xl:text-left
             '>{titleText}
             </motion.h5>
@@ -98,9 +99,9 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
              className='
             text-[#464851] 
-             md:text-xs 
-            md:text-left xl:text-left 
-            xl:text-xs
+             
+            text-left xl:text-left 
+            text-xl xl:text-xs
             font-normal 
             '>{contentText}
             </motion.p>

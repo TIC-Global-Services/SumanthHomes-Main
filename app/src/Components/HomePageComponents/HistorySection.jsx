@@ -15,8 +15,8 @@ export const HistorySection = () => {
     className='
     relative
     flex justify-center items-center
-    xl:mt-20 md:mt-14
-    xl:mb-40 md:mb-28
+    xl:mt-20 md:mt-4
+    xl:mb-40 md:mb-10
     py-14
     '>
 

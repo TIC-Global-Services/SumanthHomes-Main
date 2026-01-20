@@ -125,8 +125,8 @@ export const CompletedProjectsSection = () => {
         >
 
           {
-            CompletedProjectsCards.map((data, _)=>(
-              <GridCard2 mainText={data.mainText} subText={data.subText} Image={data.image} />
+            CompletedProjectsCards.map((data, id)=>(
+              <GridCard2 key={id} mainText={data.mainText} subText={data.subText} Image={data.image} />
             ))
           }
 

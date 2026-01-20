@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import {  useRef } from "react"
 
 export const Footer = () => {
 
@@ -20,7 +20,7 @@ export const Footer = () => {
             el.style.setProperty('--opacity', 1);
         }
     
-    const handleMouseLeave = (e) =>{
+    const handleMouseLeave = () =>{
 
         const el = textMaskRef.current;
 
@@ -30,16 +30,17 @@ export const Footer = () => {
     
   return (
 <div>
-    <div className='flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1]'>
+    <div className='flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1] '>
 
         <div className='
         flex flex-col
-        pt-4
+        pt-4 md:pt-10
         mb-7 md:mb-7
         mx-2 md:mx-8
         '>
 
             <div className='
+            
             relative
             text-center
             mb-8 
@@ -59,13 +60,14 @@ export const Footer = () => {
                     bg-gradient-to-tr from-[#B40505] to-[#da4949]
                     bg-clip-text
                     font-extrabold text-transparent 
-                    text-6xl xl:text-9xl md:text-7xl 
+                    text-6xl xl:text-9xl md:text-8xl 
                     '> SUMANTH HOMES 
                 </h2>
 
                 <h2 className='
+                    w-full
                     font-extrabold text-[#A7A7A7] 
-                    text-6xl xl:text-9xl md:text-7xl 
+                    text-6xl xl:text-9xl md:text-8xl 
                     '> SUMANTH HOMES 
                 </h2>
                 
@@ -134,7 +136,7 @@ export const Footer = () => {
 
                 </div>
 
-        </div>
+            </div>
 
         </div>
 

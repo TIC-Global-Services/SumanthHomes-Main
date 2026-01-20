@@ -21,10 +21,11 @@ export const Card1 = ({number, content, pageNo}) => {
      ref={cardRef} className='
     
     flex items-center justify-between
+    flex-shrink-0
     md:gap-5 border-t-2
     border-[#3E3E3E]
     xl:pt-4 md:pt-4
-    w-[100%] md:w-[20%] xl:w-[30%]'>
+    w-[100%] md:w-[100%] xl:w-[30%]'>
 
         <div className='md:w-[60%] xl:w-[60%] '>
 

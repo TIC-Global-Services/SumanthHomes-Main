@@ -8,8 +8,6 @@ import { MapSection } from "../Components/HomePageComponents/MapSection"
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
-import { gsap, ScrollTrigger } from 'gsap/all'
-import { useEffect } from 'react';
 import { ScrollToTop } from "../utils/ScrollToTop"
 
 export const HomePage = () => {
