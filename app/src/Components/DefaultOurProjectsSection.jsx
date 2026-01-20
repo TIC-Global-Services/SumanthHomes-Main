@@ -1,8 +1,7 @@
 import { useRef, useEffect } from "react"
 import { ScrollTrigger, gsap } from "gsap/all"
-import { TextSlideInAnimation } from "../utils/TextSlideInAnimation";
+import { motion } from "motion/react"
 
-gsap.registerPlugin(ScrollTrigger);
 
 export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, description }) => {
 
@@ -10,26 +9,16 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
     const contentRef = useRef(null);
     const containerRef = useRef(null);
 
+    const slideUpAnimation = {
+        initial: {opacity:0, y:100},
+        whileInView: {opacity:1, y:0},
+        transition:{duration:0.3},
+        viewport:{once:false} 
+    }
+
     const windowTitleRef = useRef(null);
     const windowContentRef = useRef(null);
     const windowContainerRef = useRef(null);
-
-    // useEffect(()=>{
-    //     if(window.outerWidth>600){
-    //         const ctx = gsap.context(()=>{
-    //             TextSlideInAnimation(windowTitleRef, windowContentRef, windowContainerRef)
-    //         })
-
-    //         return(()=>ctx.revert())
-    //     }
-        
-    //     const ctx = gsap.context(()=>{
-    //         TextSlideInAnimation(titleRef, contentRef, containerRef);
-    //     })
-
-    //     return(()=>ctx.revert())
-        
-    // },[])
 
   return (
     <div className='mb-4 xl:mb-10'>
@@ -112,7 +101,13 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                 xl:w-[50%]
                 ">
 
-                    <div ref={windowTitleRef}> 
+                    <motion.div
+                    initial={slideUpAnimation.initial}
+            whileInView={slideUpAnimation.whileInView}
+            transition={slideUpAnimation.transition}
+            viewport={slideUpAnimation.viewport}
+
+                    ref={windowTitleRef}> 
 
                         <h4 className='
                         font-semibold
@@ -125,9 +120,15 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                         xl:pb-4
                         text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
 
-                    </div>
+                    </motion.div>
 
-                    <div ref={windowContentRef}>
+                    <motion.div
+                    initial={slideUpAnimation.initial}
+                    whileInView={slideUpAnimation.whileInView}
+                    transition={slideUpAnimation.transition}
+                    viewport={slideUpAnimation.viewport}
+                    
+                    ref={windowContentRef}>
 
                         <p className='
                         mb-2
@@ -156,7 +157,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                         </div>
 
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>
@@ -178,7 +179,13 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             md:left-[20rem] xl:left-[52rem] 
             '>
 
-                <div ref={titleRef}> 
+                <motion.div
+                initial={slideUpAnimation.initial}
+            whileInView={slideUpAnimation.whileInView}
+            transition={slideUpAnimation.transition}
+            viewport={slideUpAnimation.viewport}
+                
+                ref={titleRef}> 
 
                     <h4 className='
                     font-semibold
@@ -191,9 +198,15 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                     xl:pb-4
                     text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
 
-                </div>
+                </motion.div>
 
-                <div ref={contentRef}>
+                <motion.div
+                initial={slideUpAnimation.initial}
+            whileInView={slideUpAnimation.whileInView}
+            transition={slideUpAnimation.transition}
+            viewport={slideUpAnimation.viewport}
+                
+                ref={contentRef}>
 
                     <p className='
                     mb-2
@@ -221,7 +234,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                     </div>
 
-                </div>
+                </motion.div>
 
             </div>
 
