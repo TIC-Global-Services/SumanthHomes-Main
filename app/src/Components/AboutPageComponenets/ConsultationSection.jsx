@@ -45,7 +45,7 @@ export const ConsultationSection = () => {
 
             <p className='
             font-normal text-white
-             md:text-xs xl:text-sm
+            text-base md:text-xs xl:text-base
             xl:mb-3
             md:leading-5
             md:mb-1'>

@@ -28,7 +28,7 @@ export const MapSection = () => {
         ">
 
           <h2 className="
-          text-xl md:text-5xl
+          text-xl md:text-4xl
           font-manrope font-semibold
           mb-10
           ">Let's talk. <span className="text-[#B50404]
@@ -40,20 +40,20 @@ export const MapSection = () => {
 
             
             
-            <div className="flex items-center gap-8 flex-wrap
+            <div className="flex items-center gap-8 flex-wrap w-[100%]
             ">
 
-              <div className="flex-grow">
+              <div className="flex-grow w-[23%]">
 
                 <h4 className="
                 text-[#B50404]
                 md:mb-4
-                text-sm md:text-xl
+                text-sm md:text-base
                 font-normal
                 ">YOUR NAME*</h4>
                 <div className="
                 flex items-center justify-between
-                mb-4
+                mb-2
                 ">
                   <label className="font-normal text-xs md:text-xl
                   ">What's your good name?</label>
@@ -76,13 +76,13 @@ export const MapSection = () => {
                 <h4 className="
                 text-[#B50404]
                 md:mb-4
-                text-sm md:text-xl
+                text-sm md:text-base
                 font-normal
                 "
                 >YOUR EMAIL ADDRESS*</h4>
                 <div className="
                 flex items-center justify-between
-                mb-4
+                mb-2
                 ">
                   <label className="
                   font-normal text-xs md:text-xl
@@ -103,21 +103,21 @@ export const MapSection = () => {
             </div>
 
             <div className="
-            flex items-center gap-8 flex-wrap
+            flex items-center gap-8 flex-wrap w-[100%]
             mb-4
             ">
 
-              <div className="flex-grow">
+              <div className="flex-grow w-[21%]">
 
                 <h4 className="
                 text-[#B50404]
                 font-normal
-                text-sm md:text-xl
+                text-sm md:text-base
                 md:mb-4
                 ">YOUR PHONE NUMBER</h4>
                 <div className="
                 flex items-center justify-between
-                mb-4">
+                mb-2">
                   <label className="
                   font-normal
                   text-xs md:text-xl
@@ -142,12 +142,12 @@ export const MapSection = () => {
                 text-[#B50404]
                 md:mb-4
                 font-normal
-                text-sm md:text-xl
+                text-sm md:text-base
                 "
                 >YOUR SUBJECT</h4>
                 <div className="
                 flex items-center justify-between
-                mb-4
+                mb-2
                 ">
                   <label className="
                   font-normal text-xs md:text-xl
@@ -170,12 +170,12 @@ export const MapSection = () => {
 
             <div className="flex md:mb-10">
 
-              <div className="flex-grow">
+              <div className="flex-grow ">
 
                 <h4 className="
                 text-[#B50404]
                 md:mb-4
-                text-sm md:text-xl
+                text-sm md:text-base
                 font-normal
                 "
                 >YOUR MESSAGE</h4>
@@ -192,7 +192,7 @@ export const MapSection = () => {
                 </div>
                 <input className="
                 w-full
-                aspect-video md:aspect-[6/1]
+                aspect-video md:aspect-[10/1]
                 bg-transparent
                 border-b-2
                 border-black
@@ -207,12 +207,12 @@ export const MapSection = () => {
           <div className="flex flex-col xl:flex-row md:items-center  justify-between flex-wrap">
 
             <div className="
-            md:w-[90%] xl:w-[50%]
+            md:w-[90%] xl:w-[45%]
             md:text-center xl:text-left
             mt-6
             mb-3 md:mb-6
             font-normal
-            text-sm  xl:text-xl
+            text-sm  xl:text-base
             ">
               <p>We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
             </div>

@@ -7,14 +7,15 @@ export const Card3 = ({text}) => {
     '>
 
         <p className='
-        font-normal
+        font-extrabold
+        xl:mr-2
         text-[#737373]
         
         '>+</p>
         <h6 className='
         font-normal
         text-[#737373]
-        text-xs md:text-xl
+        text-xs md:text-xl xl:text-base
         '>{text}</h6>
     </div>
   )

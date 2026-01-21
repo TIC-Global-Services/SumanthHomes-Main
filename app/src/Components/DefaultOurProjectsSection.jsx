@@ -111,6 +111,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
 
                         <h4 className='
                         font-semibold
+                        text-[#B40505]
                         text-sm md:text-xs xl:text-sm 
                         py-2'>
                             {miniHeader}</h4>
@@ -134,9 +135,9 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                         mb-2
                       text-[#737373] 
                         font-normal
-                        md:w-[100%] xl:w-[60%]
+                        md:w-[100%] xl:w-[90%]
                         py-4 md:py-2
-                        md:text-xs'>{description}</p>
+                        text-base md:text-xs xl:text-base'>{description}</p>
 
 
                        <div className='

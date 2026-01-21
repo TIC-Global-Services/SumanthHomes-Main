@@ -15,7 +15,7 @@ export const ContactPage = () => {
     <div>
         <ScrollToTop/>
         <NavBar/>
-        <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"}/>
+        <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} />
         <ContainerLayout>
             <KnowUsSection />
             <MapSection />

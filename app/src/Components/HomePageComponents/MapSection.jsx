@@ -23,18 +23,23 @@ export const MapSection = () => {
         '>
             <div className='
             flex justify-center
-            w-[100%]
+            w-[100%] md:w-auto
             mb-1'>
                 <p className='
                 text-center
                 font-normal text-[#737373]
-                w-[70%]
-                text-xs md:text-xl xl:text-4xl'>Studio. Showroom. Site Visits  drop by or get directions </p>
+                w-[100%]
+                mx-auto
+                text-xs md:text-xl xl:text-2xl'>Studio. Showroom. Site Visits  drop by or get directions </p>
+            </div>
+
+            <div className='w-[10%]  border-t-0 md:border-t-2 border-gray-600'>
+
             </div>
             
             <button className='
             text-[#B50404] font-semibold
-            w-[100%]
+            w-[100%] md:w-auto
              md:text-xl
             '>Get directions</button>
         </div>

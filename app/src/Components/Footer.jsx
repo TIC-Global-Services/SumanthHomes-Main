@@ -33,9 +33,9 @@ export const Footer = () => {
     <div className='flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1] '>
 
         <div className='
-        flex flex-col
-        pt-4 md:pt-10
-        mb-7 md:mb-7
+        flex flex-col 
+        pt-4 md:pt-10 
+        pb-7 md:pb-7
         mx-2 md:mx-8
         '>
 
@@ -43,7 +43,7 @@ export const Footer = () => {
             
             relative
             text-center
-            mb-8 
+            pb-8 
              '>
                 <h2
                 ref={textMaskRef}
@@ -75,6 +75,7 @@ export const Footer = () => {
             </div>
 
             <div className='
+            pt-14
             md:flex items-center justify-between
             md:order-first'> 
                 <div className=' 

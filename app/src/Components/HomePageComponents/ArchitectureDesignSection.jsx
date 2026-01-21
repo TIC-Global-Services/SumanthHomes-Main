@@ -98,6 +98,7 @@ export const ArchitectureDesignSection = () => {
                 <p className='
                 text-[#B50404] font-semibold
                 text-xs md:text-xs 
+                mb-1 xl:mb-4 md:mb-1
                 uppercase leading-8 tracking-widest'>ARCHITECTURE & DESIGN</p>
                 <h4
                 

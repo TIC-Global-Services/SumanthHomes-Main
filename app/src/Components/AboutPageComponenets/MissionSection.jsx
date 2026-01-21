@@ -22,15 +22,15 @@ export const MissionSection = () => {
           transition={{duration:0.5}}
           viewport={{once:false}}
 
-        className='order-2 md:order-1'>
+        className='order-2 md:order-1 xl:w-[50%]'>
 
             <img className='
-            xl:h-[18rem]
-            xl:w-[40rem]' src={missionImage}></img>
+            
+            xl:w-full aspect-[2/1]' src={missionImage}></img>
 
         </motion.div>
 
-        <div className='xl:w-[50%] order-1 md:order-2'>
+        <div className='xl:w-[55%] order-1 md:order-2'>
 
             <motion.div
               initial={{opacity:0, y:100}}
@@ -58,7 +58,7 @@ export const MissionSection = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-            className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
+            className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-xl'>
 
                 At Sumanth Homes, we channel all our resources, energy, and expertise toward delivering high-quality infrastructure built to the highest standards. We constantly evaluate our actions, learning from every experience to improve and evolve. This approach empowers us to take on greater challenges and drives our continuous growth as a firm.
 

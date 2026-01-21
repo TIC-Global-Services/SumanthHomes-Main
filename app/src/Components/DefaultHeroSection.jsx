@@ -1,10 +1,9 @@
 import {gsap, TextPlugin} from "gsap/all"
-import { useEffect, useRef } from "react";
 
 
 gsap.registerPlugin(TextPlugin);
 
-export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
+export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) => {
   
 
   
@@ -24,10 +23,10 @@ export const DefaultHeroSection = ({bgImage, mainText, subText}) => {
 
         <div className='text-center'>
 
-            <h2 className='
+            <h2 className={`
             font-manrope font-normal
             text-3xl md:text-6xl xl:text-7xl xl:tracking-tighter md:tracking-tight
-            xl:mb-6 md:mb-4'>{mainText}</h2>
+            xl:mb-6 md:mb-4 ${white ? 'text-white' : 'text-black'}`}>{mainText}</h2>
 
             <p className='
             font-jakarta font-semibold

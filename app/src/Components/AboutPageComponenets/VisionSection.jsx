@@ -41,11 +41,11 @@ export const VisionSection = () => {
     <div ref={containerRef} className='
     overflow-hidden
     flex justify-between items-center flex-wrap
-    xl:gap-10 md:gap-3
+    xl:gap-16 md:gap-3
     mb-14 xl:mb-10 md:mb-10'>
 
         <div className='
-        md:w-[40%] xl:w-[40%]'>
+        md:w-[40%] xl:w-[45%]'>
 
             <div ref={titleRef}>
             <p className='
@@ -62,7 +62,7 @@ export const VisionSection = () => {
 
             </div>
 
-            <p ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
+            <p ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-xl'>
 
                 Our vision is to build high-quality homes that reflect trust and lasting value. We understand that a home is a one-time investment for many, and we are committed to delivering spaces that offer comfort, reliability, and complete satisfaction. With this vision, we strive to give our best in every project we undertake.
 
@@ -70,9 +70,9 @@ export const VisionSection = () => {
 
         </div>
 
-        <div className=' md:w-[50%]'>
+        <div className=' md:w-[50%] '>
 
-            <img ref={imageRef} className=' md:h-[18%] md:w-full xl:h-[18rem] xl:w-[40rem]' src={visionImage}></img>
+            <img ref={imageRef} className=' md:h-[18%] md:w-full xl:h-[18rem] xl:w-full' src={visionImage}></img>
 
         </div>
 

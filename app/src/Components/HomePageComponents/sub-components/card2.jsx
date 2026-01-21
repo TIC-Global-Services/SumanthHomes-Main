@@ -1,6 +1,5 @@
 import { gsap, ScrollTrigger } from "gsap/all"
 import { useEffect, useState, useRef } from "react"
-import { TextSlideInAnimation } from "../../../utils/TextSlideInAnimation";
 import { motion } from "motion/react"
 
 gsap.registerPlugin(ScrollTrigger);

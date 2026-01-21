@@ -22,10 +22,9 @@ export const DesktopNavBar = () => {
       box-border
       flex items-center justify-center 
       rounded-full
-    bg-white p-1 xl:p-2
+      bg-white p-1 xl:p-2
+      w-[10%] xl:w-[8%]
       aspect-square
-      w-[15%] sm:w-10 md:w-10 lg:w-14 xl:w-14 2xl:w-20
-      sm:h-10 md:h-10 lg:h-14 xl:h-14 2xl:h-20 
       z-40
       ">
 
@@ -37,16 +36,16 @@ export const DesktopNavBar = () => {
 
 
 
-      <div className="hidden md:block">
+      <div className="">
 
         <ul className="
         md:flex items-center
         gap-2 xl:gap-14 md:gap-6 sm:gap-8
         rounded-full bg-white/40
-        h-8 xl:h-14 md:h-10 sm:h-10 lg:h-12 2xl:h-20
         px-4 xl:px-20 md:px-10
         font-manrope font-extrabold 
-        text-[.6rem] xl:text-sm sm:text-xs 2xl:text-xl md:text-sm ">
+        aspect-[10/1]
+        text-base xl:text-sm sm:text-xs 2xl:text-xl md:text-sm ">
 
           <li className={navLinkAnimation}><NavLink to='/' className={({isActive})=>(isActive?currentLinkAnimation:"")}>HOME</NavLink></li>
           <li className={navLinkAnimation}><NavLink to='/about' className={({isActive})=>(isActive?currentLinkAnimation:"")}>ABOUT</NavLink></li>

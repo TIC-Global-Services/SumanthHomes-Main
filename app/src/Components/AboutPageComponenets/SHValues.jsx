@@ -51,7 +51,7 @@ export const SHValues = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-             className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
+             className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm text-base xl:text-base'>
               Our mission is to channel our passion, expertise, and resources into crafting premium infrastructure that meets the highest standards of quality and design. We believe in learning, evolving, and improving with every project — constantly questioning our processes to achieve perfection. By embracing challenges and refining our approach, we aim to grow stronger as a firm and continue creating homes that reflect integrity, comfort, and enduring value.
             </motion.p>
 
@@ -67,7 +67,7 @@ export const SHValues = () => {
 
             <img className='
             xl:w-[70rem]
-            xl:h-[27rem] md:h-[12rem]' src={image1} />
+            xl:h-[30rem] md:h-[12rem]' src={image1} />
 
             <p className='xl:mt-1 md:mt-1'>Timeless Design</p>
 
@@ -80,7 +80,7 @@ export const SHValues = () => {
            viewport={{once:false}}
         className='hidden xl:block'>
 
-            <img className='xl:w-[70rem] xl:h-[20rem] md:h-[12rem]' src={image2} />
+            <img className='xl:w-[70rem] xl:h-[22rem] md:h-[12rem]' src={image2} />
 
             <p className='xl:mt-1 md:mt-1'>Honest Craftmanship</p>
 

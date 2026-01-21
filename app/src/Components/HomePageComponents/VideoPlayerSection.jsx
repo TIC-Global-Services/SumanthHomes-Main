@@ -66,9 +66,8 @@ export const VideoPlayerSection = () => {
         mt-4 xl:mt-8 md:mt-8'>
 
             <iframe src='https://www.youtube.com/embed/AXNHQ5Pgeig' className='
-            aspect-[3/4]
+            aspect-[16/7]
             w-full
-            xl:h-[25rem] md:h-[25rem]
             mb-12
             '></iframe>
 
@@ -92,7 +91,7 @@ export const VideoPlayerSection = () => {
         mt-6 xl:mt-16 md:mt-16'>
 
             <div className='
-            flex md:flex-row items-center justify-center md:justify-between flex-wrap
+            flex md:flex-row items-center justify-center  flex-wrap
             gap-2 md:gap-2 xl:gap-5 
             xl:mb-5 md:mb-3
             '>
@@ -101,7 +100,7 @@ export const VideoPlayerSection = () => {
                 text-center
                 text-[#737373]
                 w-[90%] md:w-[70%] xl:w-[70%] 
-                 md:text-xl xl:text-4xl
+                 md:text-xl xl:text-2xl
                 mb-2
                 '
                 > 
