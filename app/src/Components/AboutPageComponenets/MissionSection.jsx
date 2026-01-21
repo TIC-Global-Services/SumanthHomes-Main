@@ -22,7 +22,7 @@ export const MissionSection = () => {
           transition={{duration:0.5}}
           viewport={{once:false}}
 
-        className='order-2 md:order-1 xl:w-[50%]'>
+        className='order-2 md:order-1 md:w-[50%]'>
 
             <img className='
             
@@ -30,7 +30,7 @@ export const MissionSection = () => {
 
         </motion.div>
 
-        <div className='xl:w-[55%] order-1 md:order-2'>
+        <div className='md:w-[47%] order-1 md:order-2'>
 
             <motion.div
               initial={{opacity:0, y:100}}
