@@ -6,15 +6,15 @@ import { Logo } from "../sub-components/logo";
 export const DesktopNavBar = () => {
 
   const navLinkAnimation = "hover:text-[#B40505] hover:scale-125 hover:duration-200 cursor-pointer";
-  const currentLinkAnimation = "text-[#B40505] scale-125";
+  const currentLinkAnimation = "text-[#B40505] font-extrabold scale-125";
 
   return (
     <div >
       <nav className="
-      fixed top-4 left-1/2 -translate-x-1/2
+      fixed top-6 left-1/2 -translate-x-1/2
       flex items-center justify-between md:justify-center
       gap-2
-      w-[50%]
+      md:w-[60%] xl:w-[40%] 
       z-50">
 
 
@@ -23,7 +23,7 @@ export const DesktopNavBar = () => {
       flex items-center justify-center 
       rounded-full
       bg-white p-1 xl:p-2
-      w-[10%] xl:w-[8%]
+      w-[9%]
       aspect-square
       z-40
       ">
@@ -36,16 +36,20 @@ export const DesktopNavBar = () => {
 
 
 
-      <div className="">
+      <div className="w-[90%]">
 
         <ul className="
-        md:flex items-center
-        gap-2 xl:gap-14 md:gap-6 sm:gap-8
+        flex items-center justify-evenly
+        gap-3
         rounded-full bg-white/40
-        px-4 xl:px-20 md:px-10
-        font-manrope font-extrabold 
+        font-manrope font-normal
+        tracking-wider
         aspect-[10/1]
-        text-base xl:text-sm sm:text-xs 2xl:text-xl md:text-sm ">
+        uppercase
+        px-6
+        text-sm  xl:text-sm 
+        bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-none bg-opacity-60 backdrop-saturate-100 backdrop-contrast-50
+        ">
 
           <li className={navLinkAnimation}><NavLink to='/' className={({isActive})=>(isActive?currentLinkAnimation:"")}>HOME</NavLink></li>
           <li className={navLinkAnimation}><NavLink to='/about' className={({isActive})=>(isActive?currentLinkAnimation:"")}>ABOUT</NavLink></li>

@@ -58,7 +58,7 @@ export const MissionSection = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-            className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-xl'>
+            className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-base'>
 
                 At Sumanth Homes, we channel all our resources, energy, and expertise toward delivering high-quality infrastructure built to the highest standards. We constantly evaluate our actions, learning from every experience to improve and evolve. This approach empowers us to take on greater challenges and drives our continuous growth as a firm.
 

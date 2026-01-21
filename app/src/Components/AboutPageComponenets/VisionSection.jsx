@@ -62,7 +62,7 @@ export const VisionSection = () => {
 
             </div>
 
-            <p ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-xl'>
+            <p ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-base'>
 
                 Our vision is to build high-quality homes that reflect trust and lasting value. We understand that a home is a one-time investment for many, and we are committed to delivering spaces that offer comfort, reliability, and complete satisfaction. With this vision, we strive to give our best in every project we undertake.
 
