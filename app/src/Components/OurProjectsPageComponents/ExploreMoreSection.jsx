@@ -55,7 +55,7 @@ export const ExploreMoreSection = () => {
             font-normal
             mb-4 xl:mb-12
             xl:w-[80%] 
-            xl:text-3xl 
+            md:text-xl xl:text-3xl 
             '>
                 Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world.
             </motion.h4>

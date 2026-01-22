@@ -15,7 +15,7 @@ export const Card3 = ({text}) => {
         <h6 className='
         font-normal
         text-[#737373]
-        text-xs md:text-xl xl:text-base
+        text-xs md:text-base xl:text-base
         '>{text}</h6>
     </div>
   )
