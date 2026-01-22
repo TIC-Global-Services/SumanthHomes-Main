@@ -5,10 +5,13 @@ import { useRef, useEffect } from "react"
 import { gsap ,ScrollTrigger, TextPlugin } from "gsap/all"
 import '../../assets/styles/titleStyle.css';
 
+
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 export const OurProjectsSection = () => {
+
+    
 
   const titleRef = useRef(null);
       
@@ -48,7 +51,8 @@ export const OurProjectsSection = () => {
         </div>
 
         <DefaultOurProjects bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} />
-        <DefaultOurProjects bgImage={Prj2BgImage} miniHeader={'A work in motion'} mainHeader={'URBANSCAPES'} description={' Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'} />
+        
+        <DefaultOurProjects bgImage={Prj2BgImage} miniHeader={'A work in motion'} mainHeader={'URBANSCAPES'} description={' Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'} /> 
     </div>
   )
 }
