@@ -43,7 +43,7 @@ export const MapSection = () => {
             <div className="flex items-center gap-8 flex-wrap w-[100%]
             ">
 
-              <div className="flex-grow w-[23%]">
+              <div className="flex-grow xl:w-[23%]">
 
                 <h4 className="
                 text-[#B50404]
@@ -107,7 +107,7 @@ export const MapSection = () => {
             mb-4
             ">
 
-              <div className="flex-grow w-[21%]">
+              <div className="flex-grow xl:w-[21%]">
 
                 <h4 className="
                 text-[#B50404]

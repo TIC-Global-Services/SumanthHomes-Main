@@ -36,7 +36,7 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
 
         <div className='
         top-22 left-8
-        bottom-[-40px]
+        bottom-[-40px] md:bottom-[-30px]
         absolute'>
             <h4 className='text-2xl xl:text-2xl'>{mainText}</h4>
              <p className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>{subText}</p>
