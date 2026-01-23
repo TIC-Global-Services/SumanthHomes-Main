@@ -31,7 +31,7 @@ export const HistorySection = () => {
               
               className='
               font-extrabold text-[#B50404]
-              text-9xl xl:text-[14rem] md:text-9xl '>13</motion.p>
+              text-9xl xl:text-[15rem] md:text-9xl '>13</motion.p>
 
               <motion.div
               initial={slideUpAnimation.initial}
@@ -40,6 +40,7 @@ export const HistorySection = () => {
               viewport={slideUpAnimation.viewport}
               >
                 <h2  className='
+                text-[#1D1D1D]
                 flex align-center justify-center
                 font-urbanist font-medium 
                 text-3xl xl:text-8xl md:text-5xl
@@ -52,7 +53,7 @@ export const HistorySection = () => {
 
                   <p className='
                   font-medium text-[#737373]
-                  leading-5
+                  leading-6
                   w-[100%] xl:w-[70%] md:w-[80%] '>We are dedicated to crafting architectural and design experiences that not only serve a clear functional purpose but also elevate the spaces they inhabit through thoughtful, visually inspiring aesthetics. Our approach blends practicality with creativity, ensuring every environment we shape is as efficient as it is expressive.</p>
 
                 </div>
