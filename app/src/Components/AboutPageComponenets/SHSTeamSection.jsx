@@ -62,11 +62,6 @@ export const SHSTeamSection = () => {
       position:'Director',
       bgImage:bgImage,
     },
-    {
-      name:'Jeremy dupont',
-      position:'Director',
-      bgImage:bgImage,
-    },
   ]
 
   let frame = 1;
@@ -96,7 +91,7 @@ export const SHSTeamSection = () => {
   }
 
   return (
-    <div className='mb-14 xl:mb-14 '>
+    <div className='mb-14 xl:mb-14 overflow-hidden'>
 
         <div className='
         md:justify-self-center
@@ -116,7 +111,6 @@ export const SHSTeamSection = () => {
         </div>
 
         <div  className='
-        overflow-hidden md:overflow-scroll
         w-full
         xl:mb-14'
 
@@ -124,7 +118,7 @@ export const SHSTeamSection = () => {
           scrollbarWidth:'none'
         }}
         >
-          <div ref={cardSectionRef} className='flex gap-10'>
+          <div ref={cardSectionRef} className='flex gap-4'>
               {
                 TeamCards.map((data, _)=>(
                   <Card2 Name={data.name} Position={data.position} bgImage={data.bgImage}/>

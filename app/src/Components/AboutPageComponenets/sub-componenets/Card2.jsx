@@ -9,25 +9,27 @@ export const Card2 = ({bgImage, Name, Position}) => {
 
   return (
     <div className='
+    relative
     flex 
-    flex-shrink-0
-    w-full
+    flex-shrink
+    flex-grow
     aspect-[3/4]
-    md:aspect-auto
-    md:w-[20rem] xl:w-[20rem]
-    md:h-[28rem] xl:h-[20rem] 
+    w-[25%]
+    
    
     
-    relative' style={{
+    ' style={{
         backgroundImage:`url(${bgImage})`,
         backgroundRepeat:'no-repeat',
         backgroundSize: 'cover',
         position:'center'
     }}>
 
+      
+
         <div className='
         mt-auto mb-8 ml-10
-        bg-gradient-to-t from-black  via-black/90  to-transparent
+        
         '>
 
             <h2 className='
