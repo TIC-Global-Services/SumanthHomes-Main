@@ -41,9 +41,9 @@ export const Footer = () => {
         '>
 
             <div className='
-            w-full
-            flex
-            relative
+            w-full 
+            flex 
+            relative 
             text-center
             pb-8 
              '>
@@ -63,15 +63,17 @@ export const Footer = () => {
                     flex-grow
                     bg-gradient-to-tr from-[#B40505] to-[#da4949]
                     bg-clip-text
+                    text-center
                     font-extrabold text-transparent 
-                    text-6xl xl:text-9xl md:text-8xl 
+                    text-6xl xl:text-[9rem] md:text-8xl 
                     '> SUMANTH HOMES 
                 </h2>
 
                 <h2 className='
                     w-full
+                    text-center
                     font-extrabold text-[#A7A7A7] 
-                    text-6xl xl:text-9xl md:text-8xl 
+                    text-6xl xl:text-[9rem] md:text-8xl 
                     hover:cursor-default
                     '> SUMANTH HOMES 
                 </h2>
