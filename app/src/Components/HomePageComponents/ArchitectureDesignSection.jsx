@@ -104,12 +104,12 @@ export const ArchitectureDesignSection = () => {
                 
                 className='
                 text-black
-                font-bold
+                font-manrope font-bold
                 text-3xl xl:text-4xl md:text-2xl
                 mb-4
                 xl:leading-10
                 tracking-tight'>
-                    Crafting modern buildings where style meets purpose.
+                    Crafting Modern Buildings Where Style Meets Purpose.
                 </h4>
 
             </motion.div>
