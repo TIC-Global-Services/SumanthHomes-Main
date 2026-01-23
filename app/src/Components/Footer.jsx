@@ -41,6 +41,7 @@ export const Footer = () => {
         '>
 
             <div className='
+            w-full
             flex
             relative
             text-center
@@ -69,7 +70,6 @@ export const Footer = () => {
 
                 <h2 className='
                     w-full
-                    flex-grow
                     font-extrabold text-[#A7A7A7] 
                     text-6xl xl:text-9xl md:text-8xl 
                     hover:cursor-default
@@ -82,7 +82,7 @@ export const Footer = () => {
             <div className='
             w-full
             pt-14
-            md:flex items-center justify-between
+            md:flex justify-between items-end
             md:order-first'> 
                 <div className=' 
                     text-center
