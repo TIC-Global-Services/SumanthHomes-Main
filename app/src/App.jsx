@@ -4,6 +4,7 @@ import { ProjectsPage } from "./PageComponents/ProjectsPage"
 import { ContactPage } from "./PageComponents/ContactPage"
 import {createBrowserRouter, RouterProvider} from "react-router"
 import { NotFound404 } from "./PageComponents/NotFound404"
+import { ExplorePage } from "./PageComponents/ExplorePage"
 
 
 
@@ -30,6 +31,11 @@ function App() {
       path:"/contact",
       element:<ContactPage/>,
       errorElement: <NotFound404/> 
+    },
+    {
+      path:"/exploreProject/:id",
+      element:<ExplorePage/>,
+      errorElement:<NotFound404/>
     }
    ])
 
