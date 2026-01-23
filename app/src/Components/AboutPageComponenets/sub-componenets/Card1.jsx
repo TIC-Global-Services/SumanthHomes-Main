@@ -22,12 +22,12 @@ export const Card1 = ({number, content, pageNo}) => {
     
     flex items-center justify-between
     flex-shrink-0
-    md:gap-5 border-t-2
+    md:gap-5 border-t-[1px]
     border-[#3E3E3E]
     xl:pt-4 md:pt-4
     w-[100%] md:w-[100%] xl:w-[30%]'>
 
-        <div className='md:w-[60%] xl:w-[60%] '>
+        <div className='md:w-[60%] xl:w-[70%] '>
 
             <p className='font-normal tracking-wide'> <span ref={numberRef} className='text-[#B40505]'>{number}</span> {content}</p>
 

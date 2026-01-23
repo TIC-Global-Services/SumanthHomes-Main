@@ -99,7 +99,7 @@ export const ArchitectureDesignSection = () => {
                 text-[#B50404] font-semibold
                 text-xs md:text-xs 
                 mb-1 xl:mb-4 md:mb-1
-                uppercase leading-8 tracking-widest'>ARCHITECTURE & DESIGN</p>
+                uppercase leading-8 tracking-[3px]'>ARCHITECTURE & DESIGN</p>
                 <h4
                 
                 className='
@@ -108,7 +108,7 @@ export const ArchitectureDesignSection = () => {
                 text-3xl xl:text-4xl md:text-2xl
                 mb-4
                 xl:leading-10
-                tracking-tight'>
+                tracking-normal'>
                     Crafting Modern Buildings Where Style Meets Purpose.
                 </h4>
 
@@ -132,7 +132,7 @@ export const ArchitectureDesignSection = () => {
         </div>
 
         <div 
-        className='w-full overflow-hidden md:overflow-scroll'
+        className='w-full '
         style={{
             scrollbarWidth:'none',
         }}
@@ -152,9 +152,9 @@ export const ArchitectureDesignSection = () => {
                     '>
                         
                         <img className='
-                        aspect-[3/4]
-                        w-full xl:w-[280px] 
-                        h-[25rem] xl:h-[350px]
+                        aspect-[4/5]
+                        w-full xl:w-[370px] 
+                        
                         ' src={card.img}></img>
                         <p className='
                         absolute 

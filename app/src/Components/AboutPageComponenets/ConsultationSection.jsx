@@ -13,9 +13,9 @@ export const ConsultationSection = () => {
     <div className='
     flex 
     w-full
-    aspect-[3/4]
+    aspect-[3/]
     md:aspect-auto
-    xl:h-[25rem] md:h-[15rem]
+    xl:h-[30rem] md:h-[15rem]
     mb-20 xl:mb-36 md:mb-14
     ' 
       style={{
@@ -60,7 +60,7 @@ export const ConsultationSection = () => {
             bg-[#B50404] font-manrope font-bold tracking-wide rounded-md
              px-4 md:px-8 xl:px-14
              py-2 md:py-2 xl:py-4 
-             
+             hover:bg-white hover:text-[#B50404]
              
             text-white
              md:text-sm'>BOOK A CONSULTATION</button>

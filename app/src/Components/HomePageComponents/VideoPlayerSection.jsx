@@ -74,8 +74,8 @@ export const VideoPlayerSection = () => {
             <div className='
             bottom-0 right-0 absolute
             bg-[#B50404] 
-            px-2 xl:px-7 md:px-7 
-            py-1 xl:py-2 md:py-2
+            px-2 xl:px-14 md:px-7 
+            py-1 xl:py-4 md:py-2
             '>
                 <p className='
               text-white
@@ -88,6 +88,8 @@ export const VideoPlayerSection = () => {
         </div>
 
         <div className='
+        w-[75%]
+        mx-auto
         mt-6 xl:mt-16 md:mt-16'>
 
             <div className='
@@ -98,6 +100,7 @@ export const VideoPlayerSection = () => {
                 
                 <div ref={cardRef} className='
                 text-center
+                font-manrope font-extralight
                 text-[#737373]
                 w-[90%] md:w-[70%] xl:w-[70%] 
                  md:text-xl xl:text-2xl
@@ -114,7 +117,7 @@ export const VideoPlayerSection = () => {
                 flex items-center justify-center
                 md:order-first
                 flex-shrink-0
-                bg-white
+                hover:bg-white
                 p-2
                 rounded-full'>
                     <div>
@@ -135,7 +138,7 @@ export const VideoPlayerSection = () => {
                 <div className='
                 flex items-center justify-center
                 flex-shrink-0
-                bg-white
+                hover:bg-white
                 p-2
                 rounded-full'>
                     <div >

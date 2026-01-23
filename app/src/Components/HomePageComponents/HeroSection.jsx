@@ -27,9 +27,10 @@ export const HeroSection = () => {
     absolute
     text-white font-manrope font-bold
     bottom-0 left-0
-    w-[80%] md:w-[70%] lg:w-[70%] xl:w-[60%] 
-    pl-4 xl:pl-20 md:pl-10
+    w-[80%] md:w-[70%] lg:w-[70%] xl:w-[65%] 
+    px-6 xl:px-[105px] lg:px-[50px] md:px-[20px]
     pb-9 xl:pb-20 md:pb-10 
+    
     text-4xl md:text-5xl lg:text-6xl  xl:text-6xl 2xl:text-6xl
     
     '>

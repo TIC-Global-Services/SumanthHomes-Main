@@ -26,7 +26,7 @@ export const MiniStatsSections = () => {
   return (
 
     <div className='
-    flex items-center justify-evenly flex-wrap
+    flex items-center justify-between flex-wrap
     gap-1
     my-16'>
 

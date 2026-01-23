@@ -42,28 +42,30 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
           ref={containerRef}
 
          className='
-         w-[100%] md:w-[85%] xl:w-[30%]
-         flex items-center gap-14 md:gap-20 xl:gap-24
+         
+         w-[100%] md:w-[85%] xl:w-[32%]
+         box-border
+         flex items-center gap-6
+         flex-grow-0
+         flex-shrink-0
          bg-white
          text-center
-         md:mx-auto
          mb-4
          py-8 xl:py-10
-         px-5 md:px-auto
+         pl-12
          
     '>
         
         <div  className='
-        w-[10%] md:w-[35%] xl:w-[20%]
+         flex-shrink-0
         '>
 
             <h3
 
              className='
-            ml-auto
             number
-            text-right md:text-center
-            font-manrope font-bold text-[#B50404]
+            text-right md:text-right
+            font-manrope font-normal  text-[#B50404]
             text-4xl xl:text-7xl md:text-7xl
             tracking-tighter'>{currentNumber}{plus ? "+" : null}
             </h3>
@@ -72,8 +74,8 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
         <div
         className='
-        
-        w-[90%] md:w-[65%] xl:w-[70%] xl:ml-auto'> 
+        w-[50%] xl:w-[60%]
+        '> 
 
             <motion.h5
             initial={{opacity:0, y:40}}
@@ -82,6 +84,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             transition={{duration:0.5}}
             
              className='
+
             w-full
             text-left
             font-medium text-black 

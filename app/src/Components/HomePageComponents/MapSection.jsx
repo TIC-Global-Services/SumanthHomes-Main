@@ -18,7 +18,7 @@ export const MapSection = () => {
       
         <div className='
         flex items-center justify-center flex-wrap shirnk-0
-        xl:gap-2 
+        xl:gap-6
         mb-2 xl:mb-28 md:mb-28
         '>
             <div className='
@@ -29,11 +29,12 @@ export const MapSection = () => {
                 text-center
                 font-normal text-[#737373]
                 w-[100%]
+                tracking-normal
                 mx-auto
                 text-xs md:text-xl xl:text-2xl'>Studio. Showroom. Site Visits  drop by or get directions </p>
             </div>
 
-            <div className='w-[10%]  border-t-0 md:border-t-2 border-gray-600'>
+            <div className='w-[5%]  border-t-0 md:border-t-2 border-black'>
 
             </div>
             

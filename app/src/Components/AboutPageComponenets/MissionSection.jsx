@@ -22,7 +22,7 @@ export const MissionSection = () => {
           transition={{duration:0.5}}
           viewport={{once:false}}
 
-        className='order-2 md:order-1 md:w-[50%]'>
+        className='order-2 md:order-1 md:w-[40%] xl:w-[45%]'>
 
             <img className='
             

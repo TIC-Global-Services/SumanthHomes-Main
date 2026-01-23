@@ -30,17 +30,18 @@ export const Footer = () => {
     
   return (
 <div>
-    <div className='flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1] '>
+    <div className='
+    flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1]
+    px-6 xl:px-[105px] lg:px-[50px] md:px-[20px] '>
 
         <div className='
         flex flex-col 
         pt-4 md:pt-10 
         pb-7 md:pb-7
-        mx-2 md:mx-8
         '>
 
             <div className='
-            
+            flex
             relative
             text-center
             pb-8 
@@ -56,7 +57,9 @@ export const Footer = () => {
                 }}
                 className='
                     absolute
+                    hover:cursor-default
                     top-0 left-0 w-full
+                    flex-grow
                     bg-gradient-to-tr from-[#B40505] to-[#da4949]
                     bg-clip-text
                     font-extrabold text-transparent 
@@ -66,8 +69,10 @@ export const Footer = () => {
 
                 <h2 className='
                     w-full
+                    flex-grow
                     font-extrabold text-[#A7A7A7] 
                     text-6xl xl:text-9xl md:text-8xl 
+                    hover:cursor-default
                     '> SUMANTH HOMES 
                 </h2>
                 
@@ -75,6 +80,7 @@ export const Footer = () => {
             </div>
 
             <div className='
+            w-full
             pt-14
             md:flex items-center justify-between
             md:order-first'> 
@@ -113,7 +119,7 @@ export const Footer = () => {
             <div className='
             md:flex items-center justify-between
             text-center
-            px-2 
+            
             pb-4
             '>
 

@@ -20,7 +20,7 @@ export const SHValues = () => {
 
   return (
     <div ref={containerRef} className='flex xl:gap-3 
-    mb-14 xl:mb-28'>
+    mb-[28rem]'>
 
         <div
 
@@ -51,12 +51,13 @@ export const SHValues = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-             className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm text-base xl:text-base'>
+             className='w-[50%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm text-base xl:text-base'>
               Our mission is to channel our passion, expertise, and resources into crafting premium infrastructure that meets the highest standards of quality and design. We believe in learning, evolving, and improving with every project — constantly questioning our processes to achieve perfection. By embracing challenges and refining our approach, we aim to grow stronger as a firm and continue creating homes that reflect integrity, comfort, and enduring value.
             </motion.p>
 
         </div>
 
+        <div className='flex gap-4 absolute right-0'>
         <motion.div
            initial={{opacity:0, y:100}}
            whileInView={{opacity:1, y:0}}
@@ -66,10 +67,10 @@ export const SHValues = () => {
         className='hidden xl:block'>
 
             <img className='
-            xl:w-[70rem]
-            xl:h-[30rem] md:h-[12rem]' src={image1} />
+            xl:w-[28rem]
+            xl:h-[37rem] md:h-[12rem]' src={image1} />
 
-            <p className='xl:mt-1 md:mt-1'>Timeless Design</p>
+            <p className='font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
 
         </motion.div>
 
@@ -80,11 +81,12 @@ export const SHValues = () => {
            viewport={{once:false}}
         className='hidden xl:block'>
 
-            <img className='xl:w-[70rem] xl:h-[22rem] md:h-[12rem]' src={image2} />
+            <img className='xl:w-[24rem] xl:h-[22rem] md:h-[12rem]' src={image2} />
 
-            <p className='xl:mt-1 md:mt-1'>Honest Craftmanship</p>
+            <p className='font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
 
         </motion.div>
+        </div>
 
     </div>
   )

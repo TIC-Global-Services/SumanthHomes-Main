@@ -122,7 +122,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
                         <h2 className='
                         font-manrope font-semibold
-                        xl:pb-4
+                        xl:pb-2
                         text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
 
                     </motion.div>
