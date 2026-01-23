@@ -1,39 +1,12 @@
 import { useRef, useEffect, useState } from "react"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react"
-import { FloorPlan } from "./OurProjectsPageComponents/sub-componenets/FloorPlan"
-import image1 from "../assets/img/OurProjectsSection/FloorPlan/groundFloorImage.png";
-import image2 from "../assets/img/OurProjectsSection/FloorPlan/firstFloorImage.png"
-import { Amenities } from "./OurProjectsPageComponents/sub-componenets/Amenities"
-import { Location } from "./OurProjectsPageComponents/sub-componenets/Location"
-import { ProjectDescription } from "./OurProjectsPageComponents/sub-componenets/ProjectDescription";
+import { useNavigate } from "react-router-dom";
 
 
-export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, description }) => {
+export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description }) => {
 
-    const [showDetails, setShowDetails] = useState(false);
-
-    const groundData = {
-        img1 :{
-            image:image1,
-            alt:'ground-image-left'
-        },
-        img2 :{
-            image:image1,
-            alt:'ground-image-right'
-        },
-    }
-
-    const firstData = {
-        img1 :{
-            image:image2,
-            alt:'first-image-left'
-        },
-        img2 :{
-            image:image2,
-            alt:'first-image-right'
-        },
-    }
+    const Navigate = useNavigate();
 
     const titleRef = useRef(null);
     const contentRef = useRef(null);
@@ -180,7 +153,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                             md:text-xs xl:text-sm 
                             '>EXPLORE PROJECT</h4>
 
-                            <button onClick={()=>setShowDetails(!showDetails)}>
+                            <button onClick={()=>Navigate(`exploreproject/${id}`)}>
 
                                 <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7386 5.74553C12.0732 5.41098 12.0732 4.86768 11.7386 4.53313L7.45641 0.250911C7.12187 -0.0836371 6.57856 -0.0836371 6.24401 0.250911C5.90946 0.58546 5.90946 1.12877 6.24401 1.46331L9.0676 4.28423H0.856444C0.382723 4.28423 0 4.66695 0 5.14067C0 5.61439 0.382723 5.99711 0.856444 5.99711H9.06492L6.24669 8.81802C5.91214 9.15257 5.91214 9.69588 6.24669 10.0304C6.58123 10.365 7.12454 10.365 7.45909 10.0304L11.7413 5.74821L11.7386 5.74553Z" fill="#191919"/></svg>
 
@@ -255,7 +228,7 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
                          md:text-xs xl:text-sm 
                         '>EXPLORE PROJECT</h4>
 
-                        <button onClick={()=>setShowDetails(!showDetails)}>
+                        <button onClick={()=>Navigate(`exploreproject/${id}`)}>
 
                             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7386 5.74553C12.0732 5.41098 12.0732 4.86768 11.7386 4.53313L7.45641 0.250911C7.12187 -0.0836371 6.57856 -0.0836371 6.24401 0.250911C5.90946 0.58546 5.90946 1.12877 6.24401 1.46331L9.0676 4.28423H0.856444C0.382723 4.28423 0 4.66695 0 5.14067C0 5.61439 0.382723 5.99711 0.856444 5.99711H9.06492L6.24669 8.81802C5.91214 9.15257 5.91214 9.69588 6.24669 10.0304C6.58123 10.365 7.12454 10.365 7.45909 10.0304L11.7413 5.74821L11.7386 5.74553Z" fill="#191919"/></svg>
 
@@ -269,26 +242,6 @@ export const DefaultOurProjects = ({bgImage, miniHeader , mainHeader, descriptio
             </div>
 
     </div>
-    {
-        showDetails ? <ProjectDescription/> : ''
-    }
-    {
-        showDetails ? <FloorPlan title={'Ground floor plan'} img1={groundData.img1} img2={groundData.img2} />  : null
-    }
-    {
-        showDetails ? <FloorPlan title={'First floor plan'} img1={firstData.img1} img2={firstData.img2} />  : null
-    }
-
-    {
-        showDetails ? <Amenities /> : null
-    }
-    {
-        showDetails ? <Location />  : null
-    }
-    
-    
-    
-    
     
     </div>
   )
