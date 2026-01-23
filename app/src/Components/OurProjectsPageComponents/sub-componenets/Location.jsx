@@ -1,7 +1,7 @@
-import { Logo1 } from "./miniLogos/logo1";
-import { Logo2 } from "./miniLogos/logo2";
-import { Logo3 } from "./miniLogos/logo3";
-import { Logo4 } from "./miniLogos/logo4";
+import { Logo1 } from "./miniLogos/Logo1";
+import { Logo2 } from "./miniLogos/Logo2";
+import { Logo3 } from "./miniLogos/Logo3";
+import { Logo4 } from "./miniLogos/Logo4";
 
 export const Location = () => {
     const specification ={
