@@ -41,39 +41,41 @@ export const AboutSumanthHomesSection = () => {
 
     <div ref={containerRef} className='
     w-full
-    flex items-center flex-wrap
-    gap-8 md:gap-12 xl:gap-14
+    flex items-center flex-wrap xl:flex-nowrap
+    gap-8 md:gap-12 xl:gap-32
     mt-8 xl:mt-20 md:mt-14
-    mb-14 xl:mb-28 md:mb-12'>
+    mb-14 xl:mb-40 md:mb-12'>
 
         <div ref={imageRef} className='
         w-[50%]
         flex items-center relative
-        gap-1 xl:gap-3 md:gap-2
+        gap-4
+        
         '>
 
             <img className='
-            w-[17rem] xl:w-[19rem] md:w-[29rem]
-            h-[8rem] xl:h-[16rem] md:h-[10rem]
+            w-[45%]
+            aspect-square
             
             ' src={imageLeft}
             
             ></img>
 
             <img className='
+            bg-black
             absolute
             top-[3rem] xl:top-[30%] md:top-[30%]
             left-[2rem] md:left-[35%] xl:left-[25%]
-            w-[10rem] md:w-[15rem] xl:w-[16rem]
-            h-[8rem] md:h-[11rem] xl:h-[15rem] 
+            w-[45%]
+            aspect-square
             ' 
             src={imageMiddle}
             
             ></img>
 
             <img className='
-            w-[30rem] xl:w-[20rem] md:w-[29rem]
-            h-[10rem] xl:h-[19rem] md:h-[13rem]
+            w-[55%]
+            aspect-square
              ' src={imageRight}
             
              ></img>
@@ -81,6 +83,7 @@ export const AboutSumanthHomesSection = () => {
         </div>
 
         <div className='
+        
         w-[100%] xl:w-[45%] md:w-[80%]
         '>
 
