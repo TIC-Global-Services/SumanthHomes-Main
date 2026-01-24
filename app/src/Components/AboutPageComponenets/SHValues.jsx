@@ -19,12 +19,12 @@ export const SHValues = () => {
   const image2Ref = useRef(null);
 
   return (
-    <div ref={containerRef} className='flex xl:gap-3 
+    <div ref={containerRef} className='flex gap-4
     mb-[28rem]'>
 
         <div
 
-          className=' xl:w-[80%]'>
+          className=' xl:w-[40%]'>
 
             <motion.div 
               initial={{opacity:0, y:100}}
@@ -51,26 +51,27 @@ export const SHValues = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-             className='w-[50%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm text-base xl:text-base'>
+             className='w-full mb-4 font-jakarta font-normal text-[#737373] md:text-sm text-base xl:text-base'>
               Our mission is to channel our passion, expertise, and resources into crafting premium infrastructure that meets the highest standards of quality and design. We believe in learning, evolving, and improving with every project — constantly questioning our processes to achieve perfection. By embracing challenges and refining our approach, we aim to grow stronger as a firm and continue creating homes that reflect integrity, comfort, and enduring value.
             </motion.p>
 
         </div>
 
-        <div className='flex gap-4 absolute right-0'>
+        <div className='xl:w-[58%] flex gap-4 absolute right-0'>
         <motion.div
            initial={{opacity:0, y:100}}
            whileInView={{opacity:1, y:0}}
            transition={{duration:0.5}}
            viewport={{once:false}}
 
-        className='hidden xl:block'>
+        className='hidden w-[55%] xl:block'>
 
             <img className='
-            xl:w-[28rem]
-            xl:h-[37rem] md:h-[12rem]' src={image1} />
+            xl:w-[100%] 
+            aspect-[3/4]
+            ' src={image1} />
 
-            <p className='font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
+            <p className='text-xl font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
 
         </motion.div>
 
@@ -79,11 +80,11 @@ export const SHValues = () => {
            whileInView={{opacity:1, y:0}}
            transition={{duration:0.5}}
            viewport={{once:false}}
-        className='hidden xl:block'>
+        className='hidden xl:block w-[45%]'>
 
-            <img className='xl:w-[24rem] xl:h-[22rem] md:h-[12rem]' src={image2} />
+            <img className='xl:w-[100%] aspect-square' src={image2} />
 
-            <p className='font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
+            <p className='text-xl font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
 
         </motion.div>
         </div>
