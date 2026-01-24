@@ -27,7 +27,7 @@ export const Card1 = ({number, content, pageNo}) => {
     xl:pt-4 md:pt-4
     w-[100%] md:w-[100%] xl:w-[25%]'>
 
-        <div className='md:w-[60%] xl:w-[80%] '>
+        <div className='md:w-[60%] xl:w-[80%] 2xl:w-[77%] '>
 
             <p className='font-normal tracking-wide'> <span ref={numberRef} className='text-[#B40505]'>{number}</span> {content}</p>
 
