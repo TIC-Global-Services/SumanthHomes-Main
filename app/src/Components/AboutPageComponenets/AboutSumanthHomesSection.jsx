@@ -40,12 +40,14 @@ export const AboutSumanthHomesSection = () => {
   return (
 
     <div ref={containerRef} className='
+    w-full
     flex items-center flex-wrap
-    gap-8 md:gap-12 xl:gap-20
+    gap-8 md:gap-12 xl:gap-14
     mt-8 xl:mt-20 md:mt-14
     mb-14 xl:mb-20 md:mb-12'>
 
         <div ref={imageRef} className='
+        w-[50%]
         flex items-center relative
         gap-1 xl:gap-3 md:gap-2
         '>
@@ -100,7 +102,7 @@ export const AboutSumanthHomesSection = () => {
 
             <p
             ref={contentRef}
-            className='mb-4 tracking-normal font-normal text-[#737373] '>
+            className='w-full mb-4 tracking-normal font-normal text-xl text-[#737373] '>
               
               Established in 2013, Sumanth Homes is a partnership firm specializing in high-quality residential and commercial projects. With over 30 years of experience, Managing Partner Manohar Katta brings deep industry expertise and traditional values, while the other partners contribute modern technologies and advanced quality control practices.
 
