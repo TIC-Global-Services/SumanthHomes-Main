@@ -6,17 +6,17 @@ import { Logo4 } from "./miniLogos/Logo4";
 export const Location = () => {
     const specification ={
         flex:'flex  gap-4 w-full border-b-2 mb-6 pb-4',
-        secondFlex:'flex gap-2',
+        secondFlex:'flex w-[50%] gap-2',
         title:'text-base font-normal pr-4',
-        content:'font-normal ',
+        content:'w-[60%] font-normal text-[#717580]',
     } 
   return (
     <div className='w-full mb-16'>
         <h2 className='text-2xl font-manrope font-semibold mb-4'>Location</h2>
-        <div className='flex items-center justify-between flex-wrap xl:flex-nowrap gap-14 w-full'>
+        <div className='flex items-center justify-between flex-wrap xl:flex-nowrap gap-20 w-full'>
 
-            <div className='w-full xl:w-[60%] pointer-events-none'>
-                <iframe className='w-full aspect-[5/2]' src="https://www.openstreetmap.org/export/embed.html?bbox=79.01573181152344%2C13.418341060030002%2C79.65843200683595%2C13.84541369663886&amp;layer=hot" ></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=11/13.6320/79.3371&amp;layers=H">View Larger Map</a></small>
+            <div className='w-full xl:w-[65%] pointer-events-none'>
+                <iframe className='w-full aspect-[4/2]' src="https://www.openstreetmap.org/export/embed.html?bbox=79.01573181152344%2C13.418341060030002%2C79.65843200683595%2C13.84541369663886&amp;layer=hot" ></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=11/13.6320/79.3371&amp;layers=H">View Larger Map</a></small>
             </div>
             <div className='w-full xl:w-[30%]'>
 
