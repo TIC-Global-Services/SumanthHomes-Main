@@ -1,17 +1,49 @@
 import { motion } from "motion/react";
+import { useState, useEffect, useRef } from "react";
+import { ScrollTrigger, gsap } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const HistorySection = () => {
 
   const slideUpAnimation = {
-    initial : {opacity:0, y:100},
+    initial : {opacity:0, y:100,},
     whileInView : {opacity:1, y:0},
     transition : {duration:0.5},
     viewport : {once:false}
   }
 
+  let Number = 13;
+  const [currentNumber, setCurrentNumber] = useState(0);
+      const containerRef = useRef(null);
+      let timer = Number>50 ? 20 : 50; 
+      
+  
+  
+      const updateNumber = ()=>{
+          setCurrentNumber(currentNumber+1);
+      }
+  
+      useEffect(()=>{
+          gsap.to(containerRef.current, {
+              scrollTrigger:{
+                  trigger:containerRef.current,
+                  once:true,
+              },
+              onComplete:()=>{setCurrentNumber(1)}
+          })
+      },[])
+  
+       useEffect(()=>{
+              if(currentNumber != Number && currentNumber != 0){
+                  setTimeout(updateNumber, timer);
+              }
+          }, [currentNumber])
+      
+
   return (
     <div 
-  
+  ref={containerRef}
     className='
     relative
     flex justify-center items-center
@@ -31,7 +63,7 @@ export const HistorySection = () => {
               
               className='
               font-extrabold text-[#B50404]
-              text-9xl xl:text-[15rem] md:text-9xl '>13</motion.p>
+              text-9xl xl:text-[15rem] md:text-9xl '>{currentNumber}</motion.p>
 
               <motion.div
               initial={slideUpAnimation.initial}
