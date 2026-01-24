@@ -20,7 +20,7 @@ export const SHValues = () => {
 
   return (
     <div ref={containerRef} className='flex gap-4
-    mb-[28rem] 2xl:mb-[36rem]'>
+    mb-[28rem] 2xl:mb-[40rem]'>
 
         <div
 
