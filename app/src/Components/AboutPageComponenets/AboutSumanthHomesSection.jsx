@@ -44,7 +44,7 @@ export const AboutSumanthHomesSection = () => {
     flex items-center flex-wrap
     gap-8 md:gap-12 xl:gap-14
     mt-8 xl:mt-20 md:mt-14
-    mb-14 xl:mb-20 md:mb-12'>
+    mb-14 xl:mb-28 md:mb-12'>
 
         <div ref={imageRef} className='
         w-[50%]
