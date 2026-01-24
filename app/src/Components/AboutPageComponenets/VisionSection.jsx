@@ -72,7 +72,7 @@ export const VisionSection = () => {
 
         <div className=' md:w-[47%] '>
 
-            <img ref={imageRef} className=' md:h-[18%] md:w-full xl:h-[18rem] xl:w-full aspect-[2/1]' src={visionImage}></img>
+            <img ref={imageRef} className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1]' src={visionImage}></img>
 
         </div>
 
