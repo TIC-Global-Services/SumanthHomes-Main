@@ -120,7 +120,7 @@ export const ArchitectureDesignSection = () => {
             transition={slideUpAnimation.transition}
             viewport={slideUpAnimation.viewport}
 
-            className='xl:w-[50%] md:pt-2'>
+            className='xl:w-[40%]  md:pt-2'>
 
                 <p className='
                 font-normal 
