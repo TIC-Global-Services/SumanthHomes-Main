@@ -48,6 +48,7 @@ export const ExplorePage = () => {
 
   return (
     <div>
+        
         <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={data.mainHeader} subText={data.miniHeader} />
@@ -63,6 +64,7 @@ export const ExplorePage = () => {
             <ExploreMoreSection/>
         </ContainerLayout>
         <Footer/>
+
     </div>
   )
 }
