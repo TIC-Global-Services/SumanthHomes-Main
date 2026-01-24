@@ -42,22 +42,29 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
           ref={containerRef}
 
          className='
-         
-         w-[100%] md:w-[85%] xl:w-[32%]
-         box-border
-         flex items-center gap-6
-         flex-grow-0
-         flex-shrink-0
-         bg-white
-         text-center
          mb-4
          py-8 xl:py-10
          pl-12
+         bg-white
+         w-[100%] md:w-[85%] xl:w-[32%]
+         box-border
+        flex-grow-0
+         flex-shrink-0
          
     '>
-        
-        <div  className='
-         flex-shrink-0
+
+        <div className="  
+         w-[90%]
+         flex items-center gap-6
+         
+         text-center
+         
+         ">
+            
+            <div  className='
+            flex-shrink-0
+            flex-grow
+            
         '>
 
             <h3
@@ -111,8 +118,12 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             </motion.p>
 
         </div>
+        
+        </div>
 
-    </motion.div>
+         </motion.div>
+                
+        
     
 
 

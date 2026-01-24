@@ -16,6 +16,7 @@ import bgImage from "../assets/img/OurProjectsPage/ourProjectsBgImage.png"
 import Prj1BgImage from "../assets/img/OurProjectsSection/arialDayView.jpg"
 import { useParams } from 'react-router-dom'
 import { ProjectData } from '../utils/ProjectData'
+import { BackToBtn } from '../Components/OurProjectsPageComponents/sub-componenets/backToBtn'
 
 export const ExplorePage = () => {
     
@@ -57,6 +58,7 @@ export const ExplorePage = () => {
             <FloorPlan title={'First floor plan'} img1={firstData.img1} img2={firstData.img2} />
             <Amenities/>
             <Location/>
+            <BackToBtn/>
             <CompletedProjectsSection/>
             <ExploreMoreSection/>
         </ContainerLayout>
