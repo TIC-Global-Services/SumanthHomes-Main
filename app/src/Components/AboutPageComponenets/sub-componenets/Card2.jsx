@@ -55,7 +55,7 @@ export const Card2 = ({bgImage, Name, Position}) => {
           '>{Name}</h2>
 
             <h4 className='
-            font-normal text-white '>{Position}</h4>
+            font-normal text-white/80 '>{Position}</h4>
 
             </div>
             

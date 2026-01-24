@@ -59,6 +59,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                 font-manrope font-bold
                 rotate-[270deg]
                 md:text-xs xl:text-xs
+                tracking-[2px]
                  
                '>RECENT PROJECTS</h4>
 
@@ -122,6 +123,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
                         <h2 className='
                         font-manrope font-semibold
+                        tracking-[-2px]
                         xl:pb-2
                         text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
 
@@ -151,6 +153,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                             <h4 className='
                             font-bold
                             md:text-xs xl:text-sm 
+                            tracking-[-2%]
                             '>EXPLORE PROJECT</h4>
 
                             <button onClick={()=>Navigate(`exploreproject/${id}`)}>

@@ -95,7 +95,7 @@ export const Footer = () => {
                 font-semibold text-[#B50404] 
                 md:text-left
                 text-sm md:text-sm xl:text-xl
-                tracking-wider md:tracking-widest
+                tracking-[2px] md:tracking-widest
                 pb-2
                 
                 '>SUMANTH HOMES - INDIA</h2>

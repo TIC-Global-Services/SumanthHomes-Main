@@ -36,13 +36,13 @@ export const ConsultationSection = () => {
           <div className=''>
 
             <h2 className='
-            font-manrope font-semibold text-white
+            font-manrope font-semibold text-white tracking-[-0.5px]
             text-2xl xl:text-4xl md:text-2xl
             xl:mb-2'>
               Let's Build Something Meaningful</h2>
 
             <p className='
-            font-normal text-white
+            font-normal text-white 
             text-base md:text-xs xl:text-base
             xl:mb-3
             md:leading-5
@@ -55,11 +55,10 @@ export const ConsultationSection = () => {
 
           <div className=''>
             <button onClick={handleClick} className='
-            bg-[#B50404] font-manrope font-bold tracking-wide rounded-md
+            bg-[#B50404] font-manrope font-bold tracking-[2px] rounded-md
              px-4 md:px-8 xl:px-14
              py-2 md:py-2 xl:py-4 
              hover:bg-white hover:text-[#B50404]
-             
             text-white
              md:text-sm'>BOOK A CONSULTATION</button>
           </div>

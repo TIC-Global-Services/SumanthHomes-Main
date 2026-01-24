@@ -50,14 +50,14 @@ export const VisionSection = () => {
             <div ref={titleRef}>
             <p className='
             mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
+            font-semibold uppercase tracking-[3px]
             text-[rgb(181,4,4)]
             text-xs'>OUR VISION</p>
 
 
             <h2 ref={subtitleRef} className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold
+            font-manrope font-semibold tracking-[-0.5px]
             text-3xl xl:text-4xl md:text-xl'>The Art of Modern Building</h2>
 
             </div>

@@ -108,7 +108,7 @@ export const ArchitectureDesignSection = () => {
                 text-3xl xl:text-4xl md:text-2xl
                 mb-4
                 xl:leading-10
-                tracking-normal'>
+                tracking-[-0.5px]'>
                     Crafting Modern Buildings Where Style Meets Purpose.
                 </h4>
 
@@ -125,7 +125,9 @@ export const ArchitectureDesignSection = () => {
                 <p className='
                 font-normal 
                 xl:leading-5 
-                xl:text-sm'>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
+                xl:text-sm
+                text-[#737373]
+                '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
             </motion.div>
 
@@ -159,7 +161,7 @@ export const ArchitectureDesignSection = () => {
                         <p className='
                         absolute 
                         bottom-8 xl:bottom-11 
-                        font-jakarta font-medium text-white text-center
+                        font-medium text-white text-center
                         justify-self-center
                         text-xl xl:text-xl 
                         '>{card.text}</p>

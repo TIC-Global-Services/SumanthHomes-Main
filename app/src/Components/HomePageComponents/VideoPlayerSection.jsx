@@ -80,6 +80,9 @@ export const VideoPlayerSection = () => {
                 <p className='
               text-white
                 text-xs
+                font-manrope font-bold
+                tracking-[2px]
+                uppercase
                 '
                 >WATCH SHOWREEL</p>
 
@@ -101,6 +104,7 @@ export const VideoPlayerSection = () => {
                 <div ref={cardRef} className='
                 text-center
                 font-manrope font-extralight
+                tracking-[-0.5px]
                 text-[#737373]
                 w-[90%] md:w-[70%] xl:w-[70%] 
                  md:text-xl xl:text-2xl
@@ -159,14 +163,14 @@ export const VideoPlayerSection = () => {
             <div className='
             hidden md:flex items-center gap-1 justify-self-center'>
 
-                <p> 0{index+1} </p>
+                <p className='font-semibold'> 0{index+1} </p>
                 
                 <svg width="220" height="1" viewBox="0 0 220 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="220" height="1" fill="#737373"/>
                     <rect width={`${((index+1)/maxIndex)*100}%`} height="1" fill="#B50404"/>
                 </svg>
 
-                <p>0{maxIndex}</p>
+                <p className='font-semibold'>0{maxIndex}</p>
 
             </div>
 

@@ -65,9 +65,9 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
              className='
             number
             text-right md:text-right
-            font-manrope font-normal  text-[#B50404]
+            font-manrope font-normal text-[#B50404]
             text-4xl xl:text-7xl md:text-7xl
-            tracking-tighter'>{currentNumber}{plus ? "+" : null}
+            tracking-[-6px]'>{currentNumber}{plus ? "+" : null}
             </h3>
 
         </div>
@@ -88,6 +88,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             w-full
             text-left
             font-medium text-black 
+            tracking-[-0.54px]
             text-xl  md:text-3xl xl:text-xl
             md:text-left xl:text-left
             '>{titleText}
@@ -105,6 +106,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
             text-left xl:text-left 
             text-xl xl:text-xs
             font-normal 
+            tracking-[-0.48px]
             '>{contentText}
             </motion.p>
 

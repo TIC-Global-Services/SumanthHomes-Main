@@ -17,7 +17,9 @@ export const MapSection = () => {
  ></iframe><br/>
       
         <div className='
-        flex items-center justify-center flex-wrap shirnk-0
+        w-[80%]
+        mx-auto
+        flex items-center justify-evenly flex-wrap shirnk-0
         xl:gap-6
         mb-2 xl:mb-28 md:mb-28
         '>
@@ -29,17 +31,17 @@ export const MapSection = () => {
                 text-center
                 font-normal text-[#737373]
                 w-[100%]
-                tracking-normal
+                tracking-[-0.5px]
                 mx-auto
                 text-xs md:text-xl xl:text-2xl'>Studio. Showroom. Site Visits  drop by or get directions </p>
             </div>
 
-            <div className='w-[5%]  border-t-0 md:border-t-2 border-black'>
+            <div className='w-[10%]  border-t-0 md:border-t-2 border-black'>
 
             </div>
             
             <button className='
-            text-[#B50404] font-semibold
+            text-[#B50404] font-semibold tracking-[-0.5px]
             w-[100%] md:w-auto
              md:text-xl
             '>Get directions</button>

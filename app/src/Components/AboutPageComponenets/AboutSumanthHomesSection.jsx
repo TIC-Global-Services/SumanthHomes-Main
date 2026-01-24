@@ -90,14 +90,14 @@ export const AboutSumanthHomesSection = () => {
           <div ref={titleRef}>
             <p className='
             mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
+            font-semibold uppercase tracking-[3px] [word-spacing:3px]
             text-[rgb(181,4,4)]
             text-xs'>About Sumanth homes</p>
 
 
             <h4 className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold
+            font-manrope font-semibold 
             xl:w-[80%]
             text-3xl xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
 

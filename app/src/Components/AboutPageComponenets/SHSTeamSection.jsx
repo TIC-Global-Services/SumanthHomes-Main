@@ -99,14 +99,14 @@ export const SHSTeamSection = () => {
         xl:mb-5 md:mb-3'>
             <p className='
             mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
+            font-semibold uppercase tracking-[3rem]
              text-[rgb(181,4,4)]
               text-xs'>SHS TEAM</p>
             <h2
             ref={titleRef}
             className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold
+            font-manrope font-semibold tracking-[-0.5px]
             text-3xl xl:text-4xl md:text-xl'>Studio leaders</h2>
         </div>
 
