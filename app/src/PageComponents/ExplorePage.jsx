@@ -16,7 +16,7 @@ import bgImage from "../assets/img/OurProjectsPage/ourProjectsBgImage.png"
 import Prj1BgImage from "../assets/img/OurProjectsSection/arialDayView.jpg"
 import { useParams } from 'react-router-dom'
 import { ProjectData } from '../utils/ProjectData'
-import { BackToBtn } from '../Components/OurProjectsPageComponents/sub-componenets/backToBtn'
+import { BackToBtn } from '../Components/OurProjectsPageComponents/sub-componenets/BackToBtn'
 
 export const ExplorePage = () => {
     
