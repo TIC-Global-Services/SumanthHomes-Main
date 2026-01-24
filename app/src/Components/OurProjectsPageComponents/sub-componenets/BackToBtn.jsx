@@ -1,9 +1,12 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom"
 
 export const BackToBtn = () => {
+    const Navigate = useNavigate();
   return (
     <div className='w-full flex mb-16'>
-        <button className='
+        <button
+        onClick={()=>{Navigate('/projects')}}
+        className='
         flex items-center gap-4
         w-[25%] aspect-[7/1] ml-auto
         bg-[#B50404]
