@@ -18,7 +18,7 @@ export const ProjectSection = () => {
          '>
                 <h2 className="font-manrope font-semibold text-[#B50404]">OUR PROJECTS</h2>
         </div>
-        <DefaultOurProjects bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
+        <DefaultOurProjects id={1} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
     </div>
   )
 }

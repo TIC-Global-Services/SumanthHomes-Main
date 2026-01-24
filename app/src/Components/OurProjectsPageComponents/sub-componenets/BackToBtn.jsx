@@ -5,7 +5,7 @@ export const BackToBtn = () => {
   return (
     <div className='w-full flex mb-16'>
         <button
-        onClick={()=>{Navigate('/projects')}}
+        onClick={()=>{Navigate(-1)}}
         className='
         flex items-center gap-4
         w-[25%] aspect-[7/1] ml-auto
