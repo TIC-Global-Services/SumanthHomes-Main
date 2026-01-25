@@ -7,8 +7,8 @@ export const BackToBtn = () => {
         <button
         onClick={()=>{Navigate(-1)}}
         className='
-        flex items-center gap-4
-        w-[90%] xl:w-[25%] aspect-[7/1] mx-auto xl:mx-0 xl:ml-auto 
+        flex items-center gap-2
+        w-[90%] xl:w-[20%] aspect-[6/1] mx-auto xl:mx-0 xl:ml-auto 
         bg-[#B50404]
         px-6
 
@@ -18,7 +18,8 @@ export const BackToBtn = () => {
             </svg>
 
             <span className='
-             text-white
+             text-[#FFFF]
+             text-xs
             font-light tracking-[-2%] uppercase
          
             '>BACK TO ONGOING PROJECTS</span>
