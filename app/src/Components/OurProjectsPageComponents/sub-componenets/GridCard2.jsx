@@ -13,28 +13,21 @@ export const GridCard2 = ({Image, mainText, subText}) => {
 
         <img src={Image} className='
         w-full
-        h-full md:h-[20rem] xl:h-[27rem]
+        aspect-[416/461]
         '></img>
 
-        <div className="
-        absolute 
-        flex-col md:flex-row justify-normal items-center
-        text-center 
-        w-full
-        bottom-0 
-        bg-gradient-to-t from-black  via-black/90  to-transparent
-        ">
-
-            <div className='
+        <div className='
+            flex items-center gap-6
+            justify-center
             relative
             pb-4
-            '>
+            mt-6
+            mb-6            '>
 
-            <h4 className='font-medium text-xl text-white'>{mainText}</h4>
-            
-            <p className='font-normal text-[#737373] text-xl'>{subText}</p>
+          <h4 className='font-medium  text-black'>{mainText}</h4>
+          <div className="border border-t-1 border-[#3E3E3E] w-[10%]"></div>
+          <p className='font-normal text-[#737373] '>{subText}</p>
 
-            </div>
         </div>
 
     </div>
