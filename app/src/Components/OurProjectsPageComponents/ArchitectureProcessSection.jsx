@@ -29,16 +29,16 @@ export const ArchitectureProcessSection = () => {
         md:mb-4'>
 
             <div ref={titleRef}>
-            <p className='mb-1 xl:mb-4 md:mb-1 font-jakarta font-semibold uppercase tracking-[0.2rem] [word-spacing:3px] text-[rgb(181,4,4)] text-xs'>Architecture process</p>
+            <p className='mb-1 xl:mb-4 md:mb-1 font-semibold uppercase tracking-[3px]  text-[rgb(181,4,4)] text-xs'>Architecture process</p>
             <h2 
             
             className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold
+            font-manrope font-semibold tracking-[-0.5px]
             text-3xl xl:text-4xl md:text-xl'>From Concept to Completion</h2>
             </div>
 
-            <p ref={contentRef} className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>
+            <p ref={contentRef} className='xl:w-[90%] mb-4 font-normal leading-[26px] text-[#737373] '>
               At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
             </p>
 
@@ -47,19 +47,26 @@ export const ArchitectureProcessSection = () => {
         <div className='
         card-container
         w-full md:w-[50%] xl:w-[50%] 
-        flex items-start flex-wrap gap-4 md:gap-4 '
+          '
         
         style={{
           scrollbarWidth:'none',
         }}
         >
-                     
-           <GridCard1 number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
-           <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
-           <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
-           <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+
+        <div className='flex items-start justify-between flex-wrap w-full mb-10'>
+          <GridCard1 number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
+          <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>  
+        </div>            
+           
+        <div className='flex items-start justify-between flex-wrap w-full'>
+          <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+          <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+        </div>
 
         </div>
+
+       
 
     </div>
   )

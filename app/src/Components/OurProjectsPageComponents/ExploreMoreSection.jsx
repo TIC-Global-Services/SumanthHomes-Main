@@ -91,11 +91,11 @@ export const ExploreMoreSection = () => {
         className='
         hidden md:block
         relative
-        xl:w-[40%] 
+        xl:w-[45%] 
         '>
 
-            <img src={image2} className='xl:w-[25rem] xl:h-[25rem] xl:right-8 absolute'></img>
-            <img src={image1} className='xl:w-[18rem] xl:h-[20rem] xl:top-44 xl:right-40 absolute'></img>
+            <img src={image2} className='aspect-[308/371]'></img>
+            <img src={image1} className='w-[70%] aspect-[203.33/242.05] xl:top-44 xl:right-40 absolute '></img>
             
 
         </motion.div>

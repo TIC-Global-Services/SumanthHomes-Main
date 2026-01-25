@@ -16,22 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const CompletedProjectsSection = () => {
 
   const titleRef = useRef(null);
-  useEffect(()=>{
-          const el = titleRef.current;
-          
-          gsap.to(el, {
-              duration:2,
-              text:{
-                  value:'Completed Projects',
-                  oldClass:'start',
-                  newClass:'end',
-              },
-              scrollTrigger:{
-                  trigger:el,
-                  start:"top center"
-              }
-          })
-      },[])
 
   let elWidth = 0;
   const tl = gsap.timeline();
@@ -99,7 +83,7 @@ export const CompletedProjectsSection = () => {
 
   return (
     <div className='
-    mt-8
+    mt-28
      xl:mb-28'>
 
         <h2 

@@ -5,8 +5,8 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
 
   return (
     <div ref={refName}  className='
-    flex items-center gap-2 md:block
-    flex-shrink-0 flex-grow
+    flex items-start gap-2 md:block
+    flex-shrink-0 
     border-none
     w-full md:w-[40%] xl:w-[40%]
     relative  
@@ -22,11 +22,13 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
             font-jakarta font-extrabold
             "
                x="0"
-               y="110"
-               font-size="96"
+               y="0"
+               textAnchor="start"
+               dominantBaseline="hanging"
+               font-size="110"
                fill="none"
-               stroke="rgba(181,4,4,0.4)"
-               stroke-width="3"
+               stroke="rgba(181,4,4,0.68)"
+               stroke-width="1"
                stroke-linejoin="round"
                >
                 {0+number}
@@ -35,11 +37,11 @@ export const GridCard1 = ({number, mainText, subText, refName=null}) => {
         </h2>
 
         <div className='
-        top-22 left-8
+        top-[50%] left-8
         bottom-[-40px] md:bottom-[-30px]
         absolute'>
-            <h4 className='text-2xl xl:text-2xl'>{mainText}</h4>
-             <p className='xl:w-[90%] mb-4 font-jakarta font-normal text-[#737373] md:text-sm'>{subText}</p>
+            <h4 className='font-medium leading-[30px] text-xl'>{mainText}</h4>
+             <p className='xl:w-full mb-4 font-normal leading-[30px] text-[#737373] text-[16px]'>{subText}</p>
         </div>
         
     </div>
