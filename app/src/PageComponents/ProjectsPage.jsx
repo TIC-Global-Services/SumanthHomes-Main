@@ -14,7 +14,7 @@ export const ProjectsPage = () => {
 
 
   return (
-    <div>
+    <div className="overflow-hidden">
         <ScrollToTop/>
        <NavBar />
         <DefaultHeroSection bgImage={bgImage} mainText={"Our Projects"} subText={"Great Architecture Services"} />

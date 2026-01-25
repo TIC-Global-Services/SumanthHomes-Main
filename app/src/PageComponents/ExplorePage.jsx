@@ -47,8 +47,7 @@ export const ExplorePage = () => {
         }
 
   return (
-    <div>
-        
+    <div className='overflow-hidden'>
         <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={data.mainHeader} subText={data.miniHeader} />

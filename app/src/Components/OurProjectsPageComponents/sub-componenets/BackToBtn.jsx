@@ -8,7 +8,7 @@ export const BackToBtn = () => {
         onClick={()=>{Navigate(-1)}}
         className='
         flex items-center gap-4
-        w-[25%] aspect-[7/1] ml-auto
+        w-[90%] xl:w-[25%] aspect-[7/1] mx-auto xl:mx-0 xl:ml-auto 
         bg-[#B50404]
         px-6
 

@@ -12,7 +12,7 @@ export const ContactPage = () => {
 
 
   return (
-    <div>
+    <div className="overflow-hidden">
         <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} />

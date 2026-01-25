@@ -16,7 +16,7 @@ export const AboutPage = () => {
 
 
   return (
-    <div>
+    <div className='overflow-hidden'>
         <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={heroImage} mainText={"About SHs"} subText={"LET'S SEE WHO WE ARE"}/>
