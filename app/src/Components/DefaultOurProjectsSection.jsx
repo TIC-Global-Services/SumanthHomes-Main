@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 import { useNavigate } from "react-router-dom";
 
 
-export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description }) => {
+export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
 
     const Navigate = useNavigate();
 
@@ -146,15 +146,12 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         text-base md:text-xs xl:text-base'>{description}</p>
 
 
-                       <div className='
+                       <div className={`
                         flex items-center
-                        gap-2'>
+                        gap-2 ${expPrj ? 'hidden' : 'block'}`}>
                         
-                            <h4 className='
-                            font-bold
-                            md:text-xs xl:text-sm 
-                            tracking-[-2%]
-                            '>EXPLORE PROJECT</h4>
+                            <h4 className='font-bold md:text-xs xl:text-sm tracking-[-2%]'
+                            >EXPLORE PROJECT</h4>
 
                             <button onClick={()=>Navigate(`/exploreproject/${id}`)}>
 

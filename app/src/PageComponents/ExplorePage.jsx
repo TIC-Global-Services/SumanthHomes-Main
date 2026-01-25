@@ -53,7 +53,7 @@ export const ExplorePage = () => {
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={data.mainHeader} subText={data.miniHeader} />
         <ContainerLayout>
-            <DefaultOurProjects bgImage={data.bgImage} miniHeader={data.miniHeader} mainHeader={data.mainHeader} description={data.description} />
+            <DefaultOurProjects bgImage={data.bgImage} miniHeader={data.miniHeader} mainHeader={data.mainHeader} description={data.description} expPrj={true} />
             <ProjectDescription/>
             <FloorPlan title={'Ground floor plan'} img1={groundData.img1} img2={groundData.img2} />
             <FloorPlan title={'First floor plan'} img1={firstData.img1} img2={firstData.img2} />
