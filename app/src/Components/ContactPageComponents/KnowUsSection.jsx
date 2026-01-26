@@ -21,20 +21,20 @@ export const KnowUsSection = () => {
     className='
     w-full
     
-    flex justify-between items-end flex-wrap xl:flex-nowrap gap-10
+    flex justify-between items-end flex-wrap xl:flex-nowrap 
      mt-8 xl:mt-20 md:mt-14
     mb-16 xl:mb-20'>
 
-        <div ref={titleRef} className=''>
+        <div ref={titleRef} className='w-[30%]'>
 
             <p className='font-semibold tracking-[3px] uppercase text-[#B50404] text-xs mb-2'>Get to know us</p>
-            <h2 className='font-manrope font-semibold text-4xl tracking-[-0.5px] leading-[48px] '>Reach Out to Our Team and Office</h2>
+            <h2 className='font-manrope font-semibold text-4xl tracking-[-0.5px] leading-[48px] '>Reach Out to <br /> Our Team and Office</h2>
 
         </div>
 
-        <div ref={contentRef} className='flex gap-4 items-center '>
+        <div ref={contentRef} className='w-[35%] flex gap-4 items-center'>
 
-            <svg className="w-[25%] md:w-[10%] xl:w-[15%] aspect-square" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-[25%] md:w-[10%] xl:w-[20%] aspect-[55.33/69.16]" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M41.5013 48.4167C49.1304 48.4167 55.3346 42.2124 55.3346 34.5833C55.3346 26.9542 49.1304 20.75 41.5013 20.75C33.8722 20.75 27.668 26.9542 27.668 34.5833C27.668 42.2124 33.8722 48.4167 41.5013 48.4167ZM41.5013 27.6667C45.3158 27.6667 48.418 30.7688 48.418 34.5833C48.418 38.3979 45.3158 41.5 41.5013 41.5C37.6868 41.5 34.5846 38.3979 34.5846 34.5833C34.5846 30.7688 37.6868 27.6667 41.5013 27.6667Z" fill="#B50404"/>
                 <path d="M39.4932 75.4394C40.0789 75.8564 40.78 76.0806 41.499 76.0806C42.218 76.0806 42.9191 75.8564 43.5048 75.4394C44.5562 74.6959 69.266 56.8543 69.1657 34.5827C69.1657 19.328 56.7537 6.91602 41.499 6.91602C26.2443 6.91602 13.8323 19.328 13.8323 34.5654C13.732 56.8543 38.4418 74.6959 39.4932 75.4394ZM41.499 13.8327C52.9426 13.8327 62.249 23.1391 62.249 34.6C62.3216 49.9481 47.0738 63.7295 41.499 68.2496C35.9276 63.7261 20.6764 49.9411 20.749 34.5827C20.749 23.1391 30.0554 13.8327 41.499 13.8327Z" fill="#B50404"/>
             </svg>
@@ -44,7 +44,7 @@ export const KnowUsSection = () => {
             <div className="w-[85%]">
 
                 <p className='font-semibold text-[#B50404] text-base tracking-[2px] uppercase'>India</p>
-                <p className='font-normal text-xl leading-6 text-[#737373]'>Villa No.3, Lotus Serene Villas,Near Autonagar, Renigunta Road, Tirupati </p>
+                <p className='font-normal text-xl leading-6 text-[#737373] mt-3'>Villa No.3, Lotus Serene Villas,Near Autonagar, Renigunta Road, Tirupati </p>
 
             </div>
 
@@ -57,7 +57,7 @@ export const KnowUsSection = () => {
         transition={{duration:0.4}}
         viewport={{once:false}}
 
-        className='order-2 flex flex-col items-start'>
+        className='w-[25%] order-2 flex flex-col items-start '>
 
             <div className='flex gap-2 items-center justify-center mb-3'>
 
