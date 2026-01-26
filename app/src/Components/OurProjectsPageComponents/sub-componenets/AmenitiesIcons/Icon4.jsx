@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Icon4 = () => {
   return (
-    <svg className='mx-auto my-auto flex-grow' width="37" height="34" viewBox="0 0 37 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className='mx-auto my-auto' width="23" height="39" viewBox="0 0 23 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14.21 17.15H22.75V14H16.415L12.915 8.1725C12.39 7.2975 11.445 6.7025 10.36 6.7025C10.045 6.7025 9.765 6.755 9.485 6.8425L0 9.8V18.9H3.15V12.4775L6.8425 11.3225L0 38.15H3.15L8.1725 23.9575L12.25 29.4V38.15H15.4V26.9325L11.0425 18.9875L12.32 13.965M14 6.3C15.75 6.3 17.15 4.9 17.15 3.15C17.15 1.4 15.75 0 14 0C12.25 0 10.85 1.4 10.85 3.15C10.85 4.9 12.25 6.3 14 6.3Z" fill="#262B35"/>
 </svg>
 

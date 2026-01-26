@@ -12,8 +12,8 @@ export const MissionSection = () => {
   return (
     <div   className='
     overflow-hidden
-    flex flex-col md:flex-row justify-between items-center
-    xl:gap-6 md:gap-3  xl:mt-4 md:mt-4
+    flex flex-col md:flex-row justify-between items-center xl:items-start
+    xl:gap-6 md:gap-3  xl:mt-10 md:mt-4
     mb-14 xl:mb-20 md:mb-14'>
 
         <motion.div 
@@ -30,7 +30,7 @@ export const MissionSection = () => {
 
         </motion.div>
 
-        <div className='md:w-[50%] order-1 md:order-2'>
+        <div className=' md:w-[50%] order-1 md:order-2'>
 
             <motion.div
               initial={{opacity:0, y:100}}
@@ -39,6 +39,7 @@ export const MissionSection = () => {
               viewport={{once:false}}
             >
               <p className='
+              mt-2
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px] 
             text-[rgb(181,4,4)]
