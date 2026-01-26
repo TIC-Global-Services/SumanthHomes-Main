@@ -19,30 +19,32 @@ export const KnowUsSection = () => {
     <div
     ref={containerRef}
     className='
-    flex justify-between items-end flex-wrap gap-4
+    w-full
+    
+    flex justify-between items-end flex-wrap xl:flex-nowrap gap-10
      mt-8 xl:mt-20 md:mt-14
     mb-16 xl:mb-20'>
 
-        <div ref={titleRef} className='xl:w-[30'>
+        <div ref={titleRef} className=''>
 
-            <p className='font-semibold tracking-widest uppercase [word-spacing:5px] text-[#B50404] text-xs mb-2'>Get to know us</p>
-            <h2 className='font-manrope font-semibold text-3xl xl:w-[75%]'>Reach Out to Our Team and Office</h2>
+            <p className='font-semibold tracking-[3px] uppercase text-[#B50404] text-xs mb-2'>Get to know us</p>
+            <h2 className='font-manrope font-semibold text-4xl tracking-[-0.5px] leading-[48px] '>Reach Out to Our Team and Office</h2>
 
         </div>
 
-        <div ref={contentRef} className='flex gap-2 items-center xl:w-[30%] '>
+        <div ref={contentRef} className='flex gap-4 items-center '>
 
-            <svg className="w-[25%] md:w-[10%] xl:w-[35%] aspect-square" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-[25%] md:w-[10%] xl:w-[15%] aspect-square" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M41.5013 48.4167C49.1304 48.4167 55.3346 42.2124 55.3346 34.5833C55.3346 26.9542 49.1304 20.75 41.5013 20.75C33.8722 20.75 27.668 26.9542 27.668 34.5833C27.668 42.2124 33.8722 48.4167 41.5013 48.4167ZM41.5013 27.6667C45.3158 27.6667 48.418 30.7688 48.418 34.5833C48.418 38.3979 45.3158 41.5 41.5013 41.5C37.6868 41.5 34.5846 38.3979 34.5846 34.5833C34.5846 30.7688 37.6868 27.6667 41.5013 27.6667Z" fill="#B50404"/>
                 <path d="M39.4932 75.4394C40.0789 75.8564 40.78 76.0806 41.499 76.0806C42.218 76.0806 42.9191 75.8564 43.5048 75.4394C44.5562 74.6959 69.266 56.8543 69.1657 34.5827C69.1657 19.328 56.7537 6.91602 41.499 6.91602C26.2443 6.91602 13.8323 19.328 13.8323 34.5654C13.732 56.8543 38.4418 74.6959 39.4932 75.4394ZM41.499 13.8327C52.9426 13.8327 62.249 23.1391 62.249 34.6C62.3216 49.9481 47.0738 63.7295 41.499 68.2496C35.9276 63.7261 20.6764 49.9411 20.749 34.5827C20.749 23.1391 30.0554 13.8327 41.499 13.8327Z" fill="#B50404"/>
             </svg>
 
 
 
-            <div className="">
+            <div className="w-[85%]">
 
-                <p className='font-semibold'>India</p>
-                <p className='font-normal'>Villa No.3, Lotus Serene Villas,Near Autonagar, Renigunta Road, Tirupati </p>
+                <p className='font-semibold text-[#B50404] text-base tracking-[2px] uppercase'>India</p>
+                <p className='font-normal text-xl leading-6 text-[#737373]'>Villa No.3, Lotus Serene Villas,Near Autonagar, Renigunta Road, Tirupati </p>
 
             </div>
 
@@ -57,25 +59,25 @@ export const KnowUsSection = () => {
 
         className='order-2 flex flex-col items-start'>
 
-            <div className='flex gap-2 items-start justify-center '>
+            <div className='flex gap-2 items-center justify-center mb-3'>
 
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.9824 11.9346C3.19024 10.139 1.81199 7.97347 0.944064 5.58959C0.466564 4.28626 0.904064 2.85459 1.88573 1.87293L2.49323 1.26626C2.65655 1.10261 2.85055 0.972772 3.06411 0.884185C3.27767 0.795598 3.50661 0.75 3.73781 0.75C3.96902 0.75 4.19796 0.795598 4.41152 0.884185C4.62508 0.972772 4.81907 1.10261 4.9824 1.26626L6.4049 2.68876C6.56855 2.85208 6.69838 3.04608 6.78697 3.25964C6.87556 3.4732 6.92116 3.70214 6.92116 3.93334C6.92116 4.16455 6.87556 4.39348 6.78697 4.60705C6.69838 4.82061 6.56855 5.0146 6.4049 5.17793L6.0549 5.52793C5.9148 5.66799 5.80367 5.83428 5.72785 6.0173C5.65203 6.20032 5.613 6.39649 5.613 6.59459C5.613 6.7927 5.65203 6.98886 5.72785 7.17188C5.80367 7.3549 5.9148 7.52119 6.0549 7.66126L9.2549 10.8621C9.39496 11.0022 9.56126 11.1133 9.74428 11.1891C9.9273 11.265 10.1235 11.304 10.3216 11.304C10.5197 11.304 10.7158 11.265 10.8989 11.1891C11.0819 11.1133 11.2482 11.0022 11.3882 10.8621L11.7391 10.5121C11.9024 10.3484 12.0964 10.2186 12.3099 10.13C12.5235 10.0414 12.7524 9.99583 12.9836 9.99583C13.2149 9.99583 13.4438 10.0414 13.6574 10.13C13.8709 10.2186 14.0649 10.3484 14.2282 10.5121L15.6507 11.9346C15.8144 12.0979 15.9442 12.2919 16.0328 12.5055C16.1214 12.719 16.167 12.948 16.167 13.1792C16.167 13.4104 16.1214 13.6393 16.0328 13.8529C15.9442 14.0664 15.8144 14.2604 15.6507 14.4238L15.0441 15.0304C14.0624 16.0129 12.6307 16.4504 11.3274 15.9729C8.94352 15.105 6.77804 13.7268 4.9824 11.9346Z" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
                 </svg>
 
-                <p className='font-normal'>+1 234 567 8910</p>
+                <p className='font-normal text-xl'>+1 234 567 8910</p>
 
             </div>
             
               
             
-            <div className='flex gap-2 items-center'>
+            <div className='flex gap-2 items-center '>
 
                 <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.34667 11.6667C0.962778 11.6667 0.6425 11.5383 0.385833 11.2817C0.129167 11.025 0.000555556 10.7044 0 10.32V1.34667C0 0.962778 0.128611 0.6425 0.385833 0.385833C0.643056 0.129167 0.963055 0.000555556 1.34583 0H13.6542C14.0375 0 14.3575 0.128611 14.6142 0.385833C14.8708 0.643055 14.9994 0.963333 15 1.34667V10.3208C15 10.7042 14.8714 11.0244 14.6142 11.2817C14.3569 11.5389 14.0369 11.6672 13.6542 11.6667H1.34667ZM7.5 5.8C7.56944 5.8 7.63444 5.78944 7.695 5.76833C7.755 5.74722 7.81444 5.72139 7.87333 5.69083L13.8975 1.74667C13.9764 1.69889 14.0278 1.63361 14.0517 1.55083C14.0756 1.46806 14.0711 1.38556 14.0383 1.30333C14.0172 1.19611 13.9472 1.11833 13.8283 1.07C13.71 1.02222 13.5953 1.03194 13.4842 1.09917L7.5 5L1.51667 1.1C1.40556 1.03222 1.29333 1.01778 1.18 1.05667C1.06667 1.09556 0.993889 1.17222 0.961666 1.28667C0.929444 1.37222 0.925278 1.45917 0.949167 1.5475C0.973055 1.63583 1.02417 1.7025 1.1025 1.7475L7.12667 5.69083C7.18556 5.72139 7.245 5.74722 7.305 5.76833C7.36556 5.78889 7.43056 5.79917 7.5 5.79917" fill="black"/>
                 </svg>
 
-                <p className='font-normal'>info@domain.com</p>
+                <p className='font-normal text-xl'>info@domain.com</p>
                 
             </div>
 

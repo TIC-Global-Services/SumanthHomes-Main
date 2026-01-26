@@ -44,17 +44,17 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
          className='
          mb-4
          py-8 xl:py-10
-         pl-12
+         
          bg-white
          w-[100%] md:w-[85%] xl:w-[32%]
-         box-border
         flex-grow-0
          flex-shrink-0
+         flex
          
     '>
 
         <div className="  
-         w-[90%]
+         mx-auto
          flex items-center gap-6
          
          text-center
@@ -81,7 +81,7 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
         <div
         className='
-        w-[50%] xl:w-[60%]
+        
         '> 
 
             <motion.h5
