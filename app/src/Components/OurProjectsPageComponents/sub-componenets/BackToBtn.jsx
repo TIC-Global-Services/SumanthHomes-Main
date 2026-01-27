@@ -7,7 +7,7 @@ export const BackToBtn = () => {
         <button
         onClick={()=>{Navigate(-1)}}
         className='
-        w-[90%] xl:w-[20%] aspect-[6/1]
+        w-[90%] md:w-[40%] xl:w-[20%] aspect-[6/1]
          mx-auto xl:mx-0 xl:ml-auto 
         bg-[#B50404]
         px-6

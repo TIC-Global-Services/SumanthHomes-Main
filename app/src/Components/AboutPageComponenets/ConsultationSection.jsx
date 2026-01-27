@@ -13,7 +13,7 @@ export const ConsultationSection = () => {
     <div className='
     flex 
     w-full
-    aspect-[3/1]
+    aspect-[3/2] md:aspect-[3/1]
     mb-20 xl:mb-36 md:mb-14
     ' 
       style={{

@@ -5,7 +5,7 @@ export const MapSection = () => {
     <div className="
     relative 
     w-full aspect-[1440/1134.9]
-    mb-40
+    mb-[37rem] md:mb-[35rem] xl:mb-44 2xl:mb-48
     
     ">
 
@@ -21,7 +21,7 @@ export const MapSection = () => {
 
         <form className="
         absolute
-        top-32 md:top-56 xl:top-[30%]
+        top-32 md:top-[20%] xl:top-[30%]
         left-[10%]
         bg-[#E7E7E7]
         px-8 md:px-20

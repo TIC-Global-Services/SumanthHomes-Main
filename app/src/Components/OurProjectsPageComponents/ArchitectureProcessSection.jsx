@@ -25,7 +25,7 @@ export const ArchitectureProcessSection = () => {
     mb-20 xl:mb-24'>
 
         <div className='
-        w-full md:w-[40%] xl:w-[40%]
+        w-full md:w-full xl:w-[40%]
         md:mb-4'>
 
             <div ref={titleRef}>
@@ -46,7 +46,7 @@ export const ArchitectureProcessSection = () => {
 
         <div className='
         card-container
-        w-full md:w-[50%] xl:w-[50%] 
+        w-full md:w-full xl:w-[50%] 
           '
         
         style={{
@@ -54,12 +54,12 @@ export const ArchitectureProcessSection = () => {
         }}
         >
 
-        <div className='flex items-start justify-between flex-wrap w-full mb-10'>
+        <div className='flex items-start justify-between gap-10 md:gap-0 flex-wrap w-full md:mx-auto mb-10'>
           <GridCard1 number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
           <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>  
         </div>            
            
-        <div className='flex items-start justify-between flex-wrap w-full'>
+        <div className='flex items-start justify-between gap-10 md:gap-0 flex-wrap md:mx-auto w-full'>
           <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
           <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
         </div>

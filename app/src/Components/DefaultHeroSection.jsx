@@ -24,8 +24,8 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
         <div className='text-center'>
 
             <h2 className={`
-            font-manrope font-normal tracking-[-4px]
-            text-3xl md:text-6xl xl:text-7xl xl:tracking-tighter md:tracking-tight
+            font-manrope font-normal tracking-wide md:tracking-[-4px]
+            text-3xl md:text-6xl xl:text-7xl xl:tracking-tighter 
             xl:mb-6 md:mb-4 ${white ? 'text-white' : 'text-black'}`}>{mainText}</h2>
 
             <p className='

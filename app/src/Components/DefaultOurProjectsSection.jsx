@@ -48,7 +48,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
             flex justify-center items-center
             bg-[#B50404]
             w-10 md:w-10 xl:w-10
-            h-48 md:h-32 xl:h-52
+            h-48 md:h-44 xl:h-52
             
            
             '>

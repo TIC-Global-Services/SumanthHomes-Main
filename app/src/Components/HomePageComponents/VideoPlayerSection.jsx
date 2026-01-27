@@ -66,7 +66,7 @@ export const VideoPlayerSection = () => {
         mt-4 xl:mt-8 md:mt-8'>
 
             <iframe src='https://www.youtube.com/embed/AXNHQ5Pgeig' className='
-            aspect-[16/7]
+            aspect-[335/480] md:aspect-[16/7]
             w-full
             mb-12
             '></iframe>
@@ -91,12 +91,12 @@ export const VideoPlayerSection = () => {
         </div>
 
         <div className='
-        w-[75%]
+        w-full xl:w-[75%]
         mx-auto
         mt-6 xl:mt-16 md:mt-16'>
 
             <div className='
-            flex md:flex-row items-center justify-center  flex-wrap
+            flex md:flex-row items-center justify-center  flex-nowrap
             gap-2 md:gap-2 xl:gap-5 
             xl:mb-5 md:mb-3
             '>
@@ -119,7 +119,7 @@ export const VideoPlayerSection = () => {
 
                 <div className='
                 flex items-center justify-center
-                md:order-first
+                order-first
                 flex-shrink-0
                 hover:bg-white
                 p-2

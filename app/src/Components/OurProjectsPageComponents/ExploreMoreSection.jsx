@@ -89,7 +89,7 @@ export const ExploreMoreSection = () => {
           viewport={{once:false}}
         
         className='
-        hidden md:block
+        hidden xl:block
         relative
         xl:w-[45%] 
         '>

@@ -73,7 +73,7 @@ export const SHSTeamSection = () => {
       frame--;
       const el = cardSectionRef.current;
       tl.to(el, {
-        x:`+=${screenWidth}`,
+        x:`+=${cardSectionRef.current.outerWidth}`,
         ease:'power2.in'
        })
   }
@@ -84,7 +84,7 @@ export const SHSTeamSection = () => {
       frame++;
       const el = cardSectionRef.current;
       tl.to(el, {
-        x:`-=${screenWidth}`,
+        x:`-=${cardSectionRef.current.outerWidth}`,
         ease:'power2.in'
       })
   }

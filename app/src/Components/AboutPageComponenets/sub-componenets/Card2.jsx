@@ -12,8 +12,8 @@ export const Card2 = ({bgImage, Name, Position}) => {
     <div className='
     relative
     flex 
-    xl:flex-shrink
-    flex-grow
+    flex-shrink-0 md:flex-shrink
+    flex-nowrap xl:flex-grow
     aspect-[3/4]
     w-full xl:w-[30%]
     
@@ -43,25 +43,27 @@ export const Card2 = ({bgImage, Name, Position}) => {
         '>
           <div className='
           w-full 
-          absolute bottom-10
+          ml-1
+          absolute bottom-2 xl:bottom-10
           flex justify-evenly'>
 
-            <div>
+            <div className='w-full'>
 
               <h2 className='
             font-medium
             text-white
-            xl:text-xl md:text-xl 
+            xl:text-xl md:text-base 
           '>{Name}</h2>
 
             <h4 className='
-            font-normal text-white/80 '>{Position}</h4>
+            text-sm xl:text-base font-normal text-white/80 '>{Position}</h4>
 
             </div>
             
 
              <button ref={xButtonRef} className='
-            bg-white w-14 h-14 border rounded-full flex justify-center items-center' style={{
+             mr-4
+            bg-white w-10 h-10 xl:w-14 xl:h-14 border rounded-full flex justify-center items-center' style={{
               opacity:'var(--opacity, 0)'
             }}>
 

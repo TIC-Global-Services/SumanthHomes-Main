@@ -41,11 +41,11 @@ export const VisionSection = () => {
     <div ref={containerRef} className='
     overflow-hidden
     flex justify-between items-center flex-wrap
-    xl:gap-6 md:gap-3
+    xl:gap-6 md:gap-1
     mb-14 xl:mb-10 md:mb-10'>
 
         <div className='
-        md:w-[40%] xl:w-[50%]'>
+        md:w-[45%] xl:w-[50%]'>
 
             <div ref={titleRef}>
             <p className='
@@ -70,7 +70,7 @@ export const VisionSection = () => {
 
         </div>
 
-        <div className=' md:w-[47%] '>
+        <div className=' md:w-[50%] xl:w-[47%] '>
 
             <img ref={imageRef} className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1]' src={visionImage}></img>
 

@@ -44,12 +44,14 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          className='
          mb-4
          py-8 xl:py-10
-         
+         px-4 xl:px-1
          bg-white
-         w-[100%] md:w-[85%] xl:w-[32%]
+         w-[100%] md:w-[85%] xl:w-[33%]
+         aspect-[414/160]
         flex-grow-0
          flex-shrink-0
-         flex
+         flex 
+         md:mx-auto xl:mx-0
          
     '>
 
@@ -72,7 +74,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
              className={`number
             text-right md:text-right
             font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
-            text-4xl xl:text-7xl md:text-7xl
+            text-5xl xl:text-[70px] md:text-7xl
             tracking-[-6px]>`}
             >{currentNumber}<span className="text-[#B50404]">{plus ? "+" : null}</span>
             </h3>
@@ -92,11 +94,11 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             
              className='
 
-            w-full
+            
             text-left
             font-medium text-black 
             tracking-[-0.54px]
-            text-xl  md:text-3xl xl:text-xl
+            text-base md:text-xl xl:text-xl
             md:text-left xl:text-left
             '>{titleText}
             </motion.h5>
@@ -111,7 +113,8 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             text-[#464851] 
              
             text-left xl:text-left 
-            text-xl xl:text-xs
+            text-sm 
+            leading-4
             font-normal 
             tracking-[-0.48px]
             '>{contentText}

@@ -39,14 +39,15 @@ export const AboutSumanthHomesSection = () => {
 
   return (
 
-    <div ref={containerRef} className='
+    <div ref={containerRef} className=' 
     w-full
-    flex items-center flex-wrap xl:flex-nowrap
+    flex items-start flex-wrap xl:flex-nowrap
     gap-8 md:gap-12 xl:gap-32
     mt-8 xl:mt-20 md:mt-14
     mb-14 xl:mb-40 md:mb-12'>
 
         <div ref={imageRef} className='
+        
         w-full xl:w-[50%]
         flex items-center relative
         gap-4
@@ -64,8 +65,8 @@ export const AboutSumanthHomesSection = () => {
             <img className='
             bg-black
             absolute
-            top-[5rem] xl:top-[30%] md:top-[30%]
-            left-[5rem] md:left-[35%] xl:left-[25%]
+            top-[33%] xl:top-[30%] md:top-[30%]
+            left-[30%] md:left-[35%] xl:left-[25%]
             w-[45%]
             aspect-square
             ' 
@@ -83,8 +84,8 @@ export const AboutSumanthHomesSection = () => {
         </div>
 
         <div className='
-        
-        w-[100%] xl:w-[45%] md:w-[80%]
+        mt-6 md:mt-6 xl:mt-0
+        w-[100%] md:w-full xl:w-[45%] 
         '>
 
           <div ref={titleRef}>
@@ -105,7 +106,7 @@ export const AboutSumanthHomesSection = () => {
 
             <p
             ref={contentRef}
-            className='w-full mb-4 tracking-normal font-normal text-xl text-[#737373] '>
+            className='w-full mb-4 tracking-normal font-normal text-base xl:text-xl text-[#737373] '>
               
               Established in 2013, Sumanth Homes is a partnership firm specializing in high-quality residential and commercial projects. With over 30 years of experience, Managing Partner Manohar Katta brings deep industry expertise and traditional values, while the other partners contribute modern technologies and advanced quality control practices.
 

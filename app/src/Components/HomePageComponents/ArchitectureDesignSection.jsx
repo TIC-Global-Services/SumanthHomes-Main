@@ -150,7 +150,7 @@ export const ArchitectureDesignSection = () => {
 
                     <div key={i} className='
                     relative flex-shrink-0 carousel-card
-                    w-full md:w-auto
+                    w-full md:w-[30%] xl:w-auto
                     '>
                         
                         <img className='
@@ -163,7 +163,7 @@ export const ArchitectureDesignSection = () => {
                         bottom-8 xl:bottom-11 
                         font-medium text-white text-center
                         justify-self-center
-                        text-xl xl:text-xl 
+                        text-base xl:text-xl 
                         '>{card.text}</p>
                 
                     </div>
