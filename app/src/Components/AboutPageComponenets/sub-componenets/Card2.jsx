@@ -45,9 +45,10 @@ export const Card2 = ({bgImage, Name, Position}) => {
           w-full 
           ml-1
           absolute bottom-2 xl:bottom-10
-          flex justify-evenly'>
+          flex justify-evenly
+          '>
 
-            <div className='w-full'>
+            <div className='w-full xl:w-auto'>
 
               <h2 className='
             font-medium
@@ -62,8 +63,8 @@ export const Card2 = ({bgImage, Name, Position}) => {
             
 
              <button ref={xButtonRef} className='
-             mr-4 xl:mr-2
-            bg-white w-16 h-14  border rounded-full flex justify-center items-center' style={{
+             mr-4 
+            bg-white w-14 h-14  border rounded-full flex justify-center items-center' style={{
               opacity:'var(--opacity, 0)'
             }}>
 

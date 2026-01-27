@@ -27,13 +27,13 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
 
             <h2 className={`
             font-manrope font-normal tracking-wide md:tracking-[-4px]
-            text-3xl md:text-6xl xl:text-7xl xl:tracking-tighter 
+            text-3xl md:text-6xl xl:text-[86px] 
             xl:mb-6 md:mb-4 ${white ? 'text-white' : 'text-black'}`}>{mainText}</h2>
 
             <p className='
             font-semibold
-            tracking-[3px] uppercase [word-spacing:5px] text-[#B40505]
-            md:text-xs xl:text-xs'
+            tracking-[3px] uppercase text-[#B40505]
+            md:text-xs xl:text-[13px]'
             
             >{subText}</p>
 
