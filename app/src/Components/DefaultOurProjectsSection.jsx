@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef,  } from "react"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react"
 import { useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
     const windowContainerRef = useRef(null);
 
   return (
-    <div>
+    <div className="mt-8 xl:mt-20 md:mt-14">
     <div className='mb-4 xl:mb-16'>
 
         
