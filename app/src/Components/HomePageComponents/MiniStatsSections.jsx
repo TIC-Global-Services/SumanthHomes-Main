@@ -5,18 +5,21 @@ export const MiniStatsSections = () => {
   const data = [
     {
       number : "100",
+      black : true,
       plus : true,
       title : "Homes purchased",
       content : "Trusted by hundreds of happy homeowners ."
     },
     {
       number : "20",
+      black : false,
       plus : false,
       title : "Published properties",
       content : "Sophisticated apartments with top amenities."
     },
     {
       number : "13",
+      black : false,
       plus : false,
       title : "Years of experience",
       content : "Built on years of trust and timeless craftsmanship."
@@ -32,7 +35,7 @@ export const MiniStatsSections = () => {
 
       {
         data.map((data, id)=>(
-          <Card2 key={id} Number={data.number} plus={data.plus} titleText={data.title} contentText={data.content} />
+          <Card2 key={id} Number={data.number} black={data.black} plus={data.plus} titleText={data.title} contentText={data.content} />
         ))
       }
 

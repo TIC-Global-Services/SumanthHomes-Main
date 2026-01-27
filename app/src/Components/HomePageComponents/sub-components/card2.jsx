@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Card2 = ({Number, titleText, contentText, plus=false}) => {
+export const Card2 = ({Number, black=false, titleText, contentText, plus=false}) => {
 
     const [currentNumber, setCurrentNumber] = useState(0);
     const containerRef = useRef(null);
@@ -69,12 +69,12 @@ export const Card2 = ({Number, titleText, contentText, plus=false}) => {
 
             <h3
 
-             className='
-            number
+             className={`number
             text-right md:text-right
-            font-manrope font-normal text-[#B50404]
+            font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
             text-4xl xl:text-7xl md:text-7xl
-            tracking-[-6px]'>{currentNumber}{plus ? "+" : null}
+            tracking-[-6px]>`}
+            >{currentNumber}{plus ? "+" : null}
             </h3>
 
         </div>
