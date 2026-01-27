@@ -74,7 +74,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
             text-4xl xl:text-7xl md:text-7xl
             tracking-[-6px]>`}
-            >{currentNumber}{plus ? "+" : null}
+            >{currentNumber}<span className="text-[#B50404]">{plus ? "+" : null}</span>
             </h3>
 
         </div>
