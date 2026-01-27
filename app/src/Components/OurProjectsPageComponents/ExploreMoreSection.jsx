@@ -5,6 +5,7 @@ import { useRef, useEffect } from 'react'
 import { ScrollTrigger, gsap } from "gsap/all"
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
 import { motion } from "motion/react"
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,10 +47,10 @@ export const ExploreMoreSection = () => {
 
             <motion.h4
 
-            initial={{opacity:0, y:100}}
-            whileInView={{opacity:1, y:0}}
-            transition={{duration:0.2}}
-            viewport={{once:false}}
+            initial={SlideUpAnimationBlur.initial}
+            whileInView={SlideUpAnimationBlur.whileInView}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
 
             ref={titleRef} className='
             font-normal

@@ -9,6 +9,8 @@ import { useEffect, useRef } from 'react'
 import { ScrollTrigger, gsap, TextPlugin } from 'gsap/all'
 import { CardButtons } from '../../sub-components/CardButtons'
 import '../../assets/styles/titleStyle.css';
+import {motion} from "motion/react"
+import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur'
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -86,13 +88,18 @@ export const CompletedProjectsSection = () => {
     mt-28
      xl:mb-28'>
 
-        <h2 
+        <motion.h2
+        initial={SlideUpAnimationBlur.initial}
+        whileInView={SlideUpAnimationBlur.whileInView}
+        transition={SlideUpAnimationBlur.transition}
+        viewport={SlideUpAnimationBlur.viewport}
+        
         ref={titleRef}
         className='
         text-center
         mb-4 xl:mb-12
         font-semibold
-        text-3xl md:text-4xl'>Completed Projects</h2>
+        text-3xl md:text-4xl'>Completed Projects</motion.h2>
 
         <div
 
@@ -124,7 +131,13 @@ export const CompletedProjectsSection = () => {
         flex justify-center items-center
         mt-4
         '>
-            <button className='text-[rgb(181,4,4)] font-medium'>-EXPLORE MORE-</button>
+            <motion.button
+            initial={SlideUpAnimationBlur.initial}
+            whileInView={SlideUpAnimationBlur.whileInView}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+            
+            className='text-[rgb(181,4,4)] font-medium'>-EXPLORE MORE-</motion.button>
         </div>
 
     </div>

@@ -1,12 +1,19 @@
-import React from 'react'
+import {motion} from "motion/react"
+import { SlideUpAnimationBlur } from "../../../utils/SlideUpAnimationBlur"
 
 export const FloorPlan = ({title, img1, img2}) => {
   return (
     <div className='w-full mb-16'>
         
-        <div className='w-full flex'>
+        <motion.div
+        initial={SlideUpAnimationBlur.initial}
+        whileInView={SlideUpAnimationBlur.whileInView}
+        transition={SlideUpAnimationBlur.transition}
+        viewport={SlideUpAnimationBlur.viewport}
+          
+        className='w-full flex'>
             <h2 className='text-2xl font-manrope font-semibold mb-4 mx-auto'>{title}</h2>
-        </div>
+        </motion.div>
 
         <div className='flex gap-4 flex-wrap xl:flex-nowrap w-full'>
             <img className='w-full xl:w-[50%] border rounded-sm' src={img1.image} alt={img1.alt} />

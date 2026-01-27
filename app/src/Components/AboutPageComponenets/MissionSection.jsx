@@ -1,9 +1,7 @@
 import {motion} from "motion/react"
 import '../../assets/styles/titleStyle.css';
 import missionImage from "../../assets/img/AboutSection/missionImage.png"
-
-
-
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 
 export const MissionSection = () => {
@@ -33,10 +31,10 @@ export const MissionSection = () => {
         <div className=' md:w-[48%] xl:w-[50%] order-1 md:order-2'>
 
             <motion.div
-              initial={{opacity:0, y:100}}
-              whileInView={{opacity:1, y:0}}
-              transition={{duration:0.2}}
-              viewport={{once:false}}
+              initial={SlideUpAnimationBlur.initial}
+              whileInView={SlideUpAnimationBlur.whileInView}
+              transition={SlideUpAnimationBlur.transition}
+              viewport={SlideUpAnimationBlur.viewport}
             >
               <p className='
               mt-2

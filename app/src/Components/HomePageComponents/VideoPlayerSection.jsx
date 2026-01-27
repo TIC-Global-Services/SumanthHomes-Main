@@ -1,6 +1,7 @@
 import { LoadScriptNext } from '@react-google-maps/api'
 import { useState, useRef } from 'react'
 import gsap from 'gsap'
+import { motion } from 'motion/react';
 
 export const VideoPlayerSection = () => {
     const gsapTimeline = gsap.timeline();

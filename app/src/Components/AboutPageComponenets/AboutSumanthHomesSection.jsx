@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react"
 import { gsap, ScrollTrigger, TextPlugin } from "gsap/all";
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import '../../assets/styles/titleStyle.css';
+import { motion } from "motion/react";
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -18,8 +20,7 @@ export const AboutSumanthHomesSection = () => {
   const imageRef = useRef(null);
 
   useEffect(()=>{
-    TextSlideInAnimation(titleRef, contentRef, containerRef);
-
+    
     gsap.fromTo(imageRef.current, {
           x:-100,
           scrollTrigger:{
@@ -88,7 +89,14 @@ export const AboutSumanthHomesSection = () => {
         w-[100%] md:w-full xl:w-[45%] 
         '>
 
-          <div ref={titleRef}>
+          <motion.div
+
+          initial={SlideUpAnimationBlur.initial}
+          whileInView={SlideUpAnimationBlur.whileInView}
+          transition={SlideUpAnimationBlur.transition}
+          viewport={SlideUpAnimationBlur.viewport}
+
+          ref={titleRef}>
             <p className='
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px] [word-spacing:3px]
@@ -102,17 +110,29 @@ export const AboutSumanthHomesSection = () => {
             xl:w-[80%]
             text-3xl xl:text-4xl md:text-xl'>Crafting contemporary buildings with elegance.</h4>
 
-          </div>
+          </motion.div>
 
-            <p
+            <motion.p
+
+            initial={{opacity:0, y:100}}
+            whileInView={{opacity:1, y:0}}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+
             ref={contentRef}
             className='w-full mb-4 tracking-normal font-normal text-base xl:text-xl text-[#737373] '>
               
               Established in 2013, Sumanth Homes is a partnership firm specializing in high-quality residential and commercial projects. With over 30 years of experience, Managing Partner Manohar Katta brings deep industry expertise and traditional values, while the other partners contribute modern technologies and advanced quality control practices.
 
-            </p>
+            </motion.p>
 
-            <div className='flex gap-2 items-center '>
+            <motion.div
+            initial={{opacity:0, y:100}}
+            whileInView={{opacity:1, y:0}}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+            
+            className='flex gap-2 items-center '>
 
                 <p className='
                 font-extrabold uppercase 
@@ -126,7 +146,7 @@ export const AboutSumanthHomesSection = () => {
 
                 </button>
 
-            </div>
+            </motion.div>
 
         </div>
 

@@ -5,6 +5,7 @@ import { gsap, TextPlugin, ScrollTrigger } from "gsap/all";
 import '../../assets/styles/titleStyle.css'
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import { motion } from "motion/react";
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -27,10 +28,10 @@ export const SHValues = () => {
           className=' xl:w-[40%]'>
 
             <motion.div 
-              initial={{opacity:0, y:100}}
-          whileInView={{opacity:1, y:0}}
-          transition={{duration:0.2}}
-          viewport={{once:false}}
+              initial={SlideUpAnimationBlur.initial}
+              whileInView={SlideUpAnimationBlur.whileInView}
+              transition={SlideUpAnimationBlur.transition}
+              viewport={SlideUpAnimationBlur.viewport}
             >
             <p className='
             mb-1 xl:mb-4 md:mb-1

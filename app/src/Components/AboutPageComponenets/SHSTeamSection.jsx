@@ -9,7 +9,8 @@ import { useRef, useEffect} from 'react';
 import { gsap } from 'gsap/gsap-core';
 import { TextPlugin, ScrollTrigger } from 'gsap/all';
 import '../../assets/styles/titleStyle.css';
-
+import { motion } from "motion/react"
+import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -93,7 +94,13 @@ export const SHSTeamSection = () => {
   return (
     <div className='mb-14 xl:mb-14 overflow-hidden'>
 
-        <div className='
+        <motion.div
+        initial={SlideUpAnimationBlur.initial}
+        whileInView={SlideUpAnimationBlur.whileInView}
+        transition={SlideUpAnimationBlur.transition}
+        viewport={SlideUpAnimationBlur.viewport}
+
+        className='
         md:justify-self-center
         md:text-center
         xl:mb-5 md:mb-3'>
@@ -108,7 +115,7 @@ export const SHSTeamSection = () => {
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
             text-3xl xl:text-4xl md:text-xl'>Studio leaders</h2>
-        </div>
+        </motion.div>
 
         <div  className='
         w-full

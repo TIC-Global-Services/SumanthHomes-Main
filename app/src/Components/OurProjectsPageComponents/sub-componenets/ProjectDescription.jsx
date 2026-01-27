@@ -1,4 +1,5 @@
-import React from 'react'
+import {motion} from 'motion/react'
+import { SlideUpAnimationBlur } from '../../../utils/SlideUpAnimationBlur';
 
 export const ProjectDescription = () => {
     const phone = " +1 234 567 8910";
@@ -18,7 +19,13 @@ export const ProjectDescription = () => {
         flex-col justify-between
         w-full xl:w-[65%]
         '>
-            <div className='w-full mb-10'>
+            <motion.div
+            initial={SlideUpAnimationBlur.initial}
+            whileInView={SlideUpAnimationBlur.whileInView}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+            
+            className='w-full mb-10'>
 
                 <h2 className='
                 text-xl text-[#262B35]
@@ -26,7 +33,7 @@ export const ProjectDescription = () => {
                 mb-2 '>Property description</h2>
                 <p className='font-normal text-[#717580] leading-[26px]'>Crafted by Sumanth Homes, this property is built with a strong focus on quality, durability, and thoughtful design. Using premium materials and modern construction practices, the project offers well-planned spaces that ensure comfort, reliability, and long-term value for homeowners. Every detail reflects our commitment to excellence and trust.</p>
 
-            </div>
+            </motion.div>
 
             <div className='
             flex gap-3

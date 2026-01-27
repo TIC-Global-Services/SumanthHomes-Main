@@ -2,6 +2,8 @@ import { Logo1 } from "./miniLogos/Logo1";
 import { Logo2 } from "./miniLogos/Logo2";
 import { Logo3 } from "./miniLogos/Logo3";
 import { Logo4 } from "./miniLogos/Logo4";
+import {motion} from "motion/react"
+import { SlideUpAnimationBlur } from "../../../utils/SlideUpAnimationBlur";
 
 export const Location = () => {
     const specification ={
@@ -12,7 +14,13 @@ export const Location = () => {
     } 
   return (
     <div className='w-full mb-1'>
-        <h2 className='text-2xl font-manrope font-semibold mb-10'>Location</h2>
+        <motion.h2
+        initial={SlideUpAnimationBlur.initial}
+        whileInView={SlideUpAnimationBlur.whileInView}
+        transition={SlideUpAnimationBlur.transition}
+        viewport={SlideUpAnimationBlur.viewport}
+        
+        className='text-2xl font-manrope font-semibold mb-10'>Location</motion.h2>
 
         <div className='flex items-center justify-between flex-wrap xl:flex-nowrap gap-32 w-full'>
 

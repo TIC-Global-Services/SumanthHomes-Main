@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react";
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,12 +12,14 @@ export const KnowUsSection = () => {
     const contentRef = useRef(null);
     const containerRef = useRef(null);
 
-    useEffect(()=>{
-        TextSlideInAnimation(titleRef, contentRef, containerRef);
-    },[])
 
   return (
-    <div
+    <motion.div
+    initial={SlideUpAnimationBlur.initial}
+    whileInView={SlideUpAnimationBlur.whileInView}
+    transition={SlideUpAnimationBlur.transition}
+    viewport={SlideUpAnimationBlur.viewport}
+
     ref={containerRef}
     className='
     w-full
@@ -84,6 +87,6 @@ export const KnowUsSection = () => {
         </motion.div>
 
 
-    </div>
+    </motion.div>
   )
 }

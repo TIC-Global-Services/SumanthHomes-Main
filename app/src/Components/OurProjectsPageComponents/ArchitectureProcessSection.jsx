@@ -4,20 +4,20 @@ import { ScrollTrigger, TextPlugin } from 'gsap/all';
 import { useRef, useEffect } from 'react';
 import '../../assets/styles/titleStyle.css';
 import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
+import {motion} from "motion/react"
+import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 export const ArchitectureProcessSection = () => {
 
+
+
   const titleRef = useRef(null);
   const contentRef = useRef(null);
   const containerRef = useRef(null);
       
-      useEffect(()=>{
-          TextSlideInAnimation(titleRef, contentRef, containerRef);
-      },[])
-
   return (
     <div ref={containerRef} className='
     flex items-start justify-between flex-wrap 
@@ -28,7 +28,12 @@ export const ArchitectureProcessSection = () => {
         w-full md:w-full xl:w-[40%]
         md:mb-4'>
 
-            <div ref={titleRef}>
+            <motion.div
+            initial={SlideUpAnimationBlur.initial}
+            whileInView={SlideUpAnimationBlur.whileInView}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+            ref={titleRef}>
             <p className='mb-1 xl:mb-4 md:mb-1 font-semibold uppercase tracking-[3px]  text-[rgb(181,4,4)] text-xs'>Architecture process</p>
             <h2 
             
@@ -36,11 +41,17 @@ export const ArchitectureProcessSection = () => {
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
             text-3xl xl:text-4xl md:text-xl'>From Concept to Completion</h2>
-            </div>
+            </motion.div>
 
-            <p ref={contentRef} className='xl:w-[90%] mb-4 font-normal leading-[26px] text-[#737373] '>
+            <motion.p
+            initial={{opacity:0, y:100}}
+            whileInView={{opacity:1, y:0}}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+
+            ref={contentRef} className='xl:w-[90%] mb-4 font-normal leading-[26px] text-[#737373] '>
               At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
-            </p>
+            </motion.p>
 
         </div>
 

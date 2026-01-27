@@ -1,5 +1,7 @@
 import bgImage from "../../assets/img/OurProjectsSection/arialDayView.jpg";
 import { DefaultOurProjects } from "../DefaultOurProjectsSection";
+import { motion } from "motion/react";
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 export const ProjectSection = () => {
 
@@ -16,7 +18,13 @@ export const ProjectSection = () => {
         xl:mb-5 md:mb-5
         py-10
          '>
-                <h2 className="font-manrope font-semibold text-[#B50404]">OUR PROJECTS</h2>
+                <motion.h2
+                initial={SlideUpAnimationBlur.initial}
+                whileInView={SlideUpAnimationBlur.whileInView}
+                transition={SlideUpAnimationBlur.transition}
+                viewport={SlideUpAnimationBlur.viewport}
+                
+                className="font-manrope font-semibold text-[#B50404]">OUR PROJECTS</motion.h2>
         </div>
         <DefaultOurProjects id={1} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
     </div>

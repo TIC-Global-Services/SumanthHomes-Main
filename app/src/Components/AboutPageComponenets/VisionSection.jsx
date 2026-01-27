@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import { gsap, TextPlugin, ScrollTrigger } from "gsap/all";
 import '../../assets/styles/titleStyle.css'
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
+import { motion } from "motion/react"
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +18,7 @@ export const VisionSection = () => {
     const imageRef = useRef(null);
     
     useEffect(()=>{
-        TextSlideInAnimation(titleRef, contentRef, containerRef);
+        
 
         gsap.fromTo(imageRef.current, {
           x:100,
@@ -47,7 +49,13 @@ export const VisionSection = () => {
         <div className='
         md:w-[45%] xl:w-[50%]'>
 
-            <div ref={titleRef}>
+            <motion.div
+            initial={SlideUpAnimationBlur.initial}
+            whileInView={SlideUpAnimationBlur.whileInView}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+
+            ref={titleRef}>
             <p className='
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px]
@@ -60,13 +68,19 @@ export const VisionSection = () => {
             font-manrope font-semibold tracking-[-0.5px]
             text-3xl xl:text-4xl md:text-xl'>The Art of Modern Building</h2>
 
-            </div>
+            </motion.div>
 
-            <p ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-base'>
+            <motion.p
+            initial={{opacity:0, y:100}}
+            whileInView={{opacity:1, y:0}}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
+            
+            ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-base'>
 
                 Our vision is to build high-quality homes that reflect trust and lasting value. We understand that a home is a one-time investment for many, and we are committed to delivering spaces that offer comfort, reliability, and complete satisfaction. With this vision, we strive to give our best in every project we undertake.
 
-            </p>
+            </motion.p>
 
         </div>
 

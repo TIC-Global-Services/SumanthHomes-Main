@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 import { ScrollTrigger, gsap } from "gsap/all";
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +11,7 @@ export const HistorySection = () => {
     initial : {opacity:0, y:100,},
     whileInView : { opacity:1, y:0},
     transition : {duration:0.5},
-    viewport : {once:false}
+    viewport : {once:true}
   }
 
   let Number = 13;
@@ -75,7 +76,7 @@ export const HistorySection = () => {
                 initial={{filter:"blur(10px)", opacity:0}}
                 whileInView={{filter:"blur(0px)", opacity:1}}
                 transition={{duration:0.5}}
-                viewport={{once:true}}
+                viewport={{once:false}}
                 className='
                 text-[#1D1D1D]
                 flex align-center justify-center
@@ -87,10 +88,10 @@ export const HistorySection = () => {
                 </motion.h2>
 
                 <motion.div
-                initial={{filter:"blur(10px)", opacity:0}}
-                whileInView={{filter:"blur(0px)", opacity:1}}
-                transition={{duration:0.5}}
-                viewport={{once:true}}
+                initial={SlideUpAnimationBlur.initial}
+                whileInView={SlideUpAnimationBlur.whileInView}
+                transition={SlideUpAnimationBlur.transition}
+                viewport={SlideUpAnimationBlur.viewport}
                 className='flex items-center justify-center'>
 
                   <p className='

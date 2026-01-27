@@ -6,6 +6,7 @@ import { useRef, useEffect } from 'react';
 import {gsap} from "gsap/gsap-core"
 import { CardButtons } from '../../sub-components/CardButtons';
 import { motion } from "motion/react"
+import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
 export const ArchitectureDesignSection = () => {
 
@@ -88,10 +89,11 @@ export const ArchitectureDesignSection = () => {
         xl:gap-96'>
 
             <motion.div
-            initial={slideUpAnimation.initial}
-            whileInView={slideUpAnimation.whileInView}
-            transition={slideUpAnimation.transition}
-            viewport={slideUpAnimation.viewport}
+
+            initial={SlideUpAnimationBlur.initial}
+            whileInView={SlideUpAnimationBlur.whileInView}
+            transition={SlideUpAnimationBlur.transition}
+            viewport={SlideUpAnimationBlur.viewport}
             
             className='text-left'>
 
