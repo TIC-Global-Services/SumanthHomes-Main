@@ -47,10 +47,10 @@ export const AboutSumanthHomesSection = () => {
     mb-14 xl:mb-40 md:mb-12'>
 
         <div ref={imageRef} className='
-        w-[50%]
+        w-full xl:w-[50%]
         flex items-center relative
         gap-4
-        
+        mb-4
         '>
 
             <img className='
@@ -64,8 +64,8 @@ export const AboutSumanthHomesSection = () => {
             <img className='
             bg-black
             absolute
-            top-[3rem] xl:top-[30%] md:top-[30%]
-            left-[2rem] md:left-[35%] xl:left-[25%]
+            top-[5rem] xl:top-[30%] md:top-[30%]
+            left-[5rem] md:left-[35%] xl:left-[25%]
             w-[45%]
             aspect-square
             ' 

@@ -12,10 +12,10 @@ export const Card2 = ({bgImage, Name, Position}) => {
     <div className='
     relative
     flex 
-    flex-shrink
+    xl:flex-shrink
     flex-grow
     aspect-[3/4]
-    w-[30%]
+    w-full xl:w-[30%]
     
    
     

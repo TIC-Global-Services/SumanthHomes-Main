@@ -19,7 +19,6 @@ export const ContactPage = () => {
         <ContainerLayout>
             <KnowUsSection />
             <MapSection />
-            {/* <Testing/> */}
         </ContainerLayout>
         <Footer/>
     </div>
