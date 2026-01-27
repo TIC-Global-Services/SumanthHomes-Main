@@ -114,14 +114,11 @@ export const SHSTeamSection = () => {
         w-full
         xl:mb-14'
 
-        style={{
-          scrollbarWidth:'none'
-        }}
         >
           <div ref={cardSectionRef} className='flex gap-4'>
               {
-                TeamCards.map((data, _)=>(
-                  <Card2 Name={data.name} Position={data.position} bgImage={data.bgImage}/>
+                TeamCards.map((data, id)=>(
+                  <Card2 key={id} Name={data.name} Position={data.position} bgImage={data.bgImage}/>
                 ))
               }
           </div>

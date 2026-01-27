@@ -64,8 +64,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          ">
             
             <div  className='
-            flex-shrink-0
-            flex-grow
+            
             
         '>
 
@@ -79,48 +78,28 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             >{currentNumber}<span className="text-[#B50404]">{plus ? "+" : null}</span>
             </h3>
 
-        </div>
+            </div>
 
         <div
-        className='
-        
-        '> 
-
+        className= "">
             <motion.h5
-            initial={{opacity:0, y:40}}
-            whileInView={{opacity:1, y:0}}
-            viewport={{once:false}}
-            transition={{duration:0.5}}
-            
-             className='
-
-            
-            text-left
-            font-medium text-black 
-            tracking-[-0.54px]
-            text-base md:text-xl xl:text-xl
-            md:text-left xl:text-left
-            '>{titleText}
-            </motion.h5>
-
+            className="text-left font-medium text-black tracking-[-0.54px] text-base md:text-xl">
+                {titleText}
+                </motion.h5>
+                
             <motion.p
-             initial={{opacity:0, y:40}}
-             whileInView={{opacity:1, y:0}}
-             viewport={{once:false}}
-             transition={{duration:0.5}}
-
-             className='
-            text-[#464851] 
-             
-            text-left xl:text-left 
-            text-sm 
-            leading-4
-            font-normal 
+            className="
+            text-left
+            text-[#464851]
+            text-sm leading-4
+            font-normal
             tracking-[-0.48px]
-            '>{contentText}
-            </motion.p>
-
+            "
+            >
+                {contentText}
+                </motion.p>
         </div>
+
         
         </div>
 

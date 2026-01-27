@@ -62,12 +62,12 @@ export const Card2 = ({bgImage, Name, Position}) => {
             
 
              <button ref={xButtonRef} className='
-             mr-4
-            bg-white w-10 h-10 xl:w-14 xl:h-14 border rounded-full flex justify-center items-center' style={{
+             mr-4 xl:mr-2
+            bg-white w-10 h-10 xl:w-16 xl:h-14 border rounded-full flex justify-center items-center' style={{
               opacity:'var(--opacity, 0)'
             }}>
 
-                <svg width="20" height="15" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.325 0H13.5312L8.7125 5.50625L14.3813 13H9.94375L6.46562 8.45625L2.49062 13H0.28125L5.43437 7.10938L0 0H4.55L7.69062 4.15312L11.325 0ZM10.55 11.6812H11.7719L3.88438 1.25H2.57188L10.55 11.6812Z" fill="#191919"/>
               </svg>
               
