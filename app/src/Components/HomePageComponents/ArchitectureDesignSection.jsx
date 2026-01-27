@@ -120,12 +120,12 @@ export const ArchitectureDesignSection = () => {
             transition={slideUpAnimation.transition}
             viewport={slideUpAnimation.viewport}
 
-            className='xl:w-[40%]  md:pt-2'>
+            className='xl:w-[65%]  md:pt-2'>
 
                 <p className='
                 font-normal 
                 leading-7
-                text-base xl:text-xl
+                text-base xl:text-[18px]
                 text-[#737373]
                 '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
