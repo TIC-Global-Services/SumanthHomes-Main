@@ -15,9 +15,10 @@ export const ProjectDescription = () => {
 
         {/* Property Discussion section */}
         <div className='
+        flex-col justify-between
         w-full xl:w-[65%]
         '>
-            <div className='w-full mb-6'>
+            <div className='w-full mb-10'>
 
                 <h2 className='
                 text-xl text-[#262B35]
