@@ -124,8 +124,8 @@ export const ArchitectureDesignSection = () => {
 
                 <p className='
                 font-normal 
-                xl:leading-5 
-                xl:text-sm
+                leading-7
+                text-base xl:text-xl
                 text-[#737373]
                 '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
