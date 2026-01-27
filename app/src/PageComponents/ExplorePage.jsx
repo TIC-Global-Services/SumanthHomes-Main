@@ -49,7 +49,7 @@ export const ExplorePage = () => {
   return (
     <div className='overflow-hidden'>
         <NavBar/>
-        <DefaultHeroSection bgImage={bgImage} mainText={data.mainHeader} subText={data.miniHeader} />
+        <DefaultHeroSection bgImage={bgImage} mainText={'Our Projects'} subText={"Great Architecture Services"} />
         <ContainerLayout>
             <DefaultOurProjects bgImage={data.bgImage} miniHeader={data.miniHeader} mainHeader={data.mainHeader} description={data.description} expPrj={true} />
             <ProjectDescription/>
