@@ -63,7 +63,7 @@ export const Card2 = ({bgImage, Name, Position}) => {
 
              <button ref={xButtonRef} className='
              mr-4 xl:mr-2
-            bg-white w-10 h-10 xl:w-16 xl:h-14 border rounded-full flex justify-center items-center' style={{
+            bg-white w-16 h-14  border rounded-full flex justify-center items-center' style={{
               opacity:'var(--opacity, 0)'
             }}>
 
