@@ -8,7 +8,8 @@ export const ScrollToPrj = () => {
 
     useEffect(()=>{
         window.scrollTo({
-            top:window.innerHeight,
+            top:window.innerHeight - 50,
+            behavior:"smooth"
         });
     }, [pathname])
   return null;
