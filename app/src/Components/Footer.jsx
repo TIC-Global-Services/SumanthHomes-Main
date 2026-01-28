@@ -83,7 +83,7 @@ export const Footer = () => {
 
             <div className='
             w-full
-            pt-14
+            md:pt-14
             md:flex justify-between items-end
             md:order-first'> 
                 <div className=' 

@@ -101,9 +101,9 @@ export const ArchitectureDesignSection = () => {
                 direction="bottom"
                 className='
                 text-[#B50404] font-semibold
-                text-xs md:text-xs 
+                text-[10px] md:text-xs 
                 mb-1 xl:mb-4 md:mb-1
-                uppercase leading-8 tracking-[3px]'
+                uppercase leading-8 tracking-0 md:tracking-[3px]'
                 />
 
                 <BlurText
@@ -114,9 +114,9 @@ export const ArchitectureDesignSection = () => {
                 className='
                 text-black
                 font-manrope font-bold
-                text-3xl xl:text-4xl md:text-2xl
+                text-2xl xl:text-4xl md:text-2xl
                 mb-4
-                xl:leading-10
+                leading-7 xl:leading-10
                 tracking-[-0.5px]'
                 />
 
@@ -133,8 +133,8 @@ export const ArchitectureDesignSection = () => {
 
                 <p className='
                 font-normal 
-                leading-7
-                text-base xl:text-[18px]
+                leading-4 md:leading-7
+                text-[10px] xl:text-[18px]
                 text-[#737373]
                 '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
@@ -143,7 +143,7 @@ export const ArchitectureDesignSection = () => {
         </div>
 
         <div 
-        className='w-full '
+        className='w-full overflow-scroll'
         style={{
             scrollbarWidth:'none',
         }}
@@ -172,6 +172,7 @@ export const ArchitectureDesignSection = () => {
                         bottom-8 xl:bottom-11 
                         font-medium text-white text-center
                         justify-self-center
+                        mx-auto
                         text-base xl:text-xl 
                         '>{card.text}</p>
                 
@@ -182,7 +183,7 @@ export const ArchitectureDesignSection = () => {
             
             </div>
         </div>
-        <CardButtons prev={prev} next={next} />
+
 
     </div>
   )

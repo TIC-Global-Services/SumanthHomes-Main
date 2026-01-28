@@ -13,7 +13,7 @@ import { ScrollToTop } from "../utils/ScrollToTop"
 export const HomePage = () => {
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden' >
         <ScrollToTop/>
         <NavBar />
         <HeroSection/>

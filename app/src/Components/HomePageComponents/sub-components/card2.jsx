@@ -34,10 +34,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
   return (
 
         <motion.div
-          initial={{opacity:0, y:50}}
-          whileInView={{opacity:1, y:0}}
-          viewport={{once:false}}
-          transition={{duration:0.5}}
+          
 
           ref={containerRef}
 
@@ -91,7 +88,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             className="
             text-left
             text-[#464851]
-            text-sm leading-4
+            text-[10px] md:text-sm leading-4
             font-normal
             tracking-[-0.48px]
             "

@@ -72,22 +72,22 @@ export const VideoPlayerSection = () => {
             mb-12
             '></iframe>
 
-            <div className='
+            <button className='
             bottom-0 right-0 absolute
             bg-[#B50404] 
-            px-2 xl:px-14 md:px-7 
-            py-1 xl:py-4 md:py-2
+            px-5 xl:px-14 md:px-7 
+            py-4 xl:py-4 md:py-2
             '>
                 <p className='
               text-white
-                text-xs
+                text-[9px] md:text-xs
                 font-manrope font-bold
                 tracking-[2px]
                 uppercase
                 '
                 >WATCH SHOWREEL</p>
 
-            </div>
+            </button>
 
         </div>
 
