@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
+
     useEffect(() => {
     // Check if there's a hash in the URL
     const hash = window.location.hash;
