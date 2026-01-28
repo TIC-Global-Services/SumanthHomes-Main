@@ -6,6 +6,7 @@ import { gsap ,ScrollTrigger, TextPlugin } from "gsap/all"
 import '../../assets/styles/titleStyle.css';
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur"
+import BlurText from "../../utils/BlurText"
 
 
 gsap.registerPlugin(TextPlugin);
@@ -35,27 +36,44 @@ export const OurProjectsSection = () => {
       },[])
 
   return (
-    <div>
+    <div className="w-full">
 
         <motion.div
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
         
         className="mb-10">
-            <p className='
+
+            <BlurText
+              text="DREAMS IN CONCRETE"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             text-center 
+            flex justify-center items-center
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
             text-[rgb(181,4,4)]
-            text-xs'>DREAMS IN CONCRETE</p>
-            <h2 
-            ref={titleRef}
-            className='
+            text-xs'
+            />
+
+            <BlurText
+              text=" Ongoing Projects"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
+              flex justify-center items-center
             text-center font-manrope font-semibold
           text-black
-            text-3xl xl:text-4xl xl:mb-5 md:text-2xl md:mb-5 '>Ongoing Projects</h2>
+            text-3xl xl:text-4xl xl:mb-5 md:text-2xl md:mb-5 '
+            />
+
+            
+           
+
+            
+
+            
         </motion.div>
 
         <DefaultOurProjects id={1} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} />

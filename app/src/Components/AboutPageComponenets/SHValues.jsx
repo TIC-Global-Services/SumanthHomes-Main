@@ -6,6 +6,7 @@ import '../../assets/styles/titleStyle.css'
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -27,24 +28,33 @@ export const SHValues = () => {
 
           className=' xl:w-[40%]'>
 
-            <motion.div 
-              initial={SlideUpAnimationBlur.initial}
-              whileInView={SlideUpAnimationBlur.whileInView}
-              transition={SlideUpAnimationBlur.transition}
-              viewport={SlideUpAnimationBlur.viewport}
+            <div 
             >
-            <p className='
+
+             <BlurText
+              text="SH VALUES"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px]
             text-[rgb(181,4,4)]
-            text-xs'>SH VALUES</p>
+            text-xs'
+                      />
 
-            <h2 
-            className='
+             <BlurText
+              text="What We Stand For"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'>What We Stand For</h2>
-            </motion.div>
+            text-3xl xl:text-4xl md:text-xl'
+                      />
+
+            </div>
 
             <motion.p
              initial={{opacity:0, y:100}}

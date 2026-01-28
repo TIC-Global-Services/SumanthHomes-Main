@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 import { ScrollTrigger, gsap } from "gsap/all";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,7 @@ export const HistorySection = () => {
       
 
   return (
+    
     <div 
   ref={containerRef}
     className='
@@ -72,20 +74,19 @@ export const HistorySection = () => {
               transition={slideUpAnimation.transition}
               viewport={slideUpAnimation.viewport}
               >
-                <motion.h2
-                initial={{filter:"blur(10px)", opacity:0}}
-                whileInView={{filter:"blur(0px)", opacity:1}}
-                transition={{duration:0.5}}
-                viewport={{once:false}}
+
+                <BlurText
+                text="Years Of Excellence"
+                delay={120}
+                animateBy="words"
+                direction="bottom"
                 className='
                 text-[#1D1D1D]
                 flex align-center justify-center
                 font-urbanist font-medium 
                 text-3xl xl:text-8xl md:text-5xl
                 tracking-tight xl:tracking-[-2px] 
-                mb-3'>
-                  Years Of Excellence
-                </motion.h2>
+                mb-3'/>
 
                 <motion.div
                 initial={SlideUpAnimationBlur.initial}

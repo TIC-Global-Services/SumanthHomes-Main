@@ -6,6 +6,7 @@ import '../../assets/styles/titleStyle.css';
 import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
+import BlurText from '../../utils/BlurText';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -28,20 +29,29 @@ export const ArchitectureProcessSection = () => {
         w-full md:w-full xl:w-[40%]
         md:mb-4'>
 
-            <motion.div
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
+            <div
             ref={titleRef}>
-            <p className='mb-1 xl:mb-4 md:mb-1 font-semibold uppercase tracking-[3px]  text-[rgb(181,4,4)] text-xs'>Architecture process</p>
-            <h2 
-            
-            className='
+
+              <BlurText
+              text="Architecture process"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='mb-1 xl:mb-4 md:mb-1 font-semibold uppercase tracking-[3px]  text-[rgb(181,4,4)] text-xs'
+                      />
+
+            <BlurText
+              text="From Concept to Completion"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'>From Concept to Completion</h2>
-            </motion.div>
+            text-3xl xl:text-4xl md:text-xl'
+                      />
+
+            </div>
 
             <motion.p
             initial={{opacity:0, y:100}}

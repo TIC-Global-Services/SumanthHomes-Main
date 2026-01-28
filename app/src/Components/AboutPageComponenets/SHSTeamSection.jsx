@@ -11,6 +11,7 @@ import { TextPlugin, ScrollTrigger } from 'gsap/all';
 import '../../assets/styles/titleStyle.css';
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
+import BlurText from '../../utils/BlurText';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -19,22 +20,6 @@ export const SHSTeamSection = () => {
 
   const titleRef = useRef(null);
       
-      useEffect(()=>{
-          const el = titleRef.current;
-          
-          gsap.to(el, {
-              duration:2,
-              text:{
-                  value:'Studio leaders',
-                  oldClass:'start',
-                  newClass:'end',
-              },
-              scrollTrigger:{
-                  trigger:el,
-                  start:"top center"
-              }
-          })
-      },[])
 
   const tl = gsap.timeline();
 
@@ -95,26 +80,37 @@ export const SHSTeamSection = () => {
     <div className='mb-14 xl:mb-14 overflow-hidden'>
 
         <motion.div
-        initial={SlideUpAnimationBlur.initial}
-        whileInView={SlideUpAnimationBlur.whileInView}
-        transition={SlideUpAnimationBlur.transition}
-        viewport={SlideUpAnimationBlur.viewport}
 
         className='
         md:justify-self-center
         md:text-center
         xl:mb-5 md:mb-3'>
-            <p className='
-            mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[3px]
-             text-[rgb(181,4,4)]
-              text-xs'>SHS TEAM</p>
-            <h2
-            ref={titleRef}
-            className='
+
+            <BlurText
+              text="SHS TEAM"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
+                mb-1 xl:mb-4 md:mb-1
+                font-semibold uppercase tracking-[3px]
+              text-[rgb(181,4,4)]
+                text-xs'
+                      />
+
+
+            <BlurText
+             ref={titleRef}
+              text="Studio leaders"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'>Studio leaders</h2>
+            text-3xl xl:text-4xl md:text-xl'
+                      />
+
         </motion.div>
 
         <div  className='

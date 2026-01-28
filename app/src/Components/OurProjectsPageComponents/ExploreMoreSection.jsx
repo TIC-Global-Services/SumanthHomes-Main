@@ -6,6 +6,7 @@ import { ScrollTrigger, gsap } from "gsap/all"
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur"
+import BlurText from "../../utils/BlurText"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,21 +46,19 @@ export const ExploreMoreSection = () => {
         
           className='xl:mb-72 gap-20'>
 
-            <motion.h4
-
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
-
-            ref={titleRef} className='
+              <BlurText
+              text="Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world."
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+               ref={titleRef}
+               className='
             font-normal
             mb-4 xl:mb-12
             xl:w-[80%] 
             md:text-xl xl:text-3xl 
-            '>
-                Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world.
-            </motion.h4>
+            '
+            />
 
             <motion.div
             

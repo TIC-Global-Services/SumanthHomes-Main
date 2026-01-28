@@ -2,6 +2,7 @@ import {motion} from "motion/react"
 import '../../assets/styles/titleStyle.css';
 import missionImage from "../../assets/img/AboutSection/missionImage.png"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText";
 
 
 export const MissionSection = () => {
@@ -30,26 +31,35 @@ export const MissionSection = () => {
 
         <div className=' md:w-[48%] xl:w-[50%] order-1 md:order-2'>
 
-            <motion.div
-              initial={SlideUpAnimationBlur.initial}
-              whileInView={SlideUpAnimationBlur.whileInView}
-              transition={SlideUpAnimationBlur.transition}
-              viewport={SlideUpAnimationBlur.viewport}
+            <div
             >
-              <p className='
+
+            <BlurText
+              text="OUR MISSION"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
               mt-2
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px] 
             text-[rgb(181,4,4)]
-            text-xs'>OUR MISSION</p>
+            te
+            xt-xs'
+            />
 
-              <h2
-            
-            className='
+            <BlurText
+              text="Designs that Inspire Living"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'>Designs that Inspire Living</h2>
-            </ motion.div>
+            text-3xl xl:text-4xl md:text-xl'
+            />
+
+            </div>
 
             <motion.p
              initial={{opacity:0, y:100}}

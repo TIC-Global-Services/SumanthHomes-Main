@@ -6,7 +6,7 @@ import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import { MapSection } from "../Components/ContactPageComponents/MapSection"
 import { ScrollToTop } from "../utils/ScrollToTop"
-// import { Testing } from "./Testing"
+
 
 export const ContactPage = () => {
 

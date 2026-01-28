@@ -4,6 +4,7 @@ import { Logo3 } from "./miniLogos/Logo3";
 import { Logo4 } from "./miniLogos/Logo4";
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from "../../../utils/SlideUpAnimationBlur";
+import BlurText from "../../../utils/BlurText";
 
 export const Location = () => {
     const specification ={
@@ -14,13 +15,14 @@ export const Location = () => {
     } 
   return (
     <div className='w-full mb-1'>
-        <motion.h2
-        initial={SlideUpAnimationBlur.initial}
-        whileInView={SlideUpAnimationBlur.whileInView}
-        transition={SlideUpAnimationBlur.transition}
-        viewport={SlideUpAnimationBlur.viewport}
-        
-        className='text-2xl font-manrope font-semibold mb-10'>Location</motion.h2>
+
+            <BlurText
+              text='Location'
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='text-2xl font-manrope font-semibold mb-10'
+            />
 
         <div className='flex items-center justify-between flex-wrap xl:flex-nowrap gap-32 w-full'>
 

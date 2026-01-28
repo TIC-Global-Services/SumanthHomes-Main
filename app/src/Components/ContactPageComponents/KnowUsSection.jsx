@@ -3,6 +3,7 @@ import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,8 +33,21 @@ export const KnowUsSection = () => {
 
         ref={titleRef} className='w-full md:w-[50%] xl:w-[30%]'>
 
-            <p className='font-semibold tracking-[3px] uppercase text-[#B50404] text-xs mb-2'>Get to know us</p>
-            <h2 className='font-manrope font-semibold text-4xl tracking-[-0.5px] leading-[48px] '>Reach Out to <br /> Our Team and Office</h2>
+            <BlurText
+              text="Get to know us"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='font-semibold tracking-[3px] uppercase text-[#B50404] text-xs mb-2'
+            />
+
+            <BlurText
+              text="Reach Out to Our Team and Office"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='font-manrope font-semibold text-4xl tracking-[-0.5px] leading-[48px]'
+            />
 
         </motion.div>
 

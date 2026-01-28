@@ -6,6 +6,7 @@ import '../../assets/styles/titleStyle.css'
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,26 +50,34 @@ export const VisionSection = () => {
         <div className='
         md:w-[45%] xl:w-[50%]'>
 
-            <motion.div
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
+            <div>
 
-            ref={titleRef}>
-            <p className='
+            <BlurText
+            ref={titleRef}
+              text="OUR VISION"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px]
             text-[rgb(181,4,4)]
-            text-xs'>OUR VISION</p>
+            text-xs'
+            />
 
-
-            <h2 ref={subtitleRef} className='
+            <BlurText
+            ref={subtitleRef}
+              text="The Art of Modern Building"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'>The Art of Modern Building</h2>
+            text-3xl xl:text-4xl md:text-xl'
+            />
 
-            </motion.div>
+            </div>
 
             <motion.p
             initial={{opacity:0, y:100}}

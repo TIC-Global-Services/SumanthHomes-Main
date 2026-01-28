@@ -4,19 +4,22 @@ import { Icon5 } from "./AmenitiesIcons/Icon5";
 import { Icon6 } from "./AmenitiesIcons/Icon6";
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from "../../../utils/SlideUpAnimationBlur";
+import BlurText from "../../../utils/BlurText";
 
 export const Amenities = () => {
 
 
   return (
     <div className='w-full mb-32'>
-        <motion.h2
-        initial={SlideUpAnimationBlur.initial}
-        whileInView={SlideUpAnimationBlur.whileInView}
-        transition={SlideUpAnimationBlur.transition}
-        viewport={SlideUpAnimationBlur.viewport}
-        
-        className="text-2xl font-manrope font-semibold mb-10">Amenities</motion.h2>
+
+            <BlurText
+              text='Amenities'
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className="text-2xl font-manrope font-semibold mb-10"
+            />
+
 
         <div className='w-full flex gap-2 flex-wrap md:flex-nowrap'>
 

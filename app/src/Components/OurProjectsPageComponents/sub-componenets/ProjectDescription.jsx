@@ -1,5 +1,6 @@
 import {motion} from 'motion/react'
 import { SlideUpAnimationBlur } from '../../../utils/SlideUpAnimationBlur';
+import BlurText from '../../../utils/BlurText';
 
 export const ProjectDescription = () => {
     const phone = " +1 234 567 8910";
@@ -20,19 +21,24 @@ export const ProjectDescription = () => {
         w-full xl:w-[65%]
         '>
             <motion.div
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
+
             
             className='w-full mb-10'>
 
-                <h2 className='
+                <BlurText
+              text="Property description"
+              delay={120}
+              animateBy="words"
+              direction="bottom"
+              className='
                 text-xl text-[#262B35]
                 font-manrope font-semibold
-                mb-2 '>Property description</h2>
+                mb-2 '
+            />
+
                 <p className='font-normal text-[#717580] leading-[26px]'>Crafted by Sumanth Homes, this property is built with a strong focus on quality, durability, and thoughtful design. Using premium materials and modern construction practices, the project offers well-planned spaces that ensure comfort, reliability, and long-term value for homeowners. Every detail reflects our commitment to excellence and trust.</p>
 
+                
             </motion.div>
 
             <div className='

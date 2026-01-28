@@ -7,6 +7,7 @@ import {gsap} from "gsap/gsap-core"
 import { CardButtons } from '../../sub-components/CardButtons';
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText";
 
 export const ArchitectureDesignSection = () => {
 
@@ -90,29 +91,35 @@ export const ArchitectureDesignSection = () => {
 
             <motion.div
 
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
             
             className='text-left'>
 
-                <p className='
+                <BlurText
+                text="ARCHITECTURE & DESIGN"
+                delay={120}
+                animateBy="words"
+                direction="bottom"
+                className='
                 text-[#B50404] font-semibold
                 text-xs md:text-xs 
                 mb-1 xl:mb-4 md:mb-1
-                uppercase leading-8 tracking-[3px]'>ARCHITECTURE & DESIGN</p>
-                <h4
-                
+                uppercase leading-8 tracking-[3px]'
+                />
+
+                <BlurText
+                text="Crafting Modern Buildings Where Style Meets Purpose."
+                delay={120}
+                animateBy="words"
+                direction="bottom"
                 className='
                 text-black
                 font-manrope font-bold
                 text-3xl xl:text-4xl md:text-2xl
                 mb-4
                 xl:leading-10
-                tracking-[-0.5px]'>
-                    Crafting Modern Buildings Where Style Meets Purpose.
-                </h4>
+                tracking-[-0.5px]'
+                />
+
 
             </motion.div>
 
