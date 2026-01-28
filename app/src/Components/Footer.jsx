@@ -66,6 +66,7 @@ export const Footer = () => {
                     text-center
                     font-extrabold text-transparent 
                     text-6xl md:text-8xl xl:text-[8rem] 2xl:text-[9rem]
+                    mt-4 md:mt-auto
                     '> SUMANTH HOMES 
                 </h2>
 
@@ -75,6 +76,7 @@ export const Footer = () => {
                     font-extrabold text-[#A7A7A7] 
                     text-6xl md:text-8xl xl:text-[8rem] 2xl:text-[9rem]
                     hover:cursor-default
+                    mt-4 md:mt-0
                     '> SUMANTH HOMES 
                 </h2>
                 
