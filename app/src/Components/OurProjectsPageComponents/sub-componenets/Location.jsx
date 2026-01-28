@@ -30,7 +30,13 @@ export const Location = () => {
 
             <div className='w-full xl:w-[30%]'>
 
-                <h2 className='font-manrope font-semibold text-2xl mb-8'>Specification</h2>
+                <motion.h2
+                initial={SlideUpAnimationBlur.initial}
+                whileInView={SlideUpAnimationBlur.whileInView}
+                transition={SlideUpAnimationBlur.transition}
+                viewport={SlideUpAnimationBlur.viewport}
+                
+                className='font-manrope font-semibold text-2xl mb-8'>Specification</motion.h2>
 
                 <div className={specification.flex}>
                     <div className={specification.secondFlex}>
