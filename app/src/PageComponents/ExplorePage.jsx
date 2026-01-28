@@ -17,6 +17,7 @@ import Prj1BgImage from "../assets/img/OurProjectsSection/arialDayView.jpg"
 import { useParams } from 'react-router-dom'
 import { ProjectData } from '../utils/ProjectData'
 import { BackToBtn } from '../Components/OurProjectsPageComponents/sub-componenets/BackToBtn'
+import { ScrollToPrj } from '../utils/ScrollToPrj'
 
 export const ExplorePage = () => {
     
@@ -48,7 +49,7 @@ export const ExplorePage = () => {
 
   return (
     <div className='overflow-hidden'>
-        <ScrollToTop/>
+        <ScrollToPrj/>
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={'Our Projects'} subText={"Great Architecture Services"} />
         <ContainerLayout>
