@@ -1,10 +1,24 @@
-import { useRef,  } from "react"
+import { useRef, useEffect } from "react"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react"
 import { useNavigate } from "react-router-dom";
 
 
 export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
+    useEffect(() => {
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+
+    if (hash) {
+      // Small timeout to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 1000);
+    }
+  }, []);
 
     const Navigate = useNavigate();
 
@@ -24,7 +38,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
     const windowContainerRef = useRef(null);
 
   return (
-    <div className="mt-8 xl:mt-20 md:mt-14">
+    <div id="project" className="mt-8 xl:mt-20 md:mt-14">
     <div className='mb-4 xl:mb-16'>
 
         
@@ -146,7 +160,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         text-base md:text-xs xl:text-base'>{description}</p>
 
 
-                       <div onClick={()=>Navigate(`/exploreproject/${id}`)} className={`
+                       <div onClick={()=>Navigate(`/exploreproject/${id}/#project`)} className={`
                         flex items-center
                         gap-2 ${expPrj ? 'hidden' : 'block'}`}>
                         
@@ -219,7 +233,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                      md:text-xs'>{description}</p>
 
 
-                    <div onClick={()=>Navigate(`/exploreproject/${id}`)} className='
+                    <div onClick={()=>Navigate(`/exploreproject/${id}/#project`)} className='
                     flex items-center
                     gap-2'>
                         
