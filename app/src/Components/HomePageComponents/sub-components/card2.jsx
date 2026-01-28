@@ -47,7 +47,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          aspect-[414/160]
         flex-grow-0
          flex-shrink-0
-         flex 
+         flex justify-between
          md:mx-auto xl:mx-0
          
     '>
@@ -55,19 +55,31 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
         <div className="  
          mx-auto
          flex items-center gap-6
-         
+         w-full
          text-center
          
          ">
             
             <div  className='
-            
-            
+            relative
+            min-w-[20%] max-w-[30%]
         '>
 
             <h3
 
              className={`number
+                opacity-0
+            text-right md:text-right
+            font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
+            text-5xl xl:text-[70px] md:text-7xl
+            tracking-[-6px]>`}
+            >{Number}<span className="text-[#B50404]">{plus ? "+" : null}</span>
+            </h3>
+
+            <h3
+             className={`
+            absolute top-0 left-0
+            number
             text-right md:text-right
             font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
             text-5xl xl:text-[70px] md:text-7xl
@@ -77,28 +89,28 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
 
             </div>
 
-        <div
-        className= "">
-            <motion.h5
-            className="text-left font-medium text-black tracking-[-0.54px] text-base md:text-xl">
-                {titleText}
+            <div
+            className= "w-[70%]">
+                <motion.h5
+                className="text-left font-medium text-black tracking-[-0.54px] text-base md:text-xl">
+                   {titleText}
                 </motion.h5>
                 
-            <motion.p
-            className="
-            text-left
-            text-[#464851]
-            text-[10px] md:text-sm leading-4
-            font-normal
-            tracking-[-0.48px]
-            "
-            >
+                <motion.p
+                className="
+                text-left
+                text-[#464851]
+                text-[10px] md:text-sm leading-4
+                font-normal
+                tracking-[-0.48px]
+                "
+               >
                 {contentText}
                 </motion.p>
-        </div>
+            </div>
 
         
-        </div>
+            </div>
 
          </motion.div>
                 
