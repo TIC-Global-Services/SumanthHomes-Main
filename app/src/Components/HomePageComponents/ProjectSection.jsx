@@ -16,7 +16,7 @@ export const ProjectSection = () => {
         text-center  
         text-3xl xl:text-2xl md:text-2xl
         xl:mb-5 md:mb-5
-        py-10
+        py-10 md:py-4
          '>
                 <motion.h2
                 initial={SlideUpAnimationBlur.initial}

@@ -27,7 +27,9 @@ export const Location = () => {
         <div className='flex items-center justify-between flex-wrap xl:flex-nowrap gap-32 w-full'>
 
             <div className='w-full xl:w-[70%] pointer-events-none'>
-                <iframe className='w-full aspect-[4/2] border rounded-md' src="https://www.openstreetmap.org/export/embed.html?bbox=79.01573181152344%2C13.418341060030002%2C79.65843200683595%2C13.84541369663886&amp;layer=hot" ></iframe><br/>
+                <iframe style={{
+                    filter:'invert(90%) grayscale(1)',
+                }} className='w-full aspect-[4/2] border rounded-md invert' src="https://www.openstreetmap.org/export/embed.html?bbox=79.01573181152344%2C13.418341060030002%2C79.65843200683595%2C13.84541369663886&amp;layer=hot" ></iframe><br/>
             </div>
 
             <div className='w-full xl:w-[30%]'>
