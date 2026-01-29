@@ -143,6 +143,7 @@ export const AboutSumanthHomesSection = () => {
             className='flex gap-2 items-center '>
 
                 <p className='
+                cursor-pointer
                 font-extrabold uppercase 
                  '>Explore Services</p>
 
