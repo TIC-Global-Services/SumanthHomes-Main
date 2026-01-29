@@ -13,8 +13,7 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
     <div className='
     flex items-center justify-center
     w-[100%] 
-    h-[100dvh] md:h-[100dvh
-    ] xl:h-auto
+    h-[80dvh] md:h-[100dvh] xl:h-auto
     xl:aspect-[1440/553]
     ' style={{
 
