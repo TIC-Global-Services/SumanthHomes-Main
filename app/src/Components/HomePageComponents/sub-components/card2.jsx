@@ -54,16 +54,13 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
 
         <div className="  
          mx-auto
-         flex items-center gap-6
+         flex justify-center items-center gap-6
          w-full
          text-center
          
          ">
             
-            <div  className='
-            relative
-            min-w-[20%] max-w-[30%]
-        '>
+            <div  className={`relative mx-auto ${Number==100 ? 'min-w-[20%] max-w-[30%]' :''}`}>
 
             <h3
 
@@ -78,6 +75,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
 
             <h3
              className={`
+                opacity-1
             absolute top-0 left-0
             number
             text-right md:text-right
