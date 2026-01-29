@@ -1,5 +1,6 @@
 import bgImage from "../../assets/img/AboutSection/consultationBgImage.png";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export const ConsultationSection = () => {
 
