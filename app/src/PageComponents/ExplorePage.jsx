@@ -21,9 +21,10 @@ import { ScrollToPrj } from '../utils/ScrollToPrj'
 
 export const ExplorePage = () => {
     
-    const {id} = useParams();
+    const {slug} = useParams();
 
-    const data = ProjectData()[`proj${id}`];
+    const data = ProjectData()[slug];
+    console.log(data)
 
     const groundData = {
             img1 :{

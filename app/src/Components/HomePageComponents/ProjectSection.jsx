@@ -26,7 +26,7 @@ export const ProjectSection = () => {
                 
                 className="font-manrope font-semibold text-[#B50404]">OUR PROJECTS</motion.h2>
         </div>
-        <DefaultOurProjects id={1} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
+        <DefaultOurProjects id={'villa1'} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
     </div>
   )
 }

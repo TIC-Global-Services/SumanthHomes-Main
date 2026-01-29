@@ -33,7 +33,7 @@ function App() {
       errorElement: <NotFound404/> 
     },
     {
-      path:"/exploreProject/:id",
+      path:"/projects/:slug",
       element:<ExplorePage/>,
       errorElement:<NotFound404/>
     }

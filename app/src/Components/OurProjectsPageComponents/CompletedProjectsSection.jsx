@@ -56,6 +56,8 @@ export const CompletedProjectsSection = () => {
       image :Image6,
     },
   ]
+  
+  const length = CompletedProjectsCards.length;
 
   let frame = 1;
   const maxFrame = CompletedProjectsCards.length-1;
@@ -140,7 +142,7 @@ export const CompletedProjectsSection = () => {
             transition={SlideUpAnimationBlur.transition}
             viewport={SlideUpAnimationBlur.viewport}
             
-            className='text-[rgb(181,4,4)] font-medium'>-EXPLORE MORE-</motion.button>
+            className={`text-[rgb(181,4,4)] font-medium ${length>6 ? 'block' : 'hidden'}`}>-EXPLORE MORE-</motion.button>
         </div>
 
     </div>

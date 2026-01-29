@@ -161,7 +161,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         text-base md:text-xs xl:text-base'>{description}</p>
 
 
-                       <div onClick={()=>Navigate(`/exploreproject/${id}/#project`)} className={`
+                       <div onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
                        cursor-pointer
                         flex items-center
                         gap-2 ${expPrj ? 'hidden' : 'block'}`}>
@@ -235,7 +235,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                      md:text-xs'>{description}</p>
 
 
-                    <div onClick={()=>Navigate(`/exploreproject/${id}/#project`)} className={`
+                    <div onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
                     cursor-pointer
                     ${expPrj ? 'hidden' : 'block'}
                     flex items-center
