@@ -95,7 +95,9 @@ export const SHSTeamSection = () => {
                 mb-1 xl:mb-4 md:mb-1
                 font-semibold uppercase tracking-[3px]
               text-[rgb(181,4,4)]
-                text-xs'
+                text-xs
+                flex justify-center 
+                '
                       />
 
 
@@ -108,7 +110,9 @@ export const SHSTeamSection = () => {
               className='
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'
+            text-3xl xl:text-4xl md:text-xl
+            flex justify-center
+            '
                       />
 
         </motion.div>
