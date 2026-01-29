@@ -18,6 +18,7 @@ import { useParams } from 'react-router-dom'
 import { ProjectData } from '../utils/ProjectData'
 import { BackToBtn } from '../Components/OurProjectsPageComponents/sub-componenets/BackToBtn'
 import { ScrollToPrj } from '../utils/ScrollToPrj'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 export const ExplorePage = () => {
     
@@ -50,6 +51,7 @@ export const ExplorePage = () => {
 
   return (
     <div className='overflow-hidden'>
+        <ParallaxProvider>
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={'Our Projects'} subText={"Great Architecture Services"} />
         <ContainerLayout>
@@ -64,7 +66,7 @@ export const ExplorePage = () => {
             <ExploreMoreSection/>
         </ContainerLayout>
         <Footer/>
-
+        </ParallaxProvider>
     </div>
   )
 }

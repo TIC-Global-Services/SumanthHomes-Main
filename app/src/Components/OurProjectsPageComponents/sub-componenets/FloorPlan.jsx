@@ -1,6 +1,7 @@
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from "../../../utils/SlideUpAnimationBlur"
 import BlurText from "../../../utils/BlurText"
+import ParallaxComponent from "../../../utils/ParallaxComponent"
 
 export const FloorPlan = ({title, img1, img2}) => {
   return (
@@ -19,9 +20,16 @@ export const FloorPlan = ({title, img1, img2}) => {
 
         </motion.div>
 
-        <div className='flex gap-4 flex-wrap xl:flex-nowrap w-full'>
-            <img className='w-full xl:w-[50%] border rounded-sm' src={img1.image} alt={img1.alt} />
-            <img className='w-full xl:w-[50%] border rounded-sm' src={img2.image} alt={img2.alt} />
+        <div className='flex gap-4 flex-wrap xl:flex-nowrap w-full overflow-hidden'>
+
+          <ParallaxComponent className={'w-full xl:w-[50%]'}>
+            <img className='border rounded-sm' src={img1.image} alt={img1.alt} />
+          </ParallaxComponent>
+          
+          <ParallaxComponent className={'w-full xl:w-[50%]'}>
+            <img className=' border rounded-sm' src={img2.image} alt={img2.alt} />
+          </ParallaxComponent>
+            
         </div>
     </div>
   )
