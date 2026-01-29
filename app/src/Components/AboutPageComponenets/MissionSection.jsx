@@ -3,6 +3,7 @@ import '../../assets/styles/titleStyle.css';
 import missionImage from "../../assets/img/AboutSection/missionImage.png"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
+import ParallaxComponent from "../../utils/ParallaxComponent";
 
 
 export const MissionSection = () => {
@@ -15,11 +16,7 @@ export const MissionSection = () => {
     xl:gap-6 md:gap-3  xl:mt-10 md:mt-4
     mb-14 xl:mb-20 md:mb-14'>
 
-        <motion.div 
-          initial={{opacity:1, x:-100}}
-          whileInView={{opacity:1, x:0}}
-          transition={{duration:0.5}}
-          viewport={{once:false}}
+        <ParallaxComponent
 
         className='order-2 md:order-1 md:w-[48%] xl:w-[45%] bg-black'>
 
@@ -27,7 +24,7 @@ export const MissionSection = () => {
             
             xl:w-full aspect-[2/1]' src={missionImage}></img>
 
-        </motion.div>
+        </ParallaxComponent>
 
         <div className=' md:w-[48%] xl:w-[50%] order-1 md:order-2'>
 

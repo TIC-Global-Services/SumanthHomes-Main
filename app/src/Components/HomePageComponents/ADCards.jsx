@@ -2,6 +2,7 @@ import img1 from "../../assets/img/ArchitectureDesign/arielDay8k.jpg";
 import img2 from "../../assets/img/ArchitectureDesign/ArchitectureImage2.png";
 import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
+import ParallaxComponent from "../../utils/ParallaxComponent";
 
 export const ADCards = () => {
 
@@ -50,16 +51,19 @@ export const ADCards = () => {
             {
                 ArchitectureCards.map((card, i)=>(
 
-                    <div key={i} className='
+                    <div key={i} className='overflow-hidden
                     relative flex-shrink-0 carousel-card
                     w-full md:w-[30%] xl:w-auto
                     '>
-                        
-                        <img className='
+
+                        <ParallaxComponent>
+                            <img className='
                         aspect-[4/5]
                         w-full xl:w-[370px] 
                         
-                        ' src={card.img}></img>
+                        ' src={card.img}/>
+                        </ParallaxComponent>  
+                        
                         <p className='
                         absolute 
                         bottom-8 xl:bottom-11 

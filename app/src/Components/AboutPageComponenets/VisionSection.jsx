@@ -7,6 +7,8 @@ import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
+import { Parallax } from "react-scroll-parallax";
+import ParallaxComponent from "../../utils/ParallaxComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,26 +19,6 @@ export const VisionSection = () => {
     const contentRef = useRef(null);
     const containerRef = useRef(null);
     const imageRef = useRef(null);
-    
-    useEffect(()=>{
-        
-
-        gsap.fromTo(imageRef.current, {
-          x:100,
-          scrollTrigger:{
-            trigger:containerRef.current,
-            toggleActions:"play none none reset",
-        }
-        },
-        {
-          x:0,
-          duration:.5,
-          scrollTrigger:{
-            trigger:containerRef.current,
-            toggleActions:"play none none reset"
-          }
-        })
-    },[])
 
 
 
@@ -93,11 +75,9 @@ export const VisionSection = () => {
 
         </div>
 
-        <div className=' md:w-[50%] xl:w-[47%] '>
-
-            <img ref={imageRef} className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1]' src={visionImage}></img>
-
-        </div>
+        <ParallaxComponent className=' md:w-[50%] xl:w-[47%] '>
+           <img className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1]' src={visionImage}></img>
+        </ParallaxComponent>
 
     </div>
   )

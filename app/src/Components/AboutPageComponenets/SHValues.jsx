@@ -7,6 +7,7 @@ import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
+import ParallaxComponent from "../../utils/ParallaxComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -69,13 +70,10 @@ export const SHValues = () => {
         </div>
 
         <div className='xl:w-[58%] flex gap-4 absolute right-0'>
-        <motion.div
-           initial={{opacity:0, y:100}}
-           whileInView={{opacity:1, y:0}}
-           transition={{duration:0.5}}
-           viewport={{once:false}}
+        <div
+        className='hidden w-[55%] xl:block overflow-hidden xl:pb-40 mb-10'>
 
-        className='hidden w-[55%] xl:block'>
+          <ParallaxComponent>
 
             <img className='
             xl:w-[100%] 
@@ -84,18 +82,19 @@ export const SHValues = () => {
 
             <p className='text-xl font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
 
-        </motion.div>
+          </ParallaxComponent>
+            
+
+        </div>
 
         <motion.div
-           initial={{opacity:0, y:100}}
-           whileInView={{opacity:1, y:0}}
-           transition={{duration:0.5}}
-           viewport={{once:false}}
-        className='hidden xl:block w-[45%]'>
+        className='hidden xl:block w-[45%] overflow-hidden'>
 
+          <ParallaxComponent>
             <img className='xl:w-[100%] aspect-square' src={image2} />
-
             <p className='text-xl font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
+          </ParallaxComponent>
+          
 
         </motion.div>
         </div>

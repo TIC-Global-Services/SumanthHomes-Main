@@ -13,6 +13,7 @@ import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur'
 import BlurText from '../../utils/BlurText'
 
+
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 

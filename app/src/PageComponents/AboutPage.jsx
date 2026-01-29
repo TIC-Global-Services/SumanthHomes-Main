@@ -11,12 +11,14 @@ import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import { ScrollToTop } from "../utils/ScrollToTop"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export const AboutPage = () => {
 
 
   return (
     <div className='overflow-x-hidden'>
+        <ParallaxProvider>
         <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={heroImage} mainText={"About SHs"} subText={"LET'S SEE WHO WE ARE"}/>
@@ -30,6 +32,7 @@ export const AboutPage = () => {
             <ConsultationSection />
         </ContainerLayout>
         <Footer/>
+        </ParallaxProvider>
     </div>
   )
 }

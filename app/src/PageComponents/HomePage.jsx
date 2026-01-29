@@ -10,11 +10,13 @@ import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import { ScrollToTop } from "../utils/ScrollToTop"
 import { ADCards } from '../Components/HomePageComponents/ADCards'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 export const HomePage = () => {
 
   return (
     <div className='overflow-hidden' >
+      <ParallaxProvider>
         <ScrollToTop/>
         <NavBar />
         <HeroSection/>
@@ -32,6 +34,7 @@ export const HomePage = () => {
             <MapSection/>
         </ContainerLayout>
         <Footer/>
+        </ParallaxProvider>
     </div>
   )
 }

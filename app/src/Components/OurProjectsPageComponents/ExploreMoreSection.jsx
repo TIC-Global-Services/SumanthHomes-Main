@@ -7,6 +7,7 @@ import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation"
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur"
 import BlurText from "../../utils/BlurText"
+import ParallaxComponent from "../../utils/ParallaxComponent"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,18 +84,15 @@ export const ExploreMoreSection = () => {
 
         <motion.div
 
-          initial={{opacity:0, x:100}}
-          whileInView={{opacity:1, x:0}}
-          transition={{duration:0.5}}
-          viewport={{once:false}}
+       
         
         className='
         hidden xl:block
         relative
         xl:w-[45%] 
         '>
+                <img src={image2} className='aspect-[308/371]'></img>
 
-            <img src={image2} className='aspect-[308/371]'></img>
             <img src={image1} className='w-[70%] aspect-[203.33/242.05] xl:top-44 xl:right-40 absolute '></img>
             
 

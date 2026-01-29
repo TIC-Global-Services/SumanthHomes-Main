@@ -1,20 +1,23 @@
-
+import ParallaxComponent from "../../../utils/ParallaxComponent"
 
 
 export const GridCard2 = ({Image, mainText, subText}) => {
 
   return (
     <div className='
+    overflow-hidden
     card
     relative
     w-full
     flex-shrink-0
     '>
 
+      <ParallaxComponent>
         <img src={Image} className='
         w-full
         aspect-[416/461]
         '></img>
+      
 
         <div className='
             flex items-center gap-[2px] xl:gap-6
@@ -29,6 +32,7 @@ export const GridCard2 = ({Image, mainText, subText}) => {
           <p className='font-normal text-[#737373] text-sm xl:text-base'>{subText}</p>
 
         </div>
+        </ParallaxComponent>
 
     </div>
   ) 

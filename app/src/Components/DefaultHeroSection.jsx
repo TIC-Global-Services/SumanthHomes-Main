@@ -1,5 +1,5 @@
 import {gsap, TextPlugin} from "gsap/all"
-
+import ParallaxComponent from "../utils/ParallaxComponent";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -10,22 +10,16 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
 
   return (
 
-    <div className='
-    flex items-center justify-center
-    w-[100%] 
-    h-[80dvh] md:h-[100dvh] xl:h-auto
-    xl:aspect-[1440/553]
-    ' style={{
+    <div className="w-full overflow-hidden">
 
-        backgroundImage:`url(${bgImage})`,
-        backgroundRepeat:'no-repeat',
-        backgroundPosition:'center',
-        backgroundSize:'cover'
-    }}>
+        <img src={bgImage} alt="HeroImage" className="relative w-[100%] h-[80dvh] md:h-[100dvh] xl:h-auto xl:aspect-[1440/553]" />
+        
+      
 
-        <div className='text-center'>
+        <div className='absolute  w-[100%] top-[0%] h-[80dvh] md:h-[100dvh] xl:h-auto xl:aspect-[1440/553] text-center justify-self-center flex justify-center items-center'>
 
-            <h2 className={`
+        <div>
+          <h2 className={`
             font-manrope font-normal tracking-wide md:tracking-[-4px]
             text-3xl md:text-6xl xl:text-[86px] 
             xl:mb-6 md:mb-4 ${white ? 'text-white' : 'text-black'}`}>{mainText}</h2>
@@ -37,6 +31,8 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
             
             >{subText}</p>
 
+        </div>
+            
         </div>
 
     </div>

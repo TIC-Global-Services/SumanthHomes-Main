@@ -6,6 +6,7 @@ import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import { MapSection } from "../Components/ContactPageComponents/MapSection"
 import { ScrollToTop } from "../utils/ScrollToTop"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 
 export const ContactPage = () => {
@@ -13,6 +14,7 @@ export const ContactPage = () => {
 
   return (
     <div className="overflow-hidden">
+      <ParallaxProvider>
         <ScrollToTop/>
         <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} />
@@ -21,6 +23,7 @@ export const ContactPage = () => {
             <MapSection />
         </ContainerLayout>
         <Footer/>
+        </ParallaxProvider>
     </div>
   )
 }
