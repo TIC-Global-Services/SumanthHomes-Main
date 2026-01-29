@@ -110,12 +110,18 @@ export const Footer = () => {
 
                 <div className='text-center mb-6'>
 
-                <p className='
+                <a href="tel:+91 8220 637727">
+                    <p className='
                 font-medium
                 text-sm xl:text-sm md:text-xs'>+91 8220 637727</p>
-                <p className='
+                </a>
+
+                <a href="info@domain.com" target="_blank">
+                    <p className='
                 font-medium 
                 text-sm xl:text-sm md:text-xs'>info@domain.com</p>
+                </a>
+                
 
                 </div>
             </div>
@@ -131,9 +137,12 @@ export const Footer = () => {
                 md:text-left
                 pb-1'>
 
-                    <p className='
+                    <a href="https://www.theinternetcompany.one/" target="_blank">
+                        <p className='
                         font-normal
                         text-xs md:text-xs'>Designed & Developed by TIC Global Services</p>
+                    </a>
+                    
 
                 </div>
 
