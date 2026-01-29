@@ -45,7 +45,7 @@ const ContainerLayout: React.FC<ContainerProps> = ({
   className,
   disablePaddingX = false,
   disablePaddingY = false,
-  paddingX = "px-6 xl:px-[105px] lg:px-[50px] md:px-[20px]",
+  paddingX = "px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px]",
   paddingY = " py-8 md:py-10",
   maxWidth = " ",
 }) => {
