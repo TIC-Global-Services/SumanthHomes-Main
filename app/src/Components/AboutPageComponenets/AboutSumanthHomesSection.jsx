@@ -8,6 +8,7 @@ import '../../assets/styles/titleStyle.css';
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
+import ParallaxComponent from "../../utils/ParallaxComponent";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,39 +51,47 @@ export const AboutSumanthHomesSection = () => {
     mb-14 xl:mb-40 md:mb-12'>
 
         <div ref={imageRef} className='
-        
         w-full xl:w-[50%]
         flex items-center relative
         gap-4
         mb-4
         '>
 
+          <div className="w-[45%] aspect-square overflow-hidden">
+            <ParallaxComponent className={'w-full aspect-square'}>
             <img className='
-            w-[45%]
+            w-full
             aspect-square
-            
+            scale-110
             ' src={imageLeft}
             
-            ></img>
+            />
+          </ParallaxComponent>
+          </div>
 
-            <img className='
-            bg-black
+          <div className="overflow-hidden
             absolute
             top-[33%] xl:top-[30%] md:top-[30%]
             left-[30%] md:left-[35%] xl:left-[25%]
             w-[45%]
             aspect-square
-            ' 
-            src={imageMiddle}
-            
-            ></img>
+            z-10
+            ">
 
-            <img className='
-            w-[55%]
-            aspect-square
-             ' src={imageRight}
+              <ParallaxComponent className={'w-full'}>
+                <img className='w-full' src={imageMiddle}/>
+              </ParallaxComponent>
+          </div>
             
-             ></img>
+
+            
+
+             <div className="overflow-hidden w-[55%] aspect-square">
+              <ParallaxComponent className={'w-full'}>
+                <img className='w-full aspect-square' src={imageRight}/>
+              </ParallaxComponent>
+             </div>
+             
 
         </div>
 
