@@ -23,7 +23,7 @@ export const SHValues = () => {
 
   return (
     <div ref={containerRef} className='flex justify-between gap-4 
-    mb-10 lg:w-[90%]'>
+    mb-10 lg:w-[90%] xl:w-full'>
 
         <div
 
