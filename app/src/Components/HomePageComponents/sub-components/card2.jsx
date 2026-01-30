@@ -64,8 +64,9 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
 
             <h3
 
-             className={`number
-                opacity-0
+             className={`
+            number
+            opacity-0
             text-right md:text-right
             font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
             text-5xl xl:text-[70px] md:text-7xl
