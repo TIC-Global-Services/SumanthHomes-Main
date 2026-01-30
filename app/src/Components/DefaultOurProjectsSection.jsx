@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react"
 import { useNavigate } from "react-router-dom";
+import ParallaxComponent from "../utils/ParallaxComponent";
 
 
 export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
@@ -45,6 +46,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
         
 
         <div className='
+        overflow-hidden
         md:flex 
         relative
         aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
@@ -52,11 +54,22 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
         w-full 
         
        
-        ' style={{
-            backgroundImage:`url(${bgImage})`,
-            backgroundSize:'cover',
-            backgroundRepeat:'no-repeat'
-        }}>
+        '>
+            <ParallaxComponent className={`relative
+            aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
+            md:h-[390px] xl:h-[600px]
+            w-full` }>
+                <img src={bgImage} alt="project" 
+            className="
+ 
+            relative
+            aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
+            md:h-[390px] xl:h-[600px]
+            w-full 
+            "/>
+            </ParallaxComponent>
+            
+            
             
             <div className={`
             absolute
@@ -184,6 +197,8 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
             </div>
 
         </div>
+
+        {/* Mobile Screens */}
 
         <div className='
             md:hidden
