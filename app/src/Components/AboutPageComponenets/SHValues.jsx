@@ -22,12 +22,12 @@ export const SHValues = () => {
   const image2Ref = useRef(null);
 
   return (
-    <div ref={containerRef} className='flex gap-4
-    md:mb-10 xl:mb-[28rem] 2xl:mb-[40rem]'>
+    <div ref={containerRef} className='flex justify-between gap-4
+    mb-10'>
 
         <div
 
-          className=' xl:w-[40%]'>
+          className=' xl:w-[40%] '>
 
             <div 
             >
@@ -69,7 +69,7 @@ export const SHValues = () => {
 
         </div>
 
-        <div className='xl:w-[58%] flex gap-4 absolute right-0'>
+        <div className='xl:w-[58%] flex gap-4 '>
         <div
         className='hidden w-[55%] xl:block overflow-hidden xl:pb-40 mb-10'>
 

@@ -28,8 +28,12 @@ export const AboutPage = () => {
             <VisionSection/>
             <MissionSection/>
             <SHSTeamSection/>
-            <SHValues />
-            <ConsultationSection />
+        </ContainerLayout>
+        <div className='pl-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px]'>
+          <SHValues />
+        </div>
+        <ContainerLayout>
+          <ConsultationSection />
         </ContainerLayout>
         <Footer/>
         </ParallaxProvider>

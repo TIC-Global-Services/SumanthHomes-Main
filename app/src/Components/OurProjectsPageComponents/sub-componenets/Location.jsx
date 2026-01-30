@@ -32,7 +32,7 @@ export const Location = () => {
                 }} className='w-full aspect-[4/2] border rounded-md invert' src="https://www.openstreetmap.org/export/embed.html?bbox=79.01573181152344%2C13.418341060030002%2C79.65843200683595%2C13.84541369663886&amp;layer=hot" ></iframe><br/>
             </div>
 
-            <div className='w-full xl:w-[30%]'>
+            <div className='w-full xl:w-[37%]'>
 
                 <motion.h2
                 initial={SlideUpAnimationBlur.initial}
