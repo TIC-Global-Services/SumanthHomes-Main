@@ -12,7 +12,9 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
 
     <div className="w-full overflow-hidden">
 
-        <img src={bgImage} alt="HeroImage" className="relative w-[100%] h-[80dvh] md:h-[100dvh] xl:h-auto xl:aspect-[1440/553]" />
+      <ParallaxComponent>
+        <img src={bgImage} alt="HeroImage" className="relative w-[100%] h-[80dvh] md:h-[100dvh] xl:h-auto xl:aspect-[1440/553] scale-110" />
+      </ParallaxComponent>
         
       
 
