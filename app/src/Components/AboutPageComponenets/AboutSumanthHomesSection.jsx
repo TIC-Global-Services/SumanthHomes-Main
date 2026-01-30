@@ -135,29 +135,6 @@ export const AboutSumanthHomesSection = () => {
 
             </motion.p>
 
-            <motion.div
-            initial={{opacity:0, y:100}}
-            whileInView={{opacity:1, y:0}}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
-            
-            className='flex gap-2 items-center '>
-
-                <p className='
-                cursor-pointer
-                font-extrabold uppercase 
-                 '>Explore Services</p>
-
-                <button>
-
-                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.7445 7.45647C12.079 7.12192 12.079 6.57862 11.7445 6.24407L7.46227 1.96185C7.12772 1.6273 6.58442 1.6273 6.24987 1.96185C5.91532 2.2964 5.91532 2.8397 6.24987 3.17425L9.07346 5.99516H0.862303C0.388583 5.99516 0.00585938 6.37789 0.00585938 6.85161C0.00585938 7.32533 0.388583 7.70805 0.862303 7.70805H9.07078L6.25255 10.529C5.918 10.8635 5.918 11.4068 6.25255 11.7414C6.58709 12.0759 7.1304 12.0759 7.46495 11.7414L11.7472 7.45915L11.7445 7.45647Z" fill="#191919"/>
-                  </svg>
-
-                </button>
-
-            </motion.div>
-
         </div>
 
 
