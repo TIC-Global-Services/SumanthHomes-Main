@@ -112,12 +112,14 @@ export const Footer = () => {
 
                 <a href="tel:+91 8220 637727">
                     <p className='
+                    hover:scale-110
                 font-medium
                 text-sm xl:text-sm md:text-xs'>+91 8220 637727</p>
                 </a>
 
                 <a href="https:info@domain.com" target="_blank">
                     <p className='
+                    hover:scale-110
                 font-medium 
                 text-sm xl:text-sm md:text-xs'>info@domain.com</p>
                 </a>
@@ -139,6 +141,7 @@ export const Footer = () => {
 
                     <a href="https://www.theinternetcompany.one/" target="_blank">
                         <p className='
+                        hover:scale-110
                         font-normal
                         text-xs md:text-xs'>Designed & Developed by TIC Global Services</p>
                     </a>
