@@ -1,6 +1,6 @@
 import bgImage from "../../assets/img/AboutSection/consultationBgImage.png";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import ParallaxComponent from "../../utils/ParallaxComponent";
 
 export const ConsultationSection = () => {
 
@@ -12,26 +12,31 @@ export const ConsultationSection = () => {
 
   return (
     <div className='
+    relative
+    overflow-hidden
     flex 
     w-full
     aspect-[3/2] md:aspect-[3/1]
     mb-20 xl:mb-36 md:mb-14
-    ' 
-      style={{
+    ' >
 
-      backgroundImage:`url(${bgImage})`,
-      backgroundRepeat:'no-repeat',
-      backgroundSize:'cover'
-    }}>
+      <ParallaxComponent className={`w-full
+      aspect-[3/2] md:aspect-[3/1]
+      mb-20 xl:mb-36 md:mb-14`}>
+        <img src={bgImage} alt="consultation Image" 
+      className="
+      w-full
+      " />
+      </ParallaxComponent>
+      
 
         <div className='
-        flex flex-col justify-between items-center md:items-start md:justify-end
-        m-8
         w-full
-        h-full md:h-auto
-        xl:w-[45%] md:w-[60%]
-        
-        
+        aspect-[3/2] md:aspect-[3/1]
+        absolute inset-0
+        flex flex-col items-center sm:items-start sm:justify-center md:items-start md:justify-end
+        mb-20 xl:mb-36 md:mb-14 
+        pb-8 pl-10
         '>
 
           <div className=''>
