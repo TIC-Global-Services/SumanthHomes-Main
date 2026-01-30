@@ -3,6 +3,7 @@ import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react"
 import { useNavigate } from "react-router-dom";
 import ParallaxComponent from "../utils/ParallaxComponent";
+import BlurText from "../utils/BlurText";
 
 
 export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
@@ -134,28 +135,25 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                 xl:w-[50%]
                 ">
 
-                    <motion.div
-                    initial={slideUpAnimation.initial}
-            whileInView={slideUpAnimation.whileInView}
-            transition={slideUpAnimation.transition}
-            viewport={slideUpAnimation.viewport}
+                    <div
 
                     ref={windowTitleRef}> 
 
-                        <h4 className='
-                        font-semibold
+                    <BlurText text={miniHeader} className="font-semibold
                         text-[#B40505]
                         text-sm md:text-xs xl:text-sm 
-                        py-2'>
-                            {miniHeader}</h4>
+                        py-2">
 
-                        <h2 className='
-                        font-manrope font-semibold
+                    </BlurText>
+
+                    <BlurText text={mainHeader} className="font-manrope font-semibold
                         tracking-[-2px]
                         xl:pb-2
-                        text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
+                        text-2xl md:text-2xl xl:text-4xl ">
 
-                    </motion.div>
+                    </BlurText>
+
+                    </div>
 
                     <motion.div
                     initial={slideUpAnimation.initial}
