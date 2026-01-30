@@ -19,14 +19,13 @@ export const MapSection = () => {
         <div className='
         w-[50%] md:w-[80%]
         mx-auto
-        flex items-center justify-evenly flex-wrap shirnk-0
-        xl:gap-6
+        flex items-center justify-center flex-wrap shirnk-0
+        xl:gap-2
         mb-2 xl:mb-28 md:mb-28
         '>
             <div className='
             flex justify-center
             md:w-auto
-            mx-auto
             mb-1'>
                 <p className='
                 text-center
