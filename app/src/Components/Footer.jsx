@@ -116,7 +116,7 @@ export const Footer = () => {
                 text-sm xl:text-sm md:text-xs'>+91 8220 637727</p>
                 </a>
 
-                <a href="info@domain.com" target="_blank">
+                <a href="https:info@domain.com" target="_blank">
                     <p className='
                 font-medium 
                 text-sm xl:text-sm md:text-xs'>info@domain.com</p>
