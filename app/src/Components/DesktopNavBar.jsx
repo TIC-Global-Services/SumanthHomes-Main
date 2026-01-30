@@ -26,6 +26,7 @@ export const DesktopNavBar = () => {
       w-[9%]
       aspect-square
       z-40
+      hover:scale-110
       ">
 
         <Logo/>

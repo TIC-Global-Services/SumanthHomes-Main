@@ -122,7 +122,7 @@ export const VideoPlayerSection = () => {
                 flex items-center justify-center
                 order-first
                 flex-shrink-0
-                hover:bg-white
+                hover:bg-white hover:scale-110
                 p-2
                 rounded-full'>
                     <div>
@@ -143,7 +143,7 @@ export const VideoPlayerSection = () => {
                 <div className='
                 flex items-center justify-center
                 flex-shrink-0
-                hover:bg-white
+                hover:bg-white hover:scale-110
                 p-2
                 rounded-full'>
                     <div >
