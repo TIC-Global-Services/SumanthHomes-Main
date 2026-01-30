@@ -36,6 +36,7 @@ export const ExploreMoreSection = () => {
 
   return (
     <div ref={containerRef} className='
+    overflow-hidden
     flex justify-between
     mb-20
     mt-8
@@ -87,13 +88,19 @@ export const ExploreMoreSection = () => {
        
         
         className='
+        
         hidden xl:block
         relative
         xl:w-[45%] 
         '>
-                <img src={image2} className='aspect-[308/371]'></img>
+            <ParallaxComponent className='aspect-[308/371]'>
+                <img className="w-full" src={image2} />
+            </ParallaxComponent>
 
-            <img src={image1} className='w-[70%] aspect-[203.33/242.05] xl:top-44 xl:right-40 absolute '></img>
+            <ParallaxComponent className='w-[70%] aspect-[203.33/242.05] xl:top-44 xl:right-40 absolute '>
+                <img className="w-full" src={image1} />
+            </ParallaxComponent>
+            
             
 
         </motion.div>
