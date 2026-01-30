@@ -22,8 +22,8 @@ export const SHValues = () => {
   const image2Ref = useRef(null);
 
   return (
-    <div ref={containerRef} className='flex justify-between gap-4
-    mb-10'>
+    <div ref={containerRef} className='flex justify-between gap-4 
+    mb-10 lg:w-[90%]'>
 
         <div
 

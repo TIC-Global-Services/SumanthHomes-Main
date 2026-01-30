@@ -88,7 +88,7 @@ export const AboutSumanthHomesSection = () => {
 
         <div className='
         mt-6 md:mt-6 xl:mt-0
-        w-[100%] md:w-full xl:w-[45%] 
+        w-[100%] md:w-full xl:w-[55%] 
         '>
 
           <motion.div

@@ -5,7 +5,7 @@ export const MapSection = () => {
     <div className="
     relative 
     w-full aspect-[1440/1134.9]
-    mb-[37rem] md:mb-[35rem] xl:mb-44 2xl:mb-48
+    mb-[80vh] sm:mb-[70vh] md:mb-[68vh] lg:mb-[30vh] xl:mb-[30vh] 
     
     ">
 
@@ -13,7 +13,6 @@ export const MapSection = () => {
       className='
       pointer-events-none
       aspect-[4/3] md:aspect-[1280/503]
-      mb-[25rem] sm:mb-40 md:mb-[40rem] lg:mb-20 xl:mb-[25rem] 2xl:mb-[45rem]
       w-full
       '
       src="https://www.openstreetmap.org/export/embed.html?bbox=79.09950256347656%2C13.414333619316578%2C79.74220275878908%2C13.84141349246619&amp;layer=hot&amp;marker=13.627971281465944%2C79.42085266113281"
