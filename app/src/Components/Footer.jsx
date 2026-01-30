@@ -65,7 +65,7 @@ export const Footer = () => {
                     bg-clip-text
                     text-center
                     font-extrabold text-transparent 
-                    text-6xl md:text-8xl xl:text-[8rem] 2xl:text-[9rem]
+                    text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-[9rem]
                     mt-4 md:mt-auto
                     '> SUMANTH HOMES 
                 </h2>
