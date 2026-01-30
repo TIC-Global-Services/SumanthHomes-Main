@@ -91,7 +91,7 @@ export const SHValues = () => {
         className='hidden xl:block w-[45%] overflow-hidden'>
 
           <ParallaxComponent>
-            <img className='xl:w-[100%] aspect-square' src={image2} />
+            <img className='xl:w-[100%] aspect-square scale-110 mb-6' src={image2} />
             <p className='text-xl font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
           </ParallaxComponent>
           
