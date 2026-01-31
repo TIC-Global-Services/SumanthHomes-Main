@@ -44,7 +44,7 @@ export const ADCards = () => {
         >
         <div  className='
         flex
-        mt-8 xl:mt-12 
+        mt-4
         gap-4 xl:gap-8'
         >
 

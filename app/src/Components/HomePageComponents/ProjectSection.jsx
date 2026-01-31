@@ -10,12 +10,12 @@ export const ProjectSection = () => {
   const description = "Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati."
 
   return (
-    <div id="prj">
+    <div id="prj" className="mb-14">
 
         <div className='
         text-center  
         text-3xl xl:text-2xl md:text-2xl
-        lg:mb-10 xl:mb-5 md:mb-5
+        xl:mb-5 md:mb-5
         py-10 md:py-4
          '>
                 <motion.h2

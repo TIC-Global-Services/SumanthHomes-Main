@@ -26,12 +26,12 @@ export const ArchitectureDesignSection = () => {
     <div className=''>
 
         <div className='
-        lg:flex items-end justify-between '>
+        md:flex items-end justify-between '>
 
             <motion.div
 
             
-            className='text-left lg:w-[45%]'>
+            className='text-left md:w-[60%] lg:w-[45%]'>
 
                 <BlurText
                 text="ARCHITECTURE & DESIGN"
@@ -68,12 +68,12 @@ export const ArchitectureDesignSection = () => {
             transition={slideUpAnimation.transition}
             viewport={slideUpAnimation.viewport}
 
-            className='lg:w-[45%]  md:pt-2'>
+            className='md:w-[35%] lg:w-[45%]  md:pt-2'>
 
                 <p className='
                 font-normal 
                 leading-4 md:leading-7
-                text-[10px] xl:text-[18px]
+                text-[14px] xl:text-[18px]
                 text-[#737373]
                 '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
