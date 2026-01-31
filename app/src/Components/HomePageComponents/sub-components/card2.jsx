@@ -45,7 +45,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          bg-white
          w-[100%] md:w-[85%] xl:w-[33%]
          aspect-[414/160] lg:aspect-[4/1] xl:aspect-[414/160]
-        flex-grow-0
+         flex-grow-0
          flex-shrink-0
          flex justify-between
          md:mx-auto xl:mx-0
@@ -60,7 +60,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          
          ">
             
-            <div  className={`relative  ${Number==100 ? 'min-w-[20%] max-w-[30%] lg:w-auto xl:min-w-[20%] xl:max-w-[30%]' :''}`}>
+            <div  className={`relative ${Number==100 ? 'min-w-[20%] max-w-[30%]  lg:w-auto xl:min-w-[20%] xl:max-w-[30%]' :''}`}>
 
             <h3
 
@@ -89,7 +89,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             </div>
 
             <div
-            className= "w-[70%] lg:w-auto xl:w-[70%]">
+            className= "w-auto xl:w-[70%]">
                 <motion.h5
                 className="text-left font-medium text-black tracking-[-0.54px] text-base md:text-xl lg:text-2xl xl:text-xl">
                    {titleText}
