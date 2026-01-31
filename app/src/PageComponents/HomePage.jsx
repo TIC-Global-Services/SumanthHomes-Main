@@ -25,7 +25,7 @@ export const HomePage = () => {
             <ProjectSection/> 
             <ArchitectureDesignSection/>
         </ContainerLayout>
-        <div className='pl-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] overflow-scroll' style={{scrollbarWidth:"none"}}>
+        <div className='pl-[20px] pr-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] overflow-scroll' style={{scrollbarWidth:"none"}}>
           <ADCards/>
         </div>
         <ContainerLayout>
