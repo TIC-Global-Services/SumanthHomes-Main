@@ -22,12 +22,12 @@ export const FloorPlan = ({title, img1, img2}) => {
 
         <div className='flex gap-4 flex-wrap xl:flex-nowrap w-full overflow-hidden'>
 
-          <ParallaxComponent className={'w-full xl:w-[50%]'}>
-            <img className='border rounded-sm' src={img1.image} alt={img1.alt} />
+          <ParallaxComponent className={'w-full flex-grow xl:w-[50%]'}>
+            <img className='border rounded-sm w-full' src={img1.image} alt={img1.alt} />
           </ParallaxComponent>
           
-          <ParallaxComponent className={'w-full xl:w-[50%]'}>
-            <img className=' border rounded-sm' src={img2.image} alt={img2.alt} />
+          <ParallaxComponent className={'w-full flex-grow xl:w-[50%]'}>
+            <img className=' border rounded-sm w-full' src={img2.image} alt={img2.alt} />
           </ParallaxComponent>
             
         </div>
