@@ -1,7 +1,10 @@
-import React from 'react'
+import { SplitText} from "gsap/SplitText"
+import gsap from "gsap/all"
 
+gsap.registerPlugin(SplitText);
 
 export const MapSection = () => {
+  
 
 
   return (
@@ -17,6 +20,7 @@ export const MapSection = () => {
  ></iframe><br/>
       
         <div className='
+        overflow-hidden
         w-[50%] md:w-[80%]
         mx-auto
         flex items-center justify-center flex-wrap shirnk-0
@@ -42,6 +46,7 @@ export const MapSection = () => {
             </div>
             
             <button className='
+            textAnimate
             text-[#B50404] font-semibold tracking-[-0.5px]
             w-[100%] md:w-auto
             text-[18px] md:text-xl
