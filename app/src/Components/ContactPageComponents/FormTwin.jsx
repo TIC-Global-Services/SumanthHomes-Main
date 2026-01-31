@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Form Twin : Used to act as a placeholder for the absolute form
+// So it will take space for the absolute Form and provides definite Margin bottom across all devices
+
 export const FormTwin = () => {
   return (
     <form id="contactForm" className="
