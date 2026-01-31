@@ -95,13 +95,13 @@ export const ExploreMoreSection = () => {
         '>
             <div className='aspect-[308/371] overflow-hidden'>
                 <ParallaxComponent className={'w-full'}>
-                    <img className="w-full" src={image2} />
+                    <img className="w-full scale-150" src={image2} />
                 </ParallaxComponent>
             </div>
 
             <div className="w-[70%] aspect-[203.33/242.05] xl:top-44 xl:right-40 absolute overflow-hidden ">
                 <ParallaxComponent className='w-full'>
-                    <img className="w-full" src={image1} />
+                    <img className="w-full scale-150" src={image1} />
                 </ParallaxComponent>
             </div>
             
