@@ -5,7 +5,7 @@ export const MapSection = () => {
     <div className="
     relative 
     w-full aspect-[1440/1134.9]
-    mb-[80vh] sm:mb-[70vh] md:mb-[68vh] lg:mb-[30vh] xl:mb-[30vh] 
+    mb-[100vh] sm:mb-[70vh] md:mb-[68vh] lg:mb-[30vh] xl:mb-[30vh] 
     
     ">
 
