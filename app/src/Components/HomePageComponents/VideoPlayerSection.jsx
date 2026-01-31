@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import gsap from 'gsap'
 import { motion } from 'motion/react';
 
-export const VideoPlayerSection = () => {
+const VideoPlayerSection = () => {
     const gsapTimeline = gsap.timeline();
 
     const data = [
@@ -181,3 +181,5 @@ export const VideoPlayerSection = () => {
     </div>
   )
 }
+
+export default VideoPlayerSection;

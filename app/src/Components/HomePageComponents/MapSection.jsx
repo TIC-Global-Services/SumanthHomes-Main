@@ -3,7 +3,7 @@ import gsap from "gsap/all"
 
 gsap.registerPlugin(SplitText);
 
-export const MapSection = () => {
+const MapSection = () => {
   
 
 
@@ -56,3 +56,5 @@ export const MapSection = () => {
     </div>
   )
 }
+
+export default MapSection;

@@ -1,18 +1,27 @@
 import { HeroSection } from '../Components/HomePageComponents/HeroSection'
 import { HistorySection } from "../Components/HomePageComponents/HistorySection"
-import ProjectSection from '../Components/HomePageComponents/ProjectSection'
 import { ArchitectureDesignSection } from "../Components/HomePageComponents/ArchitectureDesignSection"
-import { VideoPlayerSection } from "../Components/HomePageComponents/VideoPlayerSection"
 import { MiniStatsSections } from "../Components/HomePageComponents/MiniStatsSections"
-import { MapSection } from "../Components/HomePageComponents/MapSection"
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import { ScrollToTop } from "../utils/ScrollToTop"
-import ADCards  from '../Components/HomePageComponents/ADCards'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import { lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react'
+
+const ADCards = lazy(()=>import('../Components/HomePageComponents/ADCards'));
+const ProjectSection = lazy(()=>import('../Components/HomePageComponents/ProjectSection'));
+const VideoPlayerSection = lazy(()=>import('../Components/HomePageComponents/VideoPlayerSection'));
+const MapSection = lazy(()=>import('../Components/HomePageComponents/MapSection'));
 
 const HomePage = () => {
+
+  const [showLate, setShowLate] = useState(false);
+
+  useEffect(()=>{
+    setShowLate(true);
+  }, [])
 
   return (
     <div className='overflow-hidden' >
@@ -22,16 +31,24 @@ const HomePage = () => {
         <HeroSection/>
         <ContainerLayout>    
             <HistorySection/>
-            <ProjectSection/> 
+            <Suspense fallback={<div>Loading...</div>}>
+              { showLate && <ProjectSection/> }
+            </Suspense>
             <ArchitectureDesignSection/>
         </ContainerLayout>
         <div className='pl-[20px] pr-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] overflow-scroll' style={{scrollbarWidth:"none"}}>
-          <ADCards/>
+          <Suspense fallback={<div>Loading...</div>}>
+            { showLate && <ADCards/> }
+          </Suspense>
         </div>
         <ContainerLayout>
-            <VideoPlayerSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            { showLate && <VideoPlayerSection/> }
+          </Suspense>
             <MiniStatsSections/>
-            <MapSection/>
+          <Suspense fallback={<div>Loading...</div>}>
+            { showLate && <MapSection/>}
+          </Suspense>
         </ContainerLayout>
         <Footer/>
         </ParallaxProvider>
