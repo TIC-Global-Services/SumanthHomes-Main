@@ -29,7 +29,7 @@ export const AboutPage = () => {
             <MissionSection/>
             <SHSTeamSection/>
         </ContainerLayout>
-        <div className='pl-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px]'>
+        <div className='pl-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] '>
           <SHValues />
         </div>
         <ContainerLayout>

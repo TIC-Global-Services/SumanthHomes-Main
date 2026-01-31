@@ -26,13 +26,12 @@ export const ArchitectureDesignSection = () => {
     <div className=''>
 
         <div className='
-        xl:flex items-end justify-between 
-        xl:gap-96'>
+        lg:flex items-end justify-between '>
 
             <motion.div
 
             
-            className='text-left'>
+            className='text-left lg:w-[45%]'>
 
                 <BlurText
                 text="ARCHITECTURE & DESIGN"
@@ -69,7 +68,7 @@ export const ArchitectureDesignSection = () => {
             transition={slideUpAnimation.transition}
             viewport={slideUpAnimation.viewport}
 
-            className='xl:w-[65%]  md:pt-2'>
+            className='lg:w-[45%]  md:pt-2'>
 
                 <p className='
                 font-normal 

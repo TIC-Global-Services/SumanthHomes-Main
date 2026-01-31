@@ -62,7 +62,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
             w-full` }>
                 <img src={bgImage} alt="project" 
             className="
- 
+            md:scale-150 xl:scale-125
             relative
             aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
             md:h-[390px] xl:h-[600px]
