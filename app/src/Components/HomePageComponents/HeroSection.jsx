@@ -13,7 +13,7 @@ export const HeroSection = () => {
     className="
     relative
     w-full
-    min-h-[100svh]
+    h-[100svh]
     hero-section" style={{
         backgroundImage:`url(${bgimage})`,
         backgroundSize:'cover',
