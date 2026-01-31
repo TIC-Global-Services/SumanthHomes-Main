@@ -18,11 +18,11 @@ export const MissionSection = () => {
 
         <ParallaxComponent
 
-        className='order-2 md:order-1 md:w-[48%] xl:w-[45%] bg-black'>
+        className='order-2 md:order-1 md:w-[48%] xl:w-[45%] overflow-hidden'>
 
             <img className='
             
-            xl:w-full aspect-[2/1]' src={missionImage}></img>
+            xl:w-full aspect-[2/1] scale-150' src={missionImage}></img>
 
         </ParallaxComponent>
 

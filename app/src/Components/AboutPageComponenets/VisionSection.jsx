@@ -75,8 +75,8 @@ export const VisionSection = () => {
 
         </div>
 
-        <ParallaxComponent className=' md:w-[50%] xl:w-[47%] '>
-           <img className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1]' src={visionImage}></img>
+        <ParallaxComponent className=' md:w-[50%] xl:w-[47%] overflow-hidden'>
+           <img className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1] scale-150' src={visionImage}></img>
         </ParallaxComponent>
 
     </div>

@@ -62,7 +62,7 @@ export const AboutSumanthHomesSection = () => {
             <img className='
             w-full
             aspect-square
-            scale-110
+            scale-150
             ' src={imageLeft}
             
             />
@@ -79,7 +79,7 @@ export const AboutSumanthHomesSection = () => {
             ">
 
               <ParallaxComponent className={'w-full'}>
-                <img className='w-full' src={imageMiddle}/>
+                <img className='w-full scale-150' src={imageMiddle}/>
               </ParallaxComponent>
           </div>
             
@@ -88,7 +88,7 @@ export const AboutSumanthHomesSection = () => {
 
              <div className="overflow-hidden w-[55%] aspect-square">
               <ParallaxComponent className={'w-full'}>
-                <img className='w-full aspect-square' src={imageRight}/>
+                <img className='w-full aspect-square scale-150' src={imageRight}/>
               </ParallaxComponent>
              </div>
              
