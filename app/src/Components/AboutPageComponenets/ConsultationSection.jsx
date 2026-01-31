@@ -25,7 +25,9 @@ export const ConsultationSection = () => {
       mb-20 xl:mb-36 md:mb-14`}>
         <img src={bgImage} alt="consultation Image" 
       className="
+      scale-150
       w-full
+      aspect-[3/2] md:aspect-[3/1]
       " />
       </ParallaxComponent>
       
@@ -34,12 +36,12 @@ export const ConsultationSection = () => {
         w-full
         aspect-[3/2] md:aspect-[3/1]
         absolute inset-0
-        flex flex-col items-center sm:items-start sm:justify-center md:items-start md:justify-end
+        flex flex-col items-start sm:justify-center md:items-start md:justify-end
         mb-20 xl:mb-36 md:mb-14 
         pb-8 pl-10
         '>
 
-          <div className=''>
+          <div className='my-auto sm:my-0'>
 
             <h2 className='
             font-manrope font-semibold text-white tracking-[-0.5px]
@@ -48,6 +50,7 @@ export const ConsultationSection = () => {
               Let's Build Something Meaningful</h2>
 
             <p className='
+            hidden sm:block
             font-normal text-white 
             text-base md:text-xs xl:text-base
             xl:mb-3
