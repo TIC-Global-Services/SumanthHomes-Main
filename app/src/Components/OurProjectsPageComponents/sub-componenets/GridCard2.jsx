@@ -15,7 +15,7 @@ export const GridCard2 = ({Image, mainText, subText}) => {
       
         <div className="w-full aspect-[416/461] overflow-hidden">
         <ParallaxComponent className={'w-full'}>
-          <img src={Image} className='w-full aspect-[416/461]'/>
+          <img src={Image} className='w-full aspect-[416/461] scale-125'/>
         </ParallaxComponent>
         </div>
 
