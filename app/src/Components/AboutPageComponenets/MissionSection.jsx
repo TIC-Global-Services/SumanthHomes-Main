@@ -41,8 +41,7 @@ export const MissionSection = () => {
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px] 
             text-[rgb(181,4,4)]
-            te
-            xt-xs'
+            text-xs'
             />
 
             <BlurText
