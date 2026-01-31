@@ -1,26 +1,10 @@
-import { FormTwin } from "./FormTwin"
+import React from 'react'
 
-export const MapSection = () => {
-
+export const FormTwin = () => {
   return (
-    <div className="
-    relative 
-    w-full aspect-[1440/1134.9]
-    
-    ">
-
-        <iframe 
-      className='
-      pointer-events-none
-      aspect-[4/3] md:aspect-[1280/503]
-      w-full
-      '
-      src="https://www.openstreetmap.org/export/embed.html?bbox=79.09950256347656%2C13.414333619316578%2C79.74220275878908%2C13.84141349246619&amp;layer=hot&amp;marker=13.627971281465944%2C79.42085266113281"
- ></iframe><br/>
-
-        <FormTwin/>
-        <form id="contactForm" className="
-        absolute
+    <form id="contactForm" className="
+    pointer-events-none
+        opacity-0
         top-32 md:top-[20%] xl:top-[30%]
         left-[10%]
         bg-[#E7E7E7]
@@ -231,6 +215,7 @@ export const MapSection = () => {
               px-4 md:px-10
               py-1 md:py-3
               aspect-[155.14/48]
+              disable
               ">SEND MESSAGE</button>
               
             </div>
@@ -238,6 +223,5 @@ export const MapSection = () => {
           </div>
 
         </form>
-    </div>
   )
 }
