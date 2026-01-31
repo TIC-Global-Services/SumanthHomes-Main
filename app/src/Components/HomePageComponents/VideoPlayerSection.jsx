@@ -74,12 +74,13 @@ export const VideoPlayerSection = () => {
 
             <button className='
             bottom-0 right-0 absolute
-            bg-[#B50404] 
+            bg-[#B50404] text-white
             px-5 xl:px-14 md:px-7 
             py-4 xl:py-4 md:py-2
+            hover:bg-white hover:text-[#B50404] hover:border-b-2
             '>
                 <p className='
-              text-white
+                
                 text-[9px] md:text-xs
                 font-manrope font-bold
                 tracking-[2px]
