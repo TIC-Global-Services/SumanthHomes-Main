@@ -1,6 +1,6 @@
 import { HeroSection } from '../Components/HomePageComponents/HeroSection'
 import { HistorySection } from "../Components/HomePageComponents/HistorySection"
-import { ProjectSection } from '../Components/HomePageComponents/ProjectSection'
+import ProjectSection from '../Components/HomePageComponents/ProjectSection'
 import { ArchitectureDesignSection } from "../Components/HomePageComponents/ArchitectureDesignSection"
 import { VideoPlayerSection } from "../Components/HomePageComponents/VideoPlayerSection"
 import { MiniStatsSections } from "../Components/HomePageComponents/MiniStatsSections"
@@ -9,10 +9,10 @@ import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import { ScrollToTop } from "../utils/ScrollToTop"
-import { ADCards } from '../Components/HomePageComponents/ADCards'
+import ADCards  from '../Components/HomePageComponents/ADCards'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-export const HomePage = () => {
+const HomePage = () => {
 
   return (
     <div className='overflow-hidden' >
@@ -38,3 +38,5 @@ export const HomePage = () => {
     </div>
   )
 }
+
+export default HomePage;

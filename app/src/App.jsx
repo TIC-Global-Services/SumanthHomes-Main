@@ -1,12 +1,11 @@
-import { HomePage } from "./PageComponents/HomePage"
-import { AboutPage } from "./PageComponents/AboutPage"
-import { ProjectsPage } from "./PageComponents/ProjectsPage"
-import { ContactPage } from "./PageComponents/ContactPage"
-import {createBrowserRouter, RouterProvider} from "react-router"
-import { NotFound404 } from "./PageComponents/NotFound404"
-import { ExplorePage } from "./PageComponents/ExplorePage"
-
-
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import { lazy, Suspense } from "react"
+import HomePage from "./PageComponents/HomePage";
+const AboutPage = lazy(()=>import('./PageComponents/AboutPage'));
+const ProjectsPage = lazy(()=>import('./PageComponents/ProjectsPage'));
+const ContactPage = lazy(()=>import('./PageComponents/ContactPage'));
+const ExplorePage = lazy(()=>import('./PageComponents/ExplorePage'));
+const NotFound404 = lazy(()=>import('./PageComponents/NotFound404'))
 
 function App() {
 
@@ -19,22 +18,34 @@ function App() {
     }, 
     {
       path:'/about',
-      element:<AboutPage/>,
+      element:(
+      <Suspense fallback={<div>Loading...</div>}>
+        <AboutPage/>
+      </Suspense>),
       errorElement: <NotFound404/>
     },
     {
       path:'/projects',
-      element:<ProjectsPage/>,
+      element:(
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProjectsPage/>
+      </Suspense>),
       errorElement: <NotFound404/>
     },
     {
       path:"/contact",
-      element:<ContactPage/>,
+      element:(
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactPage/>
+      </Suspense>),
       errorElement: <NotFound404/> 
     },
     {
       path:"/projects/:slug",
-      element:<ExplorePage/>,
+      element:(
+      <Suspense fallback={<div>Loading...</div>}>
+        <ExplorePage/>
+      </Suspense>),
       errorElement:<NotFound404/>
     }
    ])
@@ -45,7 +56,7 @@ function App() {
 
       <RouterProvider router={router}>
       </RouterProvider>
-      
+
     </div>
   )
 }

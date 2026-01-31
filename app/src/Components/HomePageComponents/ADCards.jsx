@@ -4,7 +4,7 @@ import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
 import ParallaxComponent from "../../utils/ParallaxComponent";
 
-export const ADCards = () => {
+const ADCards = () => {
 
       const ArchitectureCards = [
           {
@@ -82,3 +82,5 @@ export const ADCards = () => {
         </div>
   )
 }
+
+export default ADCards;

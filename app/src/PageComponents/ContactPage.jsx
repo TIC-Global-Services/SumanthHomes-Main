@@ -9,7 +9,7 @@ import { ScrollToTop } from "../utils/ScrollToTop"
 import { ParallaxProvider } from "react-scroll-parallax"
 
 
-export const ContactPage = () => {
+const ContactPage = () => {
 
 
   return (
@@ -27,3 +27,5 @@ export const ContactPage = () => {
     </div>
   )
 }
+
+export default ContactPage;

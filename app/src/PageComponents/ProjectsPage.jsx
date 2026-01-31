@@ -10,7 +10,7 @@ import ContainerLayout from "../Layout/ContainerLayout"
 import { ScrollToTop } from "../utils/ScrollToTop"
 import { ParallaxProvider } from "react-scroll-parallax"
 
-export const ProjectsPage = () => {
+const ProjectsPage = () => {
 
 
 
@@ -31,3 +31,5 @@ export const ProjectsPage = () => {
     </div>
   )
 }
+
+export default ProjectsPage;

@@ -3,7 +3,7 @@ import { DefaultOurProjects } from "../DefaultOurProjectsSection";
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 
-export const ProjectSection = () => {
+const ProjectSection = () => {
 
   const miniHeader = "PREMIUM LIVING SPACES";
   const mainHeader = "LOTUS SERENE VILLAS";
@@ -30,3 +30,6 @@ export const ProjectSection = () => {
     </div>
   )
 }
+
+
+export default ProjectSection;

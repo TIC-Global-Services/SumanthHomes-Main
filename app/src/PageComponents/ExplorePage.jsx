@@ -20,7 +20,7 @@ import { BackToBtn } from '../Components/OurProjectsPageComponents/sub-componene
 import { ScrollToPrj } from '../utils/ScrollToPrj'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-export const ExplorePage = () => {
+const ExplorePage = () => {
     
     const {slug} = useParams();
 
@@ -70,3 +70,5 @@ export const ExplorePage = () => {
     </div>
   )
 }
+
+export default ExplorePage
