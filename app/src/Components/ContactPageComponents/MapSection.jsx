@@ -195,13 +195,13 @@ export const MapSection = () => {
                   </svg>
 
                 </div>
-                <input className="
+                <textarea className="
                 w-full
                 aspect-video md:aspect-[10/1]
                 bg-transparent
                 border-b-2
                 border-black
-                " type="textarea" />
+                " />
 
               </div>
 
