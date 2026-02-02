@@ -2,6 +2,7 @@ import bgImage from "../../assets/img/OurProjectsSection/arialDayView.jpg";
 import { DefaultOurProjects } from "../DefaultOurProjectsSection";
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
+import BlurText from "../../utils/BlurText";
 
 const ProjectSection = () => {
 
@@ -15,16 +16,19 @@ const ProjectSection = () => {
         <div className='
         text-center  
         text-3xl xl:text-2xl md:text-2xl
-        xl:mb-5 md:mb-5
-        py-10 md:py-4
+        mb-4
          '>
-                <motion.h2
-                initial={SlideUpAnimationBlur.initial}
-                whileInView={SlideUpAnimationBlur.whileInView}
-                transition={SlideUpAnimationBlur.transition}
-                viewport={SlideUpAnimationBlur.viewport}
-                
-                className="font-manrope font-semibold text-[#B50404]">OUR PROJECTS</motion.h2>
+               <BlurText
+                text="OUR PROJECTS"
+                animateBy="words"
+                direction="bottom"
+                className="text-[#B50404]
+                font-manrope font-bold
+                text-2xl xl:text-4xl md:text-2xl
+                tracking-[-0.5px]
+                flex justify-center
+                "
+                />
         </div>
         <DefaultOurProjects id={'villa1'} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
     </div>
