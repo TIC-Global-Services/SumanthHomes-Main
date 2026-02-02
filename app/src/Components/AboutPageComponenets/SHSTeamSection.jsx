@@ -16,7 +16,7 @@ import BlurText from '../../utils/BlurText';
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
-export const SHSTeamSection = () => {
+const SHSTeamSection = () => {
 
   const titleRef = useRef(null);
       
@@ -137,3 +137,5 @@ export const SHSTeamSection = () => {
     </div>
   )
 }
+
+export default SHSTeamSection;

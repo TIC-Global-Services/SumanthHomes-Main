@@ -124,7 +124,7 @@ export const ProjectDescription = () => {
 
            
                 <button type="submit" className='
-                hover:scale-110 hover:bg-[#e00303] hover:text-[#fffafa]
+                hover:scale-110 hover:bg-[#e00303] hover:text-[#fffafa] active:bg-[#7c0303] active:text-white
                 bg-[#B40505]
                 text-white
                 font-bold

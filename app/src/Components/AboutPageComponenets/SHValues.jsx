@@ -12,7 +12,7 @@ import ParallaxComponent from "../../utils/ParallaxComponent";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
-export const SHValues = () => {
+const SHValues = () => {
 
   const titleRef = useRef(null);
   const contentRef = useRef(null);
@@ -102,3 +102,5 @@ export const SHValues = () => {
     </div>
   )
 }
+
+export default SHValues;
