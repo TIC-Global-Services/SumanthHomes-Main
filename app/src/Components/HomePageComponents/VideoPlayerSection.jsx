@@ -16,6 +16,8 @@ const VideoPlayerSection = () => {
     const cardRef = useRef(null);
     const maxIndex = data.length;
 
+    const [showReel, setShowReel] = useState(false);
+
     const next = () =>{
         if(index < maxIndex){
         
@@ -66,13 +68,13 @@ const VideoPlayerSection = () => {
         relative
         mt-4 xl:mt-8 md:mt-8'>
 
-            <iframe src='https://www.youtube.com/embed/AXNHQ5Pgeig' className='
+            <iframe src={`https://www.youtube.com/embed/AXNHQ5Pgeig${showReel && '?autoplay=1'}`} allow='autoplay' className='
             aspect-[335/480] md:aspect-[16/7]
             w-full
             mb-12
             '></iframe>
 
-            <button className='
+            <button onClick={()=>setShowReel(true)} className='
             bottom-0 right-0 absolute
             bg-[#B50404] text-white
             px-5 xl:px-14 md:px-7 
