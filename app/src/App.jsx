@@ -5,7 +5,8 @@ const AboutPage = lazy(()=>import('./PageComponents/AboutPage'));
 const ProjectsPage = lazy(()=>import('./PageComponents/ProjectsPage'));
 const ContactPage = lazy(()=>import('./PageComponents/ContactPage'));
 const ExplorePage = lazy(()=>import('./PageComponents/ExplorePage'));
-const NotFound404 = lazy(()=>import('./PageComponents/NotFound404'))
+const NotFound404 = lazy(()=>import('./PageComponents/NotFound404'));
+import { SkeletonLayout } from "./Layout/SkeletonLayout";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
     {
       path:'/about',
       element:(
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<SkeletonLayout/>}>
         <AboutPage/>
       </Suspense>),
       errorElement: <NotFound404/>
@@ -27,7 +28,7 @@ function App() {
     {
       path:'/projects',
       element:(
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<SkeletonLayout/>}>
         <ProjectsPage/>
       </Suspense>),
       errorElement: <NotFound404/>
@@ -35,7 +36,7 @@ function App() {
     {
       path:"/contact",
       element:(
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<SkeletonLayout/>}>
         <ContactPage/>
       </Suspense>),
       errorElement: <NotFound404/> 
@@ -43,11 +44,11 @@ function App() {
     {
       path:"/projects/:slug",
       element:(
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<SkeletonLayout/>}>
         <ExplorePage/>
       </Suspense>),
       errorElement:<NotFound404/>
-    }
+    },
    ])
 
   return (
