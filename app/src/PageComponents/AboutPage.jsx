@@ -3,18 +3,27 @@ import { AboutSumanthHomesSection} from '../Components/AboutPageComponenets/Abou
 import { CurrentStatsSection } from '../Components/AboutPageComponenets/CurrentStatsSection'
 import { VisionSection } from "../Components/AboutPageComponenets/VisionSection"
 import { MissionSection } from "../Components/AboutPageComponenets/MissionSection"
-import { SHSTeamSection } from "../Components/AboutPageComponenets/SHSTeamSection"
-import { SHValues } from "../Components/AboutPageComponenets/SHValues"
-import { ConsultationSection } from "../Components/AboutPageComponenets/ConsultationSection"
 import heroImage from "../assets/img/AboutSection/aboutHeroImage.png"
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import { ScrollToTop } from "../utils/ScrollToTop"
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { lazy, Suspense } from 'react'
+import { useState, useEffect } from 'react'
+
+
+const SHSTeamSection = lazy(()=>import('../Components/AboutPageComponenets/SHSTeamSection'))
+const SHValues = lazy(()=>import('../Components/AboutPageComponenets/SHValues'))
+const ConsultationSection = lazy(()=>import('../Components/AboutPageComponenets/ConsultationSection'));
 
 const AboutPage = () => {
 
+  const [showLate, setShowLate] = useState(false);
+
+  useEffect(()=>{
+    setShowLate(true);
+  },[])
 
   return (
     <div className='overflow-x-hidden'>
@@ -27,13 +36,19 @@ const AboutPage = () => {
             <CurrentStatsSection/>
             <VisionSection/>
             <MissionSection/>
-            <SHSTeamSection/>
+            <Suspense fallback={<div>Loading...</div>}>
+              {showLate && <SHSTeamSection/>}
+            </Suspense>
         </ContainerLayout>
         <div className='pl-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] '>
-          <SHValues />
+          <Suspense fallback={<div>Loading...</div>}>
+            {showLate && <SHValues />}
+          </Suspense>
         </div>
         <ContainerLayout>
-          <ConsultationSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            {showLate && <ConsultationSection />}
+          </Suspense>
         </ContainerLayout>
         <Footer/>
         </ParallaxProvider>

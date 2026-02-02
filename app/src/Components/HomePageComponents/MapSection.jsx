@@ -60,6 +60,7 @@ const MapSection = () => {
 
             <button className='
             textAnimate
+            hover:scale-105 hover:ease-in-out active:scale-115 active:text-gray-500
             text-[#B50404] font-semibold tracking-[-0.5px]
             w-[100%] md:w-auto
             text-[18px] md:text-xl

@@ -79,7 +79,8 @@ const VideoPlayerSection = () => {
             bg-[#B50404] text-white
             px-5 xl:px-14 md:px-7 
             py-4 xl:py-4 md:py-2
-            hover:bg-white hover:text-[#B50404] hover:border-b-2
+            hover:bg-white hover:text-[#B50404] hover:border-b-2 
+            active:bg-[#B50404] active:text-white active:ease-in
             '>
                 <p className='
                 
@@ -125,7 +126,8 @@ const VideoPlayerSection = () => {
                 flex items-center justify-center
                 order-first
                 flex-shrink-0
-                hover:bg-white hover:scale-110
+                cursor-pointer
+                hover:bg-white hover:scale-110 active:bg-[#dfdede] active:scale-125
                 p-2
                 rounded-full'>
                     <div>
@@ -146,7 +148,8 @@ const VideoPlayerSection = () => {
                 <div className='
                 flex items-center justify-center
                 flex-shrink-0
-                hover:bg-white hover:scale-110
+                cursor-pointer
+                hover:bg-white hover:scale-110 active:bg-[#dfdede] active:scale-125 
                 p-2
                 rounded-full'>
                     <div >

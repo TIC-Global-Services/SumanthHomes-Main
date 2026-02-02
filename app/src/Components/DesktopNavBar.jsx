@@ -5,7 +5,7 @@ import { Logo } from "../sub-components/logo";
 
 export const DesktopNavBar = () => {
 
-  const navLinkAnimation = "hover:text-[#B40505] hover:scale-125 hover:duration-200 cursor-pointer";
+  const navLinkAnimation = "hover:text-[#B40505] hover:scale-125 hover:duration-200 cursor-pointer active:scale-100 active:duration-100 ";
   const currentLinkAnimation = "text-[#B40505] font-extrabold scale-125";
 
   return (
@@ -26,7 +26,7 @@ export const DesktopNavBar = () => {
       w-[9%]
       aspect-square
       z-40
-      hover:scale-110
+      hover:scale-110 active:scale-100
       ">
 
         <Logo/>

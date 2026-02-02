@@ -225,7 +225,7 @@ export const MapSection = () => {
             <div>
 
               <button className="
-              bg-[#B50404] text-white hover:scale-110 hover:bg-[#e00303] hover:text-[#fffafa]
+              bg-[#B50404] text-white hover:scale-110 hover:bg-[#e00303] hover:text-[#fffafa] active:bg-[#7c0303] active:text-white
               font-bold
               text-xs
               px-4 md:px-10

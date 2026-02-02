@@ -2,7 +2,7 @@ import bgImage from "../../assets/img/AboutSection/consultationBgImage.png";
 import { useNavigate } from "react-router-dom";
 import ParallaxComponent from "../../utils/ParallaxComponent";
 
-export const ConsultationSection = () => {
+const ConsultationSection = () => {
 
   const navigate = useNavigate();
     
@@ -67,7 +67,7 @@ export const ConsultationSection = () => {
             bg-[#B50404] font-manrope font-bold tracking-[2px] rounded-md
              px-4 md:px-8 xl:px-14
              py-2 md:py-2 xl:py-4 
-             hover:bg-white hover:text-[#B50404]
+             hover:bg-white hover:text-[#B50404] active:bg-[#B50404] active:text-white
             text-white
              md:text-sm'>BOOK A CONSULTATION</button>
           </div>
@@ -78,3 +78,5 @@ export const ConsultationSection = () => {
     </div>
   )
 }
+
+export default ConsultationSection;
