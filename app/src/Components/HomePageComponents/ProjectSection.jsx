@@ -21,7 +21,7 @@ const ProjectSection = () => {
                <BlurText
                 text="OUR PROJECTS"
                 animateBy="words"
-                direction="bottom"
+                direction="bottom "
                 className="text-[#B50404]
                 font-manrope font-bold
                 text-2xl xl:text-4xl md:text-2xl
