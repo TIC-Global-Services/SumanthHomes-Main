@@ -34,6 +34,7 @@ export const KnowUsSection = () => {
         transition={SlideUpAnimationBlur.transition}
         viewport={SlideUpAnimationBlur.viewport}
 
+
         ref={titleRef} className='w-full md:w-[50%] xl:w-[30%]'>
 
             <BlurText
