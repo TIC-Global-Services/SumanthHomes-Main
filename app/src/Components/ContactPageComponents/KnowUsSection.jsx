@@ -59,7 +59,7 @@ export const KnowUsSection = () => {
         initial={{opacity:0, y:100}}
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.4}}
-        viewport={{once:false}}
+        viewport={{once:true}}
         
         ref={contentRef} className='w-full xl:w-[35%] md:w-[40%] flex md:gap-0 gap-4 xl:gap-4 items-center'>
 
@@ -84,7 +84,7 @@ export const KnowUsSection = () => {
         initial={{opacity:0, y:100}}
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.4}}
-        viewport={{once:false}}
+        viewport={{once:true}}
 
         className='w-full xl:w-[25%] order-2 flex flex-col items-start '>
 
