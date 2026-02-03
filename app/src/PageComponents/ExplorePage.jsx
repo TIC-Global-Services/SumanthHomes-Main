@@ -1,7 +1,6 @@
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
-import { ScrollToTop } from "../utils/ScrollToTop"
 import { DefaultHeroSection } from "../Components/DefaultHeroSection"
 import { DefaultOurProjects } from '../Components/DefaultOurProjectsSection'
 import { CompletedProjectsSection } from "../Components/OurProjectsPageComponents/CompletedProjectsSection"
