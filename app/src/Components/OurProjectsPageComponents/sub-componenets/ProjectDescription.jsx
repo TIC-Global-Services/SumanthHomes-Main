@@ -19,7 +19,13 @@ export const ProjectDescription = () => {
         setIsSubmitting(true);
         setTimeout(()=>{ // Simulating api call
             setIsSubmitting(false); 
-        },1000)
+            setFormData({
+        name:'',
+        email:'',
+        phone:'',
+        message:'',
+    })
+        },1000);
     }
 
     const inputChange = (e)=>{

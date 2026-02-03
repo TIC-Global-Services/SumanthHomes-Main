@@ -42,6 +42,13 @@ export const MapSection = () => {
     console.log(formData)
     setTimeout(()=>{
       setIsSubmitting(false); // Simulating the form submission temporarily 
+      setFormData({
+    name:'',
+    email:'',
+    phone:'',
+    subject:'',
+    message:'',
+  });
     }, 1000)
   }
 
