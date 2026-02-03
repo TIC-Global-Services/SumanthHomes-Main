@@ -5,7 +5,7 @@ export const Logo = () => {
   const Navigate = useNavigate();
 
   return (
-       <img onClick={()=>{Navigate('/')}}
+       <img 
         src={logo}
         alt="logo"
         className="

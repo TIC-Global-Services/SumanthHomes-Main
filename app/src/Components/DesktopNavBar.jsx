@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom"
 import { Logo } from "../sub-components/logo";
+import { useNavigate } from "react-router-dom";
 
 
 
 export const DesktopNavBar = () => {
+
+  const Navigate = useNavigate();
 
   const navLinkAnimation = "hover:text-[#B40505] hover:scale-125 hover:duration-200 cursor-pointer active:scale-100 active:duration-100 ";
   const currentLinkAnimation = "text-[#B40505] font-extrabold scale-125";
@@ -18,7 +21,8 @@ export const DesktopNavBar = () => {
       z-50">
 
 
-      <div className="
+      <div onClick={()=>{Navigate('/')}} className="
+      hover:cursor-pointer
       box-border
       flex items-center justify-center 
       rounded-full
