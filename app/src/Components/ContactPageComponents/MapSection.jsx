@@ -1,7 +1,51 @@
 import { FormTwin } from "./FormTwin"
+import { useState } from "react";
 
 export const MapSection = () => {
 
+  const [formData, setFormData] = useState({
+    name:'',
+    email:'',
+    phone:'',
+    subject:'',
+    message:'',
+  })
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const changeInput = (e)=>{
+    const {name, value} = e.target;
+
+    // Phone number validation
+    if(name=='phone'){
+
+      if(Number(value) || value==='' || !(value.includes(" ") )) { //Only Numbers and empty value are filtered
+
+        
+
+        if(value.length > 10){ // If user types in more than 10 numbers then UI not updated
+        }
+        else{
+        setFormData({...formData, [name]:value}) // Number ( not more than 10 numbers ) & empty values are updated
+        }
+      }
+    }
+    else{
+      setFormData({...formData, [name]:value})
+    }
+    
+  }
+
+  const formSubmit = (e)=>{
+    e.preventDefault();
+    setIsSubmitting(true);
+    console.log(formData)
+    setTimeout(()=>{
+      setIsSubmitting(false); // Simulating the form submission temporarily 
+    }, 1000)
+  }
+
+  
   return (
     <div className="
     relative 
@@ -19,7 +63,7 @@ export const MapSection = () => {
  ></iframe><br/>
 
         <FormTwin/>
-        <form id="contactForm" className="
+        <form onSubmit={(e)=>formSubmit(e)} id="contactForm" className="
         absolute
         top-32 md:top-[20%] xl:top-[30%]
         left-[10%]
@@ -72,7 +116,7 @@ export const MapSection = () => {
                 bg-transparent
                 border-b-2
                 border-black
-                " type="text" />
+                " type="text" name="name" value={formData.name} onChange={(e)=>changeInput(e)} required/>
 
               </div>
 
@@ -101,7 +145,7 @@ export const MapSection = () => {
                 w-full
                 bg-transparent
                 border-b-2
-                border-black" type="email" />
+                border-black" name="email" type="email" value={formData.email} onChange={(e)=>changeInput(e)} required/>
 
               </div>
 
@@ -137,7 +181,7 @@ export const MapSection = () => {
                 bg-transparent
                 border-b-2
                 border-black
-                " type="text" />
+                " type="text" name="phone" value={formData.phone} onChange={(e)=>changeInput(e)} />
 
               </div>
 
@@ -167,7 +211,7 @@ export const MapSection = () => {
                 bg-transparent
                 border-b-2
                 border-black
-                " type="text" />
+                " type="text" name="subject" value={formData.subject} onChange={(e)=>changeInput(e)}/>
 
               </div>
 
@@ -201,7 +245,7 @@ export const MapSection = () => {
                 bg-transparent
                 border-b-2
                 border-black
-                " />
+                " name="message" value={formData.message} onChange={(e)=>changeInput(e)} />
 
               </div>
 
@@ -224,14 +268,18 @@ export const MapSection = () => {
 
             <div>
 
-              <button className="
-              bg-[#B50404] text-white hover:scale-110 hover:bg-[#e00303] hover:text-[#fffafa] active:bg-[#7c0303] active:text-white
+              <button disabled={isSubmitting} type="submit" className={`
+              bg-[#B50404] text-white hover:scale-110 hover:bg-[#e00303] hover:text-[#fffafa]
+               active:bg-[#7c0303] active:text-white
+               disabled:bg-gray-600 disabled:hover:scale-100 
               font-bold
               text-xs
               px-4 md:px-10
               py-1 md:py-3
               aspect-[155.14/48]
-              ">SEND MESSAGE</button>
+              `}>
+                {isSubmitting ? 'Sending...' : 'SEND MESSAGE'}
+                </button>
               
             </div>
 
