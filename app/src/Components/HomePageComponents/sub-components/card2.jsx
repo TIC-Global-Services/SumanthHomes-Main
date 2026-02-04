@@ -52,15 +52,15 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          
     '>
 
-        <div className="  
+        <div className={`  
          mx-auto
-         flex justify-center items-center gap-6 
+         flex justify-center items-center ${Number==100 ? 'gap-6' : 'gap-4'}
          w-full
          text-center
          
-         ">
+         `}>
             
-            <div  className={`relative ${Number==100 ? 'min-w-[20%] max-w-[30%]  lg:w-auto xl:min-w-[20%] xl:max-w-[30%]' :''}`}>
+            <div  className={`relative ${Number==100 ? 'min-w-[20%] max-w-[30%] flex lg:w-auto xl:min-w-[20%] xl:max-w-[30%] ' :''}`}>
 
             <h3
 
@@ -69,19 +69,19 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             opacity-0
             text-right md:text-right
             font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
-            text-5xl xl:text-[70px] md:text-7xl
+            text-4xl xl:text-[60px] md:text-7xl
             tracking-[-6px]>`}
             >{Number}<span className="text-[#B50404]">{plus ? "+" : null}</span>
             </h3>
 
             <h3
              className={`
-                opacity-1
+            opacity-1
             absolute top-0 left-0
             number
             text-right md:text-right
             font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
-            text-5xl xl:text-[70px] md:text-7xl
+            text-4xl xl:text-[60px] md:text-7xl
             tracking-[-6px]>`}
             >{currentNumber}<span className="text-[#B50404]">{plus ? "+" : null}</span>
             </h3>
@@ -89,7 +89,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             </div>
 
             <div
-            className= "w-auto xl:w-[70%]">
+            className= "w-auto xl:w-[60%] ">
                 <motion.h5
                 className="text-left font-medium text-black tracking-[-0.54px] text-base md:text-xl lg:text-2xl xl:text-xl">
                    {titleText}
