@@ -8,7 +8,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
 
     const [currentNumber, setCurrentNumber] = useState(0);
     const containerRef = useRef(null);
-    let timer = Number>50 ? 20 : 40; 
+    let timer = Number>50 ? 20 : 100; 
 
 
     const updateNumber = ()=>{
@@ -19,13 +19,14 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
         gsap.to(containerRef.current, {
             scrollTrigger:{
                 trigger:containerRef.current,
+                start:"top center",
                 once:true,
             },
             onComplete:()=>{setCurrentNumber(1)}
         })
     },[])
 
-     useEffect(()=>{
+    useEffect(()=>{
             if(currentNumber != Number && currentNumber != 0){
                 setTimeout(updateNumber, timer);
             }
@@ -36,7 +37,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
         <motion.div
           
 
-          ref={containerRef}
+         
 
          className='
          mb-4
@@ -52,7 +53,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          
     '>
 
-        <div className={`  
+        <div  ref={containerRef} className={`  
          mx-auto
          flex justify-center items-center ${Number==100 ? 'gap-6' : 'gap-4'}
          w-full
