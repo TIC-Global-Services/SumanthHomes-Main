@@ -112,7 +112,7 @@ export const AboutSumanthHomesSection = () => {
               className="mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px] [word-spacing:3px]
             text-[rgb(181,4,4)]
-            text-xs"
+            text-[10px] md:text-xs "
             />
             
 
@@ -125,7 +125,7 @@ export const AboutSumanthHomesSection = () => {
             mb-4 xl:mb-8 md:mb-4
             font-manrope font-semibold 
             xl:w-[80%]
-            text-3xl xl:text-4xl md:text-xl'
+            text-2xl md:text-2xl xl:text-4xl'
             />
 
           </motion.div>
