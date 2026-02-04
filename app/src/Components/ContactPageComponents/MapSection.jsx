@@ -19,7 +19,7 @@ export const MapSection = () => {
     // Phone number validation
     if(name=='phone'){
 
-      if(Number(value) || value==='' || !(value.includes(" ") )) { //Only Numbers and empty value are filtered
+      if(Number(value) || value==='' ) { //Only Numbers and empty value are filtered
 
         
 

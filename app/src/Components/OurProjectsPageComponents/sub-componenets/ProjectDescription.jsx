@@ -30,7 +30,15 @@ export const ProjectDescription = () => {
 
     const inputChange = (e)=>{
         const {name, value} = e.target;
-        setFormData({...formData, [name]:value});
+        if(name == 'phone'){
+            if(value.length<=10){
+                if(Number(value) || value==''){
+                setFormData({...formData, [name]:value});
+            }
+            }
+        } else{
+            setFormData({...formData, [name]:value});
+        }
     }
 
     const phone = " +1 234 567 8910";
