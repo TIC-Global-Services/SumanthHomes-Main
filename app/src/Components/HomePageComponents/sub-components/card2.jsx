@@ -8,23 +8,12 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
 
     const [currentNumber, setCurrentNumber] = useState(0);
     const containerRef = useRef(null);
-    let timer = Number>50 ? 20 : 100; 
+    let timer = Number>50 ? 20 : 60; 
 
 
     const updateNumber = ()=>{
         setCurrentNumber(currentNumber+1);
     }
-
-    useEffect(()=>{
-        gsap.to(containerRef.current, {
-            scrollTrigger:{
-                trigger:containerRef.current,
-                start:"top center",
-                once:true,
-            },
-            onComplete:()=>{setCurrentNumber(1)}
-        })
-    },[])
 
     useEffect(()=>{
             if(currentNumber != Number && currentNumber != 0){
@@ -35,8 +24,10 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
   return (
 
         <motion.div
-          
-
+        initial={{opacity:1}}
+        whileInView={{opacity:1}}
+        viewport={{once:true}}
+        onAnimationComplete={()=>{setCurrentNumber(1)}}
          
 
          className='
@@ -53,7 +44,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          
     '>
 
-        <div  ref={containerRef} className={`  
+        <div   className={`  
          mx-auto
          flex justify-center items-center ${Number==100 ? 'gap-6' : 'gap-4'}
          w-full
@@ -61,7 +52,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          
          `}>
             
-            <div  className={`relative ${Number==100 ? 'min-w-[20%] max-w-[30%] flex lg:w-auto xl:min-w-[20%] xl:max-w-[30%] ' :''}`}>
+            <div   className={`relative ${Number==100 ? 'min-w-[20%] max-w-[30%] flex lg:w-auto xl:min-w-[20%] xl:max-w-[30%] ' :''}`}>
 
             <h3
 
@@ -76,6 +67,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             </h3>
 
             <h3
+            ref={containerRef}
              className={`
             opacity-1
             absolute top-0 left-0
