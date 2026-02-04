@@ -31,7 +31,7 @@ export const HeroSection = () => {
     px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px]
     pb-9 xl:pb-20 md:pb-10 
     
-    text-4xl md:text-5xl lg:text-6xl  xl:text-6xl 2xl:text-6xl
+    text-3xl sm:text-4xl md:text-5xl lg:text-6xl  xl:text-6xl 2xl:text-6xl
     
     '>
             Elevating Every Space <br /> with Purpose and Precision
