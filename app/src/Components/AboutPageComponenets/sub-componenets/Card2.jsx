@@ -44,11 +44,11 @@ export const Card2 = ({bgImage, Name, Position}) => {
           <div className='
           w-full 
           ml-1
-          absolute bottom-2 xl:bottom-10
-          flex justify-evenly
+          absolute bottom-10
+          flex  justify-evenly
           '>
 
-            <div className='w-full xl:w-auto'>
+            <div className='w-auto xl:w-auto'>
 
               <h2 className='
             font-medium
