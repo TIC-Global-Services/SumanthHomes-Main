@@ -84,7 +84,7 @@ export const VisionSection = () => {
             viewport={SlideUpAnimationBlur.viewport}
             
             ref={contentRef} className='mb-4 
-            text-[10px] md:text-sm xl:text-base
+            text-[11px] md:text-sm xl:text-base
             font-normal
             text-[#737373]
             leading-3
