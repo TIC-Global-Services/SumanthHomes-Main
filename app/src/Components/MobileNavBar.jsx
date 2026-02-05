@@ -23,11 +23,11 @@ export const MobileNavBar = () => {
 
     let navBtnStyle = `
             absolute
-            top-4
-            right-2
+            top-6
+            right-6
             flex justify-center items-center
             rounded-full
-            w-[19%]
+            w-[15%]
             aspect-[4/3]
             md:hidden
             z-40
@@ -102,14 +102,14 @@ export const MobileNavBar = () => {
         
         <div className="
             absolute
-            top-4
-            left-2
+            top-5
+            left-6
             box-border
             flex items-center justify-center 
             rounded-full
             bg-white p-1 xl:p-2
             aspect-square
-            w-[15%] sm:w-10 md:w-10 lg:w-14 xl:w-14 2xl:w-20
+            w-[13%] sm:w-10 md:w-10 lg:w-14 xl:w-14 2xl:w-20
             sm:h-10 md:h-10 lg:h-14 xl:h-14 2xl:h-20 
             z-40
             ">
