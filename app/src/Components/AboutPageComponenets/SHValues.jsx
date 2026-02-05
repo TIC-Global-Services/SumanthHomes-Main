@@ -22,7 +22,7 @@ const SHValues = () => {
   const image2Ref = useRef(null);
 
   return (
-    <div ref={containerRef} className='flex justify-between gap-4 
+    <div ref={containerRef} className='flex justify-between gap-4 flex-wrap md:flex-nowrap
     mb-10 md:w-[90%] xl:w-full'>
 
         <div
@@ -69,34 +69,40 @@ const SHValues = () => {
 
         </div>
 
-        <div className='xl:w-[58%] flex gap-4 '>
+        <div className='w-full md:w-auto xl:w-[58%] flex gap-4 overflow-scroll md:overflow-hidden ' style={{scrollbarWidth:'none'}}>
         <div
-        className='hidden w-[55%] xl:block overflow-hidden xl:pb-40 mb-10'>
+        className='w-full md:w-[55%] xl:block overflow-hidden xl:pb-40 mb-10 flex-shrink-0'>
 
           <ParallaxComponent>
-
-            <img className='
+            <div className="w-full overflow-hidden">
+              <img className='
             xl:w-[100%] 
             aspect-[3/4]
             ' src={image1} />
 
-            <p className='text-xl font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
-
+            </div>
           </ParallaxComponent>
-            
+          <p className='text-xl font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
 
         </div>
 
         <motion.div
-        className='hidden xl:block w-[45%] overflow-hidden'>
+        className=' xl:block w-full md:w-[45%] overflow-hidden flex-shrink-0'>
 
           <ParallaxComponent>
-            <img className='xl:w-[100%] aspect-square scale-110 mb-6' src={image2} />
-            <p className='text-xl font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
+            <div className="w-full overflow-hidden">
+              <img className='w-full xl:w-[100%] aspect-square scale-110 mb-14 md:mb-6' src={image2} />
+            </div>
           </ParallaxComponent>
+          <p className='text-xl font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
           
 
         </motion.div>
+        </div>
+
+        <div className="md:hidden flex justify-center w-full">
+          <div className="w-3 h-3 border rounded-full bg-gray-600"></div>
+          <div className="w-3 h-3 border rounded-full bg-gray-600"></div>
         </div>
 
     </div>

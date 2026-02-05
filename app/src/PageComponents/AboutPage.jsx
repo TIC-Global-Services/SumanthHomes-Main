@@ -40,7 +40,7 @@ const AboutPage = () => {
               {showLate && <SHSTeamSection/>}
             </Suspense>
         </ContainerLayout>
-        <div className='pl-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] '>
+        <div className='px-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] '>
           <Suspense fallback={<div>Loading...</div>}>
             {showLate && <SHValues />}
           </Suspense>
