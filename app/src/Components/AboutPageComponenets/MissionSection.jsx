@@ -41,7 +41,8 @@ export const MissionSection = () => {
             <div
             >
 
-            <BlurText
+            <div className="w-auto hidden md:block">
+              <BlurText
               text="OUR MISSION"
               delay={120}
               animateBy="words"
@@ -53,6 +54,7 @@ export const MissionSection = () => {
             text-[rgb(181,4,4)]
             text-xs'
             />
+            </div>
 
             <BlurText
               text="Designs that Inspire Living"
