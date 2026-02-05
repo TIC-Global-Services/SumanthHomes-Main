@@ -77,7 +77,7 @@ const VideoPlayerSection = () => {
             <button onClick={()=>setShowReel(true)} className='
             bottom-0 right-0 absolute
             bg-[#B50404] text-white
-            px-5 xl:px-14 md:px-7 
+            px-8 xl:px-14 md:px-7 
             py-4 xl:py-4 md:py-2
             hover:bg-white hover:text-[#B50404] hover:border-b-2 
             active:bg-[#B50404] active:text-white active:ease-in
