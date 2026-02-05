@@ -132,7 +132,10 @@ const SHSTeamSection = () => {
 
         </div>
 
-        <CardButtons prev={prev} next={next}/>
+        <div className='md:hidden w-full flex justify-center gap-1 mt-4'>
+          <div className='w-3 h-3 border rounded-full bg-gray-600'></div>
+          <div className='w-3 h-3 border rounded-full bg-gray-600'></div>
+        </div>
               
     </div>
   )
