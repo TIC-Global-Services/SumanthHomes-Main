@@ -36,7 +36,7 @@ const HomePage = () => {
             </Suspense>
             <ArchitectureDesignSection/>
         </ContainerLayout>
-        <div className='pl-[20px] pr-[20px] md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] overflow-scroll' style={{scrollbarWidth:"none"}}>
+        <div className='pl-[20px] pr-[20px] md:pr-0 md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] overflow-auto md:overflow-scroll ' style={{scrollbarWidth:'none'}} >
           <Suspense fallback={<div>Loading...</div>}>
             { showLate && <ADCards/> }
           </Suspense>

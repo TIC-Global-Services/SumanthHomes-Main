@@ -16,18 +16,27 @@ export const MissionSection = () => {
     xl:gap-6 md:gap-3  xl:mt-10 md:mt-4
     mb-14 xl:mb-20 md:mb-14'>
 
-      <div className='order-2 md:order-1 md:w-[48%] xl:w-[45%] overflow-hidden'>
+      <div className="w-full flex md:hidden justify-center mb-4"> 
+        <h2 className="font-manrope font-semibold text-xl tracking-0 text-[#B50404]">OUR MISSION</h2>
+      </div>
+
+      <div className='order-1 md:w-[48%] xl:w-[45%] overflow-hidden'>
         <ParallaxComponent className='w-full'>
 
             <img className='
             
-            xl:w-full aspect-[2/1] scale-150' src={missionImage}></img>
+            xl:w-full aspect-[335/285] md:aspect-[2/1] scale-150' src={missionImage}></img>
 
         </ParallaxComponent>
       </div>
         
 
-        <div className=' md:w-[48%] xl:w-[50%] order-1 md:order-2'>
+        <div className='
+        md:w-[48%] xl:w-[50%] order-2
+        bg-white md:bg-transparent
+        px-4 md:px-0
+        py-6 md:py-0
+        '>
 
             <div
             >
@@ -52,8 +61,10 @@ export const MissionSection = () => {
               direction="bottom"
               className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'
+            font-manrope font-semibold tracking-[-1.5px] md:tracking-[-0.5px]
+            text-2xl xl:text-4xl 
+            text-[#191919]
+            '
             />
 
             </div>
@@ -64,7 +75,12 @@ export const MissionSection = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-            className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-base'>
+            className='
+            mb-4 
+            font-normal text-[#737373]
+            text-[10px] md:text-sm xl:text-base
+            leading-3 tracking-0
+            '>
 
                 At Sumanth Homes, we channel all our resources, energy, and expertise toward delivering high-quality infrastructure built to the highest standards. We constantly evaluate our actions, learning from every experience to improve and evolve. This approach empowers us to take on greater challenges and drives our continuous growth as a firm.
 

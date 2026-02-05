@@ -23,29 +23,24 @@ const ADCards = () => {
               img: img4,
               text:'Random'
           },
-          {
-              img: img1,
-              text:'Residential Apartment'
-          },
-          {
-              img: img2,
-              text:'Commercial Space'
-          }
       ]
 
 
 
   return (
     <div 
-        className='w-full '
+        className='w-full'
+        >
+        <div
         style={{
             scrollbarWidth:'none',
         }}
-        >
-        <div  className='
+        className='
+        w-full
+        overflow-scroll md:overflow-auto
         flex
         mt-4
-        gap-4 xl:gap-8'
+        gap-6 md:gap-4 xl:gap-8'
         >
 
             {
@@ -70,16 +65,23 @@ const ADCards = () => {
                         font-medium text-white text-center
                         justify-self-center
                         mx-auto
+                        tracking-0
                         text-base xl:text-xl 
                         '>{card.text}</p>
                 
                     </div>
                 ))
             }
-                
+           
             
-            </div>
         </div>
+
+        <div className="flex gap-1 md:hidden justify-center mt-4">
+            {ArchitectureCards.map((data, index)=>(
+                    <div key={index} className={`w-3 h-3 border rounded-full bg-gray-700`}></div>
+            ))}
+        </div>
+    </div>
   )
 }
 

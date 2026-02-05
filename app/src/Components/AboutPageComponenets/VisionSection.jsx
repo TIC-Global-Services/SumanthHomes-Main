@@ -29,8 +29,21 @@ export const VisionSection = () => {
     xl:gap-6 md:gap-1
     mb-14 xl:mb-10 md:mb-10'>
 
+        <div className="
+        w-full
+        flex justify-center md:hidden
+        mb-4
+        ">
+          <h2 className="font-manrope font-semibold text-xl tracking-0 text-[#B50404]">OUR VISION</h2>
+        </div>
+
         <div className='
-        md:w-[45%] xl:w-[50%]'>
+        bg-white md:bg-transparent
+        px-6 md:px-0
+        py-10 md:py-auto
+        md:w-[45%] xl:w-[50%]
+        order-2 md:order-1
+        '>
 
             <div>
 
@@ -44,7 +57,8 @@ export const VisionSection = () => {
             mb-1 xl:mb-4 md:mb-1
             font-semibold uppercase tracking-[3px]
             text-[rgb(181,4,4)]
-            text-xs'
+            text-xs
+            '
             />
 
             <BlurText
@@ -55,8 +69,10 @@ export const VisionSection = () => {
               direction="bottom"
               className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'
+            font-manrope font-semibold tracking-[-1.5px] md:tracking-[-0.5px]
+            text-2xl xl:text-4xl
+            text-[#191919]
+            '
             />
 
             </div>
@@ -67,7 +83,13 @@ export const VisionSection = () => {
             transition={SlideUpAnimationBlur.transition}
             viewport={SlideUpAnimationBlur.viewport}
             
-            ref={contentRef} className='mb-4 font-jakarta font-normal text-[#737373] md:text-sm xl:text-base'>
+            ref={contentRef} className='mb-4 
+            text-[10px] md:text-sm xl:text-base
+            font-normal
+            text-[#737373]
+            leading-3
+            tracking-0
+            '>
 
                 Our vision is to build high-quality homes that reflect trust and lasting value. We understand that a home is a one-time investment for many, and we are committed to delivering spaces that offer comfort, reliability, and complete satisfaction. With this vision, we strive to give our best in every project we undertake.
 
@@ -75,9 +97,9 @@ export const VisionSection = () => {
 
         </div>
 
-        <div className=' md:w-[50%] xl:w-[47%] overflow-hidden'>
+        <div className=' md:w-[50%] xl:w-[47%] overflow-hidden order-1 md:order-2'>
           <ParallaxComponent className='w-full'>
-           <img className=' md:h-[18%] md:w-full  xl:w-full aspect-[2/1] scale-150' src={visionImage}></img>
+           <img className=' md:h-[18%] md:w-full  xl:w-full aspect-[335/245] md:aspect-[2/1] scale-150' src={visionImage}></img>
           </ParallaxComponent>
         </div>
 

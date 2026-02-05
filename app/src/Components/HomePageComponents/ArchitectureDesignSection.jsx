@@ -42,7 +42,7 @@ export const ArchitectureDesignSection = () => {
                 text-[#B50404] font-semibold
                 text-[10px] md:text-xs 
                 mb-1 xl:mb-4 md:mb-1
-                uppercase leading-8 tracking-0 md:tracking-[3px]'
+                uppercase leading-3 md:leading-8 tracking-0 md:tracking-[3px]'
                 />
 
                 <BlurText
@@ -51,7 +51,7 @@ export const ArchitectureDesignSection = () => {
                 animateBy="words"
                 direction="bottom"
                 className='
-                text-black
+                text-[#191919]
                 font-manrope font-bold
                 text-2xl xl:text-4xl md:text-2xl
                 mb-4
@@ -72,8 +72,9 @@ export const ArchitectureDesignSection = () => {
 
                 <p className='
                 font-normal 
-                leading-4 md:leading-5 lg:leading-7
-                text-[14px] xl:text-[18px]
+                leading-3 md:leading-5 lg:leading-7
+                tracking-0
+                text-[10px] md:text-[14px] xl:text-[18px]
                 text-[#737373]
                 '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 

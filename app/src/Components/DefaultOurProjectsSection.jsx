@@ -42,7 +42,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
   return (
     <div id="project" className="mt-8 xl:mt-20 md:mt-14">
-    <div className='mb-4 xl:mb-16'>
+    <div className='mb-4 xl:mb-16 relative'>
 
         
 
@@ -139,18 +139,21 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
                     ref={windowTitleRef}> 
 
-                    <BlurText text={miniHeader} className="font-semibold
-                        text-[#B40505]
-                        text-sm md:text-xs xl:text-sm 
+                    <BlurText text={miniHeader} className="
+                        font-semibold
+                        text-[#191919]
+                        text-[10px] md:text-xs xl:text-sm 
+                        tracking-[-0.5px]
                         py-2">
 
                     </BlurText>
 
                     <BlurText text={mainHeader} className="font-manrope font-semibold
-                        tracking-[-2px]
+                        tracking-[-1.5px] md:tracking-[-2px]
                         xl:pb-2
-                        text-2xl md:text-2xl xl:text-4xl ">
-
+                        text-[28px] md:text-2xl xl:text-4xl 
+                        text-[#191919]
+                        ">
                     </BlurText>
 
                     </div>
@@ -169,7 +172,10 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         font-normal
                         md:w-[100%] xl:w-[90%]
                         py-4 md:py-2
-                        text-base md:text-xs xl:text-base'>{description}</p>
+                        text-[10px] md:text-xs xl:text-base
+                        leading-3
+                        tracking-0
+                        '>{description}</p>
 
 
                        <button onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
@@ -178,7 +184,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         active:text-[#B50404]
                         gap-2 ${expPrj ? 'hidden' : 'block'}`}>
                         
-                            <h4 className='font-bold md:text-xs xl:text-sm tracking-[-2%] hover:scale-105 '
+                            <h4 className='font-bold text-[10px] uppercase text-[#000] md:text-xs xl:text-sm tracking-[-2%] hover:scale-105 '
                             >EXPLORE PROJECT</h4>
 
                             <div className="hover:scale-105">

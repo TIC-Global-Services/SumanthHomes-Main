@@ -23,9 +23,9 @@ const ProjectSection = () => {
                 animateBy="words"
                 direction="bottom "
                 className="text-[#B50404]
-                font-manrope font-bold
+                font-manrope font-semibold
                 text-2xl xl:text-4xl md:text-2xl
-                tracking-[-0.5px]
+                tracking-0 md:tracking-[-0.5px]
                 flex justify-center
                 "
                 />

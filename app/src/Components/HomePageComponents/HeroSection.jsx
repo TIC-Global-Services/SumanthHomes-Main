@@ -25,13 +25,17 @@ export const HeroSection = () => {
 
     <h2 className='
     absolute
-    text-white font-manrope font-bold
+    
     bottom-0 left-0
     w-[80%] md:w-[70%] lg:w-[70%] xl:w-[70%] 
     px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px]
-    pb-9 xl:pb-20 md:pb-10 
+    pb-14 xl:pb-20 md:pb-10 
     
-    text-3xl sm:text-4xl md:text-5xl lg:text-6xl  xl:text-6xl 2xl:text-6xl
+    font-manrope font-bold
+    
+    text-[36px] sm:text-4xl md:text-5xl lg:text-6xl  xl:text-6xl 2xl:text-6xl
+    leading-[38px] tracking-[-4%]
+    text-[#F7F7F2]
     
     '>
             Elevating Every Space <br /> with Purpose and Precision
