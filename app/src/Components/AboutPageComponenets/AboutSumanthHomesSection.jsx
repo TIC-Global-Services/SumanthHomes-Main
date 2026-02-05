@@ -51,6 +51,7 @@ export const AboutSumanthHomesSection = () => {
     mb-14 xl:mb-40 md:mb-12'>
 
         <div ref={imageRef} className='
+        order-2 md:order-1
         w-full xl:w-[50%]
         flex items-center relative
         gap-4
@@ -61,7 +62,7 @@ export const AboutSumanthHomesSection = () => {
             <ParallaxComponent className={'w-full aspect-square'}>
             <img className='
             w-full
-            aspect-square
+            aspect-[129.02/125.67] md:aspect-square
             scale-150
             ' src={imageLeft}
             
@@ -74,7 +75,7 @@ export const AboutSumanthHomesSection = () => {
             top-[33%] xl:top-[30%] md:top-[30%]
             left-[30%] md:left-[35%] xl:left-[25%]
             w-[45%]
-            aspect-square
+            aspect-[129.02/125.67] md:aspect-square
             z-10
             ">
 
@@ -86,7 +87,7 @@ export const AboutSumanthHomesSection = () => {
 
             
 
-             <div className="overflow-hidden w-[55%] aspect-square">
+             <div className="overflow-hidden w-[55%] aspect-[174.52/179.65] md:aspect-square">
               <ParallaxComponent className={'w-full'}>
                 <img className='w-full aspect-square scale-150' src={imageRight}/>
               </ParallaxComponent>
@@ -98,6 +99,7 @@ export const AboutSumanthHomesSection = () => {
         <div className='
         mt-6 md:mt-6 xl:mt-0
         w-[100%] md:w-full xl:w-[55%] 
+        order-1 md:order-2
         '>
 
           <motion.div
@@ -110,22 +112,26 @@ export const AboutSumanthHomesSection = () => {
               animateBy="words"
               direction="bottom"
               className="mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[3px] [word-spacing:3px]
-            text-[rgb(181,4,4)]
+            font-semibold uppercase 
+            tracking-0 md:tracking-[3px] 
+            text-[#B50404]
             text-[10px] md:text-xs "
             />
             
 
             <BlurText
-              text="Crafting contemporary buildings with elegance."
+              text="Crafting Contemporary Buildings With Elegance."
               delay={120}
               animateBy="words"
               direction="bottom"
               className='
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold 
-            xl:w-[80%]
-            text-2xl md:text-2xl xl:text-4xl'
+            font-manrope font-bold 
+            w-[80%] xl:w-[80%]
+            text-2xl md:text-2xl xl:text-4xl
+            leading-7 tracking-[-0.5px]
+            text-[#191919]
+            '
             />
 
           </motion.div>
@@ -138,7 +144,13 @@ export const AboutSumanthHomesSection = () => {
             viewport={SlideUpAnimationBlur.viewport}
 
             ref={contentRef}
-            className='w-full mb-4 tracking-normal font-normal text-base xl:text-xl text-[#737373] '>
+            className='w-full mb-4 
+            font-normal
+            text-xs md:text-base xl:text-xl 
+            text-[#737373]
+            leading-[14px] tracking-0
+
+             '>
               
               Established in 2013, Sumanth Homes is a partnership firm specializing in high-quality residential and commercial projects. With over 30 years of experience, Managing Partner Manohar Katta brings deep industry expertise and traditional values, while the other partners contribute modern technologies and advanced quality control practices.
 
