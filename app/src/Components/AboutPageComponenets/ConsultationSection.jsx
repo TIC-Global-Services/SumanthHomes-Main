@@ -16,8 +16,8 @@ const ConsultationSection = () => {
     overflow-hidden
     flex 
     w-full
-    aspect-[3/2] md:aspect-[3/1]
-    mb-20 xl:mb-36 md:mb-14
+    md:aspect-[3/1]
+    xl:mb-36 md:mb-14
     ' >
 
       <ParallaxComponent className={`w-full
@@ -27,35 +27,39 @@ const ConsultationSection = () => {
       className="
       scale-150
       w-full
-      aspect-[3/2] md:aspect-[3/1]
+      aspect-[375/575] md:aspect-[3/1]
       " />
       </ParallaxComponent>
       
 
         <div className='
-        w-full
+        w-[80%] md:w-full
         aspect-[3/2] md:aspect-[3/1]
-        absolute inset-0
+        absolute left-0 bottom-0 md:inset-0
         flex flex-col items-start sm:justify-center md:items-start md:justify-end
-        mb-20 xl:mb-36 md:mb-14 
-        pb-8 pl-10
+        xl:mb-36 md:mb-14 
+        pb-10 md:pb-8
+        pl-6 md:pl-10
         '>
 
-          <div className='my-auto sm:my-0'>
+          <div className=''>
 
             <h2 className='
-            font-manrope font-semibold text-white tracking-[-0.5px]
-            text-2xl xl:text-4xl md:text-2xl
-            xl:mb-2'>
+            font-manrope font-semibold
+            text-[40px] xl:text-4xl md:text-2xl
+          text-[#F7F7F2]
+           tracking-[-0.5px]
+           leading-[48px]
+           mb-4 xl:mb-2'>
               Let's Build Something Meaningful</h2>
 
             <p className='
-            hidden sm:block
+            w-[80%] md:w-auto
             font-normal text-white 
-            text-base md:text-xs xl:text-base
+            text-xs md:text-xs xl:text-base
             xl:mb-3
-            md:leading-5
-            md:mb-1'>
+            leading-[15px] md:leading-5
+            mb-4 md:mb-1'>
               We're here to discuss your ideas, understand your vision, and guide you through the entire design journey.
               </p>
 
@@ -64,12 +68,13 @@ const ConsultationSection = () => {
 
           <div className=''>
             <button onClick={handleClick} className='
-            bg-[#B50404] font-manrope font-bold tracking-[2px] rounded-md
+            uppercase
+            bg-[#B50404] font-manrope font-bold tracking-0 md:tracking-[2px] rounded-md
              px-4 md:px-8 xl:px-14
              py-2 md:py-2 xl:py-4 
              hover:bg-white hover:text-[#B50404] active:bg-[#B50404] active:text-white
             text-white
-             md:text-sm'>BOOK A CONSULTATION</button>
+             text-[11px] md:text-sm'>BOOK A CONSULTATION</button>
           </div>
             
             

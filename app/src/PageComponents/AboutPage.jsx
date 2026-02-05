@@ -45,11 +45,11 @@ const AboutPage = () => {
             {showLate && <SHValues />}
           </Suspense>
         </div>
-        <ContainerLayout>
+        <div className='w-full md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px] md:py-10'>
           <Suspense fallback={<div>Loading...</div>}>
             {showLate && <ConsultationSection />}
           </Suspense>
-        </ContainerLayout>
+        </div>
         <Footer/>
         </ParallaxProvider>
     </div>
