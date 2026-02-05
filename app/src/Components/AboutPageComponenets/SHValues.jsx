@@ -73,15 +73,15 @@ const SHValues = () => {
         <div
         className='w-full md:w-[55%] xl:block overflow-hidden xl:pb-40 mb-10 flex-shrink-0'>
 
+          <div className="w-full overflow-hidden">
           <ParallaxComponent>
-            <div className="w-full overflow-hidden">
               <img className='
             xl:w-[100%] 
             aspect-[3/4]
             ' src={image1} />
 
-            </div>
           </ParallaxComponent>
+          </div>
           <p className='text-xl font-medium xl:mt-1 md:mt-1'>Timeless Design</p>
 
         </div>
@@ -89,11 +89,12 @@ const SHValues = () => {
         <motion.div
         className=' xl:block w-full md:w-[45%] overflow-hidden flex-shrink-0'>
 
+          <div className="w-full overflow-hidden">
           <ParallaxComponent>
-            <div className="w-full overflow-hidden">
               <img className='w-full xl:w-[100%] aspect-square scale-110 mb-14 md:mb-6' src={image2} />
-            </div>
           </ParallaxComponent>
+          </div>
+
           <p className='text-xl font-medium xl:mt-1 md:mt-1'>Honest Craftmanship</p>
           
 
