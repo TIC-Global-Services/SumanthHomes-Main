@@ -64,7 +64,7 @@ export const MapSection = () => {
         <iframe 
       className='
       pointer-events-none
-      aspect-[4/3] md:aspect-[1280/503]
+      aspect-[335/280] md:aspect-[1280/503]
       w-full
       '
       src="https://www.openstreetmap.org/export/embed.html?bbox=79.09950256347656%2C13.414333619316578%2C79.74220275878908%2C13.84141349246619&amp;layer=hot&amp;marker=13.627971281465944%2C79.42085266113281"
@@ -72,6 +72,7 @@ export const MapSection = () => {
 
         <FormTwin/>
         <form onSubmit={(e)=>formSubmit(e)} id="contactForm" className="
+        hidden md:block
         absolute
         top-32 md:top-[20%] xl:top-[30%]
         left-[10%]
