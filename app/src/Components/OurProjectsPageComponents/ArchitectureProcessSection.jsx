@@ -75,12 +75,12 @@ export const ArchitectureProcessSection = () => {
         }}
         >
 
-        <div className='flex items-start justify-between gap-10 md:gap-0 flex-wrap w-full md:mx-auto mb-10'>
+        <div className='w-full  flex items-start justify-normal md:justify-between gap-3 md:gap-0 flex-nowrap md:flex-wrap  md:mx-auto mb-10'>
           <GridCard1 number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
           <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>  
         </div>            
            
-        <div className='flex items-start justify-between gap-10 md:gap-0 flex-wrap md:mx-auto w-full'>
+        <div className='flex items-start justify-normal md:justify-between gap-3 md:gap-0 flex-nowrap md:flex-wrap md:mx-auto w-full'>
           <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
           <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
         </div>

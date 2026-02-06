@@ -131,19 +131,12 @@ export const CompletedProjectsSection = () => {
 
         </div>
 
-        <CardButtons prev={prev} next={next} />
-
-        <div className='
-        flex justify-center items-center
-        mt-4
-        '>
-            <motion.button
-            initial={SlideUpAnimationBlur.initial}
-            whileInView={SlideUpAnimationBlur.whileInView}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
-            
-            className={`text-[rgb(181,4,4)] font-medium ${length>6 ? 'block' : 'hidden'}`}>-EXPLORE MORE-</motion.button>
+        <div className='md:hidden w-full flex justify-center gap-2'>
+          {
+            CompletedProjectsCards.map((data, id)=>(
+              <div className='w-3 h-3 border-0 rounded-full bg-slate-600' key={id}></div>
+            ))
+          }
         </div>
 
     </div>
