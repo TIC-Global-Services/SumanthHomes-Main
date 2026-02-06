@@ -207,13 +207,10 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
         <div className='
             md:hidden
-            bg-white
-            pl-4
-            pr-2
-            md:px-6 xl:px-9 
-            py-6 md:py-6 xl:py-12 
+            bg-white 
             md:bottom-0
             md:right-0
+            pl-5
             w-full xl:w-[40%]
             md:left-[20rem] xl:left-[52rem] 
             '>
@@ -228,14 +225,22 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
                     <h4 className='
                     font-semibold
-                    text-sm md:text-xs xl:text-sm 
-                    py-2'>
-                        {miniHeader}</h4>
+                    pt-6
+                    text-[10px] md:text-xs xl:text-sm 
+                    leading-[100%]
+                    tracking-[-0.5px]
+                    text-[#191919]
+                    '>
+                        Premium Living Spaces</h4>
 
                     <h2 className='
                     font-manrope font-semibold
-                    xl:pb-4
-                    text-2xl md:text-2xl xl:text-4xl '>{mainHeader}</h2>
+                    pt-2
+                    text-[28px] md:text-2xl xl:text-4xl 
+                    leading-[30px]
+                    tracking-[-1.5px]
+                    text-[#191919]
+                    '>{mainHeader}</h2>
 
                 </motion.div>
 
@@ -248,11 +253,14 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                 ref={contentRef}>
 
                     <p className='
-                    mb-2
                     text-[#737373] 
                     font-normal
-                    py-4
-                     md:text-xs'>{description}</p>
+                    pt-[6px]
+                    text-[10px] md:text-xs
+                    leading-3
+                    tracking-0
+                    w-[90%]
+                    '>{description}</p>
 
 
                     <div onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
@@ -260,11 +268,18 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                     active:text-[#b50404]
                     ${expPrj ? 'hidden' : 'block'}
                     flex items-center
-                    gap-2`}>
+                    gap-2
+                    pt-[31px]
+                    pb-5
+                    `}>
                         
                         <h4 className='
                         font-bold
-                         md:text-xs xl:text-sm 
+                        text-[10px] md:text-xs xl:text-sm 
+                        leading-3
+                        tracking-[-2%]
+                        uppercase
+                        text-[#000]
                         '>EXPLORE PROJECT</h4>
 
                         <button>

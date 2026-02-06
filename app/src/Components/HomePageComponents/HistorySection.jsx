@@ -50,12 +50,11 @@ export const HistorySection = () => {
     className='
     relative
     flex justify-center items-center
-    mt-0 xl:mt-20 md:mt-4
-    mb-0 xl:mb-40 md:mb-10
-    py-24 md:py-14
+    mt-14 md:mt-[120px]
+    mb-[116px] md:mb-[237px]
+    
     '>
-
-        <div className='text-center'>
+        <div className='text-center '>
 
 
               <motion.h2
@@ -66,9 +65,9 @@ export const HistorySection = () => {
               
               className='
               font-manrope font-extrabold text-[#B50404]
-              w-auto
-              text-[140px] xl:text-[15rem] md:text-9xl 
+              text-[140px]  md:text-9xl  xl:text-[300px]
               tracking-[-4%]
+              leading-none
               '>{currentNumber}</motion.h2>
 
               <motion.div
@@ -87,10 +86,10 @@ export const HistorySection = () => {
                 text-[#1D1D1D]
                 flex align-center justify-center
                 font-urbanist font-medium 
-                text-[34px] xl:text-8xl md:text-5xl
+                text-[34px] md:text-5xl xl:text-[100px]
                 tracking-[-1px] md:tracking-tight xl:tracking-[-2px] 
                 leading-9
-                mb-3'/>
+                mb-2'/>
 
                 <motion.div
                 initial={SlideUpAnimationBlur.initial}

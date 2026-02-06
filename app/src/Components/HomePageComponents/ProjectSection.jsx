@@ -11,12 +11,12 @@ const ProjectSection = () => {
   const description = "Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati."
 
   return (
-    <div id="prj" className="mb-14">
+    <div id="prj" className="mb-20 md:mb-[120px]">
 
         <div className='
         text-center  
         text-3xl xl:text-2xl md:text-2xl
-        mb-4
+        mb-5 md:mb-10
          '>
                <BlurText
                 text="OUR PROJECTS"
@@ -24,7 +24,7 @@ const ProjectSection = () => {
                 direction="bottom "
                 className="text-[#B50404]
                 font-manrope font-semibold
-                text-2xl xl:text-4xl md:text-2xl
+                text-2xl  md:text-2xl xl:text-[28px]
                 tracking-0 md:tracking-[-0.5px]
                 flex justify-center
                 "
