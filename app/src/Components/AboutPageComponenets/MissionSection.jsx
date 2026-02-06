@@ -4,7 +4,7 @@ import missionImage from "../../assets/img/AboutSection/missionImage.png"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
 import ParallaxComponent from "../../utils/ParallaxComponent";
-
+import { TitleStyleData } from "../../utils/TitleComponentStyle";
 
 export const MissionSection = () => {
 
@@ -47,12 +47,11 @@ export const MissionSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
+              className={`
               mt-2
-            mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[3px] 
-            text-[rgb(181,4,4)]
-            text-xs'
+              mb-1 xl:mb-4 md:mb-1
+              ${TitleStyleData.miniTitle}
+            `}
             />
             </div>
 
@@ -61,12 +60,11 @@ export const MissionSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-1.5px] md:tracking-[-0.5px]
-            text-2xl xl:text-4xl 
-            text-[#191919]
-            '
+              className={`
+                 mb-4 xl:mb-8 md:mb-4
+                 ${TitleStyleData.mainTitle}
+                `}
+           
             />
 
             </div>
@@ -77,12 +75,9 @@ export const MissionSection = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-            className='
-            mb-4 
-            font-normal text-[#737373]
-            text-[10px] md:text-sm xl:text-base
-            leading-3 tracking-0
-            '>
+            className={
+              `${TitleStyleData.content}`
+            }>
 
                 At Sumanth Homes, we channel all our resources, energy, and expertise toward delivering high-quality infrastructure built to the highest standards. We constantly evaluate our actions, learning from every experience to improve and evolve. This approach empowers us to take on greater challenges and drives our continuous growth as a firm.
 

@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
 import ParallaxComponent from "../../utils/ParallaxComponent";
+import { TitleStyleData } from "../../utils/TitleComponentStyle";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -37,11 +38,7 @@ const SHValues = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[3px]
-            text-[rgb(181,4,4)]
-            text-xs'
+              className={`mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
                       />
 
              <BlurText
@@ -49,10 +46,11 @@ const SHValues = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'
+              className={`
+                mb-4 xl:mb-8 md:mb-4
+                ${TitleStyleData.mainTitle}
+                `}
+            
                       />
 
             </div>
@@ -63,7 +61,10 @@ const SHValues = () => {
              transition={{duration:0.2}}
              viewport={{once:false}}
 
-             className='w-full mb-4 font-jakarta font-normal text-[#737373] md:text-sm text-base xl:text-base'>
+             className={`
+             w-full mb-4 ${TitleStyleData.content}
+              `}
+             >
               Our mission is to channel our passion, expertise, and resources into crafting premium infrastructure that meets the highest standards of quality and design. We believe in learning, evolving, and improving with every project — constantly questioning our processes to achieve perfection. By embracing challenges and refining our approach, we aim to grow stronger as a firm and continue creating homes that reflect integrity, comfort, and enduring value.
             </motion.p>
 

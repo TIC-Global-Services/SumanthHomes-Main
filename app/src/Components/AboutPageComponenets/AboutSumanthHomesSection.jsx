@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
 import ParallaxComponent from "../../utils/ParallaxComponent";
-
+import { TitleStyleData } from "../../utils/TitleComponentStyle";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -111,11 +111,9 @@ export const AboutSumanthHomesSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className="mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase 
-            tracking-0 md:tracking-[3px] 
-            text-[#B50404]
-            text-[10px] md:text-xs "
+              className={`mb-1 xl:mb-4 md:mb-1
+                ${TitleStyleData.miniTitle}
+                `}
             />
             
 
@@ -124,14 +122,13 @@ export const AboutSumanthHomesSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            mb-4 xl:mb-8 md:mb-4
-            font-manrope font-bold 
-            w-[80%] xl:w-[80%]
-            text-2xl md:text-2xl xl:text-4xl
-            leading-7 tracking-[-0.5px]
-            text-[#191919]
-            '
+              className={
+                `
+                 mb-4 xl:mb-8 md:mb-4 w-[80%] xl:w-[80%]
+                 ${TitleStyleData.mainTitle}
+                `
+              }
+           
             />
 
           </motion.div>
@@ -144,13 +141,7 @@ export const AboutSumanthHomesSection = () => {
             viewport={SlideUpAnimationBlur.viewport}
 
             ref={contentRef}
-            className='w-full mb-4 
-            font-normal
-            text-xs md:text-base xl:text-xl 
-            text-[#737373]
-            leading-[14px] tracking-0
-
-             '>
+            className={`w-full mb-4 ${TitleStyleData.content} `}>
               
               Established in 2013, Sumanth Homes is a partnership firm specializing in high-quality residential and commercial projects. With over 30 years of experience, Managing Partner Manohar Katta brings deep industry expertise and traditional values, while the other partners contribute modern technologies and advanced quality control practices.
 

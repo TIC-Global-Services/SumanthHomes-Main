@@ -4,6 +4,7 @@ import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react";
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
+import { TitleStyleData } from "../../utils/TitleComponentStyle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +43,7 @@ export const KnowUsSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='font-semibold  tracking-0 md:tracking-[3px] uppercase text-[#B50404] text-[10px] md:text-xs mb-2 '
+              className={`${TitleStyleData.miniTitle}`}
             />
 
             <BlurText
@@ -50,7 +51,7 @@ export const KnowUsSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='font-manrope font-bold md:font-semibold text-2xl leading-7 md:text-4xl tracking-[-0.5px] md:leading-[48px] text-[#191919] w-[60%] md:w-auto'
+              className={`w-[60%] md:w-auto ${TitleStyleData.mainTitle}`}
             />
 
         </motion.div>

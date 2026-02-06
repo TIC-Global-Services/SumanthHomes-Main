@@ -4,6 +4,7 @@ import { CardButtons } from '../../sub-components/CardButtons';
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
+import { TitleStyleData } from '../../utils/TitleComponentStyle';
 
 export const ArchitectureDesignSection = () => {
 
@@ -38,11 +39,7 @@ export const ArchitectureDesignSection = () => {
                 delay={120}
                 animateBy="words"
                 direction="bottom"
-                className='
-                text-[#B50404] font-semibold
-                text-[10px] md:text-xs 
-                mb-1 xl:mb-4 md:mb-1
-                uppercase leading-3 md:leading-8 tracking-0 md:tracking-[3px]'
+                className={`mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
                 />
 
                 <BlurText
@@ -50,13 +47,7 @@ export const ArchitectureDesignSection = () => {
                 delay={120}
                 animateBy="words"
                 direction="bottom"
-                className='
-                text-[#191919]
-                font-manrope font-bold
-                text-2xl xl:text-4xl md:text-2xl
-                mb-4
-                leading-7 xl:leading-10
-                tracking-[-0.5px]'
+                className={`mb-4 ${TitleStyleData.mainTitle}`}
                 />
 
 
@@ -70,13 +61,8 @@ export const ArchitectureDesignSection = () => {
 
             className='md:w-[35%] lg:w-[45%]  md:pt-2'>
 
-                <p className='
-                font-normal 
-                leading-3 md:leading-5 lg:leading-7
-                tracking-0
-                text-[10px] md:text-[14px] xl:text-[18px]
-                text-[#737373]
-                '>Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
+                <p className={`${TitleStyleData.content}`}
+                >Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
             </motion.div>
 

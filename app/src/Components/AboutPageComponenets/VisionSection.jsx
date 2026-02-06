@@ -9,6 +9,7 @@ import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
 import { Parallax } from "react-scroll-parallax";
 import ParallaxComponent from "../../utils/ParallaxComponent";
+import { TitleStyleData } from "../../utils/TitleComponentStyle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,13 +55,9 @@ export const VisionSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-              w-full
-            mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[3px]
-            text-[rgb(181,4,4)]
-            text-xs
-            '
+              className={
+                `w-full ${TitleStyleData.miniTitle}`
+              }
             />
               </div>
             
@@ -71,12 +68,10 @@ export const VisionSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
+              className={`
             mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-1.5px] md:tracking-[-0.5px]
-            text-2xl xl:text-4xl
-            text-[#191919]
-            '
+            ${TitleStyleData.mainTitle}
+            `}
             />
 
             </div>
@@ -87,13 +82,7 @@ export const VisionSection = () => {
             transition={SlideUpAnimationBlur.transition}
             viewport={SlideUpAnimationBlur.viewport}
             
-            ref={contentRef} className='mb-4 
-            text-[11px] md:text-sm xl:text-base
-            font-normal
-            text-[#737373]
-            leading-3
-            tracking-0
-            '>
+            ref={contentRef} className={`${TitleStyleData.content}`}>
 
                 Our vision is to build high-quality homes that reflect trust and lasting value. We understand that a home is a one-time investment for many, and we are committed to delivering spaces that offer comfort, reliability, and complete satisfaction. With this vision, we strive to give our best in every project we undertake.
 

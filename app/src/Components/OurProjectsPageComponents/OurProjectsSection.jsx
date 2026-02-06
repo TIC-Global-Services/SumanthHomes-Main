@@ -7,6 +7,7 @@ import '../../assets/styles/titleStyle.css';
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur"
 import BlurText from "../../utils/BlurText"
+import { TitleStyleData } from "../../utils/TitleComponentStyle"
 
 
 gsap.registerPlugin(TextPlugin);
@@ -47,13 +48,10 @@ export const OurProjectsSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            text-center 
+              className={`text-center 
             flex justify-center items-center
-            mb-1 xl:mb-4 md:mb-1
-            font-semibold uppercase tracking-[0.2rem] [word-spacing:3px]
-            text-[rgb(181,4,4)]
-            text-xs'
+            mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
+            
             />
 
             <BlurText
@@ -61,11 +59,7 @@ export const OurProjectsSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-              flex justify-center items-center
-            text-center font-manrope font-semibold
-          text-black
-            text-3xl xl:text-4xl xl:mb-5 md:text-2xl md:mb-5 '
+              className={`flex justify-center items-center text-center xl:mb-5 md:mb-5 ${TitleStyleData.mainTitle}`}
             />
 
             

@@ -12,6 +12,7 @@ import '../../assets/styles/titleStyle.css';
 import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
 import BlurText from '../../utils/BlurText';
+import { TitleStyleData } from '../../utils/TitleComponentStyle';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -91,13 +92,13 @@ const SHSTeamSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
+              className={`
                 mb-1 xl:mb-4 md:mb-1
-                font-semibold uppercase tracking-[3px]
-              text-[rgb(181,4,4)]
-                text-xs
-                flex justify-center 
-                '
+                flex justify-center
+                ${TitleStyleData.miniTitle}
+                `}
+                
+  
                       />
 
 
@@ -107,12 +108,11 @@ const SHSTeamSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl
-            flex justify-center
-            '
+              className={`
+                mb-4 xl:mb-8 md:mb-4
+                flex justify-center
+                ${TitleStyleData.mainTitle}
+                `}
                       />
 
         </motion.div>

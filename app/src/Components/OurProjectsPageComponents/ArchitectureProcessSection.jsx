@@ -7,6 +7,7 @@ import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
 import {motion} from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
 import BlurText from '../../utils/BlurText';
+import { TitleStyleData } from '../../utils/TitleComponentStyle';
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -37,7 +38,7 @@ export const ArchitectureProcessSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='mb-1 xl:mb-4 md:mb-1 font-semibold uppercase tracking-[3px]  text-[rgb(181,4,4)] text-xs'
+              className={`mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
                       />
 
             <BlurText
@@ -45,10 +46,8 @@ export const ArchitectureProcessSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className='
-            mb-4 xl:mb-8 md:mb-4
-            font-manrope font-semibold tracking-[-0.5px]
-            text-3xl xl:text-4xl md:text-xl'
+              className={`mb-4 xl:mb-8 md:mb-4 ${TitleStyleData.mainTitle}`}
+            
                       />
 
             </div>
@@ -59,7 +58,7 @@ export const ArchitectureProcessSection = () => {
             transition={SlideUpAnimationBlur.transition}
             viewport={SlideUpAnimationBlur.viewport}
 
-            ref={contentRef} className='xl:w-[90%] mb-4 font-normal leading-[26px] text-[#737373] '>
+            ref={contentRef} className={`xl:w-[90%] mb-4 ${TitleStyleData.content} `}>
               At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
             </motion.p>
 
