@@ -26,8 +26,7 @@ export const KnowUsSection = () => {
     w-full
     
     flex justify-between items-start xl:items-end gap-6 flex-wrap xl:flex-nowrap 
-     mt-8 xl:mt-20 md:mt-14
-    mb-16 xl:mb-20'>
+    mt-7 md:mt-20'>
 
         <motion.div
         initial={SlideUpAnimationBlur.initial}
@@ -62,7 +61,7 @@ export const KnowUsSection = () => {
         transition={{duration:0.4}}
         viewport={{once:true}}
         
-        ref={contentRef} className='w-full xl:w-[35%] md:w-[40%] flex md:gap-0 gap-10 xl:gap-4 items-center'>
+        ref={contentRef} className='w-full xl:w-[35%] md:w-[40%] flex md:gap-0 gap-10 xl:gap-4 items-center mt-[30px] md:mt-0'>
 
             <svg className="w-[25%] md:w-[30%] xl:w-[20%] aspect-square md:aspect-[55.33/69.16]" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M41.5013 48.4167C49.1304 48.4167 55.3346 42.2124 55.3346 34.5833C55.3346 26.9542 49.1304 20.75 41.5013 20.75C33.8722 20.75 27.668 26.9542 27.668 34.5833C27.668 42.2124 33.8722 48.4167 41.5013 48.4167ZM41.5013 27.6667C45.3158 27.6667 48.418 30.7688 48.418 34.5833C48.418 38.3979 45.3158 41.5 41.5013 41.5C37.6868 41.5 34.5846 38.3979 34.5846 34.5833C34.5846 30.7688 37.6868 27.6667 41.5013 27.6667Z" fill="#B50404"/>
@@ -87,7 +86,7 @@ export const KnowUsSection = () => {
         transition={{duration:0.4}}
         viewport={{once:true}}
 
-        className='w-full xl:w-[25%] order-2 flex justify-between md:flex-col md:justify-normal items-start '>
+        className='w-full xl:w-[25%] order-2 flex justify-between md:flex-col md:justify-normal items-start mt-[10px] md:mt-0'>
 
             <div className='flex gap-2 items-center justify-center mb-3'>
 

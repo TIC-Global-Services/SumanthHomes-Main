@@ -58,6 +58,7 @@ export const MapSection = () => {
     <div className="
     relative 
     w-full aspect-[1440/1134.9]
+    mt-5 md:mt-[100px]
     
     ">
 

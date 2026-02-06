@@ -16,6 +16,8 @@ export const FormTwin = () => {
         mx-auto
         w-full md:w-[80%]
         aspect-[986.66/781.22]
+        mt-[60px] md:mt-0
+        mb-5 mb-0
         ">
 
           <h2 className="
