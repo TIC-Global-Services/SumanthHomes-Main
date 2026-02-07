@@ -21,13 +21,14 @@ const MapSection = () => {
   },[])
 
   return (
-    <div className='mb-20 xl:mb-36 md:mb-14'>
+    <div className='mt-[60px] md:mt-[100px] mb-[52px] md:mb-[120px]'>
 
       <iframe 
       className='
       pointer-events-none
       aspect-[335/280] md:aspect-[3/1]
       w-full
+      pb-[30px] 
       '
       src="https://www.openstreetmap.org/export/embed.html?bbox=79.09950256347656%2C13.414333619316578%2C79.74220275878908%2C13.84141349246619&amp;layer=hot&amp;marker=13.627971281465944%2C79.42085266113281"
  ></iframe><br/>
@@ -38,7 +39,7 @@ const MapSection = () => {
         mx-auto
         flex items-center justify-center flex-wrap shirnk-0
         gap-1 xl:gap-2
-        mb-2 xl:mb-28 md:mb-28
+        
         '>
             <div className='
             flex justify-center
@@ -75,7 +76,7 @@ const MapSection = () => {
             active:scale-115 active:text-gray-500
             
             '>
-              <a className="w-full uppercase font-manrope font-bold tracking-[-0.5px]  text-[10px] md:text-xl text-white md:text-[#B50404] " href={`https://www.google.com/maps/dir/${latitude},${longitude}/Tirupati,+Andhra+Pradesh/@13.2822401,79.51811,10z/data=!3m1!4b1!4m18!1m8!3m7!1s0x3a4d4b0f88620427:0xcf4152d1daca0cac!2sTirupati,+Andhra+Pradesh!3b1!8m2!3d13.6287557!4d79.4191795!16zL20vMDg5bHJj!4m8!1m1!4e1!1m5!1m1!1s0x3a4d4b0f88620427:0xcf4152d1daca0cac!2m2!1d79.4191795!2d13.6287557?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D`} target="_blank">
+              <a className="w-full uppercase md:normal-case font-manrope font-bold tracking-[-0.5px]  text-[10px] md:text-xl text-white md:text-[#B50404] " href={`https://www.google.com/maps/dir/${latitude},${longitude}/Tirupati,+Andhra+Pradesh/@13.2822401,79.51811,10z/data=!3m1!4b1!4m18!1m8!3m7!1s0x3a4d4b0f88620427:0xcf4152d1daca0cac!2sTirupati,+Andhra+Pradesh!3b1!8m2!3d13.6287557!4d79.4191795!16zL20vMDg5bHJj!4m8!1m1!4e1!1m5!1m1!1s0x3a4d4b0f88620427:0xcf4152d1daca0cac!2m2!1d79.4191795!2d13.6287557?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D`} target="_blank">
             Get directions
             </a>
               </button> 

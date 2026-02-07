@@ -31,7 +31,9 @@ export const MiniStatsSections = () => {
     <div className='
     flex items-center justify-between flex-wrap xl:flex-nowrap
     gap-1 xl:gap-3
-    my-16'>
+    mt-[60px] md:mt-20
+    overflow-hidden
+    '>
 
       {
         data.map((data, id)=>(

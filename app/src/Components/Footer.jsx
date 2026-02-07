@@ -32,7 +32,7 @@ export const Footer = () => {
 <div>
     <div className='
     flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1]
-    px-6 xl:px-[105px] lg:px-[50px] md:px-[20px] '>
+    px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px] '>
 
         <div className='
         flex flex-col 

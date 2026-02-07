@@ -78,14 +78,14 @@ const SHSTeamSection = () => {
   }
 
   return (
-    <div className='mb-14 xl:mb-14 overflow-hidden'>
+    <div className='mt-[60px] md:mt-[120px] overflow-hidden'>
 
         <motion.div
 
         className='
         md:justify-self-center
         md:text-center
-        xl:mb-5 md:mb-3'>
+        mb-[30px] xl:mb-5 md:mb-3'>
 
             <BlurText
               text="SHS TEAM"

@@ -89,8 +89,7 @@ export const CompletedProjectsSection = () => {
 
   return (
     <div className='
-    mt-28
-     xl:mb-28'>
+    mt-[60px] md:mt-[120px]'>
 
       <BlurText
               text="Completed Projects"
@@ -101,9 +100,10 @@ export const CompletedProjectsSection = () => {
         className='
         flex justify-center items-center
         text-center
-        mb-4 xl:mb-12
         font-semibold
-        text-3xl md:text-4xl'
+        text-3xl md:text-4xl
+        mb-[30px] md:mb-[50px]
+        '
             />
 
 

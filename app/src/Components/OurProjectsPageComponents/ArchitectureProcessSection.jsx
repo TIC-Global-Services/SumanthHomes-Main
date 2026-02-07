@@ -23,12 +23,11 @@ export const ArchitectureProcessSection = () => {
   return (
     <div ref={containerRef} className='
     flex items-start justify-between flex-wrap 
-    mt-8 xl:mt-20 md:mt-14
-    mb-20 xl:mb-36'>
+    mt-7 md:mt-[122px]'>
 
         <div className='
         w-full md:w-full xl:w-[40%]
-        md:mb-4'>
+        mb-[60px] md:mb-4'>
 
             <div
             ref={titleRef}>

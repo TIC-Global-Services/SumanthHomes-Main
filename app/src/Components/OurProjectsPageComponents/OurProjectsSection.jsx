@@ -37,11 +37,11 @@ export const OurProjectsSection = () => {
       },[])
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-[120px] md:mt-[120px]">
 
         <motion.div
         
-        className="mb-10">
+        className="mb-[30px] md:mb-[60px]">
 
             <BlurText
               text="DREAMS IN CONCRETE"
@@ -50,7 +50,7 @@ export const OurProjectsSection = () => {
               direction="bottom"
               className={`text-center 
             flex justify-center items-center
-            mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
+            ${TitleStyleData.miniTitle}`}
             
             />
 
@@ -59,7 +59,7 @@ export const OurProjectsSection = () => {
               delay={120}
               animateBy="words"
               direction="bottom"
-              className={`flex justify-center items-center text-center xl:mb-5 md:mb-5 ${TitleStyleData.mainTitle}`}
+              className={`flex justify-center items-center text-center  ${TitleStyleData.mainTitle}`}
             />
 
             
@@ -70,8 +70,9 @@ export const OurProjectsSection = () => {
             
         </motion.div>
 
-        <DefaultOurProjects id={'villa1'} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} />
-        
+        <div className="w-full mb-[30px]">
+            <DefaultOurProjects id={'villa1'} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} />
+        </div>
         <DefaultOurProjects id={'villa2'} bgImage={Prj2BgImage} miniHeader={'A work in motion'} mainHeader={'URBANSCAPES'} description={' Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'} /> 
     </div>
   )

@@ -17,7 +17,8 @@ const ConsultationSection = () => {
     flex 
     w-full
     md:aspect-[3/1]
-    xl:mb-36 md:mb-14
+    mt-[60px]
+    md:mb-[120px]
     ' >
 
       <ParallaxComponent className={`w-full

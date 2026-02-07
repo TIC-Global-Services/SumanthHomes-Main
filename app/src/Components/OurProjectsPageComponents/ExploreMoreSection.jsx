@@ -38,8 +38,8 @@ export const ExploreMoreSection = () => {
     <div ref={containerRef} className='
     md:overflow-hidden
     flex justify-between gap-6 md:gap-0 flex-wrap md:flex-nowrap
-    mb-20
-    mt-8
+    mt-[100px] md:mt-[190px]
+    mb-[90px] md:mb-20
     '>
 
         <div

@@ -13,10 +13,11 @@ export const MissionSection = () => {
     <div   className='
     overflow-hidden
     flex flex-col md:flex-row justify-between items-center xl:items-start
-    xl:gap-6 md:gap-3  xl:mt-10 md:mt-4
-    mb-14 xl:mb-20 md:mb-14'>
+    xl:gap-6 md:gap-3
+    mt-[60px] md:mt-20
+    '>
 
-      <div className="w-full flex md:hidden justify-center mb-4"> 
+      <div className="w-full flex md:hidden justify-center mb-[21px]"> 
         <h2 className="font-manrope font-semibold text-xl tracking-0 text-[#B50404]">OUR MISSION</h2>
       </div>
 

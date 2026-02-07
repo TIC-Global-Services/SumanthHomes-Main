@@ -24,7 +24,7 @@ export const ArchitectureDesignSection = () => {
   
 
   return (
-    <div className=''>
+    <div className='md:py-5'>
 
         <div className='
         md:flex items-end justify-between '>
@@ -39,7 +39,7 @@ export const ArchitectureDesignSection = () => {
                 delay={120}
                 animateBy="words"
                 direction="bottom"
-                className={`mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
+                className={` ${TitleStyleData.miniTitle}`}
                 />
 
                 <BlurText
@@ -47,7 +47,7 @@ export const ArchitectureDesignSection = () => {
                 delay={120}
                 animateBy="words"
                 direction="bottom"
-                className={`mb-4 ${TitleStyleData.mainTitle}`}
+                className={`pb-[10px] md:pb-0 ${TitleStyleData.mainTitle}`}
                 />
 
 
@@ -59,9 +59,9 @@ export const ArchitectureDesignSection = () => {
             transition={slideUpAnimation.transition}
             viewport={slideUpAnimation.viewport}
 
-            className='md:w-[35%] lg:w-[45%]  md:pt-2'>
+            className='md:w-[35%] lg:w-[45%] '>
 
-                <p className={`${TitleStyleData.content}`}
+                <p className={` ${TitleStyleData.content}`}
                 >Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
             </motion.div>

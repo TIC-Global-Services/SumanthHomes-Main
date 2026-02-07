@@ -41,7 +41,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
     const windowContainerRef = useRef(null);
 
   return (
-    <div id="project" className="mt-8 xl:mt-20 md:mt-14">
+    <div id="project" className="">
     <div className='mb-4 xl:mb-16 relative'>
 
         

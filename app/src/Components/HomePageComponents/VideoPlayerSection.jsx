@@ -62,16 +62,17 @@ const VideoPlayerSection = () => {
     
 
   return (
-    <div>
+    <div className='mt-7 md:mt-20'>
 
         <div className='
+        mb-[60px] md:mb-[120px]
         relative
-        mt-4 xl:mt-8 md:mt-8'>
+        '>
 
             <iframe src={`https://www.youtube.com/embed/AXNHQ5Pgeig${showReel && '?autoplay=1'}`} allow='autoplay' className='
             aspect-[335/480] md:aspect-[16/7]
             w-full
-            mb-12
+            
             '></iframe>
 
             <button onClick={()=>setShowReel(true)} className='

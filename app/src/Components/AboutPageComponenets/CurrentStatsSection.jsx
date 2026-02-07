@@ -21,8 +21,8 @@ export const CurrentStatsSection = () => {
     <div className='
     hidden md:flex justify-evenly flex-wrap
     gap-10 md:gap-10
-    md:mt-4 xl:mt-4 
-    mb-14 md:mb-20 xl:mb-20 '>
+    md:mt-[116px]
+    '>
 
       {data.map((data, id)=>(
         <Card1 key={id} number={data.number} content={data.content} pageNo={`0${id+1}`}/>

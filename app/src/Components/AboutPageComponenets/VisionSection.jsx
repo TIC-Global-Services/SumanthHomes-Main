@@ -28,12 +28,13 @@ export const VisionSection = () => {
     overflow-hidden
     flex justify-between items-center flex-wrap
     xl:gap-6 md:gap-1
-    mb-14 xl:mb-10 md:mb-10'>
+    mt-[83px] md:mt-[120px]
+    '>
 
         <div className="
         w-full
         flex justify-center md:hidden
-        mb-4
+        mb-[21px]
         ">
           <h2 className="font-manrope font-semibold text-xl tracking-0 text-[#B50404]">OUR VISION</h2>
         </div>

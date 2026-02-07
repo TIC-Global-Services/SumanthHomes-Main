@@ -47,15 +47,15 @@ export const AboutSumanthHomesSection = () => {
     w-full
     flex items-start flex-wrap xl:flex-nowrap
     gap-8 md:gap-12 xl:gap-32
-    mt-8 xl:mt-20 md:mt-14
-    mb-14 xl:mb-40 md:mb-12'>
+    mt-[27px] md:mt-10
+    '>
 
         <div ref={imageRef} className='
         order-2 md:order-1
         w-full xl:w-[50%]
         flex items-center relative
         gap-4
-        mb-4
+        mb-4 
         '>
 
           <div className="w-[45%] aspect-square overflow-hidden">
@@ -97,7 +97,6 @@ export const AboutSumanthHomesSection = () => {
         </div>
 
         <div className='
-        mt-6 md:mt-6 xl:mt-0
         w-[100%] md:w-full xl:w-[55%] 
         order-1 md:order-2
         '>

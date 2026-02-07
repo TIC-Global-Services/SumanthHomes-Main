@@ -24,11 +24,10 @@ const SHValues = () => {
 
   return (
     <div ref={containerRef} className='flex justify-between gap-4 flex-wrap md:flex-nowrap
-    mb-10 md:w-[90%] xl:w-full'>
+    mt-[25px] md:mt-20  md:w-full'>
 
         <div
-
-          className=' xl:w-[40%] '>
+        className='mb-5 xl:w-[40%] '>
 
             <div 
             >
@@ -70,7 +69,7 @@ const SHValues = () => {
 
         </div>
 
-        <div className='w-full md:w-auto xl:w-[58%] flex gap-4 overflow-scroll md:overflow-hidden ' style={{scrollbarWidth:'none'}}>
+        <div className='w-full md:w-auto xl:w-[58%] flex gap-4  overflow-scroll  ' style={{scrollbarWidth:'none'}}>
         <div
         className='w-full md:w-[55%] xl:block overflow-hidden xl:pb-40 mb-10 flex-shrink-0'>
 
@@ -88,7 +87,7 @@ const SHValues = () => {
         </div>
 
         <motion.div
-        className=' xl:block w-full md:w-[45%] overflow-hidden flex-shrink-0'>
+        className=' xl:block w-full md:w-[45%]  flex-shrink-0'>
 
           <div className="w-full overflow-hidden">
           <ParallaxComponent>

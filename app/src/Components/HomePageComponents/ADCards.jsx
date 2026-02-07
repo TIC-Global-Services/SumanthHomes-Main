@@ -39,7 +39,6 @@ const ADCards = () => {
         w-full
         overflow-scroll md:overflow-auto
         flex
-        mt-4
         gap-6 md:gap-4 xl:gap-8'
         >
 
@@ -76,7 +75,7 @@ const ADCards = () => {
             
         </div>
 
-        <div className="flex gap-1 md:hidden justify-center mt-4">
+        <div className="flex gap-1 md:hidden justify-center mt-5">
             {ArchitectureCards.map((data, index)=>(
                     <div key={index} className={`w-3 h-3 border rounded-full bg-gray-700`}></div>
             ))}

@@ -26,7 +26,7 @@ export const KnowUsSection = () => {
     w-full
     
     flex justify-between items-start xl:items-end gap-6 flex-wrap xl:flex-nowrap 
-    mt-7 md:mt-20'>
+    mt-[28px] md:mt-20'>
 
         <motion.div
         initial={SlideUpAnimationBlur.initial}

@@ -31,7 +31,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
          
 
          className='
-         mb-3 md:mb-4
+         mb-[14px]
          py-0 xl:py-10
          px-4 xl:px-1
          bg-white
