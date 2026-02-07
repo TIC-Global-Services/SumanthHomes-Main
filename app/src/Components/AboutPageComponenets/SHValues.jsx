@@ -128,8 +128,8 @@ const SHValues = () => {
         </div>
 
         <div className="md:hidden flex justify-center w-full">
-          <div className={`w-3 h-3 border rounded-full ${currentCard == 0 ? 'bg-gray-700' : 'bg-gray-400'}` }></div>
-          <div className={`w-3 h-3 border rounded-full ${currentCard == 1 ? 'bg-gray-700' : 'bg-gray-400'}`}></div>
+          <div className={`w-3 h-3 border rounded-full ${currentCard == 0 ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}` }></div>
+          <div className={`w-3 h-3 border rounded-full ${currentCard == 1 ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`}></div>
         </div>
 
     </div>
