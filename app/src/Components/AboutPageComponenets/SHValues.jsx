@@ -1,6 +1,6 @@
 import image1 from "../../assets/img/AboutSection/shvalueImage1.png"
 import image2 from "../../assets/img/AboutSection/shvalueImage2.png"
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap, TextPlugin, ScrollTrigger } from "gsap/all";
 import '../../assets/styles/titleStyle.css'
 import { TextSlideInAnimation } from "../../utils/TextSlideInAnimation";
@@ -9,11 +9,16 @@ import { SlideUpAnimationBlur } from "../../utils/SlideUpAnimationBlur";
 import BlurText from "../../utils/BlurText";
 import ParallaxComponent from "../../utils/ParallaxComponent";
 import { TitleStyleData } from "../../utils/TitleComponentStyle";
+import { useSwipeable } from "react-swipeable";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 const SHValues = () => {
+
+  const [currentCard, setCurrentCard] = useState(0);
+
+  const tl = gsap.timeline()
 
   const titleRef = useRef(null);
   const contentRef = useRef(null);
@@ -21,6 +26,25 @@ const SHValues = () => {
 
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
+
+  const cardRef = useRef(null);
+
+  const swipeLeft = ()=>{
+    setCurrentCard(1);
+    const card = cardRef.current;
+    tl.to(card, {x:`-=${window.innerWidth}`})
+  }
+
+  const swipeRight = ()=>{
+    setCurrentCard(0);
+    const card = cardRef.current;
+    tl.to(card, {x:`+=${window.innerWidth}`})
+  }
+
+  const handler = useSwipeable({
+    onSwipedLeft:()=>{currentCard == 0 && swipeLeft()},
+    onSwipedRight:()=>{currentCard == 1 && swipeRight()},
+  })
 
   return (
     <div ref={containerRef} className='flex justify-between gap-4 flex-wrap md:flex-nowrap
@@ -69,7 +93,8 @@ const SHValues = () => {
 
         </div>
 
-        <div className='w-full md:w-auto xl:w-[58%] flex gap-4  overflow-scroll  ' style={{scrollbarWidth:'none'}}>
+        <div {...handler} className="w-full md:w-auto xl:w-[58%] overflow-hidden">
+        <div ref={cardRef} className='w-full flex gap-10 md:gap-4  ' style={{scrollbarWidth:'none'}}>
         <div
         className='w-full md:w-[55%] xl:block overflow-hidden xl:pb-40 mb-10 flex-shrink-0'>
 
@@ -100,10 +125,11 @@ const SHValues = () => {
 
         </motion.div>
         </div>
+        </div>
 
         <div className="md:hidden flex justify-center w-full">
-          <div className="w-3 h-3 border rounded-full bg-gray-600"></div>
-          <div className="w-3 h-3 border rounded-full bg-gray-600"></div>
+          <div className={`w-3 h-3 border rounded-full ${currentCard == 0 ? 'bg-gray-700' : 'bg-gray-400'}` }></div>
+          <div className={`w-3 h-3 border rounded-full ${currentCard == 1 ? 'bg-gray-700' : 'bg-gray-400'}`}></div>
         </div>
 
     </div>
