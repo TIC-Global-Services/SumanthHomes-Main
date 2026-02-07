@@ -29,33 +29,35 @@ const ADCards = () => {
       ]
 
       const cardRef = useRef(null);
-
+      
       const swipeLeft = ()=>{
         console.log('Swiped Left');
         const card = cardRef.current;
-        const cardWidth = card.outerWidth;
-        gsap.to(card, {x:-cardWidth});
+        const cardWidth = card.getBoundingClientRect().width;
+        gsap.to(card, {x:`-=${cardWidth}`});
       };
 
       const swipeRight = ()=>{
         console.log('Swiped Right');
         const card = cardRef.current;
-        const cardWidth = card.outerWidth;
-        gsap.to(card, {x:cardWidth});
+        const cardWidth = card.getBoundingClientRect().width;
+        gsap.to(card, {x:`+=${cardWidth}`});
       };
 
       const handler = useSwipeable({
-        onSwipedLeft: ()=>swipeLeft,
-        onSwipedRight: ()=>swipeRight,
+        onSwipedLeft: ()=>swipeLeft(),
+        onSwipedRight: ()=>swipeRight(),
 
       });
 
   return (
     <div 
         className='w-full'
-        >
-        <div
         {...handler}
+        >
+
+        <div
+        ref={cardRef}
         style={{
             scrollbarWidth:'none',
         }}
@@ -65,11 +67,12 @@ const ADCards = () => {
         flex
         gap-6 md:gap-4 xl:gap-8'
         >
-
+            
             {
                 ArchitectureCards.map((card, i)=>(
+                    
 
-                    <div ref={cardRef} key={i} className='overflow-hidden
+                    <div  key={i} className='overflow-hidden
                     relative flex-shrink-0 carousel-card
                     w-full md:w-[30%] xl:w-auto
                     '>
