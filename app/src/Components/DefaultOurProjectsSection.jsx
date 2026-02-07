@@ -1,9 +1,12 @@
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import { ScrollTrigger, gsap } from "gsap/all"
 import { motion } from "motion/react"
 import { useNavigate } from "react-router-dom";
 import ParallaxComponent from "../utils/ParallaxComponent";
 import BlurText from "../utils/BlurText";
+import Prj1BgImage from "../assets/img/OurProjectsSection/arialDayView.jpg"
+import Prj2BgImage from "../assets/img/OurProjectsPage/elevation8k.jpg"
+
 
 
 export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
@@ -40,6 +43,39 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
     const windowContentRef = useRef(null);
     const windowContainerRef = useRef(null);
 
+    const [currentPrj, setCurrentPrj] = useState({
+        id:id,
+        bgImage:bgImage,
+        miniHeader:miniHeader,
+        mainHeader:mainHeader,
+        description:description,
+        expPrj:expPrj,
+    })
+    
+    const ProjectData = [
+        {
+            bgImage:Prj2BgImage,
+            miniHeader:'A work in motion',
+            mainHeader:'URBANSCAPES',
+            description:'Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'
+        },
+        {
+            bgImage:Prj1BgImage,
+            miniHeader:'Premium Living Spaces',
+            mainHeader:'LOTUS SERENE VILLAS',
+            description:'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'
+        },
+        
+    ]
+
+    const nextPrj = ()=>{
+        setCurrentPrj(ProjectData[0]);
+    }
+
+    const prevPrj = ()=>{
+        setCurrentPrj(ProjectData[1])
+    }
+
   return (
     <div id="project" className="">
     <div className='mb-4 xl:mb-16 relative'>
@@ -60,7 +96,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
             aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
             md:h-[390px] xl:h-[600px]
             w-full` }>
-                <img src={bgImage} alt="project" 
+                <img src={currentPrj.bgImage} alt="project" 
             className="
             md:scale-150 xl:scale-125
             relative
@@ -78,7 +114,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
             bg-[#B50404]
             w-10 md:w-10 xl:w-10
             h-48 md:h-44 xl:h-52
-            ${expPrj ? 'hidden' : 'block'}
+            ${currentPrj.expPrj ? 'hidden' : 'block'}
            
             `}>
 
@@ -106,7 +142,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                 
                 <div className='ml-auto'>
 
-                <button className='
+                <button onClick={nextPrj} className='
                 hidden md:flex justify-center items-center
                 bg-[#191919] box-border
                 w-7 md:w-10 xl:w-16
@@ -116,7 +152,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                 '><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.0008 0.625C15.0008 0.45924 14.9349 0.300269 14.8177 0.183058C14.7005 0.0658481 14.5415 0 14.3758 0H6.87579C6.71003 0 6.55106 0.0658481 6.43385 0.183058C6.31664 0.300269 6.25079 0.45924 6.25079 0.625C6.25079 0.79076 6.31664 0.949731 6.43385 1.06694C6.55106 1.18415 6.71003 1.25 6.87579 1.25H12.867L0.183289 13.9325C0.125179 13.9906 0.0790843 14.0596 0.0476354 14.1355C0.0161866 14.2114 0 14.2928 0 14.375C0 14.4572 0.0161866 14.5386 0.0476354 14.6145C0.0790843 14.6904 0.125179 14.7594 0.183289 14.8175C0.241399 14.8756 0.310386 14.9217 0.38631 14.9532C0.462234 14.9846 0.54361 15.0008 0.625789 15.0008C0.707969 15.0008 0.789344 14.9846 0.865269 14.9532C0.941193 14.9217 1.01018 14.8756 1.06829 14.8175L13.7508 2.13375V8.125C13.7508 8.29076 13.8166 8.44973 13.9338 8.56694C14.0511 8.68415 14.21 8.75 14.3758 8.75C14.5415 8.75 14.7005 8.68415 14.8177 8.56694C14.9349 8.44973 15.0008 8.29076 15.0008 8.125V0.625Z" fill="white"/></svg>
                 </button>
 
-                <button className='
+                <button onClick={prevPrj} className='
                 hidden md:flex justify-center items-center
                 bg-[#191919] box-border
                 w-7 md:w-10 xl:w-16
@@ -139,7 +175,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
                     ref={windowTitleRef}> 
 
-                    <BlurText text={miniHeader} className="
+                    <BlurText text={currentPrj.miniHeader} className="
                         font-semibold
                         text-[#191919]
                         text-[10px] md:text-xs xl:text-sm 
@@ -148,7 +184,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
 
                     </BlurText>
 
-                    <BlurText text={mainHeader} className="font-manrope font-semibold
+                    <BlurText text={currentPrj.mainHeader} className="font-manrope font-semibold
                         tracking-[-1.5px] md:tracking-[-2px]
                         xl:pb-2
                         text-[28px] md:text-2xl xl:text-4xl 
@@ -175,14 +211,14 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         text-[10px] md:text-xs xl:text-base
                         leading-3
                         tracking-0
-                        '>{description}</p>
+                        '>{currentPrj.description}</p>
 
 
                        <button onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
                        cursor-pointer
                         flex items-center
                         active:text-[#B50404]
-                        gap-2 ${expPrj ? 'hidden' : 'block'}`}>
+                        gap-2 ${currentPrj.expPrj ? 'hidden' : 'block'}`}>
                         
                             <h4 className='font-bold text-[10px] uppercase text-[#000] md:text-xs xl:text-sm tracking-[-2%] hover:scale-105 '
                             >EXPLORE PROJECT</h4>

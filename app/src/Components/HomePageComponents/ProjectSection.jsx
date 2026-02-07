@@ -30,7 +30,7 @@ const ProjectSection = () => {
                 "
                 />
         </div>
-        <DefaultOurProjects id={'villa1'} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
+        <DefaultOurProjects id={'1'} bgImage={bgImage} miniHeader={miniHeader} mainHeader={mainHeader} description={description} />
     </div>
   )
 }
