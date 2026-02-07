@@ -15,10 +15,15 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 const SHValues = () => {
+  const tlRef = useRef(null);
+
+  useEffect(() => {
+  tlRef.current = gsap.timeline({ paused: true });
+}, []);
 
   const [currentCard, setCurrentCard] = useState(0);
 
-  const tl = gsap.timeline()
+  const tl = gsap.timeline({paused:true})
 
   const titleRef = useRef(null);
   const contentRef = useRef(null);
@@ -29,17 +34,29 @@ const SHValues = () => {
 
   const cardRef = useRef(null);
 
-  const swipeLeft = ()=>{
-    setCurrentCard(1);
-    const card = cardRef.current;
-    tl.to(card, {x:`-=${window.innerWidth}`})
-  }
+  const swipeLeft = () => {
+  if (!tlRef.current || tlRef.current.isActive()) return;
 
-  const swipeRight = ()=>{
-    setCurrentCard(0);
-    const card = cardRef.current;
-    tl.to(card, {x:`+=${window.innerWidth}`})
-  }
+  setCurrentCard(1);
+  const card = cardRef.current;
+
+  tlRef.current
+    .clear()
+    .to(card, { x: `-=${window.innerWidth}`, duration: 0.4 })
+    .play();
+};
+
+const swipeRight = () => {
+  if (!tlRef.current || tlRef.current.isActive()) return;
+
+  setCurrentCard(0);
+  const card = cardRef.current;
+
+  tlRef.current
+    .clear()
+    .to(card, { x: `+=${window.innerWidth}`, duration: 0.4 })
+    .play();
+};
 
   const handler = useSwipeable({
     onSwipedLeft:()=>{currentCard == 0 && swipeLeft()},
