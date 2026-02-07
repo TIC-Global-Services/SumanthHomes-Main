@@ -36,8 +36,8 @@ const ADCards = () => {
       const cardRef = useRef(null);
       
       const swipeLeft = ()=>{
-        if(currentData !=maxData){
-            currentData++;
+        if(currentData != maxData){
+            currentData +=1;
             console.log('Swiped Left');
             const card = cardRef.current;
             const cardWidth = card.getBoundingClientRect().width;
@@ -74,8 +74,8 @@ const ADCards = () => {
             scrollbarWidth:'none',
         }}
         className='
-        w-full
-        overflow-scroll md:overflow-auto
+        w-auto md:w-full
+        overflow-hidden md:overflow-auto
         flex
         gap-6 md:gap-4 xl:gap-8'
         >
