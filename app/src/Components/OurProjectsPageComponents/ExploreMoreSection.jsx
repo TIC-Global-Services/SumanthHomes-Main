@@ -92,6 +92,7 @@ export const ExploreMoreSection = () => {
         relative
         w-full md:w-auto
         xl:w-[45%] 
+        mt-[50px] md:mt-0
         '>
             <div className='aspect-[243/300] md:aspect-[308/371] w-[70%] md:w-auto flex ml-auto  overflow-hidden'>
                 <ParallaxComponent className={'w-full'}>
