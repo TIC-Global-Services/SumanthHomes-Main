@@ -3,6 +3,9 @@ import img2 from "../../assets/img/ArchitectureDesign/ArchitectureImage2.png";
 import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
 import ParallaxComponent from "../../utils/ParallaxComponent";
+import { useSwipeable } from "react-swipeable";
+import { useRef } from "react";
+import gsap from "gsap";
 
 const ADCards = () => {
 
@@ -25,19 +28,40 @@ const ADCards = () => {
           },
       ]
 
+      const cardRef = useRef(null);
 
+      const swipeLeft = ()=>{
+        console.log('Swiped Left');
+        const card = cardRef.current;
+        const cardWidth = card.outerWidth;
+        gsap.to(card, {x:-cardWidth});
+      };
+
+      const swipeRight = ()=>{
+        console.log('Swiped Right');
+        const card = cardRef.current;
+        const cardWidth = card.outerWidth;
+        gsap.to(card, {x:cardWidth});
+      };
+
+      const handler = useSwipeable({
+        onSwipedLeft: ()=>swipeLeft,
+        onSwipedRight: ()=>swipeRight,
+
+      });
 
   return (
     <div 
         className='w-full'
         >
         <div
+        {...handler}
         style={{
             scrollbarWidth:'none',
         }}
         className='
         w-full
-        overflow-scroll md:overflow-auto
+        overflow-hidden md:overflow-auto
         flex
         gap-6 md:gap-4 xl:gap-8'
         >
@@ -45,7 +69,7 @@ const ADCards = () => {
             {
                 ArchitectureCards.map((card, i)=>(
 
-                    <div key={i} className='overflow-hidden
+                    <div ref={cardRef} key={i} className='overflow-hidden
                     relative flex-shrink-0 carousel-card
                     w-full md:w-[30%] xl:w-auto
                     '>
