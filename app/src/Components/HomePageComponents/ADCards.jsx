@@ -9,6 +9,8 @@ import gsap from "gsap";
 
 const ADCards = () => {
 
+    const t = gsap.timeline();
+
       const ArchitectureCards = [
           {
               img: img1,
@@ -27,22 +29,32 @@ const ADCards = () => {
               text:'Random'
           },
       ]
+      
+      let currentData = 1;
+      const maxData = ArchitectureCards.length;
 
       const cardRef = useRef(null);
       
       const swipeLeft = ()=>{
-        console.log('Swiped Left');
-        const card = cardRef.current;
-        const cardWidth = card.getBoundingClientRect().width;
-        gsap.to(card, {x:`-=${cardWidth}`});
-      };
+        if(currentData !=maxData){
+            currentData++;
+            console.log('Swiped Left');
+            const card = cardRef.current;
+            const cardWidth = card.getBoundingClientRect().width;
+            t.to(card, {x:`-=${cardWidth}`});
+        };
+    }
 
       const swipeRight = ()=>{
-        console.log('Swiped Right');
-        const card = cardRef.current;
-        const cardWidth = card.getBoundingClientRect().width;
-        gsap.to(card, {x:`+=${cardWidth}`});
-      };
+        if(currentData != 1){
+            currentData--;
+            console.log('Swiped Right');
+            const card = cardRef.current;
+           const cardWidth = card.getBoundingClientRect().width;
+            t.to(card, {x:`+=${cardWidth}`});
+        };
+        }
+        
 
       const handler = useSwipeable({
         onSwipedLeft: ()=>swipeLeft(),
@@ -63,7 +75,7 @@ const ADCards = () => {
         }}
         className='
         w-full
-        overflow-hidden md:overflow-auto
+        overflow-scroll md:overflow-auto
         flex
         gap-6 md:gap-4 xl:gap-8'
         >
