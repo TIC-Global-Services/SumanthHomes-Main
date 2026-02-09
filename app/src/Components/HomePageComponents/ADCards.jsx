@@ -4,12 +4,17 @@ import img3 from "../../assets/img/ArchitectureDesign/ArchitectureImage3.jpg";
 import img4 from "../../assets/img/ArchitectureDesign/ArchitectureImage4.png";
 import ParallaxComponent from "../../utils/ParallaxComponent";
 import { useSwipeable } from "react-swipeable";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const ADCards = () => {
 
-    const t = gsap.timeline();
+    const tl = useRef(null);
+    const [frame, setFrame] = useState(1);
+
+    useEffect(()=>{
+        tl.current = gsap.timeline();
+    }, [])
 
       const ArchitectureCards = [
           {
@@ -30,29 +35,27 @@ const ADCards = () => {
           },
       ]
       
-      let currentData = 1;
-      const maxData = ArchitectureCards.length;
+      const maxFrame = ArchitectureCards.length;
 
       const cardRef = useRef(null);
       
       const swipeLeft = ()=>{
-        if(currentData != maxData){
-            currentData +=1;
-            console.log('Swiped Left');
-            const card = cardRef.current;
-            const cardWidth = card.getBoundingClientRect().width;
-            t.to(card, {x:`-=${cardWidth}`});
+        if(frame != maxFrame){
+            if(tl.current.isActive()) return;
+
+            setFrame(frame+1);
+            tl.current.to(cardRef.current, {x:`-=${window.innerWidth}`});
+        }
         };
-    }
+    
 
       const swipeRight = ()=>{
-        if(currentData != 1){
-            currentData--;
-            console.log('Swiped Right');
-            const card = cardRef.current;
-           const cardWidth = card.getBoundingClientRect().width;
-            t.to(card, {x:`+=${cardWidth}`});
-        };
+        if(frame != 1){
+            if(tl.current.isActive()) return;
+
+            setFrame(frame-1);
+            tl.current.to(cardRef.current, {x:`+=${window.innerWidth}`});
+        }
         }
         
 
@@ -61,10 +64,9 @@ const ADCards = () => {
         onSwipedRight: ()=>swipeRight(),
 
       });
-
-  return (
+  return(
     <div 
-        className='w-full'
+        className='w-full overflow-hidden'
         {...handler}
         >
 
@@ -74,10 +76,10 @@ const ADCards = () => {
             scrollbarWidth:'none',
         }}
         className='
+        md:overflow-scroll
         w-auto md:w-full
-        overflow-hidden md:overflow-auto
         flex
-        gap-6 md:gap-4 xl:gap-8'
+        gap-10 md:gap-4 xl:gap-8'
         >
             
             {
@@ -116,7 +118,7 @@ const ADCards = () => {
 
         <div className="flex gap-1 md:hidden justify-center mt-5">
             {ArchitectureCards.map((data, index)=>(
-                    <div key={index} className={`w-3 h-3 border rounded-full bg-gray-700`}></div>
+                    <div key={index} className={`w-3 h-3 border rounded-full ${(index+1) == frame ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`}></div>
             ))}
         </div>
     </div>
