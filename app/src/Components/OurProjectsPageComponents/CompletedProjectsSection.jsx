@@ -5,13 +5,14 @@ import Image3 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Im
 import Image4 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image4.jpg"
 import Image5 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image5.jpg"
 import Image6 from "../../assets/img/OurProjectsPage/CompletedProjectsSection/Image6.jpg"
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ScrollTrigger, gsap, TextPlugin } from 'gsap/all'
 import { CardButtons } from '../../sub-components/CardButtons'
 import '../../assets/styles/titleStyle.css';
-import {motion} from "motion/react"
+import {motion, useScroll} from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur'
 import BlurText from '../../utils/BlurText'
+import { useSwipeable } from 'react-swipeable'
 
 
 gsap.registerPlugin(TextPlugin);
@@ -20,10 +21,15 @@ gsap.registerPlugin(ScrollTrigger);
 export const CompletedProjectsSection = () => {
 
   const titleRef = useRef(null);
-
-  let elWidth = 0;
-  const tl = gsap.timeline();
+  const tl = useRef(null);
   const cardSectionRef = useRef(null);  
+  const [frame, setFrame] = useState(1);
+  
+  useEffect(()=>{
+    tl.current = gsap.timeline();
+  },[]);
+
+  
 
   const CompletedProjectsCards=[
     {
@@ -58,34 +64,31 @@ export const CompletedProjectsSection = () => {
     },
   ]
   
-  const length = CompletedProjectsCards.length;
+  const maxFrame = CompletedProjectsCards.length;
 
-  let frame = 1;
-  const maxFrame = CompletedProjectsCards.length-1;
+  const swipeLeft = ()=>{
+    if(frame != maxFrame){
+      if(tl.current.isActive()) return;
 
-  const prev = () =>{
-    if(frame>1){
-      frame--;
-    tl.to(cardSectionRef.current, {
-      x:`+=${elWidth}`,
-      ease:'power3',
-    })
-  }
-  }
-  const next = () =>{
-    if(frame<maxFrame){
-      frame++;
-    tl.to(cardSectionRef.current, {
-      x:`-=${elWidth}`,
-      ease:'power3'
-    })
-  }
+      setFrame(frame+1);
+      tl.current.to(cardSectionRef.current, {x:`-=${window.innerWidth}`});
+    }
   }
 
-  useEffect(()=>{
-    const el = cardSectionRef.current;
-    elWidth = el.offsetWidth +20;
-  },[])
+  const swipeRight = ()=>{
+    if(frame != 1){
+      if(tl.current.isActive()) return;
+
+      setFrame(frame-1);
+      tl.current.to(cardSectionRef.current, {x:`+=${window.innerWidth}`});
+    }
+  }
+
+  const handler = useSwipeable({
+    onSwipedLeft:()=>swipeLeft(),
+    onSwipedRight:()=>swipeRight()
+  })
+
 
   return (
     <div className='
@@ -108,7 +111,7 @@ export const CompletedProjectsSection = () => {
 
 
         <div
-
+        {...handler}
         className='overflow-hidden md:overflow-scroll w-full'
 
         style={{
@@ -117,7 +120,7 @@ export const CompletedProjectsSection = () => {
         >
 
           <div ref={cardSectionRef}  className='
-        flex flex-nowrap gap-5 md:grid grid-cols-3 md:gap-4'
+        flex flex-nowrap gap-10 md:grid grid-cols-3 md:gap-4'
 
         >
 
@@ -134,7 +137,7 @@ export const CompletedProjectsSection = () => {
         <div className='md:hidden w-full flex justify-center gap-2'>
           {
             CompletedProjectsCards.map((data, id)=>(
-              <div className='w-3 h-3 border-0 rounded-full bg-slate-600' key={id}></div>
+              <div className={`w-3 h-3 border-0 rounded-full ${(id+1) == frame ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`} key={id}></div>
             ))
           }
         </div>
