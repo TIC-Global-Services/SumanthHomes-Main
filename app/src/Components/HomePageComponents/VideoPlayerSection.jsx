@@ -42,6 +42,7 @@ const VideoPlayerSection = () => {
 
 
     const prev = () => {
+        if(index > 0 ){
          const card = cardRef.current;
 
          gsapTimeline.to(card,{
@@ -57,6 +58,7 @@ const VideoPlayerSection = () => {
             duration:0.6
          }
          )
+        } 
        };
 
     
@@ -64,6 +66,7 @@ const VideoPlayerSection = () => {
   return (
     <div className='mt-7 md:mt-20'>
 
+        {/* Video Player */}
         <div className='
         mb-[60px] md:mb-[120px]
         relative
@@ -96,6 +99,7 @@ const VideoPlayerSection = () => {
 
         </div>
 
+        {/* Testimonial Cards */}
         <div className='
         w-full xl:w-[75%]
         mx-auto
