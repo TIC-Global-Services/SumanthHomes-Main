@@ -69,7 +69,7 @@ const VideoPlayerSection = () => {
         relative
         '>
 
-            <iframe src={`https://www.youtube.com/embed/AXNHQ5Pgeig${showReel && '?autoplay=1'}`} allow='autoplay' className='
+            <iframe src={`https://www.youtube.com/embed/AXNHQ5Pgeig${showReel ? '?autoplay=1' : ''}`}  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className='
             aspect-[335/480] md:aspect-[16/7]
             w-full
             
