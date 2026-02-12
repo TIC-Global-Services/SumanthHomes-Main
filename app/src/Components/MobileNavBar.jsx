@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect} from "react";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { gsap } from "gsap"
 import { Logo } from "../sub-components/logo";
 import { motion } from "motion/react";
@@ -8,6 +8,8 @@ export const MobileNavBar = () => {
 
     const tl = gsap.timeline();
     const [clicked, setClicked] = useState(false);
+
+    const currentUrl = useLocation().pathname;
 
     const linkAnimation = {
       initial : {opacity:0, x:-100},
@@ -167,7 +169,7 @@ export const MobileNavBar = () => {
                 transition={linkAnimation.transition}
                 viewport={linkAnimation.viewport}
 
-                className="pl-10"><Link to='/'>HOME</Link></motion.li>
+                className="pl-10">{currentUrl ? <a href="/">HOME</a> : <Link to='/'>HOME</Link>}</motion.li>
 
                 <motion.li
                 initial={linkAnimation.initial}
@@ -175,7 +177,7 @@ export const MobileNavBar = () => {
                 transition={linkAnimation.transition}
                 viewport={linkAnimation.viewport}
 
-                className="pl-10" ><Link to='/about'>ABOUT</Link></motion.li>
+                className="pl-10" >{currentUrl === '/about' ? <a href="/about">ABOUT</a> : <Link to='/about'>ABOUT</Link>}</motion.li>
 
                 <motion.li
                 initial={linkAnimation.initial}
@@ -183,7 +185,7 @@ export const MobileNavBar = () => {
                 transition={linkAnimation.transition}
                 viewport={linkAnimation.viewport}
                 
-                className="pl-10" ><Link to='/projects'>PROJECTS</Link></motion.li>
+                className="pl-10" >{currentUrl === '/projects' ? <a href="/projects">PROJECTS</a> : <Link to='/projects'>PROJECTS</Link>}</motion.li>
 
                 <motion.li 
                 
@@ -192,7 +194,7 @@ export const MobileNavBar = () => {
                 transition={linkAnimation.transition}
                 viewport={linkAnimation.viewport}
                 
-                className="pl-10" ><Link to='/contact'>CONTACT</Link> </motion.li>         
+                className="pl-10" > {currentUrl === '/contact' ? <a href="/contact">CONTACT</a> : <Link to='/contact'>CONTACT</Link> }</motion.li>         
 
             </ul>
       </div>
