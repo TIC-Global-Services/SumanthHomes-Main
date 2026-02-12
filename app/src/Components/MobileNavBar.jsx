@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect} from "react";
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { gsap } from "gsap"
 import { Logo } from "../sub-components/logo";
 import { motion } from "motion/react";
@@ -10,6 +10,7 @@ export const MobileNavBar = () => {
     const [clicked, setClicked] = useState(false);
 
     const currentUrl = useLocation().pathname;
+    const navigate = useNavigate();
 
     const linkAnimation = {
       initial : {opacity:0, x:-100},
@@ -102,7 +103,7 @@ export const MobileNavBar = () => {
         z-50">
         
         
-        <div className="
+        <div onClick={()=>navigate('/')} className="
             absolute
             top-5
             left-6
