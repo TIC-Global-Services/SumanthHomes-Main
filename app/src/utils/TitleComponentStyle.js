@@ -6,6 +6,6 @@ export const TitleStyleData = {
             text-xs md:text-lg
             font-normal
             text-[#737373]
-            leading-3 md:leading-[26px]
+            leading-[14px] md:leading-[26px]
             tracking-0`
 }
