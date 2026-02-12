@@ -70,7 +70,8 @@ export const FormTwin = () => {
               bg-transparent
                 md:border-b-2
                 border-black rounded-md 
-                placeholder:pl-8
+                pl-8
+                placeholder:pl-
                 placeholder:font-normal
                 placeholder:text-[10px]
                 placeholder:text-[#737373]
@@ -112,7 +113,8 @@ export const FormTwin = () => {
                 bg-transparent
                 border-0 rounded-md md:border-b-2
                 md:border-black
-                placeholder:pl-8
+                pl-8
+                
                 aspect-[295/30]
                 placeholder:font-normal
                 placeholder:text-[10px]
@@ -160,7 +162,8 @@ export const FormTwin = () => {
                 bg-transparent
                 border-0 rounded-md md:border-b-2
                 border-black
-                placeholder:pl-8
+                pl-8
+                
                 aspect-[295/30]
                 placeholder:font-normal
                 placeholder:text-[10px]
@@ -205,7 +208,8 @@ export const FormTwin = () => {
                 border-0 md:border-b-2
                 rounded-md
                 border-black
-                placeholder:pl-8
+                pl-8
+                
                 placeholder:mx-auto
                 aspect-[295/30]
                 placeholder:font-normal
@@ -252,7 +256,8 @@ export const FormTwin = () => {
                 border-0 md:border-b-2
                 rounded-md
                 border-black
-                placeholder:pl-8
+                pl-8
+                
                 placeholder:pt-3
                 aspect-[295/93]
                 placeholder:font-normal
