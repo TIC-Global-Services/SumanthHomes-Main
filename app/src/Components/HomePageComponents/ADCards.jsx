@@ -41,20 +41,20 @@ const ADCards = () => {
       
       const swipeLeft = ()=>{
         if(frame != maxFrame){
-            // if(tl.current.isActive()) return;
+            if(tl.current.isActive()) return;
 
             setFrame(frame+1);
-            // tl.current.to(cardRef.current, {x:`-=${window.innerWidth}`});
+            tl.current.to(cardRef.current, {x:`-=${window.innerWidth}`});
         }
         };
     
 
       const swipeRight = ()=>{
         if(frame != 1){
-            // if(tl.current.isActive()) return;
+            if(tl.current.isActive()) return;
 
             setFrame(frame-1);
-            // tl.current.to(cardRef.current, {x:`+=${window.innerWidth}`});
+            tl.current.to(cardRef.current, {x:`+=${window.innerWidth}`});
         }
         }
         
@@ -62,8 +62,8 @@ const ADCards = () => {
       const handler = useSwipeable({
         onSwipedLeft: ()=>swipeLeft(),
         onSwipedRight: ()=>swipeRight(),
-    })
 
+      });
   return(
     <div 
         className='w-full overflow-hidden'
@@ -76,9 +76,7 @@ const ADCards = () => {
             scrollbarWidth:'none',
         }}
         className='
-        snap-x snap-mandatory md:snap-none
-        scroll-smooth
-        overflow-scroll
+        md:overflow-scroll
         w-auto md:w-full
         flex
         gap-10 md:gap-4 xl:gap-8'
@@ -91,7 +89,6 @@ const ADCards = () => {
                     <div  key={i} className='overflow-hidden
                     relative flex-shrink-0 carousel-card
                     w-full md:w-[30%] xl:w-auto
-                    snap-center 
                     '>
 
                         <ParallaxComponent>
