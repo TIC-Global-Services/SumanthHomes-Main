@@ -1,5 +1,7 @@
 import Prj1BgImage from "../../assets/img/OurProjectsSection/arialDayView.jpg"
 import Prj2BgImage from "../../assets/img/OurProjectsPage/elevation8k.jpg"
+import Logo1 from "../../assets/img/OurProjectsSection/lotus_serene_villas.png"
+import Logo2 from "../../assets/img/OurProjectsSection/urbanscapes_brown_logo.png"
 import { DefaultOurProjects } from "../DefaultOurProjectsSection"
 import { useRef, useEffect } from "react"
 import { gsap ,ScrollTrigger, TextPlugin } from "gsap/all"
@@ -71,9 +73,9 @@ export const OurProjectsSection = () => {
         </motion.div>
 
         <div className="w-full mb-[30px]">
-            <DefaultOurProjects id={'villa1'} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} />
+            <DefaultOurProjects id={'villa1'} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} logoImage={Logo1} link="/projects/villa1" />
         </div>
-        <DefaultOurProjects id={'villa2'} bgImage={Prj2BgImage} miniHeader={'A work in motion'} mainHeader={'URBANSCAPES'} description={' Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'} /> 
+        <DefaultOurProjects id={'villa2'} bgImage={Prj2BgImage} miniHeader={'A work in motion'} mainHeader={'URBANSCAPES'} description={' Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'} logoImage={Logo2} link="/urbanscapes" /> 
     </div>
   )
 }

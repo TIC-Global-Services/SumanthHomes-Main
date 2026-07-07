@@ -8,6 +8,7 @@ const ContactPage = lazy(()=>import('./PageComponents/ContactPage'));
 const ExplorePage = lazy(()=>import('./PageComponents/ExplorePage'));
 const NotFound404 = lazy(()=>import('./PageComponents/NotFound404'));
 import { SkeletonLayout } from "./Layout/SkeletonLayout";
+import Urbanscaps from "./PageComponents/urbanscaps";
    const router = createBrowserRouter([
     {
       path: '/',
@@ -46,6 +47,13 @@ import { SkeletonLayout } from "./Layout/SkeletonLayout";
             <ExplorePage/>
           </Suspense>),
         },
+        {
+          path:"/urbanscapes",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <Urbanscaps/>
+          </Suspense>),
+        }
       ]
     }
    ])

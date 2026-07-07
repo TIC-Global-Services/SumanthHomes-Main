@@ -7,6 +7,9 @@ import Upgrade from '../Components/Project/upgrade'
 import ExploreDetails from '../Components/Project/exploreDetails'
 import Amenities from '../Components/Project/amenities'
 import Video from '../Components/Project/video'
+import { OurProjectsSection } from "../Components/OurProjectsPageComponents/OurProjectsSection"
+import { CompletedProjectsSection } from "../Components/OurProjectsPageComponents/CompletedProjectsSection"
+import { ExploreMoreSection } from "../Components/OurProjectsPageComponents/ExploreMoreSection"
 import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
 import { NavBar } from '../Components/NavBar'
 import { Footer } from '../Components/Footer'
@@ -24,14 +27,21 @@ const ProjectsPage = () => {
         <ScrollToTop />
         {/* <DefaultHeroSection bgImage={bgImage} mainText={"Our Projects"} subText={"Great Architecture Services"} /> */}
         {/* <ContainerLayout> */}
-        <Hero />
+        {/* <Hero />
         <Crafting />
         <Upgrade />
         <ExploreDetails />
         <Amenities />
         <Video />
         <OngoingDevelopment />
-        <Urbanscapes />
+        <Urbanscapes /> */}
+        <DefaultHeroSection bgImage={bgImage} mainText={"Our Projects"} subText={"Great Architecture Services"} />
+        <ContainerLayout>
+          <ArchitectureProcessSection />
+          <OurProjectsSection />
+          <CompletedProjectsSection />
+          <ExploreMoreSection />
+        </ContainerLayout>
         {/* </ContainerLayout>   */}
 
       </ParallaxProvider>

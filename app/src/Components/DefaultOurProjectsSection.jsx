@@ -9,22 +9,22 @@ import Prj2BgImage from "../assets/img/OurProjectsPage/elevation8k.jpg"
 
 
 
-export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, description, expPrj=false }) => {
+export const DefaultOurProjects = ({ id, bgImage, miniHeader, mainHeader, description, expPrj = false, logoImage, link }) => {
 
     useEffect(() => {
-    // Check if there's a hash in the URL
-    const hash = window.location.hash;
+        // Check if there's a hash in the URL
+        const hash = window.location.hash;
 
-    if (hash) {
-      // Small timeout to ensure DOM is ready
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+        if (hash) {
+            // Small timeout to ensure DOM is ready
+            setTimeout(() => {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 1000);
         }
-      }, 1000);
-    }
-  }, []);
+    }, []);
 
     const Navigate = useNavigate();
 
@@ -33,10 +33,10 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
     const containerRef = useRef(null);
 
     const slideUpAnimation = {
-        initial: {opacity:0, y:100},
-        whileInView: {opacity:1, y:0},
-        transition:{duration:0.3},
-        viewport:{once:true} 
+        initial: { opacity: 0, y: 100 },
+        whileInView: { opacity: 1, y: 0 },
+        transition: { duration: 0.3 },
+        viewport: { once: true }
     }
 
     const windowTitleRef = useRef(null);
@@ -44,45 +44,46 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
     const windowContainerRef = useRef(null);
 
     const [currentPrj, setCurrentPrj] = useState({
-        id:id,
-        bgImage:bgImage,
-        miniHeader:miniHeader,
-        mainHeader:mainHeader,
-        description:description,
-        expPrj:expPrj,
+        id: id,
+        bgImage: bgImage,
+        miniHeader: miniHeader,
+        mainHeader: mainHeader,
+        description: description,
+        expPrj: expPrj,
+        logoImage: logoImage,
+        link: link,
     })
-    
-    const ProjectData = [
-        {
-            bgImage:Prj2BgImage,
-            miniHeader:'A work in motion',
-            mainHeader:'URBANSCAPES',
-            description:'Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'
-        },
-        {
-            bgImage:Prj1BgImage,
-            miniHeader:'Premium Living Spaces',
-            mainHeader:'LOTUS SERENE VILLAS',
-            description:'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'
-        },
-        
-    ]
 
-    const nextPrj = ()=>{
+    useEffect(() => {
+        setCurrentPrj({
+            id: id,
+            bgImage: bgImage,
+            miniHeader: miniHeader,
+            mainHeader: mainHeader,
+            description: description,
+            expPrj: expPrj,
+            logoImage: logoImage,
+            link: link,
+        });
+    }, [id, bgImage, miniHeader, mainHeader, description, expPrj, logoImage, link]);
+
+
+
+    const nextPrj = () => {
         setCurrentPrj(ProjectData[0]);
     }
 
-    const prevPrj = ()=>{
+    const prevPrj = () => {
         setCurrentPrj(ProjectData[1])
     }
 
-  return (
-    <div id="project" className="">
-    <div className='mb-4 xl:mb-16 relative'>
+    return (
+        <div id="project" className="">
+            <div className='mb-4 xl:mb-16 relative'>
 
-        
 
-        <div className='
+
+                <div className='
         overflow-hidden
         md:flex 
         relative
@@ -92,23 +93,23 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
         
        
         '>
-            <ParallaxComponent className={`relative
+                    <ParallaxComponent className={`relative
             aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
             md:h-[390px] xl:h-[600px]
             w-full` }>
-                <img src={currentPrj.bgImage} alt="project" 
-            className="
+                        <img src={currentPrj.bgImage} alt="project"
+                            className="
             md:scale-150 xl:scale-125
             relative
             aspect-[3/4] md:aspect-[9/16] xl:aspect-[3/4]
             md:h-[390px] xl:h-[600px]
             w-full 
             "/>
-            </ParallaxComponent>
-            
-            
-            
-            <div className={`
+                    </ParallaxComponent>
+
+
+
+                    <div className={`
             absolute
             flex justify-center items-center
             bg-[#B50404]
@@ -118,7 +119,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
            
             `}>
 
-                <h4 className='
+                        <h4 className='
                 flex-shrink-0
                 text-white
                 font-manrope font-bold
@@ -128,41 +129,41 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                  
                '>RECENT PROJECTS</h4>
 
-            </div>
+                    </div>
 
-            
 
-            <div className='
+
+                    <div className='
             hidden md:absolute bottom-0 right-0
             md:flex gap-0 items-end
             w-full md:w-[50%] xl:w-full
             md:left-[20rem] xl:left-[52rem] 
             md:ml-auto
             '>
-                
-                <div className='ml-auto'>
 
-                <button onClick={nextPrj} className='
+                        <div className='ml-auto'>
+
+                            <button onClick={nextPrj} className='
                 hidden md:flex justify-center items-center
                 bg-[#191919] box-border
                 w-7 md:w-10 xl:w-16
                 h-7 md:h-10 xl:h-16
                 mb-[2px]
                 
-                '><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.0008 0.625C15.0008 0.45924 14.9349 0.300269 14.8177 0.183058C14.7005 0.0658481 14.5415 0 14.3758 0H6.87579C6.71003 0 6.55106 0.0658481 6.43385 0.183058C6.31664 0.300269 6.25079 0.45924 6.25079 0.625C6.25079 0.79076 6.31664 0.949731 6.43385 1.06694C6.55106 1.18415 6.71003 1.25 6.87579 1.25H12.867L0.183289 13.9325C0.125179 13.9906 0.0790843 14.0596 0.0476354 14.1355C0.0161866 14.2114 0 14.2928 0 14.375C0 14.4572 0.0161866 14.5386 0.0476354 14.6145C0.0790843 14.6904 0.125179 14.7594 0.183289 14.8175C0.241399 14.8756 0.310386 14.9217 0.38631 14.9532C0.462234 14.9846 0.54361 15.0008 0.625789 15.0008C0.707969 15.0008 0.789344 14.9846 0.865269 14.9532C0.941193 14.9217 1.01018 14.8756 1.06829 14.8175L13.7508 2.13375V8.125C13.7508 8.29076 13.8166 8.44973 13.9338 8.56694C14.0511 8.68415 14.21 8.75 14.3758 8.75C14.5415 8.75 14.7005 8.68415 14.8177 8.56694C14.9349 8.44973 15.0008 8.29076 15.0008 8.125V0.625Z" fill="white"/></svg>
-                </button>
+                '><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.0008 0.625C15.0008 0.45924 14.9349 0.300269 14.8177 0.183058C14.7005 0.0658481 14.5415 0 14.3758 0H6.87579C6.71003 0 6.55106 0.0658481 6.43385 0.183058C6.31664 0.300269 6.25079 0.45924 6.25079 0.625C6.25079 0.79076 6.31664 0.949731 6.43385 1.06694C6.55106 1.18415 6.71003 1.25 6.87579 1.25H12.867L0.183289 13.9325C0.125179 13.9906 0.0790843 14.0596 0.0476354 14.1355C0.0161866 14.2114 0 14.2928 0 14.375C0 14.4572 0.0161866 14.5386 0.0476354 14.6145C0.0790843 14.6904 0.125179 14.7594 0.183289 14.8175C0.241399 14.8756 0.310386 14.9217 0.38631 14.9532C0.462234 14.9846 0.54361 15.0008 0.625789 15.0008C0.707969 15.0008 0.789344 14.9846 0.865269 14.9532C0.941193 14.9217 1.01018 14.8756 1.06829 14.8175L13.7508 2.13375V8.125C13.7508 8.29076 13.8166 8.44973 13.9338 8.56694C14.0511 8.68415 14.21 8.75 14.3758 8.75C14.5415 8.75 14.7005 8.68415 14.8177 8.56694C14.9349 8.44973 15.0008 8.29076 15.0008 8.125V0.625Z" fill="white" /></svg>
+                            </button>
 
-                <button onClick={prevPrj} className='
+                            <button onClick={prevPrj} className='
                 hidden md:flex justify-center items-center
                 bg-[#191919] box-border
                 w-7 md:w-10 xl:w-16
                 h-7 md:h-10 xl:h-16  
 
-                '><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 16.8748C2.5 17.0406 2.56585 17.1995 2.68306 17.3168C2.80027 17.434 2.95924 17.4998 3.125 17.4998H10.625C10.7908 17.4998 10.9497 17.434 11.0669 17.3168C11.1842 17.1995 11.25 17.0406 11.25 16.8748C11.25 16.7091 11.1842 16.5501 11.0669 16.4329C10.9497 16.3157 10.7908 16.2498 10.625 16.2498H4.63375L17.3175 3.56731C17.4349 3.44995 17.5008 3.29078 17.5008 3.12481C17.5008 2.95884 17.4349 2.79967 17.3175 2.68231C17.2001 2.56495 17.041 2.49902 16.875 2.49902C16.709 2.49902 16.5499 2.56495 16.4325 2.68231L3.75 15.3661V9.37481C3.75 9.20905 3.68415 9.05008 3.56694 8.93287C3.44973 8.81566 3.29076 8.74981 3.125 8.74981C2.95924 8.74981 2.80027 8.81566 2.68306 8.93287C2.56585 9.05008 2.5 9.20905 2.5 9.37481V16.8748Z" fill="white"/></svg></button>
+                '><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 16.8748C2.5 17.0406 2.56585 17.1995 2.68306 17.3168C2.80027 17.434 2.95924 17.4998 3.125 17.4998H10.625C10.7908 17.4998 10.9497 17.434 11.0669 17.3168C11.1842 17.1995 11.25 17.0406 11.25 16.8748C11.25 16.7091 11.1842 16.5501 11.0669 16.4329C10.9497 16.3157 10.7908 16.2498 10.625 16.2498H4.63375L17.3175 3.56731C17.4349 3.44995 17.5008 3.29078 17.5008 3.12481C17.5008 2.95884 17.4349 2.79967 17.3175 2.68231C17.2001 2.56495 17.041 2.49902 16.875 2.49902C16.709 2.49902 16.5499 2.56495 16.4325 2.68231L3.75 15.3661V9.37481C3.75 9.20905 3.68415 9.05008 3.56694 8.93287C3.44973 8.81566 3.29076 8.74981 3.125 8.74981C2.95924 8.74981 2.80027 8.81566 2.68306 8.93287C2.56585 9.05008 2.5 9.20905 2.5 9.37481V16.8748Z" fill="white" /></svg></button>
 
-                </div>
- 
-                <div ref={windowContainerRef} className="
+                        </div>
+
+                        <div ref={windowContainerRef} className="
                 bg-white
                 pl-4
                 pr-2
@@ -171,38 +172,44 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                 xl:w-[50%]
                 ">
 
-                    <div
+                            <div
+                                ref={windowTitleRef}>
 
-                    ref={windowTitleRef}> 
+                                {currentPrj.logoImage ? (
+                                    <div className="flex justify-center w-full mb-2 xl:mb-4">
+                                        <img src={currentPrj.logoImage} alt={currentPrj.mainHeader} className="h-20 md:h-24 xl:h-28 object-contain" />
+                                    </div>
+                                ) : (
+                                    <>
+                                        <BlurText text={currentPrj.miniHeader} className="
+                                font-semibold
+                                text-[#191919]
+                                text-[10px] md:text-xs xl:text-sm 
+                                tracking-[-0.5px]
+                                py-2">
+                                        </BlurText>
 
-                    <BlurText text={currentPrj.miniHeader} className="
-                        font-semibold
-                        text-[#191919]
-                        text-[10px] md:text-xs xl:text-sm 
-                        tracking-[-0.5px]
-                        py-2">
+                                        <BlurText text={currentPrj.mainHeader} className="font-manrope font-semibold
+                                tracking-[-1.5px] md:tracking-[-2px]
+                                xl:pb-2
+                                text-[28px] md:text-2xl xl:text-4xl 
+                                text-[#191919]
+                                ">
+                                        </BlurText>
+                                    </>
+                                )}
 
-                    </BlurText>
+                            </div>
 
-                    <BlurText text={currentPrj.mainHeader} className="font-manrope font-semibold
-                        tracking-[-1.5px] md:tracking-[-2px]
-                        xl:pb-2
-                        text-[28px] md:text-2xl xl:text-4xl 
-                        text-[#191919]
-                        ">
-                    </BlurText>
+                            <motion.div
+                                initial={slideUpAnimation.initial}
+                                whileInView={slideUpAnimation.whileInView}
+                                transition={slideUpAnimation.transition}
+                                viewport={slideUpAnimation.viewport}
 
-                    </div>
+                                ref={windowContentRef}>
 
-                    <motion.div
-                    initial={slideUpAnimation.initial}
-                    whileInView={slideUpAnimation.whileInView}
-                    transition={slideUpAnimation.transition}
-                    viewport={slideUpAnimation.viewport}
-                    
-                    ref={windowContentRef}>
-
-                        <p className='
+                                <p className='
                         mb-2
                       text-[#737373] 
                         font-normal
@@ -214,34 +221,27 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                         '>{currentPrj.description}</p>
 
 
-                       <button onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
+                                <button onClick={() => Navigate(currentPrj.link)} className={`
                        cursor-pointer
                         flex items-center
                         active:text-[#B50404]
                         gap-2 ${currentPrj.expPrj ? 'hidden' : 'block'}`}>
-                        
-                            <h4 className='font-bold text-[10px] uppercase text-[#000] md:text-xs xl:text-sm tracking-[-2%] hover:scale-105 '
-                            >EXPLORE PROJECT</h4>
 
-                            <div className="hover:scale-105">
+                                    <h4 className='font-bold text-[10px] uppercase text-[#000] md:text-xs xl:text-sm tracking-[-2%] hover:scale-105 '
+                                    >KNOW MORE &#8594;</h4>
 
-                                <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7386 5.74553C12.0732 5.41098 12.0732 4.86768 11.7386 4.53313L7.45641 0.250911C7.12187 -0.0836371 6.57856 -0.0836371 6.24401 0.250911C5.90946 0.58546 5.90946 1.12877 6.24401 1.46331L9.0676 4.28423H0.856444C0.382723 4.28423 0 4.66695 0 5.14067C0 5.61439 0.382723 5.99711 0.856444 5.99711H9.06492L6.24669 8.81802C5.91214 9.15257 5.91214 9.69588 6.24669 10.0304C6.58123 10.365 7.12454 10.365 7.45909 10.0304L11.7413 5.74821L11.7386 5.74553Z" fill="#191919"/></svg>
+                                </button>
 
-                            </div>
-                        
+                            </motion.div>
+                        </div>
 
-                        </button>
+                    </div>
 
-                    </motion.div>
                 </div>
 
-            </div>
+                {/* Mobile Screens */}
 
-        </div>
-
-        {/* Mobile Screens */}
-
-        <div className='
+                <div className='
             md:hidden
             bg-white 
             md:bottom-0
@@ -251,44 +251,52 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
             md:left-[20rem] xl:left-[52rem] 
             '>
 
-                <motion.div
-                initial={slideUpAnimation.initial}
-            whileInView={slideUpAnimation.whileInView}
-            transition={slideUpAnimation.transition}
-            viewport={slideUpAnimation.viewport}
-                
-                ref={titleRef}> 
+                    <motion.div
+                        initial={slideUpAnimation.initial}
+                        whileInView={slideUpAnimation.whileInView}
+                        transition={slideUpAnimation.transition}
+                        viewport={slideUpAnimation.viewport}
 
-                    <h4 className='
-                    font-semibold
-                    pt-6
-                    text-[10px] md:text-xs xl:text-sm 
-                    leading-[100%]
-                    tracking-[-0.5px]
-                    text-[#191919]
-                    '>
-                        Premium Living Spaces</h4>
+                        ref={titleRef}>
 
-                    <h2 className='
-                    font-manrope font-semibold
-                    pt-2
-                    text-[28px] md:text-2xl xl:text-4xl 
-                    leading-[30px]
-                    tracking-[-1.5px]
-                    text-[#191919]
-                    '>{mainHeader}</h2>
+                        {currentPrj.logoImage ? (
+                            <div className="flex justify-start w-full pt-6 mb-2">
+                                <img src={currentPrj.logoImage} alt={currentPrj.mainHeader} className="h-16 md:h-20 object-contain" />
+                            </div>
+                        ) : (
+                            <>
+                                <h4 className='
+                            font-semibold
+                            pt-6
+                            text-[10px] md:text-xs xl:text-sm 
+                            leading-[100%]
+                            tracking-[-0.5px]
+                            text-[#191919]
+                            '>
+                                    {currentPrj.miniHeader}</h4>
 
-                </motion.div>
+                                <h2 className='
+                            font-manrope font-semibold
+                            pt-2
+                            text-[28px] md:text-2xl xl:text-4xl 
+                            leading-[30px]
+                            tracking-[-1.5px]
+                            text-[#191919]
+                            '>{currentPrj.mainHeader}</h2>
+                            </>
+                        )}
 
-                <motion.div
-                initial={slideUpAnimation.initial}
-            whileInView={slideUpAnimation.whileInView}
-            transition={slideUpAnimation.transition}
-            viewport={slideUpAnimation.viewport}
-                
-                ref={contentRef}>
+                    </motion.div>
 
-                    <p className='
+                    <motion.div
+                        initial={slideUpAnimation.initial}
+                        whileInView={slideUpAnimation.whileInView}
+                        transition={slideUpAnimation.transition}
+                        viewport={slideUpAnimation.viewport}
+
+                        ref={contentRef}>
+
+                        <p className='
                     text-[#737373] 
                     font-normal
                     pt-[6px]
@@ -299,7 +307,7 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                     '>{description}</p>
 
 
-                    <div onClick={()=>Navigate(`/projects/${id}/#project`)} className={`
+                        <div onClick={() => Navigate(currentPrj.link)} className={`
                     cursor-pointer
                     active:text-[#b50404]
                     ${expPrj ? 'hidden' : 'block'}
@@ -308,31 +316,24 @@ export const DefaultOurProjects = ({id, bgImage, miniHeader , mainHeader, descri
                     pt-[31px]
                     pb-5
                     `}>
-                        
-                        <h4 className='
+
+                            <h4 className='
                         font-bold
                         text-[10px] md:text-xs xl:text-sm 
                         leading-3
                         tracking-[-2%]
                         uppercase
                         text-[#000]
-                        '>EXPLORE PROJECT</h4>
+                        '>KNOW MORE &#8594;</h4>
 
-                        <button>
+                        </div>
 
-                            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7386 5.74553C12.0732 5.41098 12.0732 4.86768 11.7386 4.53313L7.45641 0.250911C7.12187 -0.0836371 6.57856 -0.0836371 6.24401 0.250911C5.90946 0.58546 5.90946 1.12877 6.24401 1.46331L9.0676 4.28423H0.856444C0.382723 4.28423 0 4.66695 0 5.14067C0 5.61439 0.382723 5.99711 0.856444 5.99711H9.06492L6.24669 8.81802C5.91214 9.15257 5.91214 9.69588 6.24669 10.0304C6.58123 10.365 7.12454 10.365 7.45909 10.0304L11.7413 5.74821L11.7386 5.74553Z" fill="#191919"/></svg>
+                    </motion.div>
 
-                        </button>
-                        
-
-                    </div>
-
-                </motion.div>
+                </div>
 
             </div>
 
-    </div>
-    
-    </div>
-  )
+        </div>
+    )
 }
