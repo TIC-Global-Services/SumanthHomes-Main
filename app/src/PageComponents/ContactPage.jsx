@@ -16,13 +16,11 @@ const ContactPage = () => {
     <div className="overflow-hidden">
       <ParallaxProvider>
         <ScrollToTop/>
-        <NavBar/>
         <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} />
         <ContainerLayout>
             <KnowUsSection />
             <MapSection />
         </ContainerLayout>
-        <Footer/>
         </ParallaxProvider>
     </div>
   )

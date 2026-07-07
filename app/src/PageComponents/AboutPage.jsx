@@ -29,7 +29,6 @@ const AboutPage = () => {
     <div className='overflow-x-hidden'>
         <ParallaxProvider>
         <ScrollToTop/>
-        <NavBar/>
         <DefaultHeroSection bgImage={heroImage} mainText={"About SHs"} subText={"LET'S SEE WHO WE ARE"}/>
         <ContainerLayout>
             <AboutSumanthHomesSection/>
@@ -50,7 +49,6 @@ const AboutPage = () => {
             {showLate && <ConsultationSection />}
           </Suspense>
         </div>
-        <Footer/>
         </ParallaxProvider>
     </div>
   )

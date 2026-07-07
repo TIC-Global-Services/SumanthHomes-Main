@@ -1,62 +1,62 @@
-import {  useRef } from "react"
+import { useRef } from "react"
 
 export const Footer = () => {
 
     const textMaskRef = useRef(null);
 
 
-        
 
-        const handleMouseEnter = (e) =>{
 
-            const el = textMaskRef.current;
-            const rect = el.getBoundingClientRect();
-            
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            el.style.setProperty('--x', `${x}px`);
-            el.style.setProperty('--y', `${y}px`);
-            el.style.setProperty('--opacity', 1);
-        }
-    
-    const handleMouseLeave = () =>{
+    const handleMouseEnter = (e) => {
+
+        const el = textMaskRef.current;
+        const rect = el.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        el.style.setProperty('--x', `${x}px`);
+        el.style.setProperty('--y', `${y}px`);
+        el.style.setProperty('--opacity', 1);
+    }
+
+    const handleMouseLeave = () => {
 
         const el = textMaskRef.current;
 
         el.style.setProperty('--opacity', 0);
     }
 
-    
-  return (
-<div>
-    <div className='
+
+    return (
+        <div>
+            <div className='
     flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1]
     px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px] '>
 
-        <div className='
+                <div className='
         flex flex-col 
         pt-4 md:pt-10 
         pb-7 md:pb-7
         '>
 
-            <div className='
+                    <div className='
             w-full 
             flex 
             relative 
             text-center
             pb-8 
              '>
-                <h2
-                ref={textMaskRef}
-                onMouseMove={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                style={{
-                    WebkitMaskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, .9) 1%, transparent 10%)',
-                    maskImage:'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.9) 1%, transparent 10%)',
-                    opacity:'var(--opacity, 0)'
-                }}
-                className='
+                        <h2
+                            ref={textMaskRef}
+                            onMouseMove={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            style={{
+                                WebkitMaskImage: 'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, .9) 1%, transparent 10%)',
+                                maskImage: 'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.9) 1%, transparent 10%)',
+                                opacity: 'var(--opacity, 0)'
+                            }}
+                            className='
                     absolute
                     hover:cursor-default
                     top-0 left-0 w-full
@@ -67,33 +67,33 @@ export const Footer = () => {
                     font-extrabold text-transparent 
                     text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-[9rem]
                     mt-4 md:mt-auto
-                    '> SUMANTH HOMES 
-                </h2>
+                    '> SUMANTH HOMES
+                        </h2>
 
-                <h2 className='
+                        <h2 className='
                     w-full
                     text-center
                     font-extrabold text-[#A7A7A7] 
                     text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-[9rem]
                     hover:cursor-default
                     mt-4 md:mt-0
-                    '> SUMANTH HOMES 
-                </h2>
-                
+                    '> SUMANTH HOMES
+                        </h2>
 
-            </div>
 
-            <div className='
+                    </div>
+
+                    <div className='
             w-full
             md:pt-14
             md:flex justify-between items-end
-            md:order-first'> 
-                <div className=' 
+            md:order-first'>
+                        <div className=' 
                     text-center
                     mb-6 
                     md:order-first'>
 
-                <h2 className='
+                            <h2 className='
                 font-semibold text-[#B50404] 
                 md:text-left
                 text-sm md:text-sm xl:text-xl
@@ -101,75 +101,65 @@ export const Footer = () => {
                 pb-2
                 
                 '>SUMANTH HOMES - INDIA</h2>
-                <p className='
+                            <p className='
                 font-normal
                 md:text-left
-                text-sm md:text-xs xl:text-sm'>Villa No.3, Lotus Serene Villas, <br/>Near Autonagar, Renigunta Road, Tirupati</p>
+                text-sm md:text-xs xl:text-sm'>Villa No.3, Lotus Serene Villas, <br />Near Autonagar, Renigunta Road, Tirupati</p>
 
-                </div>
+                        </div>
 
-                <div className='text-center mb-6'>
+                        <div className='text-center mb-6'>
 
-                <a href="tel:+91 8220 637727">
-                    <p className='
+                            <a href="tel:+91 8220 637727">
+                                <p className='
                     hover:scale-110
                 font-medium
                 text-sm xl:text-sm md:text-xs'>+91 8220 637727</p>
-                </a>
+                            </a>
 
-                <a href="https:info@domain.com" target="_blank">
-                    <p className='
+                            <a href="https:info@domain.com" target="_blank">
+                                <p className='
                     hover:scale-110
                 font-medium 
                 text-sm xl:text-sm md:text-xs'>info@domain.com</p>
-                </a>
-                
+                            </a>
 
-                </div>
-            </div>
 
-            <div className='
+                        </div>
+                    </div>
+
+                    <div className='
             md:flex items-center justify-between
             text-center
             
             pb-4
             '>
 
-                <div className='
+                        <div className='
                 md:text-left
                 pb-1'>
 
-                    <a href="https://www.theinternetcompany.one/" target="_blank">
-                        <p className='
+                            <a href="https://www.theinternetcompany.one/" target="_blank">
+                                <p className='
                         hover:scale-110
                         font-normal
                         text-xs md:text-xs'>Designed & Developed by TIC Global Services</p>
-                    </a>
-                    
+                            </a>
 
-                </div>
 
-                <div className='
+                        </div>
+
+                        <div className='
                 md:text-right
                 '>
 
-                    <p className='
+                            <p className='
                         font-normal 
                         text-xs md:text-xs'>@2025 Sumanth Homes. All Rights Reserved</p>
-
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
-        
-
-        
-
-    </div>
-
-
-</div>
-  )
+    )
 }

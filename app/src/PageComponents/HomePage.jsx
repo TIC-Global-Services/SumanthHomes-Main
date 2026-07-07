@@ -27,7 +27,6 @@ const HomePage = () => {
     <div className='overflow-hidden' >
       <ParallaxProvider>
         <ScrollToTop/>
-        <NavBar />
         <HeroSection/>
         <ContainerLayout>    
             <HistorySection/>
@@ -50,7 +49,7 @@ const HomePage = () => {
             { showLate && <MapSection/>}
           </Suspense>
         </ContainerLayout>
-        <Footer/>
+        
         </ParallaxProvider>
     </div>
   )
