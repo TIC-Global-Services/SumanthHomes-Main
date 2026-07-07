@@ -123,7 +123,7 @@ const Amenities = () => {
               <img
                 src={specification}
                 alt="Specifications"
-                className="w-full max-w-4xl rounded-xl object-contain"
+                className="w-full max-w-xl lg:max-w-4xl rounded-xl object-contain"
               />
             </div>
           )}

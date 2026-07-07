@@ -25,7 +25,7 @@ const Urbanscapes = () => {
             <button className="bg-[#5A3A2E] hover:bg-[#5a3f30] text-white px-8 py-3 rounded text-sm font-medium transition-colors mb-4">
               Book a Site Visit Today
             </button>
-            <p className="text-lg font-semibold text-[#5A3A2E] mt-2">
+            <p className="text-sm lg:text-lg font-semibold text-[#5A3A2E] mt-2">
               Call : {ctaData.phoneNumbers.join(' | ')}
             </p>
           </div>
