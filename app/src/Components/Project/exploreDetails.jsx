@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from '../../assets/img/OurProjectsSection/explore_banner.jpg'
+import BlurText from '../../utils/BlurText'
 
 const ExploreDetails = () => {
   return (
@@ -16,12 +17,18 @@ const ExploreDetails = () => {
 
         {/* Text Content */}
         <div className="flex flex-col space-y-6 order-1 md:order-2">
-          <h2 className="text-3xl md:text-4xl font-semibold leading-tight text-gray-900">
-            Explore Every Detail Before <br className="hidden md:block" /> You Move In
-          </h2>
-          <p className="text-gray-600 leading-relaxed max-w-lg">
-            Discover the thoughtfully designed spaces, premium amenities, floor plans, and specifications that make Urbanscapes a landmark address in Tirupati. Download our brochure to get a complete overview of the project and experience elevated living crafted for modern families.
-          </p>
+          <BlurText 
+              text="Explore Every Detail Before You Move In"
+              delay={30}
+              animateBy="words"
+              direction="bottom" 
+              className="text-3xl md:text-4xl font-semibold leading-tight text-gray-900" />
+          <BlurText 
+              text="Discover the thoughtfully designed spaces, premium amenities, floor plans, and specifications that make Urbanscapes a landmark address in Tirupati. Download our brochure to get a complete overview of the project and experience elevated living crafted for modern families."
+              delay={30}
+              animateBy="words"
+              direction="bottom" 
+              className="text-gray-600 leading-relaxed max-w-lg" />
           <div>
             <button className="bg-[#5A3A2E] hover:bg-[#5a3f30] text-white px-8 py-3 rounded text-sm font-medium transition-colors">
               Download Brochure

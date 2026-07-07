@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from '../../assets/img/OurProjectsSection/truely_deserve.jpg'
+import BlurText from '../../utils/BlurText'
 
 const Upgrade = () => {
     const data = [
@@ -14,12 +15,18 @@ const Upgrade = () => {
         <section className="py-16 w-full flex flex-col items-center">
             {/* Top Text Section */}
             <div className="text-center sm:max-w-3xl lg:max-w-5xl px-4 mb-10">
-                <h2 className="text-3xl md:text-[38px] font-semibold mb-4 text-[#000000]">
-                    An Upgrade in Life You Truly Deserve
-                </h2>
-                <p className="text-[#929292]">
-                    A premium residential community by Sumanth Homes, thoughtfully designed to blend contemporary architecture with <br className='hidden lg:block'/> timeless Indian values. Located in the heart of Tirupati, Urbanscapes offers spacious 2 & 3 BHK residences with exceptional connectivity, modern amenities, and 100% Vaastu-compliant planning.
-                </p>
+                <BlurText 
+                    text="An Upgrade in Life You Truly Deserve"
+                    delay={30}
+                    animateBy="words"
+                    direction="bottom" 
+                    className="text-3xl md:text-[38px] font-semibold mb-4 text-[#000000]" />
+                <BlurText 
+                    text="A premium residential community by Sumanth Homes, thoughtfully designed to blend contemporary architecture with timeless Indian values. Located in the heart of Tirupati, Urbanscapes offers spacious 2 & 3 BHK residences with exceptional connectivity, modern amenities, and 100% Vaastu-compliant planning."
+                    delay={30}
+                    animateBy="words"
+                    direction="bottom" 
+                    className="text-[#929292]" />
             </div>
 
             {/* Full Width Image with Bottom Bar */}

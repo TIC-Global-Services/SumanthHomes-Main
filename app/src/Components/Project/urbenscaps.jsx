@@ -1,4 +1,5 @@
 import React from 'react'
+import BlurText from '../../utils/BlurText'
 
 const ctaData = {
   title: "Find Your Dream Home\nat Urbanscapes",
@@ -15,12 +16,18 @@ const Urbanscapes = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div className="flex flex-col space-y-6">
-          <h2 className="text-3xl md:text-4xl font-semibold leading-tight text-gray-900 whitespace-pre-line">
-            Find Your Dream Home <br className='hidden md:block'/>at <span className='text-[#5A3A2E]'>Urbanscapes</span>
-          </h2>
-          <p className="text-gray-600 leading-relaxed max-w-lg">
-            {ctaData.description}
-          </p>
+          <BlurText 
+              text="Find Your Dream Home at Urbanscapes"
+              delay={30}
+              animateBy="words"
+              direction="bottom" 
+              className="text-3xl md:text-4xl font-semibold leading-tight text-gray-900 whitespace-pre-line" />
+          <BlurText 
+              text={ctaData.description}
+              delay={30}
+              animateBy="words"
+              direction="bottom" 
+              className="text-gray-600 leading-relaxed max-w-lg" />
           <div>
             <button className="bg-[#5A3A2E] hover:bg-[#5a3f30] text-white px-8 py-3 rounded text-sm font-medium transition-colors mb-4">
               Book a Site Visit Today
