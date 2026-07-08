@@ -24,13 +24,14 @@ export const Hero = ({bgImage, mainText, subText, white=false}) => {
         <div>
           <h2 className={`
             font-manrope font-normal tracking-wide md:tracking-[-4px]
-            text-3xl md:text-6xl xl:text-[86px] 
+            text-4xl md:text-6xl xl:text-[86px] 
             xl:mb-6 md:mb-4 ${white ? 'text-white' : 'text-black'}`}>{mainText}</h2>
 
             <p className='
             font-semibold
             tracking-[3px] uppercase text-[#B40505]
-            md:text-xs xl:text-[13px]'
+            text-[10px]
+            md:text-xs xl:text-sm'
             
             >{subText}</p>
 
