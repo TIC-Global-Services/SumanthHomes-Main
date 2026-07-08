@@ -14,19 +14,19 @@ const Upgrade = () => {
     return (
         <section className="py-16 w-full flex flex-col items-center">
             {/* Top Text Section */}
-            <div className="text-center sm:max-w-3xl lg:max-w-5xl px-4 mb-10">
+            <div className="mx-auto sm:max-w-3xl lg:max-w-5xl px-4 mb-10">
                 <BlurText 
                     text="An Upgrade in Life You Truly Deserve"
                     delay={30}
                     animateBy="words"
                     direction="bottom" 
-                    className="text-3xl md:text-[38px] font-semibold mb-4 text-[#000000]" />
+                    className="text-3xl md:text-[38px] flex justify-center font-semibold mb-4 text-[#000000]" />
                 <BlurText 
                     text="A premium residential community by Sumanth Homes, thoughtfully designed to blend contemporary architecture with timeless Indian values. Located in the heart of Tirupati, Urbanscapes offers spacious 2 & 3 BHK residences with exceptional connectivity, modern amenities, and 100% Vaastu-compliant planning."
                     delay={30}
                     animateBy="words"
                     direction="bottom" 
-                    className="text-[#929292]" />
+                    className="text-[#929292] flex justify-center" />
             </div>
 
             {/* Full Width Image with Bottom Bar */}
@@ -40,7 +40,7 @@ const Upgrade = () => {
 
                 {/* Bottom Labels Bar */}
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[85%]">
-                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+                    <div className="grid grid-cols-3  lg:grid-cols-6 gap-3">
                         {data.map((item, index) => (
                             <div
 c                                key={index}

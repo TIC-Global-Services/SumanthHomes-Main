@@ -1,9 +1,10 @@
 import {gsap, TextPlugin} from "gsap/all"
-import ParallaxComponent from "../utils/ParallaxComponent";
+import ParallaxComponent from "../../utils/ParallaxComponent";
+
 
 gsap.registerPlugin(TextPlugin);
 
-export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) => {
+export const Hero = ({bgImage, mainText, subText, white=false}) => {
   
 
   
@@ -13,7 +14,7 @@ export const DefaultHeroSection = ({bgImage, mainText, subText, white=false}) =>
     <div className="w-full overflow-hidden">
 
       <ParallaxComponent>
-        <img src={bgImage} alt="HeroImage" className="relative w-[100%] h-[80svh] lg:h-[100svh] xl:h-auto xl:aspect-[1440/553] scale-150 sm:scale-150 md:scale-130 lg:scale-120 xl:scale-150" />
+        <img src={bgImage} alt="HeroImage" className="relative w-[100%] h-[100dvh] object-cover object-right lg:object-center lg:h-[100svh] xl:h-auto xl:aspect-[1440/553]  lg:scale-120 xl:scale-150" />
       </ParallaxComponent>
         
       

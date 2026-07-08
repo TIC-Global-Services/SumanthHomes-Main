@@ -11,10 +11,18 @@
 }
 
 @font-face {
-    font-family:manrope ;
+    font-family: manrope;
     src: url("../src/assets/fonts/Manrope-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
+}
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 @font-face {
@@ -87,13 +95,11 @@
     font-style: normal;
 }
 
-@theme{
-    --font-manrope:manrope,'sans-serif', 
-    --font-jakarta:'Plus Jakarta Sans', 'sans-serif',
+@theme {
+    --font-manrope: manrope, 'sans-serif',
+        --font-jakarta:'Plus Jakarta Sans', 'sans-serif',
 }
 
-body{
+body {
     font-family: 'Plus Jakarta Sans';
 }
-
-

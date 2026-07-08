@@ -7,6 +7,7 @@ import { Footer } from '../Components/Footer'
 import { MapSection } from "../Components/ContactPageComponents/MapSection"
 import { ScrollToTop } from "../utils/ScrollToTop"
 import { ParallaxProvider } from "react-scroll-parallax"
+import { Hero } from "../Components/ContactPageComponents/Hero"
 
 
 const ContactPage = () => {
@@ -16,7 +17,8 @@ const ContactPage = () => {
     <div className="overflow-hidden">
       <ParallaxProvider>
         <ScrollToTop/>
-        <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} />
+        <Hero bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} />
+        {/* <DefaultHeroSection bgImage={bgImage} mainText={'Contact us'} subText={"LET'S WORK TOGETHER"} white={true} /> */}
         <ContainerLayout>
             <KnowUsSection />
             <MapSection />
