@@ -1,0 +1,11 @@
+﻿{
+  "name": "sumanthhomes-main",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix app run dev",
+    "build": "npm --prefix app run build",
+    "lint": "npm --prefix app run lint",
+    "preview": "npm --prefix app run preview"
+  }
+}

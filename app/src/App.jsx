@@ -9,6 +9,9 @@ const ExplorePage = lazy(()=>import('./PageComponents/ExplorePage'));
 const NotFound404 = lazy(()=>import('./PageComponents/NotFound404'));
 import { SkeletonLayout } from "./Layout/SkeletonLayout";
 import Urbanscaps from "./PageComponents/urbanscaps";
+const LotusSereneVillas = lazy(() => import('./PageComponents/lotusSereneVillas'));
+const KbrBrindavanam = lazy(() => import('./PageComponents/KbrBrindavanam'));
+
    const router = createBrowserRouter([
     {
       path: '/',
@@ -52,6 +55,34 @@ import Urbanscaps from "./PageComponents/urbanscaps";
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
             <Urbanscaps/>
+          </Suspense>),
+        },
+        {
+          path:"/lotus-serene-villas",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <LotusSereneVillas/>
+          </Suspense>),
+        },
+        {
+          path:"/lotus-villas",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <LotusSereneVillas/>
+          </Suspense>),
+        },
+        {
+          path:"/kbr-brindavanam",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <KbrBrindavanam/>
+          </Suspense>),
+        },
+        {
+          path:"/kbr-brindhavan",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <KbrBrindavanam/>
           </Suspense>),
         }
       ]

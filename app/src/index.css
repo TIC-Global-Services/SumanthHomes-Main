@@ -95,9 +95,9 @@ textarea:focus-visible {
     font-style: normal;
 }
 
-@theme {
-    --font-manrope: manrope, 'sans-serif',
-        --font-jakarta:'Plus Jakarta Sans', 'sans-serif',
+:root {
+    --font-manrope: 'Manrope', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
