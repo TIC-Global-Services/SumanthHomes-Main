@@ -10,7 +10,11 @@ const NotFound404 = lazy(()=>import('./PageComponents/NotFound404'));
 import { SkeletonLayout } from "./Layout/SkeletonLayout";
 import Urbanscaps from "./PageComponents/urbanscaps";
 const LotusSereneVillas = lazy(() => import('./PageComponents/lotusSereneVillas'));
+const LotusVillaPhase1 = lazy(() => import('./PageComponents/LotusVillaPhase1'));
 const KbrBrindavanam = lazy(() => import('./PageComponents/KbrBrindavanam'));
+const PadmavathiGarden = lazy(() => import('./PageComponents/padavathiGarden'));
+const GarudanGateWay = lazy(() => import('./PageComponents/GarudanGateWay'));
+const PearlAbode = lazy(() => import('./PageComponents/PearlAbode'));
 
    const router = createBrowserRouter([
     {
@@ -68,7 +72,14 @@ const KbrBrindavanam = lazy(() => import('./PageComponents/KbrBrindavanam'));
           path:"/lotus-villas",
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
-            <LotusSereneVillas/>
+            <LotusVillaPhase1/>
+          </Suspense>),
+        },
+        {
+          path:"/lotus-villa-phase-1",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <LotusVillaPhase1/>
           </Suspense>),
         },
         {
@@ -79,10 +90,31 @@ const KbrBrindavanam = lazy(() => import('./PageComponents/KbrBrindavanam'));
           </Suspense>),
         },
         {
-          path:"/kbr-brindhavan",
+          path:"/padmavathi-garden",
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
-            <KbrBrindavanam/>
+            <PadmavathiGarden/>
+          </Suspense>),
+        },
+        {
+          path:"/garudan-gateway",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <GarudanGateWay/>
+          </Suspense>),
+        },
+        {
+          path:"/pearl-abode",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <PearlAbode/>
+          </Suspense>),
+        },
+        {
+          path:"/pearlaode",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <PearlAbode/>
           </Suspense>),
         }
       ]
