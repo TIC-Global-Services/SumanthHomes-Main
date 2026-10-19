@@ -127,7 +127,7 @@ const OngoingDevelopment = ({
   return (
     <section
       id={id}
-      className={`relative w-full py-16 md:py-24 overflow-hidden bg-[#FAF9F7] ${className}`}
+      className={`relative w-full py-16 md:py-24 overflow-hidden  ${className}`}
       // style={sectionStyle}
     >
       {/* Section Header */}

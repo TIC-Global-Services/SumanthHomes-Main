@@ -285,7 +285,7 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
     >
       <div className="px-4 md:px-[5%] max-w-7xl mx-auto">
         {/* Scalable Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-12 md:mb-16">
+        <div className={`flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-12 md:mb-16 border-b-2 pb-10 border-b-${activeTabColor}`}>
           {tabs.map((tab) => {
             const isActive = activeTab === tab
             return (

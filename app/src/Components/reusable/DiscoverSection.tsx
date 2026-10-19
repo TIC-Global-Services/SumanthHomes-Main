@@ -45,7 +45,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
   }
 
   return (
-    <section id={id} className={`py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full bg-white ${className}`}>
+    <section id={id} className={`py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full ${className}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left Column: Text Content */}
         <div className="flex flex-col justify-center">

@@ -9,7 +9,7 @@ const Hero = (props) => {
     {
       banner: banner,
       alt: 'pearl aode',
-      logo: 'logo',
+      logo: logo,
       logoPosition: 'center',
       buttonText: 'EXPLORE THE VILLAS',
       buttonLink: '#explore',
