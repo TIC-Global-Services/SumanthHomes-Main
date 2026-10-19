@@ -24,8 +24,8 @@ export const ShowreelSection: React.FC<ShowreelSectionProps> = ({
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   return (
-    <section id={id} className={`py-12 md:py-20 px-4 sm:px-8 md:px-[5%] w-full bg-white ${className}`}>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh] rounded-2xl overflow-hidden shadow-2xl bg-gray-900 group">
+    <section id={id} className={`py-12 md:py-20 px-4 sm:px-8 md:px-[5%] w-full ${className}`}>
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh] rounded-2xl overflow-hidden shadow-2xl group">
         {isPlaying ? (
           <div className="relative w-full h-full flex items-center justify-center bg-black">
             <iframe

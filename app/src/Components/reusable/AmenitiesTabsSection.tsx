@@ -67,6 +67,10 @@ export interface AmenitiesTabsSectionProps {
   locationItems?: LocationItem[]
   mapEmbedUrl?: string
   className?: string
+  specificationsTextColor?: string
+  specificationsTitleColor?: string
+  specificationsDescColor?: string
+  specificationsCircleColor?: string
 }
 
 export const defaultFloorPlans: FloorPlanSlide[] = [
@@ -228,6 +232,10 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
   locationItems = defaultLocationData,
   mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=79.3900%2C13.6100%2C79.4500%2C13.6500&layer=mapnik&marker=13.6288%2C79.4192',
   className = '',
+  specificationsTextColor,
+  specificationsTitleColor,
+  specificationsDescColor,
+  specificationsCircleColor,
 }) => {
   const [activeTab, setActiveTab] = useState<string>(initialTab || tabs[0] || 'Amenities')
   const [currentSlide, setCurrentSlide] = useState<number>(0)
@@ -321,12 +329,18 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
               currentSlide={currentSlide}
               onSlideChange={setCurrentSlide}
               onOpenLightbox={openLightbox}
+              titleColor={activeTabColor}
             />
           )}
 
           {/* 4. Specifications Tab */}
           {activeTab === 'Specifications' && (
-            <SpecificationsTab specifications={specifications} />
+            <SpecificationsTab
+              specifications={specifications}
+              textColor={specificationsTextColor || activeTabColor}
+              titleColor={specificationsTitleColor || activeTabColor}
+              descriptionColor={specificationsDescColor || activeTabColor}
+            />
           )}
 
           {/* 5. Location Tab */}
@@ -334,6 +348,7 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
             <LocationTab
               locationItems={locationItems}
               mapEmbedUrl={mapEmbedUrl}
+              accentColor={activeTabColor}
             />
           )}
         </div>

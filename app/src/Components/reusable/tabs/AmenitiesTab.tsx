@@ -16,7 +16,7 @@ export const AmenitiesTab: React.FC<AmenitiesTabProps> = ({
 }) => {
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 md:p-8 max-w-6xl w-full border border-gray-100 flex items-center justify-center">
+      <div className="p-4 sm:p-6 md:p-8 max-w-6xl w-full border border-gray-100 flex items-center justify-center">
         <img
           src={amenitiesImage}
           alt={alt}

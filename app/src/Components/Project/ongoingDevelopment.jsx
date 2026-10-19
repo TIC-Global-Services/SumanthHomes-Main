@@ -169,7 +169,7 @@ const OngoingDevelopment = ({
               <div
                 key={dev.id || index}
                 onClick={() => handleCardClick(itemLink)}
-                className="group relative flex-shrink-0 w-[270px] sm:w-[310px] md:w-[340px] lg:w-[370px] h-[390px] sm:h-[450px] md:h-[490px] lg:h-[520px] bg-neutral-900 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
+                className="group relative flex-shrink-0 w-[270px] sm:w-[310px] md:w-[340px] lg:w-[370px] h-[390px] sm:h-[450px] md:h-[490px] lg:h-[520px]  overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
               >
                 {/* Background Project Image */}
                 {imageSrc && (

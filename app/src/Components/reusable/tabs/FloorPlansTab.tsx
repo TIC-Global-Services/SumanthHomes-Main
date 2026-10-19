@@ -14,6 +14,7 @@ export interface FloorPlansTabProps {
   currentSlide?: number
   onSlideChange?: (index: number) => void
   onOpenLightbox?: (imageUrl: string, title: string) => void
+  titleColor?: string
   className?: string
 }
 
@@ -25,6 +26,7 @@ export const FloorPlansTab: React.FC<FloorPlansTabProps> = ({
   currentSlide: controlledSlide,
   onSlideChange,
   onOpenLightbox,
+  titleColor,
   className = '',
 }) => {
   const [internalSlide, setInternalSlide] = useState<number>(0)
@@ -59,15 +61,18 @@ export const FloorPlansTab: React.FC<FloorPlansTabProps> = ({
   return (
     <div className={`flex flex-col items-center w-full ${className}`}>
       {/* Floor Plan Title */}
-      <h2 className="text-2xl sm:text-3xl md:text-[34px] font-semibold text-[#5A3A2E] mb-6 text-center tracking-tight">
+      <h2
+        style={titleColor ? { color: titleColor } : undefined}
+        className="text-2xl sm:text-3xl md:text-[34px] font-semibold text-[#5A3A2E] mb-4 text-center tracking-tight"
+      >
         {currentFloorPlan.title}
       </h2>
 
       {/* Floor Plan Card Container */}
-      <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100 max-w-6xl w-full p-4 sm:p-6 md:p-8">
+      <div className="relative max-w-6xl w-full p-4 sm:p-6 md:p-8">
         <div className="flex flex-col lg:flex-row gap-6 items-stretch">
           {/* Main Floor Plan Image (80% Width) */}
-          <div className="w-full lg:w-[80%] flex items-center justify-center relative min-h-[320px] sm:min-h-[420px] bg-white rounded-xl overflow-hidden group">
+          <div className="w-full lg:w-[80%] flex items-center justify-center relative min-h-[320px] sm:min-h-[420px]  overflow-hidden group">
             <img
               src={currentFloorPlan.mainImage}
               alt={currentFloorPlan.alt || currentFloorPlan.title}

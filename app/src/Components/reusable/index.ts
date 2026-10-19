@@ -53,3 +53,5 @@ export type {
 
 export { CommunitySection, defaultCommunityMedia } from './CommunitySection'
 export type { CommunitySectionProps, CommunityMediaItem } from './CommunitySection'
+
+export { lotusSereneSpecifications, pearlAbodeSpecifications } from '../../utils/specificationsData'

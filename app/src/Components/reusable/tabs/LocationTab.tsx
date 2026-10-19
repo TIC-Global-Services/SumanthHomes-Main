@@ -10,6 +10,7 @@ export interface LocationTabProps {
   mapEmbedUrl?: string
   title?: string
   subtitle?: string
+  accentColor?: string
   className?: string
 }
 
@@ -21,6 +22,7 @@ export const LocationTab: React.FC<LocationTabProps> = ({
   mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=79.3900%2C13.6100%2C79.4500%2C13.6500&layer=mapnik&marker=13.6288%2C79.4192',
   title = 'Location Map',
   subtitle = 'Proximities',
+  accentColor,
   className = '',
 }) => {
   return (
@@ -29,7 +31,14 @@ export const LocationTab: React.FC<LocationTabProps> = ({
     >
       {/* Proximities List */}
       <div>
-        {title && <h3 className="text-2xl font-semibold text-[#5A3A2E] mb-2">{title}</h3>}
+        {title && (
+          <h3
+            style={accentColor ? { color: accentColor } : undefined}
+            className="text-2xl font-semibold text-[#5A3A2E] mb-2"
+          >
+            {title}
+          </h3>
+        )}
         {subtitle && <h4 className="text-lg font-medium text-black mb-6">{subtitle}</h4>}
         <ul className="space-y-3">
           {locationItems.map((item, idx) => (
@@ -38,7 +47,10 @@ export const LocationTab: React.FC<LocationTabProps> = ({
               className="flex justify-between items-center text-sm sm:text-base border-b border-gray-100 pb-2.5 last:border-0"
             >
               <span className="text-gray-700 font-medium">{item.name}</span>
-              <span className="text-[#6b4c3a] bg-[#F7F2EE] font-semibold px-3 py-1 rounded-full text-xs sm:text-sm">
+              <span
+                style={accentColor ? { color: accentColor } : undefined}
+                className="text-[#6b4c3a] bg-[#F7F2EE] font-semibold px-3 py-1 rounded-full text-xs sm:text-sm"
+              >
                 {item.dist}
               </span>
             </li>
