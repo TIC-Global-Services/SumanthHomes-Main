@@ -37,7 +37,7 @@ const LotusVillaPhase1: React.FC = () => {
       <OngoingDevelopment />
 
       {/* 8. Find Your Dream Home Section */}
-      <FindYour />
+      {/* <FindYour /> */}
     </div>
   )
 }

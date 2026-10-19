@@ -6,9 +6,9 @@ const Community: React.FC<Partial<CommunitySectionProps>> = (props) => {
     <CommunitySection
       subtitle="Thoughtfully Designed"
       highlightTextColor='#CC1518'
-      highlightedText='MN Sri Padmavati Gradens '
-      title="A Community Designed Around Modern Living"
-      description="Lotus Serene Villas – Phase I is an exclusive gated villa community offering elegantly designed homes, expansive living spaces, and world-class amenities. Surrounded by serene landscapes, it delivers a lifestyle that blends sophistication, comfort, and everyday convenience."
+      highlightedText='MN Sri Padmavati Gradens'
+      title="For Every Family."
+      description="offers thoughtfully crafted homes that blend modern design, everyday comfort, and a peaceful living environment. Surrounded by lush landscapes and premium amenities within a secure gated community, it's a place where families can enjoy privacy, convenience, and a lifestyle built to last."
       media={[
         {
           title: 'Lotus Serene Villas - Modern Living Villa Elevation',

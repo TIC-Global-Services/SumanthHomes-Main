@@ -191,7 +191,7 @@ const OngoingDevelopment = ({
                       src={itemLogo}
                       alt={itemTitle}
                       draggable="false"
-                      className="w-auto max-h-24 sm:max-h-28 md:max-h-32 max-w-[85%] object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] brightness-105"
+                      className="w-auto max-h-44 sm:max-h-28 md:max-h-52  object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] brightness-105"
                     />
                   )}
 

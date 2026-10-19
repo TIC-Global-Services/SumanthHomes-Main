@@ -4,9 +4,11 @@ import { CommunitySection, CommunitySectionProps } from '../reusable/CommunitySe
 const Community: React.FC<Partial<CommunitySectionProps>> = (props) => {
   return (
     <CommunitySection
-      subtitle="Modern Living"
-      title="A Community Designed Around Modern Living"
-      description="Lotus Serene Villas – Phase I is an exclusive gated villa community offering elegantly designed homes, expansive living spaces, and world-class amenities. Surrounded by serene landscapes, it delivers a lifestyle that blends sophistication, comfort, and everyday convenience."
+      subtitle="Thoughtfully Designed"
+      highlightedText='Pearl Aode'
+      highlightTextColor='#D9B57D'
+      title="For Every Family."
+      description="offers thoughtfully crafted homes that blend modern design, everyday comfort, and a peaceful living environment. Surrounded by lush landscapes and premium amenities within a secure gated community, it's a place where families can enjoy privacy, convenience, and a lifestyle built to last."
       media={[
         {
           title: 'Lotus Serene Villas - Modern Living Villa Elevation',

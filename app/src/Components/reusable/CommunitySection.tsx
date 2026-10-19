@@ -187,7 +187,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
                 animateBy="words"
                 direction="bottom"
                 className={
-                  ` text-[${highlightTextColor}] text-3xl sm:text-4xl md:text-4xl lg:text-[64px] font-semibold text-black tracking-tight leading-none mb-4 mt-4 justify-center`
+                  `text-[${highlightTextColor}] text-3xl sm:text-4xl md:text-4xl lg:text-[64px] font-semibold tracking-tight leading-relaxed mb-4 mt-4 justify-center`
                 }
               />
             )}
