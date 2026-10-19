@@ -10,6 +10,7 @@ import ShowReel from '../Components/lotus-vilas-phase-2/showReel'
 import OnGoingDevelopement from '../Components/lotus-vilas-phase-2/onGoingDevelopement'
 import FindyourDream from '../Components/lotus-vilas-phase-2/FindyourDream'
 import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
+import ExploreDetails from '../Components/lotus-vilas-phase-2/exploreDetails'
 
 const LotusSereneVillas: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const LotusSereneVillas: React.FC = () => {
         {/* 1. Hero Section */}
         <Hero />
         <Discover />
+        <ExploreDetails />
         {/* 2. Thoughtfully Designed Section */}
         {/* <Thoughtful /> */}
 

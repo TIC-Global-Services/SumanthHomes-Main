@@ -4,6 +4,7 @@ export interface BlurTextProps {
   text?: string;
   delay?: number;
   className?: string;
+  style?: React.CSSProperties;
   animateBy?: 'words' | 'letters';
   direction?: 'top' | 'bottom';
   threshold?: number;

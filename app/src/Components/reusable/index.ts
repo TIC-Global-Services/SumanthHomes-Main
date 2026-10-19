@@ -54,4 +54,8 @@ export type {
 export { CommunitySection, defaultCommunityMedia } from './CommunitySection'
 export type { CommunitySectionProps, CommunityMediaItem } from './CommunitySection'
 
+export { ExploreDetailsSection, defaultExploreItems, CARD_SIZES } from './ExploreDetailsSection'
+export type { ExploreDetailsSectionProps, ExploreCardItem, CardSize } from './ExploreDetailsSection'
+
 export { lotusSereneSpecifications, pearlAbodeSpecifications } from '../../utils/specificationsData'
+
