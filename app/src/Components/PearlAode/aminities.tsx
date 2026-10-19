@@ -29,7 +29,7 @@ const Aminities: React.FC<Partial<AmenitiesTabsSectionProps>> = (props) => {
       specificationsTextColor="#D9B67D"
       specificationsTitleColor="#D9B67D"
       specificationsDescColor="#D9B67D"
-      amenitiesImage="/pearlaode/pearl-aminitis.png"
+      amenitiesImage="/pearlaode/pearl-aode.png"
       floorPlans={pearlFloorPlans}
       specifications={pearlAbodeSpecifications}
       {...props}

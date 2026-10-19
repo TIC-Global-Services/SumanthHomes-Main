@@ -18,7 +18,6 @@ import type {
 } from './tabs'
 
 // Default Asset imports
-import aminitiesImg from '../../assets/img/OurProjectsSection/amenities.png'
 import floorplan1 from '../../assets/img/OurProjectsSection/floor_plan-1.png'
 import floorplan2 from '../../assets/img/OurProjectsSection/floor_plan-2.png'
 import floorsInPlan1 from '../../assets/img/OurProjectsSection/floors-inthe-plan-1.png'
@@ -60,6 +59,8 @@ export interface AmenitiesTabsSectionProps {
   initialTab?: string
   activeTabColor?: string
   amenitiesImage?: string
+  /** Alias for amenitiesImage for consumer flexibility */
+  amenitiesImg?: string
   masterPlanImage?: string
   masterPlanTitle?: string
   floorPlans?: FloorPlanSlide[]
@@ -224,7 +225,8 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
   tabs = defaultTabsList,
   initialTab,
   activeTabColor = '#5A3A2E',
-  amenitiesImage = aminitiesImg,
+  amenitiesImage,
+  amenitiesImg,
   masterPlanImage = specificationImg,
   masterPlanTitle = 'Master Plan Layout',
   floorPlans = defaultFloorPlans,
@@ -310,7 +312,7 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
         <div className="min-h-[400px]">
           {/* 1. Amenities Tab */}
           {activeTab === 'Amenities' && (
-            <AmenitiesTab amenitiesImage={amenitiesImage} />
+            <AmenitiesTab amenitiesImage={amenitiesImage || amenitiesImg} />
           )}
 
           {/* 2. Master Plan Tab */}

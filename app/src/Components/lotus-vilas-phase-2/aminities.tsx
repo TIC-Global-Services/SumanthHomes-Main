@@ -14,6 +14,7 @@ const Aminities: React.FC<Partial<AmenitiesTabsSectionProps>> = (props) => {
       specificationsTextColor="#164944"
       specificationsTitleColor="#164944"
       specificationsDescColor="#164944"
+      amenitiesImage="/lotus-serena-amenities.png"
       specifications={lotusSereneSpecifications}
       {...props}
     />

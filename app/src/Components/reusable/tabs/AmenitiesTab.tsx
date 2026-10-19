@@ -1,7 +1,7 @@
   import React from 'react'
 
 export interface AmenitiesTabProps {
-  amenitiesImage: string
+  amenitiesImage?: string
   alt?: string
   className?: string
 }
@@ -14,6 +14,8 @@ export const AmenitiesTab: React.FC<AmenitiesTabProps> = ({
   alt = 'Amenities',
   className = '',
 }) => {
+  if (!amenitiesImage) return null
+
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className="p-4 sm:p-6 md:p-8 max-w-6xl w-full border border-gray-100 flex items-center justify-center">
