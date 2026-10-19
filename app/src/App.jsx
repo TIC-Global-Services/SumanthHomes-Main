@@ -62,21 +62,14 @@ const PearlAbode = lazy(() => import('./PageComponents/PearlAbode'));
           </Suspense>),
         },
         {
-          path:"/lotus-serene-villas",
+          path:"/lotus-villas-phase-2",
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
             <LotusSereneVillas/>
           </Suspense>),
         },
         {
-          path:"/lotus-villas",
-          element:(
-          <Suspense fallback={<SkeletonLayout/>}>
-            <LotusVillaPhase1/>
-          </Suspense>),
-        },
-        {
-          path:"/lotus-villa-phase-1",
+          path:"/lotus-villas-phase-1",
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
             <LotusVillaPhase1/>
@@ -105,13 +98,6 @@ const PearlAbode = lazy(() => import('./PageComponents/PearlAbode'));
         },
         {
           path:"/pearl-abode",
-          element:(
-          <Suspense fallback={<SkeletonLayout/>}>
-            <PearlAbode/>
-          </Suspense>),
-        },
-        {
-          path:"/pearlaode",
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
             <PearlAbode/>

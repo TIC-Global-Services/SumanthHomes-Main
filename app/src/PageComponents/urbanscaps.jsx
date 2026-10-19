@@ -12,7 +12,12 @@ import Urbanscapes from '../Components/Project/urbenscaps'
 
 const urbanscaps = () => {
     return (
-        <div>
+        <div style={{
+        backgroundImage: "url('/bg_layer.svg')",
+        backgroundRepeat: 'repeat',
+        backgroundSize: '1200px auto',
+        backgroundPosition: 'top center',
+      }}>
             <ParallaxProvider>
                 <ScrollToTop />
                 <Hero />

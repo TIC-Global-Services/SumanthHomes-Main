@@ -8,6 +8,9 @@ import Aminities from '../Components/PearlAode/aminities'
 import Showreel from '../Components/PearlAode/showreel'
 import Ongoing from '../Components/PearlAode/ongoing'
 import FindYour from '../Components/PearlAode/findyour'
+import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
+import Community from '../Components/PearlAode/community'
+import Discover from '../Components/PearlAode/discover'
 
 const PearlAbode: React.FC = () => {
   return (
@@ -15,27 +18,17 @@ const PearlAbode: React.FC = () => {
       <ScrollToTop />
       {/* 1. Hero Section */}
       <Hero />
-
-      {/* 2. Timeless Homes / Lasting Memories Section */}
-      <Timeless />
-
-      {/* 3. Designed for the Way You Live (GSAP Pinned ScrollTrigger Section) */}
-      <DesignedFor />
-
-      {/* 4. Everything You Need, All in One Place Section */}
-      <Everything />
-
+      <Discover />
+      {/* 3. A Community Designed Around Modern Living Section */}
+      <Community />
       {/* 5. Amenities, Floor Plans, Specifications, Location Section */}
       <Aminities />
-
       {/* 6. Showreel Section */}
       <Showreel />
-
       {/* 7. Ongoing Developments Section */}
-      <Ongoing />
-
+      <OngoingDevelopment />
       {/* 8. Find Your Dream Home Section */}
-      <FindYour />
+      {/* <FindYour /> */}
     </div>
   )
 }

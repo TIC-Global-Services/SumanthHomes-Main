@@ -1,3 +1,4 @@
+
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState, useMemo } from 'react';
 
@@ -19,13 +20,13 @@ const BlurText = ({
   direction = 'top',
   threshold = 0.1,
   rootMargin = '0px',
-  animationFrom,
-  animationTo,
+  animationFrom = undefined,
+  animationTo = undefined,
   easing = t => t,
-  onAnimationComplete,
+  onAnimationComplete = undefined,
   stepDuration = 0.35
 }) => {
-  const elements = animateBy === 'words' ? text.split(' ') : text.split('');
+  const elements = animateBy === 'words' ? (text || '').split(' ') : (text || '').split('');
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
 

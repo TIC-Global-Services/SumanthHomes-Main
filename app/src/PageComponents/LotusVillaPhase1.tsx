@@ -8,6 +8,8 @@ import Aminities from '../Components/lotus-villa-phase1/aminities'
 import Showreel from '../Components/lotus-villa-phase1/showreel'
 import Ongoing from '../Components/lotus-villa-phase1/ongoing'
 import FindYour from '../Components/lotus-villa-phase1/findyour'
+import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
+
 
 const LotusVillaPhase1: React.FC = () => {
   return (
@@ -15,15 +17,15 @@ const LotusVillaPhase1: React.FC = () => {
       <ScrollToTop />
       {/* 1. Hero Section */}
       <Hero />
-
+      {/* 2. Discover the Complete Lifestyle Section */}
+      <Discover />
       {/* 2. Thoughtfully Designed Section */}
-      <Thoughtful />
+      {/* <Thoughtful /> */}
 
       {/* 3. A Community Designed Around Modern Living Section */}
       <Community />
 
-      {/* 4. Discover the Complete Lifestyle Section */}
-      <Discover />
+
 
       {/* 5. Amenities, Floor Plans, Specifications, Location Section */}
       <Aminities />
@@ -32,7 +34,7 @@ const LotusVillaPhase1: React.FC = () => {
       <Showreel />
 
       {/* 7. Ongoing Developments Section */}
-      <Ongoing />
+      <OngoingDevelopment />
 
       {/* 8. Find Your Dream Home Section */}
       <FindYour />

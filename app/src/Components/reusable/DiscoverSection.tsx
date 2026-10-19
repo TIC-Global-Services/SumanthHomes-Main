@@ -4,6 +4,8 @@ import BlurText from '../../utils/BlurText'
 export interface DiscoverSectionProps {
   id?: string
   title?: string
+  Highlighttitle?: string
+  Highlighttitecolor?: string
   description?: string
   buttonText?: string
   buttonColor?: string
@@ -21,6 +23,8 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
   buttonText = 'Download Brochure',
   buttonColor = '#B50404',
   imageSrc,
+  Highlighttitle,
+  Highlighttitecolor,
   imageAlt = 'Discover the complete lifestyle',
   contactTargetId = 'contact-cta',
   onDownload,
@@ -53,6 +57,13 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
               direction="bottom"
               className="text-3xl sm:text-4xl md:text-[38px] font-semibold leading-tight text-gray-900 tracking-tight"
             />
+            <BlurText
+              text={Highlighttitle}
+              delay={30}
+              animateBy="words"
+              direction="bottom"
+              className={`${Highlighttitecolor ??'text-gray-900'} text-3xl sm:text-4xl md:text-[38px] font-semibold leading-tight tracking-tight`}
+            />
           </div>
 
           <div className="mb-8">
@@ -77,7 +88,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
         </div>
 
         {/* Right Column: Architectural Elevation Image */}
-        <div className="w-full h-72 sm:h-96 md:h-[420px] lg:h-[460px] rounded-2xl overflow-hidden shadow-xl bg-gray-100 group">
+        <div className="w-full h-72 sm:h-96 md:h-[420px] lg:h-[460px] rounded-[4px] overflow-hidden shadow-xl bg-gray-100 group">
           <img
             src={imageSrc}
             alt={imageAlt}

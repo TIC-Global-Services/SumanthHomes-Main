@@ -7,6 +7,8 @@ import Discover from '../Components/kbrBrindhavan/discover'
 import Showreel from '../Components/kbrBrindhavan/showreel'
 import Ongoing from '../Components/kbrBrindhavan/ongoing'
 import FindYour from '../Components/kbrBrindhavan/findyour'
+import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
+import Community from '../Components/kbrBrindhavan/community'
 
 const KbrBrindavanam: React.FC = () => {
   return (
@@ -17,19 +19,10 @@ const KbrBrindavanam: React.FC = () => {
         <Hero />
 
         {/* 2. Inspired by Luxury / Designed for Life Section */}
-        <InspiredBy />
-
-        {/* 3. Discover the Complete Lifestyle Section */}
         <Discover />
-
-        {/* 4. Showreel / Video Section */}
+        <Community />
         <Showreel />
-
-        {/* 5. Ongoing Developments Section */}
-        <Ongoing />
-
-        {/* 6. Find Your Dream Home Call-to-Action Section */}
-        <FindYour />
+        <OngoingDevelopment />
       </ParallaxProvider>
     </div>
   )

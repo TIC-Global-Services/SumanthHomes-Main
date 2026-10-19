@@ -1,20 +1,30 @@
 import React from 'react'
+import { ProjectHeroSection } from '../reusable/ProjectHeroSection'
+import logo from '../../assets/img/OurProjectsSection/lotus-vilas-phase-1.png'
 
-const Hero: React.FC = () => {
+export interface HeroProps {
+  data?: any[]
+  [key: string]: any
+}
+
+const Hero: React.FC<HeroProps> = (props) => {
+  const data = [
+    {
+      banner: '/loutus-phase-1/lotus-villas-phase-1-banner.jpg',
+      alt: 'Lotus Serene Villas - Phase I Aerial View',
+      logo: logo,
+      logoPosition: 'bottom-center' as const,
+      buttonText: 'EXPLORE THE VILLAS',
+      buttonLink: '#build-for',
+      buttonBgColor: '#164944',
+    },
+  ]
+
   return (
-    <section className="relative w-full overflow-hidden bg-[#22331c]">
-      {/* Hero Banner Image */}
-      <div className="relative w-full h-screen flex items-center justify-center">
-        <img
-          src="/loutus-phase-1/lotus-villas-phase-1-hero.png"
-          alt="Lotus Serene Villas - Phase I Aerial View"
-          className="w-full h-full object-cover object-top select-none"
-          loading="eager"
-        />
-        {/* Subtle Gradient Overlays for Depth and Seamless Section Flow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/30 pointer-events-none" />
-      </div>
-    </section>
+    <ProjectHeroSection
+      data={props.data || data}
+      {...props}
+    />
   )
 }
 

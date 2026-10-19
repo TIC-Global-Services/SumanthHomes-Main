@@ -1,10 +1,10 @@
 import React from 'react'
-import banner from '../../assets/img/OurProjectsSection/urban_hormony.jpg'
+import banner from '../../assets/img/OurProjectsSection/urban-harmany.png'
 import BlurText from '../../utils/BlurText'
 
 const Crafting = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-[5%] w-full">
+    <section className="py-16 md:py-24 px-4 md:px-[5%] w-full" >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div className="flex flex-col space-y-6">
@@ -19,7 +19,7 @@ const Crafting = () => {
               delay={30}
               animateBy="words"
               direction="bottom" 
-              className="text-gray-600 leading-relaxed" />
+              className="text-gray-600 leading-relaxed text-xl leading-[1.2]" />
         </div>
 
         {/* Image Content */}

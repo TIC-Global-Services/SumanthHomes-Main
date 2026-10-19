@@ -1,24 +1,27 @@
 import React from 'react'
+import ProjectHeroSection from '../reusable/ProjectHeroSection'
 import banner from '../../assets/img/OurProjectsSection/project_hero_banner.png'
 import logo from '../../assets/img/OurProjectsSection/urbanscapes_logo.png'
 
-const Hero = () => {
-  return (
-    <section className="relative w-full min-h-screen bg-gray-300">
-      {/* Background Image Placeholder */}
-      <img
-        src={banner}
-        alt="Urbanscapes Building"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      {/* Overlay to darken image if needed */}
-      <div className="absolute inset-0 bg-black/30"></div>
+const Hero = (props) => {
+  // Configured via an array of objects passed as props
+  const data = [
+    {
+      banner: banner,
+      alt: 'Urbanscapes Building',
+      logo: logo,
+      logoPosition: 'center',
+      buttonText: 'EXPLORE THE APARTMENTS',
+      buttonLink: '#explore',
+      buttonBgColor: '#623725',
+    },
+  ]
 
-      {/* Centered Content */}
-      <div className="absolute inset-0 z-10 flex items-start -top-[15%] justify-center text-white px-4">
-        <img src={logo} alt="" width={800} height={700} />
-      </div>
-    </section>
+  return (
+    <ProjectHeroSection
+      data={props.data || data}
+      {...props}
+    />
   )
 }
 
