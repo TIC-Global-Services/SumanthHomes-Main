@@ -1,4 +1,5 @@
 import React from 'react'
+import { ScrollToTop } from '../utils/ScrollToTop'
 import Hero from '../Components/garudan-gatway/hero'
 import Discover from '../Components/garudan-gatway/discover'
 import BuildFor from '../Components/garudan-gatway/buildfor'
@@ -10,6 +11,7 @@ import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
 const GarudanGateWay = () => {
   return (
     <div>
+        <ScrollToTop/>
         <Hero/>
         <Discover/>
         <Community/>

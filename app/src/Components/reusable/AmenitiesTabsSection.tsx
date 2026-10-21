@@ -67,6 +67,7 @@ export interface AmenitiesTabsSectionProps {
   specifications?: SpecificationItem[]
   locationItems?: LocationItem[]
   mapEmbedUrl?: string
+  mapUrl?: string
   className?: string
   specificationsTextColor?: string
   specificationsTitleColor?: string
@@ -196,18 +197,24 @@ export const defaultSpecifications: SpecificationItem[] = [
   },
 ]
 
-export const defaultLocationData: LocationItem[] = [
-  { name: "Sri Venkateswara Children's School", dist: '300 Mts' },
-  { name: 'Medigo Multi Speciality Hospital', dist: '1 Km' },
-  { name: 'DMART', dist: '1 Km' },
-  { name: 'ANKURA Hospital', dist: '2 Kms' },
-  { name: 'Narayanadri Hospital', dist: '3 Kms' },
+export const lotusSereneLocationData: LocationItem[] = [
+  { name: 'Tirupati - Renigunta Road', dist: '200 Mts' },
+  { name: 'Narayanadri Hospital', dist: '250 Mts' },
+  { name: 'Ankura Hospital', dist: '750 Mts' },
+  { name: 'New Tiruchanur Railway Station', dist: '1 Km' },
+  { name: 'Chadalawada Educational Institutions', dist: '1 Km' },
   { name: 'Tirupati Central Bus Stand', dist: '3 Kms' },
-  { name: 'Tirupati Railway Station', dist: '3.5 Kms' },
-  { name: 'New Tiruchanoor Railway Station', dist: '3.5 Kms' },
-  { name: 'Tirumala Alipiri Toll Gate', dist: '5 Kms' },
-  { name: 'Tirupati International Airport', dist: '15 Kms' },
+  { name: 'Tirupati Main Railway Station', dist: '3.5 Kms' },
+  { name: 'Tirupati International Airport', dist: '12 Kms' },
 ]
+
+export const lotusSereneMapEmbedUrl =
+  'https://www.openstreetmap.org/export/embed.html?bbox=79.4300%2C13.6100%2C79.4700%2C13.6450&layer=mapnik&marker=13.6264%2C79.4538'
+
+export const lotusSereneMapUrl =
+  'https://www.openstreetmap.org/?mlat=13.6264&mlon=79.4538#map=15/13.6264/79.4538'
+
+export const defaultLocationData: LocationItem[] = lotusSereneLocationData
 
 export const defaultTabsList = ['Amenities', 'Master Plan', 'Floor Plans', 'Specifications', 'Location']
 
@@ -232,7 +239,8 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
   floorPlans = defaultFloorPlans,
   specifications = defaultSpecifications,
   locationItems = defaultLocationData,
-  mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=79.3900%2C13.6100%2C79.4500%2C13.6500&layer=mapnik&marker=13.6288%2C79.4192',
+  mapEmbedUrl = lotusSereneMapEmbedUrl,
+  mapUrl = lotusSereneMapUrl,
   className = '',
   specificationsTextColor,
   specificationsTitleColor,
@@ -275,13 +283,8 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
   return (
     <section
       id={id}
-      className={`py-16 md:py-24 w-full bg-[#FAF9F7] ${className}`}
-      style={{
-        backgroundImage: "url('/bg_layer.svg')",
-        backgroundRepeat: 'repeat',
-        backgroundSize: '1200px auto',
-        backgroundPosition: 'top center',
-      }}
+      className={`py-16 md:py-24 w-full ${className}`}
+      
     >
       <div className="px-4 md:px-[5%] max-w-7xl mx-auto">
         {/* Scalable Tab Buttons */}
@@ -350,6 +353,7 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
             <LocationTab
               locationItems={locationItems}
               mapEmbedUrl={mapEmbedUrl}
+              mapUrl={mapUrl}
               accentColor={activeTabColor}
             />
           )}

@@ -14,7 +14,12 @@ import ExploreDetails from '../Components/lotus-vilas-phase-2/exploreDetails'
 
 const LotusSereneVillas: React.FC = () => {
   return (
-    <div className="w-full bg-[#fbfbfb] min-h-screen">
+    <div className="w-full bg-[#fbfbfb] min-h-screen" style={{
+      backgroundImage: "url('/lotus-villas-bg.png')",
+      backgroundRepeat: 'repeat',
+      backgroundSize: '1200px auto',
+      backgroundPosition: 'top center',
+    }}>
       <ParallaxProvider>
         <ScrollToTop />
         {/* 1. Hero Section */}

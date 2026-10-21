@@ -8,6 +8,7 @@ export interface LocationItem {
 export interface LocationTabProps {
   locationItems?: LocationItem[]
   mapEmbedUrl?: string
+  mapUrl?: string
   title?: string
   subtitle?: string
   accentColor?: string
@@ -19,7 +20,8 @@ export interface LocationTabProps {
  */
 export const LocationTab: React.FC<LocationTabProps> = ({
   locationItems = [],
-  mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=79.3900%2C13.6100%2C79.4500%2C13.6500&layer=mapnik&marker=13.6288%2C79.4192',
+  mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=79.4300%2C13.6100%2C79.4700%2C13.6450&layer=mapnik&marker=13.6264%2C79.4538',
+  mapUrl,
   title = 'Location Map',
   subtitle = 'Proximities',
   accentColor,
@@ -73,7 +75,12 @@ export const LocationTab: React.FC<LocationTabProps> = ({
         />
         <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs text-gray-600 shadow-sm">
           <a
-            href="https://www.openstreetmap.org/#map=14/13.6288/79.4192"
+            href={
+              mapUrl ||
+              (mapEmbedUrl.includes('marker=')
+                ? `https://www.openstreetmap.org/?mlat=${mapEmbedUrl.split('marker=')[1].split('%2C')[0]}&mlon=${mapEmbedUrl.split('marker=')[1].split('%2C')[1]}#map=15`
+                : 'https://www.openstreetmap.org')
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline font-medium"

@@ -24,7 +24,7 @@ export const defaultDevelopments = [
     bgimage: '/lotus-vila/ongoing-developement-2.jpg',
     logo: lotusSerenephase2,
     logotitle: '',
-    link: '/lotus-serene-villas',
+    link: '/lotus-villas-phase-2',
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const defaultDevelopments = [
     bgimage: '/lotus-vila/community-2.jpg',
     logo: lotusSerenephase1,
     logotitle: '',
-    link: '/lotus-villa-phase-1',
+    link: '/lotus-villas-phase-1',
   },
   {
     id: 4,

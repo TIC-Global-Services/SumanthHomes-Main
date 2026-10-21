@@ -3,6 +3,7 @@ import {
   AmenitiesTabsSection,
   AmenitiesTabsSectionProps,
   lotusSereneSpecifications,
+  lotusSereneLocationData,
 } from '../reusable'
 
 const Aminities: React.FC<Partial<AmenitiesTabsSectionProps>> = (props) => {
@@ -16,6 +17,9 @@ const Aminities: React.FC<Partial<AmenitiesTabsSectionProps>> = (props) => {
       specificationsDescColor="#164944"
       amenitiesImage="/lotus-serena-amenities.png"
       specifications={lotusSereneSpecifications}
+      locationItems={lotusSereneLocationData}
+      mapEmbedUrl="https://www.openstreetmap.org/export/embed.html?bbox=79.4300%2C13.6100%2C79.4700%2C13.6450&layer=mapnik&marker=13.6264%2C79.4538"
+      mapUrl="https://www.openstreetmap.org/?mlat=13.6264&mlon=79.4538#map=15/13.6264/79.4538"
       {...props}
     />
   )

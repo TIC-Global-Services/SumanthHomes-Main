@@ -176,7 +176,7 @@ export const DefaultOurProjects = ({ id, bgImage, miniHeader, mainHeader, descri
                                 ref={windowTitleRef}>
 
                                 {currentPrj.logoImage ? (
-                                    <div className="flex justify-center w-full mb-2 xl:mb-4">
+                                    <div onClick={() => currentPrj.link && Navigate(currentPrj.link)} className="flex justify-center w-full mb-2 xl:mb-4 cursor-pointer hover:opacity-90 transition-opacity">
                                         <img src={currentPrj.logoImage} alt={currentPrj.mainHeader} className="h-20 md:h-24 xl:h-28 object-contain" />
                                     </div>
                                 ) : (
@@ -260,7 +260,7 @@ export const DefaultOurProjects = ({ id, bgImage, miniHeader, mainHeader, descri
                         ref={titleRef}>
 
                         {currentPrj.logoImage ? (
-                            <div className="flex justify-start w-full pt-6 mb-2">
+                            <div onClick={() => currentPrj.link && Navigate(currentPrj.link)} className="flex justify-start w-full pt-6 mb-2 cursor-pointer hover:opacity-90 transition-opacity">
                                 <img src={currentPrj.logoImage} alt={currentPrj.mainHeader} className="h-16 md:h-20 object-contain" />
                             </div>
                         ) : (

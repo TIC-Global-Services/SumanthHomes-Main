@@ -31,36 +31,42 @@ export const CompletedProjectsSection = () => {
 
   
 
-  const CompletedProjectsCards=[
+  const CompletedProjectsCards = [
     {
-      mainText :"Pearl Abode",
-      subText :"Apartments",
-      image :Image1,
+      mainText: 'Pearl Abode',
+      subText: 'Apartments',
+      image: Image1,
+      link: '/pearl-abode',
     },
     {
-      mainText :"Lotus Serene Villas",
-      subText :"Villa",
-      image :Image2,
+      mainText: 'Lotus Serene Villas',
+      subText: 'Villa',
+      image: Image2,
+      link: '/lotus-villas-phase-1',
     },
     {
-      mainText :"Garuda Gateway",
-      subText :"Commercial",
-      image :Image3,
+      mainText: 'Garuda Gateway',
+      subText: 'Commercial',
+      image: Image3,
+      link: '/garudan-gateway',
     },
     {
-      mainText :"Garuda Gateway",
-      subText :"Residential",
-      image :Image4,
+      mainText: 'Garuda Gateway',
+      subText: 'Residential',
+      image: Image4,
+      link: '/garudan-gateway',
     },
     {
-      mainText :"MN Sri Padmavati Gardens",
-      subText :"Villa",
-      image :Image5,
+      mainText: 'MN Sri Padmavati Gardens',
+      subText: 'Villa',
+      image: Image5,
+      link: '/padmavathi-garden',
     },
     {
-      mainText :"KBR Brindavanam",
-      subText :"Villa",
-      image :Image6,
+      mainText: 'KBR Brindavanam',
+      subText: 'Villa',
+      image: Image6,
+      link: '/kbr-brindavanam',
     },
   ]
   
@@ -126,7 +132,7 @@ export const CompletedProjectsSection = () => {
 
           {
             CompletedProjectsCards.map((data, id)=>(
-              <GridCard2 key={id} mainText={data.mainText} subText={data.subText} Image={data.image} />
+              <GridCard2 key={id} mainText={data.mainText} subText={data.subText} Image={data.image} link={data.link} />
             ))
           }
 

@@ -439,7 +439,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
     <section
       id={id}
       className={`relative py-16 md:py-24 w-full overflow-hidden ${className}`}
-      style={sectionStyle}
+      // style={sectionStyle}
     >
       <div className={containerClassName}>
         {/* Section Header: Subtitle, Title, Description, CTA Button */}

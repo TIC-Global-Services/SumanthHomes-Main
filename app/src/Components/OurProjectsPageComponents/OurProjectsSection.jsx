@@ -73,7 +73,7 @@ export const OurProjectsSection = () => {
         </motion.div>
 
         <div className="w-full mb-[30px]">
-            <DefaultOurProjects id={'villa1'} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} logoImage={Logo1} link="/projects/villa1" />
+            <DefaultOurProjects id={'villa1'} bgImage={Prj1BgImage} miniHeader={'Premium Living Spaces'} mainHeader={'LOTUS SERENE VILLAS'} description={'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.'} logoImage={Logo1} link="/lotus-villas-phase-2" />
         </div>
         <DefaultOurProjects id={'villa2'} bgImage={Prj2BgImage} miniHeader={'A work in motion'} mainHeader={'URBANSCAPES'} description={' Urbanscapes is a contemporary Hi- Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.'} logoImage={Logo2} link="/urbanscapes" /> 
     </div>

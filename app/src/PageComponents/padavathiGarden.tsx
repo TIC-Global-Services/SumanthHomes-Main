@@ -1,4 +1,5 @@
 import React from 'react'
+import { ScrollToTop } from '../utils/ScrollToTop'
 import Hero from '../Components/padmavathi-garden/hero'
 import BuildFor from '../Components/padmavathi-garden/buildfor'
 import Discover from '../Components/padmavathi-garden/discover'
@@ -11,6 +12,7 @@ import Community from '../Components/padmavathi-garden/community'
 const PadmavathiGarden = () => {
   return (
     <div className="w-full bg-[#fbfbfb] min-h-screen">
+      <ScrollToTop />
       <Hero />
       <Discover />
       <Community />

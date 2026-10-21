@@ -3,7 +3,7 @@ import BlurText from '../../utils/BlurText'
 
 const Community: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full bg-[#fbfbfb]">
+    <section className="py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full">
       <div className="">
         {/* Section Heading & Subtitle (Centered) */}
         <div className="text-center max-w-7xl mx-auto mb-10 md:mb-14">

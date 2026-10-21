@@ -15,7 +15,7 @@ import Discover from '../Components/PearlAode/discover'
 const PearlAbode: React.FC = () => {
   return (
     <div className="w-full bg-[#fbfbfb] min-h-screen" style={{
-        backgroundImage: "url('/bg_layer.svg')",
+        backgroundImage: "url('/pearl-adode-bg.png')",
         backgroundRepeat: 'repeat',
         backgroundSize: '1200px auto',
         backgroundPosition: 'top center',

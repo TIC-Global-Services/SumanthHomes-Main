@@ -12,7 +12,7 @@ const Discover: React.FC = () => {
   }
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-[5%] w-full bg-white">
+    <section className="py-16 md:py-24 px-4 md:px-[5%] w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center">
         {/* Left Column: Text Content */}
         <div className="flex flex-col space-y-6">

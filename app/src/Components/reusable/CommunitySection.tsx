@@ -159,7 +159,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
   return (
     <section
       id={id}
-      className={`py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full bg-[#fbfbfb] ${className}`}
+      className={`py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full ${className}`}
     >
       <div className={containerClassName}>
         {/* Section Heading, Subtitle & Description (Centered) */}
