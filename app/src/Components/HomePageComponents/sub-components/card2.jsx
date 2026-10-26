@@ -60,8 +60,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             number
             opacity-0
             text-right md:text-right
-            font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
-            text-[40px] xl:text-[60px] md:text-7xl
+            font-manrope font-normal text-[#B50404]  text-[40px] xl:text-[60px] md:text-7xl
             tracking-[-5px] md:tracking-[-6px]>`}
             >{Number}<span className="text-[#B50404]">{plus ? "+" : null}</span>
             </h3>
@@ -73,7 +72,7 @@ export const Card2 = ({Number, black=false, titleText, contentText, plus=false})
             absolute top-0 left-0
             number
             text-right md:text-right
-            font-manrope font-normal ${black ? 'text-black' : 'text-[#B50404]'}
+            font-manrope font-normal text-[#B50404]
             text-[40px] xl:text-[60px] md:text-7xl
             tracking-[-5px] md:tracking-[-6px]>`}
             >{currentNumber}<span className="text-[#B50404]">{plus ? "+" : null}</span>

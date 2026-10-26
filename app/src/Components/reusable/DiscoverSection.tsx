@@ -88,7 +88,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
         </div>
 
         {/* Right Column: Architectural Elevation Image */}
-        <div className="w-full h-72 sm:h-96 md:h-[420px] lg:h-[460px] rounded-[4px] overflow-hidden shadow-xl bg-gray-100 group">
+        <div className="w-full h-72 sm:h-96 md:h-[420px] lg:h-[460px] overflow-hidden shadow-xl bg-gray-100 group">
           <img
             src={imageSrc}
             alt={imageAlt}

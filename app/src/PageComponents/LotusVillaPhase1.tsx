@@ -9,12 +9,13 @@ import Showreel from '../Components/lotus-villa-phase1/showreel'
 import Ongoing from '../Components/lotus-villa-phase1/ongoing'
 import FindYour from '../Components/lotus-villa-phase1/findyour'
 import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
+import { UpgradeSection } from '../Components/reusable/UpgradeSection'
 
 
 const LotusVillaPhase1: React.FC = () => {
   return (
     <div className="w-full bg-[#fbfbfb] min-h-screen" style={{
-      backgroundImage: "url('/lotus-villas-bg.png')",
+      backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/lotus-villas-bg.png')",
       backgroundRepeat: 'repeat',
       backgroundSize: '1200px auto',
       backgroundPosition: 'top center',
@@ -26,7 +27,7 @@ const LotusVillaPhase1: React.FC = () => {
       <Discover />
       {/* 2. Thoughtfully Designed Section */}
       {/* <Thoughtful /> */}
-
+      <UpgradeSection/>
       {/* 3. A Community Designed Around Modern Living Section */}
       <Community />
 

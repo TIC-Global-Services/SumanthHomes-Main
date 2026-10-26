@@ -25,7 +25,7 @@ export const ShowreelSection: React.FC<ShowreelSectionProps> = ({
 
   return (
     <section id={id} className={`py-12 md:py-20 px-4 sm:px-8 md:px-[5%] w-full ${className}`}>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh] rounded-2xl overflow-hidden shadow-2xl group">
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh] rounded-[4px] overflow-hidden shadow-2xl group">
         {isPlaying ? (
           <div className="relative w-full h-full flex items-center justify-center bg-black">
             <iframe

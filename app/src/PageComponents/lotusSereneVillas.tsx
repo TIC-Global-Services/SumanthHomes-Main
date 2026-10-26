@@ -11,11 +11,12 @@ import OnGoingDevelopement from '../Components/lotus-vilas-phase-2/onGoingDevelo
 import FindyourDream from '../Components/lotus-vilas-phase-2/FindyourDream'
 import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
 import ExploreDetails from '../Components/lotus-vilas-phase-2/exploreDetails'
+import UpgradeSection from '../Components/reusable/UpgradeSection'
 
 const LotusSereneVillas: React.FC = () => {
   return (
     <div className="w-full bg-[#fbfbfb] min-h-screen" style={{
-      backgroundImage: "url('/lotus-villas-bg.png')",
+      backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url('/lotus-villas-bg.png')",
       backgroundRepeat: 'repeat',
       backgroundSize: '1200px auto',
       backgroundPosition: 'top center',
@@ -25,6 +26,7 @@ const LotusSereneVillas: React.FC = () => {
         {/* 1. Hero Section */}
         <Hero />
         <Discover />
+        <UpgradeSection/>
         <ExploreDetails />
         {/* 2. Thoughtfully Designed Section */}
         {/* <Thoughtful /> */}
