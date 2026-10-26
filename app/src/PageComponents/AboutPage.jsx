@@ -35,9 +35,9 @@ const AboutPage = () => {
             <CurrentStatsSection/>
             <VisionSection/>
             <MissionSection/>
-            <Suspense fallback={<div>Loading...</div>}>
+            {/* <Suspense fallback={<div>Loading...</div>}>
               {showLate && <SHSTeamSection/>}
-            </Suspense>
+            </Suspense> */}
         </ContainerLayout>
         <div className='px-[20px] md:px-0 md:pl-[43px] lg:pl-[57px] xl:pl-[71px] 2xl:pl-[80px] '>
           <Suspense fallback={<div>Loading...</div>}>
