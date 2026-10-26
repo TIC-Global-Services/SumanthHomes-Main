@@ -202,7 +202,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
                   delay={15}
                   className={
                     descriptionClassName ||
-                    'text-black text-sm sm:text-base md:text-xl lg:text-[28px] leading-[1.8] tracking-tight mt-10 max-w-5xl mx-auto justify-center'
+                    'text-black text-sm sm:text-base md:text-xl lg:text-2xl leading-[1.8] tracking-tight mt-10 max-w-6xl mx-auto justify-center'
                   }
                 />
               ) : (

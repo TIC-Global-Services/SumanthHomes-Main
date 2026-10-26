@@ -201,7 +201,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
   contactUrl = '/contact',
   brochureUrl,
   cardHeight = 'h-[280px] sm:h-[380px] md:h-[460px] lg:h-[520px] xl:h-[560px]',
-  cardRadius = 'rounded-xl sm:rounded-[4px]',
+  cardRadius = '',
   gap = 'gap-4 sm:gap-5 md:gap-6',
   showArrows = true,
   arrowActiveColor = '#DC2626',

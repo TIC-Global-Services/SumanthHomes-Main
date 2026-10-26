@@ -55,14 +55,15 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
               delay={30}
               animateBy="words"
               direction="bottom"
-              className="text-3xl sm:text-4xl md:text-[38px] font-semibold leading-tight text-gray-900 tracking-tight"
+              className="text-3xl sm:text-4xl md:text-[32px] font-semibold text-gray-900 tracking-tight"
             />
             <BlurText
               text={Highlighttitle}
               delay={30}
               animateBy="words"
               direction="bottom"
-              className={`${Highlighttitecolor ??'text-gray-900'} text-3xl sm:text-4xl md:text-[38px] font-semibold leading-tight tracking-tight`}
+              className="text-3xl sm:text-4xl md:text-[48px] font-semibold leading-tight text-gray-900 tracking-tight"
+              style={{ color: Highlighttitecolor }}
             />
           </div>
 

@@ -4,7 +4,9 @@ import { DiscoverSection } from '../reusable/DiscoverSection'
 const Discover: React.FC = () => {
   return (
     <DiscoverSection
-      title="Discover the Complete Lifestyle"
+      title="A Superior Expression of"
+      Highlighttitle="Luxurious Lifestyle"
+      Highlighttitecolor='#CC1518'
       description="Garuda Gateway Commercial & Residential is a thoughtfully planned mixed-use destination that brings together modern commercial spaces and contemporary residences. Designed for convenience, connectivity, and long-term value, it offers a dynamic environment where businesses and communities flourish together."
       buttonText="Download Brochure"
       buttonColor="#D9B57D"
@@ -14,4 +16,4 @@ const Discover: React.FC = () => {
   )
 }
 
-export default Discover
+export default Discover

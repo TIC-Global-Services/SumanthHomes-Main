@@ -25,7 +25,7 @@ export const ShowreelSection: React.FC<ShowreelSectionProps> = ({
 
   return (
     <section id={id} className={`py-12 md:py-20 px-4 sm:px-8 md:px-[5%] w-full ${className}`}>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh] rounded-[4px] overflow-hidden shadow-2xl group">
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh]  overflow-hidden shadow-2xl group">
         {isPlaying ? (
           <div className="relative w-full h-full flex items-center justify-center bg-black">
             <iframe
@@ -80,12 +80,10 @@ export const ShowreelSection: React.FC<ShowreelSectionProps> = ({
             <button
               onClick={() => setIsPlaying(true)}
               style={{ backgroundColor: accentColor }}
-              className="absolute bottom-5 right-5 sm:bottom-0 sm:right-0 text-white px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold tracking-wider uppercase backdrop-blur-md shadow-lg hover:brightness-105 transition-all duration-200 cursor-pointer flex items-center gap-2"
+              className="absolute bottom-5 right-5 sm:bottom-0 sm:right-0 text-white px-5 sm:px-12 py-2.5 sm:py-3 text-xs sm:text-sm font-normal tracking-wider uppercase backdrop-blur-md shadow-lg hover:brightness-105 transition-all duration-200 cursor-pointer flex items-center gap-2"
             >
               <span>{buttonText}</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-              </svg>
+              
             </button>
           </>
         )}

@@ -5,7 +5,7 @@ const ShowReel: React.FC = () => {
 
   return (
     <section className="py-12 md:py-20 px-4 md:px-[5%] w-full bg-white">
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh] rounded-2xl overflow-hidden shadow-2xl bg-gray-900 group">
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[72vh]  overflow-hidden shadow-2xl bg-gray-900 group">
         {isPlaying ? (
           <div className="relative w-full h-full flex items-center justify-center bg-black">
             <iframe
@@ -50,7 +50,7 @@ const ShowReel: React.FC = () => {
             {/* Bottom Right Showreel Badge */}
             <button
               onClick={() => setIsPlaying(true)}
-              className="absolute bottom-5 right-5 bg-[#144234]/85 hover:bg-[#144234] text-white px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg transition-all duration-200 cursor-pointer flex items-center gap-2"
+              className="absolute bottom-0 right-0 bg-[#144234]/85 hover:bg-[#144234] text-white px-5 py-2.5  text-xs sm:text-sm font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg transition-all duration-200 cursor-pointer flex items-center gap-2"
             >
               <span>Watch Showreel</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

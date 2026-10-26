@@ -5,6 +5,8 @@ const Discover: React.FC = () => {
   return (
     <DiscoverSection
       title="A Superior Expression of"
+      Highlighttitle="Luxurious Lifestyle"
+      Highlighttitecolor='#D9B67D'
       description="Explore every aspect of Lotus Serene Villas – Phase II through our comprehensive brochure. From the thoughtfully designed master plan and spacious villa configurations to premium amenities, architectural details, and community features, discover what makes this exclusive development a distinguished address crafted for refined and modern living."
       buttonText="Download Brochure"
       buttonColor="#164944"

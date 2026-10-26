@@ -21,9 +21,13 @@ const Video = () => {
         </div>
 
         {/* Bottom Right Text */}
-        <div className="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 text-sm backdrop-blur-sm">
-          Watch Video &gt;
-        </div>
+         <button
+              onClick={() => setIsPlaying(true)}
+              className="absolute bottom-0 right-0 bg-[#5A3A2E] text-white px-12 py-2.5  text-xs sm:text-sm font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg transition-all duration-200 cursor-pointer flex items-center gap-2"
+            >
+              <span>Watch Showreel</span>
+              
+            </button>
       </div>
     </section>
   )

@@ -72,7 +72,7 @@ export const UpgradeSection: React.FC<UpgradeSectionProps> = ({
       </div>
 
       {/* Full Width Image with Bottom Glassmorphism Bar */}
-      <div className="relative w-[90vw] h-[50vh] md:h-[70vh] bg-gray-300 rounded-xl overflow-hidden shadow-md">
+      <div className="relative w-[90vw] h-[50vh] md:h-[70vh] bg-gray-300 overflow-hidden shadow-md">
         <img
           src={image}
           alt={imageAlt}

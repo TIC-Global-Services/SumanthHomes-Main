@@ -1,4 +1,5 @@
-  import React from 'react'
+import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 export interface AmenitiesTabProps {
   amenitiesImage?: string
@@ -14,6 +15,9 @@ export const AmenitiesTab: React.FC<AmenitiesTabProps> = ({
   alt = 'Amenities',
   className = '',
 }) => {
+  const location = useLocation()
+  const isPearlAbode = location.pathname.includes('/pearl-abode')
+
   if (!amenitiesImage) return null
 
   return (
@@ -22,7 +26,7 @@ export const AmenitiesTab: React.FC<AmenitiesTabProps> = ({
         <img
           src={amenitiesImage}
           alt={alt}
-          className="w-full h-auto max-h-[55dvh] object-contain rounded-xl"
+          className={`w-full h-auto ${isPearlAbode ? 'max-h-[40dvh]' : 'max-h-[55dvh]'} object-contain rounded-xl`}
         />
       </div>
     </div>
