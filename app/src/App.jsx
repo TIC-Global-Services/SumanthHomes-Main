@@ -15,6 +15,7 @@ const KbrBrindavanam = lazy(() => import('./PageComponents/KbrBrindavanam'));
 const PadmavathiGarden = lazy(() => import('./PageComponents/padavathiGarden'));
 const GarudanGateWay = lazy(() => import('./PageComponents/GarudanGateWay'));
 const PearlAbode = lazy(() => import('./PageComponents/PearlAbode'));
+const JasmineRidge = lazy(() => import('./PageComponents/JasmineRidge'));
 
    const router = createBrowserRouter([
     {
@@ -101,6 +102,13 @@ const PearlAbode = lazy(() => import('./PageComponents/PearlAbode'));
           element:(
           <Suspense fallback={<SkeletonLayout/>}>
             <PearlAbode/>
+          </Suspense>),
+        },
+        {
+          path:"/jasmine-ridge",
+          element:(
+          <Suspense fallback={<SkeletonLayout/>}>
+            <JasmineRidge/>
           </Suspense>),
         }
       ]

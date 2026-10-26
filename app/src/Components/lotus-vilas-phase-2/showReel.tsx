@@ -53,9 +53,7 @@ const ShowReel: React.FC = () => {
               className="absolute bottom-0 right-0 bg-[#144234]/85 hover:bg-[#144234] text-white px-5 py-2.5  text-xs sm:text-sm font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg transition-all duration-200 cursor-pointer flex items-center gap-2"
             >
               <span>Watch Showreel</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-              </svg>
+              
             </button>
           </>
         )}

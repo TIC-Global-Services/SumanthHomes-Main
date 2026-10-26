@@ -69,7 +69,7 @@ const FindyourDream: React.FC = () => {
           </div>
         </div>
         {/* 1. Image Content (Swapped to First / Left Position) */}
-        <div className="w-full h-72 sm:h-80 md:h-[420px] rounded-xl overflow-hidden shadow-xl bg-gray-200 group">
+        <div className="w-full h-72 sm:h-80 md:h-[420px] overflow-hidden shadow-xl bg-gray-200 group">
           <img
             src={ctaData.image}
             alt={ctaData.imageAlt}
