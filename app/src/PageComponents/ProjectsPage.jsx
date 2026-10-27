@@ -22,7 +22,7 @@ const ProjectsPage = () => {
 
 
   return (
-    <div className="overflow-hidden" style={{ backgroundImage: "url('/bg_layer.svg')", backgroundRepeat: 'repeat-y', backgroundSize: 'contain', backgroundPosition: 'center' }}>
+    <div className="overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url('/bg_layer.svg')", backgroundRepeat: 'repeat-y', backgroundSize: 'contain', backgroundPosition: 'center' }}>
       <ParallaxProvider>
         <ScrollToTop />
         {/* <DefaultHeroSection bgImage={bgImage} mainText={"Our Projects"} subText={"Great Architecture Services"} /> */}
