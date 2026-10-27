@@ -50,14 +50,14 @@ export const UpgradeSection: React.FC<UpgradeSectionProps> = ({
   return (
     <section id={id} className={`py-16 w-full flex flex-col items-center ${className}`}>
       {/* Top Text Section */}
-      <div className="mx-auto sm:max-w-3xl lg:max-w-5xl px-4 mb-10 text-center">
+      <div className="w-full sm:max-w-3xl lg:max-w-5xl px-4 mb-10 text-left md:text-center">
         {title && (
           <BlurText
             text={title}
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-3xl md:text-[38px] flex justify-center font-semibold mb-4 text-[#000000]"
+            className="text-2xl md:text-[38px] flex justify-start md:justify-center font-semibold mb-4 text-[#000000] "
           />
         )}
         {description && (
@@ -66,7 +66,7 @@ export const UpgradeSection: React.FC<UpgradeSectionProps> = ({
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-[#929292] flex justify-center"
+            className="text-[#929292] flex justify-start md:justify-center text-sm md:text-lg"
           />
         )}
       </div>

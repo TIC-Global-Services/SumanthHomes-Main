@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 // Tab Subcomponents
 import {
@@ -250,6 +250,10 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
   const [activeTab, setActiveTab] = useState<string>(initialTab || tabs[0] || 'Amenities')
   const [currentSlide, setCurrentSlide] = useState<number>(0)
 
+  // Tab button refs for mobile auto-scroll slider
+  const tabsContainerRef = useRef<HTMLDivElement>(null)
+  const tabButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({})
+
   // Lightbox Modal State
   const [lightboxState, setLightboxState] = useState<{
     isOpen: boolean
@@ -267,6 +271,18 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
       setActiveTab(tabs[0] || 'Amenities')
     }
   }, [tabs, activeTab])
+
+  // Automatically scroll active tab into view on mobile
+  useEffect(() => {
+    const activeEl = tabButtonRefs.current[activeTab]
+    if (activeEl && tabsContainerRef.current) {
+      activeEl.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      })
+    }
+  }, [activeTab])
 
   const openLightbox = (imageUrl: string, title: string) => {
     setLightboxState({
@@ -287,28 +303,40 @@ export const AmenitiesTabsSection: React.FC<AmenitiesTabsSectionProps> = ({
       
     >
       <div className="px-4 md:px-[5%] max-w-7xl mx-auto">
-        {/* Scalable Tab Buttons */}
-        <div className={`flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-12 md:mb-16 border-b-2 pb-10 border-b-${activeTabColor}`}>
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab
-            return (
-              <button
-                key={tab}
-                onClick={() => {
-                  setActiveTab(tab)
-                  if (tab === 'Floor Plans') setCurrentSlide(0)
-                }}
-                style={isActive ? { backgroundColor: activeTabColor } : {}}
-                className={`px-6 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 cursor-pointer shadow-sm ${
-                  isActive
-                    ? 'text-white scale-105 shadow-md'
-                    : 'bg-white text-gray-700 hover:text-black hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                {tab}
-              </button>
-            )
-          })}
+        {/* Scalable Tab Buttons (Slider on Mobile, Wrapped on Desktop) */}
+        <div 
+          className="relative w-full mb-8 md:mb-16 border-b-2 pb-6 md:pb-10"
+          style={{ borderBottomColor: activeTabColor || '#CC1518' }}
+        >
+          <div
+            ref={tabsContainerRef}
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex items-center gap-2.5 sm:gap-4 md:gap-6 overflow-x-auto scroll-smooth py-1 px-1 md:px-0 md:flex-wrap md:justify-center md:overflow-visible [&::-webkit-scrollbar]:hidden"
+          >
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab
+              return (
+                <button
+                  key={tab}
+                  ref={(el) => {
+                    tabButtonRefs.current[tab] = el
+                  }}
+                  onClick={() => {
+                    setActiveTab(tab)
+                    if (tab === 'Floor Plans') setCurrentSlide(0)
+                  }}
+                  style={isActive ? { backgroundColor: activeTabColor } : {}}
+                  className={`flex-shrink-0 whitespace-nowrap px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base font-semibold transition-all duration-300 cursor-pointer shadow-sm ${
+                    isActive
+                      ? 'text-white scale-105 shadow-md'
+                      : 'bg-white text-gray-700 hover:text-black hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {tab}
+                </button>
+              )
+            })}
+          </div>
         </div>
 
         {/* Tab Content Panels */}

@@ -70,11 +70,11 @@ export const DefaultOurProjects = ({ id, bgImage, miniHeader, mainHeader, descri
 
 
     const nextPrj = () => {
-        setCurrentPrj(ProjectData[0]);
+        // Safe placeholder if not passed
     }
 
     const prevPrj = () => {
-        setCurrentPrj(ProjectData[1])
+        // Safe placeholder if not passed
     }
 
     return (

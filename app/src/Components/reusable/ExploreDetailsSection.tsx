@@ -473,7 +473,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
                 direction="bottom"
                 className={
                   titleClassName ||
-                  'text-3xl sm:text-4xl md:text-[38px] font-semibold text-black leading-[1.2] tracking-tight justify-center flex-wrap'
+                  'text-2xl sm:text-4xl md:text-[38px] font-semibold text-black leading-[1.2] tracking-tight justify-start md:justify-center flex-wrap'
                 }
               />
               {highlightTitle && (
@@ -482,7 +482,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
                   delay={25}
                   animateBy="words"
                   direction="bottom"
-                  className={`text-3xl sm:text-4xl md:text-[38px] font-semibold leading-[1.2] tracking-tight justify-center flex-wrap`}
+                  className={`text-2xl sm:text-4xl md:text-[38px] font-semibold leading-[1.2] tracking-tight justify-start md:justify-center flex-wrap`}
                   style={{ color: highlightTitleColor }}
                 />
               )}
@@ -498,7 +498,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
                 direction="bottom"
                 className={
                   descriptionClassName ||
-                  'text-[#929292] text-sm sm:text-lg md:text-xl leading-relaxed justify-center flex-wrap'
+                  'text-[#929292] text-sm sm:text-lg md:text-xl leading-relaxed justify-start md:justify-center flex-wrap'
                 }
               />
             </div>

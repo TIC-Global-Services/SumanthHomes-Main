@@ -28,7 +28,7 @@ const ConsultationSection = () => {
       className="
       scale-150
       w-full
-      aspect-[375/575] md:aspect-[3/1]
+      h-full md:aspect-[3/1]
       " />
       </ParallaxComponent>
       

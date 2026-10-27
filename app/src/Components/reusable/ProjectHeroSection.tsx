@@ -298,7 +298,7 @@ export const ProjectHeroSection: React.FC<ProjectHeroSectionProps> = ({
           )}
 
           {titleText && (
-            <div className={`max-w-2xl sm:max-w-3xl ${titleClass}`}>
+            <div className={`max-w-2xl mb-10 sm:max-w-3xl ${titleClass}`}>
               <BlurText
                 text={titleText}
                 delay={40}

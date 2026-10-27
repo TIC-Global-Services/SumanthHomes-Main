@@ -146,7 +146,7 @@ const SHValues = () => {
   return (
     <div className="w-full">
       {/* 1. From the Founder Component (placed on top of SH Values) */}
-      <div className="w-full pr-[20px] md:pr-[43px] lg:pr-[57px] xl:pr-[71px] 2xl:pr-[80px]">
+      <div className="w-full">
         <FromTheFounder />
       </div>
 

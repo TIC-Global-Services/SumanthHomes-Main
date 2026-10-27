@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Video = () => {
+  const [isPlaying, setIsPlaying] = useState(false)
   return (
     <section className="py-12 md:py-20 px-4 md:px-[5%] w-full">
       <div className="relative w-full h-[50vh] md:h-[70vh] bg-gray-200 overflow-hidden shadow-2xl">
