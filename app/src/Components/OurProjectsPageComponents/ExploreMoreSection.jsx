@@ -50,7 +50,7 @@ export const ExploreMoreSection = () => {
 
               <BlurText
               text="Our small size enables us to service our clients closely and gives us the flexibility to adapt to changing scenarios in the design world."
-              delay={120}
+              delay={20}
               animateBy="words"
               direction="bottom"
                ref={titleRef}
