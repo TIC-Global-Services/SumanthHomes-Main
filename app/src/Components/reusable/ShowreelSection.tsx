@@ -80,7 +80,7 @@ export const ShowreelSection: React.FC<ShowreelSectionProps> = ({
             <button
               onClick={() => setIsPlaying(true)}
               style={{ backgroundColor: accentColor }}
-              className="absolute bottom-5 right-5 sm:bottom-0 sm:right-0 text-white px-5 sm:px-12 py-2.5 sm:py-3 text-xs sm:text-sm font-normal tracking-wider uppercase backdrop-blur-md shadow-lg hover:brightness-105 transition-all duration-200 cursor-pointer flex items-center gap-2"
+              className="absolute bottom-0 right-0 sm:bottom-0 sm:right-0 text-white px-5 sm:px-12 py-2.5 sm:py-3 text-xs sm:text-sm font-normal tracking-wider uppercase backdrop-blur-md shadow-lg hover:brightness-105 transition-all duration-200 cursor-pointer flex items-center gap-2"
             >
               <span>{buttonText}</span>
               

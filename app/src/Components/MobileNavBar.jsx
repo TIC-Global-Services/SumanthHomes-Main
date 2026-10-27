@@ -29,7 +29,7 @@ export const MobileNavBar = () => {
             aspect-[4/3]
             md:hidden
             z-40
-            bg-white/20
+            bg-[#FFFFFF80]
           `
 
     const closeMenu = () => {
@@ -91,7 +91,16 @@ export const MobileNavBar = () => {
         
         <button
             ref={navBarMenu}
-            className={navBtnStyle}
+            className="absolute
+            top-6
+            right-6
+            flex justify-center items-center
+            rounded-full
+            w-[15%]
+            aspect-[4/3]
+            md:hidden
+            z-40
+            bg-[#FFFFFF80]"
             onClick={navMenu}
             aria-label="Toggle Navigation Menu"
         >

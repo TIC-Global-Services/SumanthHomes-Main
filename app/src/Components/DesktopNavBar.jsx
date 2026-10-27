@@ -53,7 +53,7 @@ export const DesktopNavBar = () => {
         uppercase
         px-6
         text-sm  xl:text-sm 
-        bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-none bg-opacity-60 backdrop-saturate-100 backdrop-contrast-50
+        bg-[#FFFFFF80] bg-clip-padding backdrop-filter  backdrop-blur-none bg-opacity-60 backdrop-saturate-100 backdrop-contrast-50
         ">
 
           <li className={navLinkAnimation}><NavLink to='/' className={({isActive})=>(isActive?currentLinkAnimation:"")}>HOME</NavLink></li>

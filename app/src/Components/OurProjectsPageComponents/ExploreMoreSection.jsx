@@ -71,7 +71,7 @@ export const ExploreMoreSection = () => {
               viewport={{once:true}}
             
             className='
-            grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4
+            grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4
             w-full md:w-[80%]'>
 
                 {
