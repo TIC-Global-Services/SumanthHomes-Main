@@ -191,24 +191,39 @@ const ProjectSection = () => {
                 <img
                   src={currentProject.logoDark}
                   alt={currentProject.mainHeader}
-                  className="h-20 lg:h-24 max-w-[220px] object-contain"
+                  className="h-20 lg:h-30 w-[150px] object-cover"
                 />
               </div>
             ) : (
               <div className="mb-4">
-                <p className="text-white/70 text-xs uppercase tracking-wider font-medium mb-1">
-                  {currentProject.miniHeader}
-                </p>
-                <h3 className="text-white font-manrope font-bold text-2xl lg:text-3xl tracking-tight">
-                  {currentProject.mainHeader}
-                </h3>
+                <BlurText
+                  key={`mini-${currentProject.id}`}
+                  text={currentProject.miniHeader}
+                  delay={50}
+                  animateBy="words"
+                  direction="bottom"
+                  className="text-white/70 text-xs uppercase tracking-wider font-medium mb-1"
+                />
+                <BlurText
+                  key={`main-${currentProject.id}`}
+                  text={currentProject.mainHeader}
+                  delay={80}
+                  animateBy="words"
+                  direction="bottom"
+                  className="text-white font-manrope font-bold text-2xl lg:text-3xl tracking-tight"
+                />
               </div>
             )}
 
             {/* Description */}
-            <p className="text-white/85 font-manrope font-light text-[13px] lg:text-[14px] leading-relaxed mb-6 text-left">
-              {currentProject.description}
-            </p>
+            <BlurText
+              key={`desc-${currentProject.id}`}
+              text={currentProject.description}
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+              className="text-white/85 font-manrope font-light text-[13px] lg:text-[14px] leading-relaxed mb-6 text-left"
+            />
 
             {/* Explore Projects Button */}
             <button

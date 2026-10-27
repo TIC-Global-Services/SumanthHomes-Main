@@ -110,8 +110,9 @@ export const CompletedProjectsSection = () => {
         flex justify-center items-center
         text-center
         font-semibold
-        text-3xl md:text-4xl
-        mb-[30px] md:mb-[50px]
+        tracking-tight
+        text-2xl md:text-4xl
+        mb-[10px] md:mb-[50px]
         '
             />
 
@@ -140,10 +141,10 @@ export const CompletedProjectsSection = () => {
 
         </div>
 
-        <div className='md:hidden w-full flex justify-center gap-2'>
+        <div className='md:hidden w-full flex justify-center items-start gap-2'>
           {
             CompletedProjectsCards.map((data, id)=>(
-              <div className={`w-3 h-3 border-0 rounded-full ${(id+1) == frame ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`} key={id}></div>
+              <div className={`h-2 w-2 md:w-3 md:h-3 border-0 rounded-full ${(id+1) == frame ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`} key={id}></div>
             ))
           }
         </div>

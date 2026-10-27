@@ -14,7 +14,7 @@ export const MissionSection = () => {
     overflow-hidden
     flex flex-col md:flex-row justify-between items-center xl:items-start
     xl:gap-6 md:gap-3
-    mt-[60px] md:mt-20
+    mt-[70px] md:mt-20
     '>
 
       <div className="w-full flex md:hidden justify-center mb-[21px]"> 
@@ -50,7 +50,7 @@ export const MissionSection = () => {
               direction="bottom"
               className={`
               mt-2
-              mb-1 xl:mb-4 md:mb-1
+              mb-1 xl:mb-2 md:mb-1
               ${TitleStyleData.miniTitle}
             `}
             />

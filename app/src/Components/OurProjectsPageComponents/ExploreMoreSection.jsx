@@ -56,6 +56,7 @@ export const ExploreMoreSection = () => {
                ref={titleRef}
                className='
             font-normal
+            leading-[1.3]
             mb-4 xl:mb-12
             xl:w-[80%] 
             md:text-xl xl:text-3xl 
@@ -70,7 +71,7 @@ export const ExploreMoreSection = () => {
               viewport={{once:true}}
             
             className='
-            grid grid-cols-2 md:grid-cols-3 gap-4
+            grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4
             w-full md:w-[80%]'>
 
                 {

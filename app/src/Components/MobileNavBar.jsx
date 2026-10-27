@@ -5,11 +5,8 @@ import { Logo } from "../sub-components/logo";
 import { motion } from "motion/react";
 
 export const MobileNavBar = () => {
-
-    const tl = gsap.timeline();
     const [clicked, setClicked] = useState(false);
-
-    const currentUrl = useLocation().pathname;
+    const location = useLocation();
     const navigate = useNavigate();
 
     const linkAnimation = {
@@ -21,8 +18,6 @@ export const MobileNavBar = () => {
     
     const navBarMenuBtn = useRef(null);
     const navBarMenu = useRef(null);
-    const line1 = useRef(null);
-    const line2 = useRef(null);
 
     let navBtnStyle = `
             absolute
@@ -37,62 +32,36 @@ export const MobileNavBar = () => {
             bg-white/20
           `
 
+    const closeMenu = () => {
+      setClicked(false);
+      if (navBarMenuBtn.current) {
+        navBarMenuBtn.current.style.display = "none";
+      }
+      if (navBarMenu.current) {
+        navBarMenu.current.style.backgroundColor = "rgba(255,255,255,0.2)";
+      }
+    };
+
+    // Close menu when route changes
     useEffect(() => {
-      const ctx = gsap.context(()=>{
-
-        gsap.set(line1.current, { y: -6 });
-        gsap.set(line2.current, { y: 6 });
-
-      })
-        
-      return(()=>ctx.revert())
-    }, []);
-
-    // Making navbar X
-    useEffect(() => {
-        
-        if (!line1.current || !line2.current) return;
-
-        if(clicked){
-          navBtnStyle = navBtnStyle + ""
-        }
-        
-        const ctx = gsap.context(()=>{
-            
-            if (clicked) {
-                gsap.to(line1.current, { rotate: 45, y: 0, duration: 0.3 });
-                gsap.to(line2.current, { rotate: -45, y: 0, duration: 0.3 });
-            } else {
-                gsap.to(line1.current, { rotate: 0, y: -6, duration: 0.3 });
-                gsap.to(line2.current, { rotate: 0, y: 6, duration: 0.3 });
-            }
-        })
-        return(
-            ()=>{ctx.revert()}
-        )
-
-        
-    }, [clicked]);
+      closeMenu();
+    }, [location.pathname]);
 
     const navMenu = () => {
-  setClicked(prev => !prev);
-
-  if (!clicked) {
-    navBarMenuBtn.current.style.display = "block";
-
-    tl.fromTo(navBarMenuBtn.current, {
-      opacity:0,
-    }, {
-      opacity:1,
-      duration:.5,
-    }).revert()
-
-
-  } else {
-    navBarMenuBtn.current.style.display = "none";
-    navBarMenu.current.style.backgroundColor = "rgba(255,255,255,0.2)";
-  }
-};
+      if (!clicked) {
+        setClicked(true);
+        if (navBarMenuBtn.current) {
+          navBarMenuBtn.current.style.display = "block";
+          gsap.fromTo(
+            navBarMenuBtn.current,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.3 }
+          );
+        }
+      } else {
+        closeMenu();
+      }
+    };
     
     return (
     <nav className="
@@ -102,8 +71,9 @@ export const MobileNavBar = () => {
         w-full sm:w-[70%] md:w-[90%] lg:w-[90%] xl:w-[50%]
         z-50">
         
-        
-        <div onClick={()=>navigate('/')} className="
+        <div 
+            onClick={() => { navigate('/'); closeMenu(); }} 
+            className="
             absolute
             top-5
             left-6
@@ -114,34 +84,28 @@ export const MobileNavBar = () => {
             aspect-square
             w-[13%] sm:w-10 md:w-10 lg:w-14 xl:w-14 2xl:w-20
             sm:h-10 md:h-10 lg:h-14 xl:h-14 2xl:h-20 
-            z-40
+            z-40 cursor-pointer
             ">
-        
             <Logo/>
-        
         </div>
         
         <button
             ref={navBarMenu}
             className={navBtnStyle}
-
-          onClick={navMenu}
+            onClick={navMenu}
+            aria-label="Toggle Navigation Menu"
         >
-            <span
-            ref={line1}
-            className="absolute w-[40%] h-[2px] bg-black "
-        />
-        
-        <span
-            ref={line2}
-            className="absolute w-[40%] h-[2px] bg-black "
-        /> 
+            {clicked ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-black">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            ) : (
+              <img src="/hugeicons_menu.svg" alt="Menu" className="w-6 h-6 object-contain" />
+            )}
         </button>
 
-        
-
         <div
-        ref={navBarMenuBtn}
+            ref={navBarMenuBtn}
             className="
                 fixed
                 top-0
@@ -163,40 +127,45 @@ export const MobileNavBar = () => {
                 text-black
                 text-4xl
             ">
+                <motion.li
+                  initial={linkAnimation.initial}
+                  whileInView={linkAnimation.whileInView}
+                  transition={linkAnimation.transition}
+                  viewport={linkAnimation.viewport}
+                  className="pl-10"
+                >
+                  <Link to='/' onClick={closeMenu}>HOME</Link>
+                </motion.li>
 
                 <motion.li
-                initial={linkAnimation.initial}
-                whileInView={linkAnimation.whileInView}
-                transition={linkAnimation.transition}
-                viewport={linkAnimation.viewport}
-
-                className="pl-10">{currentUrl ? <a href="/">HOME</a> : <Link to='/'>HOME</Link>}</motion.li>
-
-                <motion.li
-                initial={linkAnimation.initial}
-                whileInView={linkAnimation.whileInView}
-                transition={linkAnimation.transition}
-                viewport={linkAnimation.viewport}
-
-                className="pl-10" >{currentUrl === '/about' ? <a href="/about">ABOUT</a> : <Link to='/about'>ABOUT</Link>}</motion.li>
+                  initial={linkAnimation.initial}
+                  whileInView={linkAnimation.whileInView}
+                  transition={linkAnimation.transition}
+                  viewport={linkAnimation.viewport}
+                  className="pl-10"
+                >
+                  <Link to='/about' onClick={closeMenu}>ABOUT</Link>
+                </motion.li>
 
                 <motion.li
-                initial={linkAnimation.initial}
-                whileInView={linkAnimation.whileInView}
-                transition={linkAnimation.transition}
-                viewport={linkAnimation.viewport}
-                
-                className="pl-10" >{currentUrl === '/projects' ? <a href="/projects">PROJECTS</a> : <Link to='/projects'>PROJECTS</Link>}</motion.li>
+                  initial={linkAnimation.initial}
+                  whileInView={linkAnimation.whileInView}
+                  transition={linkAnimation.transition}
+                  viewport={linkAnimation.viewport}
+                  className="pl-10"
+                >
+                  <Link to='/projects' onClick={closeMenu}>PROJECTS</Link>
+                </motion.li>
 
                 <motion.li 
-                
-                initial={linkAnimation.initial}
-                whileInView={linkAnimation.whileInView}
-                transition={linkAnimation.transition}
-                viewport={linkAnimation.viewport}
-                
-                className="pl-10" > {currentUrl === '/contact' ? <a href="/contact">CONTACT</a> : <Link to='/contact'>CONTACT</Link> }</motion.li>         
-
+                  initial={linkAnimation.initial}
+                  whileInView={linkAnimation.whileInView}
+                  transition={linkAnimation.transition}
+                  viewport={linkAnimation.viewport}
+                  className="pl-10"
+                >
+                  <Link to='/contact' onClick={closeMenu}>CONTACT</Link>
+                </motion.li>         
             </ul>
       </div>
     </nav>

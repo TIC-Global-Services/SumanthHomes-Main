@@ -1,10 +1,10 @@
 import { GridCard1 } from './sub-componenets/GridCard1'
-import {gsap } from "gsap"
+import { gsap } from "gsap"
 import { ScrollTrigger, TextPlugin } from 'gsap/all';
 import { useRef, useEffect } from 'react';
 import '../../assets/styles/titleStyle.css';
 import { TextSlideInAnimation } from '../../utils/TextSlideInAnimation';
-import {motion} from "motion/react"
+import { motion } from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur';
 import BlurText from '../../utils/BlurText';
 import { TitleStyleData } from '../../utils/TitleComponentStyle';
@@ -19,73 +19,78 @@ export const ArchitectureProcessSection = () => {
   const titleRef = useRef(null);
   const contentRef = useRef(null);
   const containerRef = useRef(null);
-      
+
   return (
     <div ref={containerRef} className='
     flex items-start justify-between flex-wrap 
     mt-7 md:mt-[122px]'>
 
-        <div className='
+      <div className='
         w-full md:w-full xl:w-[40%]
         mb-[60px] md:mb-4'>
 
-            <div
-            ref={titleRef}>
+        <div
+          ref={titleRef}>
 
-              <BlurText
-              text="Architecture process"
-              delay={120}
-              animateBy="words"
-              direction="bottom"
-              className={`mb-1 xl:mb-4 md:mb-1 ${TitleStyleData.miniTitle}`}
-                      />
+          <BlurText
+            text="Architecture process"
+            delay={120}
+            animateBy="words"
+            direction="bottom"
+            className={`mb-1 xl:mb-4 md:mb-1 font-medium  tracking-0 md:tracking-[3px] uppercase text-[#B50404] text-[10px] md:text-xs pb-[6px] md:pb-[5px] `}
+          />
 
-            <BlurText
-              text="From Concept to Completion"
-              delay={120}
-              animateBy="words"
-              direction="bottom"
-              className={`mb-4 xl:mb-8 md:mb-4 ${TitleStyleData.mainTitle}`}
-            
-                      />
+          <BlurText
+            text="From Concept to Completion"
+            delay={120}
+            animateBy="words"
+            direction="bottom"
+            className={`mb-4 xl:mb-8 md:mb-4 font-manrope font-bold md:font-semibold text-2xl leading-none md:text-[38px] tracking-tight md:leading-[48px] text-[#191919]`}
 
-            </div>
-
-            <motion.p
-            initial={{opacity:0, y:100}}
-            whileInView={{opacity:1, y:0}}
-            transition={SlideUpAnimationBlur.transition}
-            viewport={SlideUpAnimationBlur.viewport}
-
-            ref={contentRef} className={`xl:w-[90%] mb-4 ${TitleStyleData.content} `}>
-              At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
-            </motion.p>
+          />
 
         </div>
 
-        <div className='
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={SlideUpAnimationBlur.transition}
+          viewport={SlideUpAnimationBlur.viewport}
+
+          ref={contentRef} className={`xl:w-[90%] mb-4
+            text-xs md:text-lg
+            font-normal
+            text-[#737373]
+            leading-[14px] md:leading-[26px]
+            tracking-0`}>
+          At Sumanth Homes, we create buildings that reflect minimalism and timeless elegance, thoughtfully designed to harmonize with the environment and complement the beauty around them.
+        </motion.p>
+
+      </div>
+
+      <div className='
         card-container
         w-full md:w-full xl:w-[50%] 
           '
-        
+
         style={{
-          scrollbarWidth:'none',
+          scrollbarWidth: 'none',
         }}
-        >
+      >
 
-        <div className='w-full  flex items-start justify-normal md:justify-between gap-3 md:gap-0 flex-nowrap md:flex-wrap  md:mx-auto mb-10'>
+        <div className='w-full  flex items-start justify-normal md:justify-between gap-3 md:gap-0 flex-nowrap md:flex-wrap leading-none  md:mx-auto mb-10'>
           <GridCard1 number={'1'} mainText={'Design planing'} subText={"Our buildings combine design elegance of lines and shapes."} />
-          <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'}/>  
-        </div>            
-           
-        <div className='flex items-start justify-normal md:justify-between gap-3 md:gap-0 flex-nowrap md:flex-wrap md:mx-auto w-full'>
-          <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
-          <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'}/>
+          <GridCard1 number={'2'} mainText={'Design concept'} subText={'Our buildings combine design elegance of lines and shapes.'} />
         </div>
 
+        <div className='flex items-start justify-normal leading-none md:justify-between gap-3 md:gap-0 flex-nowrap md:flex-wrap md:mx-auto w-full'>
+          <GridCard1 number={'3'} mainText={'Design development'} subText={'Our buildings combine design elegance of lines and shapes.'} />
+          <GridCard1 number={'4'} mainText={'Finished project'} subText={'Our buildings combine design elegance of lines and shapes.'} />
         </div>
 
-       
+      </div>
+
+
 
     </div>
   )

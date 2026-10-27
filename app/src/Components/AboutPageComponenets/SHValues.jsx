@@ -197,11 +197,10 @@ const SHValues = () => {
                 >
                   {/* Image Container: Staggered height matching exact mockup (Tall vs Shorter) */}
                   <div
-                    className={`w-full overflow-hidden bg-gray-100 ${
-                      card.isTall
+                    className={`w-full overflow-hidden bg-gray-100 ${card.isTall
                         ? 'h-[340px] sm:h-[390px] md:h-[420px] lg:h-[440px]'
                         : 'h-[250px] sm:h-[290px] md:h-[310px] lg:h-[325px]'
-                    }`}
+                      }`}
                   >
                     <img
                       src={card.image}
@@ -255,11 +254,10 @@ const SHValues = () => {
               type="button"
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className={`transition-all duration-300 p-1.5 flex items-center justify-center ${
-                currentIndex === 0
+              className={`transition-all duration-300 p-1.5 flex items-center justify-center ${currentIndex === 0
                   ? 'text-[#9E9E9E] cursor-not-allowed opacity-60'
                   : 'text-[#CC1518] hover:scale-115 cursor-pointer'
-              }`}
+                }`}
               aria-label="Previous card"
             >
               <svg
@@ -281,11 +279,10 @@ const SHValues = () => {
               type="button"
               onClick={nextSlide}
               disabled={currentIndex >= maxIndex}
-              className={`transition-all duration-300 p-1.5 flex items-center justify-center ${
-                currentIndex >= maxIndex
+              className={`transition-all duration-300 p-1.5 flex items-center justify-center ${currentIndex >= maxIndex
                   ? 'text-[#9E9E9E] cursor-not-allowed opacity-60'
                   : 'text-[#CC1518] hover:scale-115 cursor-pointer'
-              }`}
+                }`}
               aria-label="Next card"
             >
               <svg
