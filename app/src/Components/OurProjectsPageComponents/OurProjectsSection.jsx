@@ -50,7 +50,7 @@ export const OurProjectsSection = () => {
           delay={120}
           animateBy="words"
           direction="bottom"
-          className="text-center text-[#B50404] flex justify-center items-center font-semibold text-[10px] md:text-xs tracking-tight md:tracking-wider"
+          className="text-center mb-2 text-[#B50404] flex justify-center items-center font-semibold text-[10px] md:text-xs tracking-tight md:tracking-wider"
         />
 
         <BlurText
