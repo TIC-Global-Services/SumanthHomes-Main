@@ -76,12 +76,13 @@ export const MapSection = () => {
         hidden md:block
         absolute
         top-32 md:top-[20%] xl:top-[30%]
-        left-[10%]
+        lg:left-[10%]
         bg-[#E7E7E7]
-        px-8 md:px-20
+        px-8 lg:px-20
         py-10 md:py-20
         mx-auto
-        w-[80%]
+        w-full lg:w-[80%]
+        lg:w-[80%]
         aspect-[986.66/781.22]
         ">
 
@@ -271,7 +272,7 @@ export const MapSection = () => {
             mt-6
             mb-3 md:mb-6
             font-normal
-            text-sm tracking-[-0.1px] leading-6
+            text-xs md:text-sm tracking-[-0.1px] leading-6
             ">
               <p>We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
             </div>
