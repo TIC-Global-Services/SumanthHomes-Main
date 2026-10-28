@@ -31,7 +31,7 @@ export const Footer = () => {
     return (
         <div>
             <div className='
-    flex items-center justify-center md:block min-h-[50dvh] bg-[#E1E1E1]
+    flex items-center justify-center md:block lg:min-h-[50dvh] bg-[#E1E1E1]
     px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px] '>
 
                 <div className='

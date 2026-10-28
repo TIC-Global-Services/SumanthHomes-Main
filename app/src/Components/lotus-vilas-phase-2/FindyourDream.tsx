@@ -19,7 +19,7 @@ const FindyourDream: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center">
         {/* 2. Text Content (Swapped to Second / Right Position) */}
         <div className="flex flex-col space-y-6">
-          <div className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.2]">
+          <div className="text-3xl md:text-2xl lg:text-5xl font-semibold leading-[1.2]">
             <BlurText
               text={ctaData.title}
               delay={30}
@@ -69,7 +69,7 @@ const FindyourDream: React.FC = () => {
           </div>
         </div>
         {/* 1. Image Content (Swapped to First / Left Position) */}
-        <div className="w-full h-72 sm:h-80 md:h-[420px] overflow-hidden shadow-xl bg-gray-200 group">
+        <div className="w-full h-72 sm:h-80 md:h-[350px] lg:h-[420px] overflow-hidden shadow-xl bg-gray-200 group">
           <img
             src={ctaData.image}
             alt={ctaData.imageAlt}

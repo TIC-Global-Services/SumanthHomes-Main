@@ -53,7 +53,7 @@ export const OngoingDevelopmentsSection: React.FC<OngoingDevelopmentsSectionProp
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 justify-center tracking-tight"
+            className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 justify-center tracking-tight"
           />
         </div>
 

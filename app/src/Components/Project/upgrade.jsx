@@ -32,7 +32,7 @@ const Upgrade = ({
                         delay={30}
                         animateBy="words"
                         direction="bottom"
-                        className="text-2xl md:text-[38px] flex justify-start md:justify-center font-semibold mb-4 text-black"
+                        className="text-2xl lg:text-[38px] flex justify-start md:justify-center font-semibold mb-4 text-black"
                     />
                 )}
 
@@ -42,12 +42,12 @@ const Upgrade = ({
                         delay={30}
                         animateBy="words"
                         direction="bottom"
-                        className="text-[#929292] flex justify-start md:justify-center text-sm md:text-lg"
+                        className="text-[#929292] flex justify-start md:justify-center text-sm md:text-base lg:text-lg"
                     />
                 )}
             </div>
 
-            <div className="relative w-[90vw] h-[50vh] md:h-[70vh] bg-gray-300 overflow-hidden shadow-md">
+            <div className="relative w-[90vw] h-[50vh] lg:h-[70vh] bg-gray-300 overflow-hidden shadow-md">
                 <img
                     src={bannerImg}
                     alt={imageAlt}

@@ -13,17 +13,17 @@ const Crafting = () => {
               delay={30}
               animateBy="words"
               direction="bottom" 
-              className="text-2xl md:text-4xl font-semibold text-gray-900" />
+              className="text-2xl lg:text-4xl font-semibold text-gray-900" />
           <BlurText 
               text="A premium residential community by Sumanth Homes, thoughtfully designed to blend contemporary architecture with timeless Indian values. Located in the heart of Tirupati, Urbanscapes offers spacious 2 & 3 BHK residences with exceptional connectivity, modern amenities, and 100% Vaastu-compliant planning."
               delay={30}
               animateBy="words"
               direction="bottom" 
-              className="text-gray-600 leading-[1.2] md:leading-relaxed text-sm md:text-xl" />
+              className="text-gray-600 leading-[1.2] lg:leading-relaxed text-sm lg:text-xl" />
         </div>
 
         {/* Image Content */}
-        <div className="w-full h-64 md:h-[400px] bg-gray-200 overflow-hidden shadow-lg">
+        <div className="w-full h-64 lg:h-[400px] bg-gray-200 overflow-hidden shadow-lg">
           <img 
             src={banner}
             alt="Crafting Urban Harmony" 

@@ -47,7 +47,7 @@ export const ArchitectureDesignSection = () => {
                 delay={120}
                 animateBy="words"
                 direction="bottom"
-                className={`pb-[10px] md:pb-0 ${TitleStyleData.mainTitle}`}
+                className={`pb-[10px] md:pb-0 font-manrope font-bold md:font-semibold text-2xl leading-[1.1] md:text-[38px] tracking-[-0.5px] lg:leading-[48px] text-[#191919]`}
                 />
 
 
@@ -61,7 +61,12 @@ export const ArchitectureDesignSection = () => {
 
             className='md:w-[35%] lg:w-[45%] '>
 
-                <p className={` ${TitleStyleData.content}`}
+                <p className={`mb-4 
+            text-xs md:text-base lg:text-lg
+            font-normal
+            text-[#737373]
+            leading-[1.2] lg:leading-[26px]
+            tracking-0`}
                 >Our buildings combine minimalism and elegance of lines and shapes. We want them to be an integral part of the surrounding landscape.</p>
 
             </motion.div>

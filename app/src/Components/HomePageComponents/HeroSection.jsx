@@ -27,7 +27,7 @@ export const HeroSection = () => {
     absolute
     
     bottom-0 left-0
-    w-[80%] md:w-[70%] lg:w-[70%] xl:w-[70%] 
+    w-[80%] md:w-[80%] lg:w-[70%] xl:w-[70%] 
     px-[20px] md:px-[43px] lg:px-[57px] xl:px-[71px] 2xl:px-[80px]
     pb-14 xl:pb-20 md:pb-10 
     
@@ -38,7 +38,7 @@ export const HeroSection = () => {
     text-[#F7F7F2]
     
     '>
-            Elevating Every Space <br /> with Purpose and Precision
+            Elevating Every Space <br className="hidden lg:block"/> with Purpose and Precision
     </h2>
 
     </motion.div>

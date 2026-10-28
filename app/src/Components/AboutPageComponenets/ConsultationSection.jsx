@@ -16,7 +16,7 @@ const ConsultationSection = () => {
     overflow-hidden
     flex 
     w-full
-    md:aspect-[3/1]
+    lg:aspect-[3/1]
 
     mt-[60px]
     md:mb-[120px]
@@ -58,9 +58,9 @@ const ConsultationSection = () => {
             Let's Build Something Meaningful</h2>
 
           <p className='
-            w-[80%] md:w-auto
+            w-[80%] md:w-full
             font-normal text-white 
-            text-xs md:text-xs xl:text-base
+            text-xs md:text-sm xl:text-base
             xl:mb-3
             leading-[15px] md:leading-5
             mb-4 md:mb-1'>

@@ -57,7 +57,7 @@ export const UpgradeSection: React.FC<UpgradeSectionProps> = ({
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-2xl md:text-[38px] flex justify-start md:justify-center font-semibold mb-4 text-[#000000] "
+            className="text-2xl lg:text-[38px] flex justify-start md:justify-center font-semibold mb-4 text-[#000000] "
           />
         )}
         {description && (
@@ -66,7 +66,7 @@ export const UpgradeSection: React.FC<UpgradeSectionProps> = ({
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-[#929292] flex justify-start md:justify-center text-sm md:text-lg"
+            className="text-[#929292] flex justify-start md:justify-center text-sm md:text-base lg:text-lg"
           />
         )}
       </div>

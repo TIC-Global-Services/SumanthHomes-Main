@@ -6,20 +6,20 @@ const Community: React.FC = () => {
     <section className="py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full">
       <div className="">
         {/* Section Heading & Subtitle (Centered) */}
-        <div className="text-center max-w-7xl mx-auto mb-10 md:mb-14">
+        <div className="md:text-center max-w-7xl mx-auto mb-10 md:mb-14">
           <BlurText
             text="A Community Designed Around Modern Living"
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-3xl sm:text-4xl md:text-4xl font-semibold text-black tracking-tight justify-center"
+            className="text2xl sm:text-2xl lg:text-4xl font-semibold text-black tracking-tight justify-start lg:justify-center"
           />
           <BlurText
             text="Lotus Serene Villas – Phase I is an exclusive gated villa community offering elegantly designed homes, expansive living spaces, and world-class amenities. Surrounded by serene landscapes, it delivers a lifestyle that blends sophistication, comfort, and everyday convenience."
             delay={15}
             animateBy="words"
             direction="bottom"
-            className="text-[#929292] text-sm sm:text-base md:text-lg leading-[1.2] mt-4 max-w-4xl mx-auto justify-center"
+            className="text-[#929292] text-sm sm:text-base lg:text-lg leading-[1.2] mt-4 lg:max-w-4xl lg:mx-auto justify-start"
           />
         </div>
 

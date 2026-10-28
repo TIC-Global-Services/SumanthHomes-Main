@@ -174,7 +174,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
                 direction="bottom"
                 className={
                   subtitleClassName ||
-                  'text-xs sm:text-sm md:text-[32px] font-semibold tracking-tight  text-black md:mb-6 justify-center'
+                  'text-xs sm:text-xl lg:text-[32px] font-semibold tracking-tight  text-black lg:mb-6 justify-center'
                 }
               />
             )}
@@ -187,7 +187,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
                 animateBy="words"
                 direction="bottom"
                 className={
-                  `text-[${highlightTextColor}] text-2xl sm:text-4xl md:text-4xl lg:text-[64px] font-semibold tracking-tight leading-relaxed mb-2 md:mb-4 mt-0 md:mt-4 justify-center`
+                  `text-[${highlightTextColor}] text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-semibold tracking-tight leading-relaxed mb-2 md:mb-4 mt-0 md:mt-1 lg:mt-4 justify-center`
                 }
               />
             )}
@@ -202,7 +202,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
                   delay={15}
                   className={
                     descriptionClassName ||
-                    'text-black text-sm sm:text-base md:text-xl lg:text-2xl leading-[1.2] md:leading-[1.8] tracking-tight mt-4 md:mt-10 max-w-6xl mx-auto justify-center'
+                    'text-black text-sm sm:text-base md:text-base lg:text-2xl leading-[1.2] lg:leading-[1.8] tracking-tight mt-4 lg:mt-10 max-w-6xl mx-auto justify-center'
                   }
                 />
               ) : (
@@ -213,7 +213,7 @@ export const CommunitySection: React.FC<CommunitySectionProps> = ({
                   direction="bottom"
                   className={
                     descriptionClassName ||
-                    'text-[#929292] text-sm sm:text-base md:text-[28px] leading-relaxed tracking-tight mt-4 max-w-3xl mx-auto justify-center'
+                    'text-[#929292] text-sm sm:text-base lg:text-[28px] leading-relaxed tracking-tight mt-4 max-w-3xl mx-auto justify-center'
                   }
                 />
               )

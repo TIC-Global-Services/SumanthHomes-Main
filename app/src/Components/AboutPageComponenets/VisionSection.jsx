@@ -71,7 +71,8 @@ export const VisionSection = () => {
               direction="bottom"
               className={`
             mb-4 xl:mb-8 md:mb-4
-            ${TitleStyleData.mainTitle}
+
+                font-manrope font-bold md:font-semibold text-xl leading-[1.2] md:text-2xl lg:text-[38px] tracking-[-0.5px] lg:leading-[48px] text-black
             `}
             />
 
@@ -83,7 +84,12 @@ export const VisionSection = () => {
             transition={SlideUpAnimationBlur.transition}
             viewport={SlideUpAnimationBlur.viewport}
             
-            ref={contentRef} className={`${TitleStyleData.content}`}>
+            ref={contentRef} className={`mb-4 
+            text-xs md:text-base lg:text-lg
+            font-normal
+            text-[#737373]
+            leading-[1.2] lg:leading-[26px]
+            tracking-0`}>
 
                 Our vision is to build high-quality homes that reflect trust and lasting value. We understand that a home is a one-time investment for many, and we are committed to delivering spaces that offer comfort, reliability, and complete satisfaction. With this vision, we strive to give our best in every project we undertake.
 
@@ -93,7 +99,7 @@ export const VisionSection = () => {
 
         <div className=' md:w-[50%] xl:w-[47%] overflow-hidden order-1 md:order-2'>
           <ParallaxComponent className='w-full'>
-           <img className=' md:h-[18%] md:w-full  xl:w-full aspect-[335/245] md:aspect-[2/1] scale-150' src={visionImage}></img>
+           <img className='h-full lg:h-[18%] md:w-full object-contain  xl:w-full aspect-[335/245] md:aspect-[3/3] lg:aspect-[2/1] scale-150' src={visionImage}></img>
           </ParallaxComponent>
         </div>
 

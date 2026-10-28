@@ -46,7 +46,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
 
   return (
     <section id={id} className={`py-16 md:py-24 px-4 sm:px-8 md:px-[5%] w-full ${className}`}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left Column: Text Content */}
         <div className="flex flex-col justify-center">
           <div className="mb-6">
@@ -55,14 +55,14 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
               delay={30}
               animateBy="words"
               direction="bottom"
-              className="text-2xl sm:text-4xl md:text-[32px] font-semibold text-gray-900 tracking-tight"
+              className="text-2xl sm:text-2xl lg:text-[32px] font-semibold text-gray-900 tracking-tight"
             />
             <BlurText
               text={Highlighttitle}
               delay={30}
               animateBy="words"
               direction="bottom"
-              className="text-2xl sm:text-4xl md:text-[48px] font-semibold leading-tight text-gray-900 tracking-tight"
+              className="text-2xl sm:text-2xl lg:text-[48px] font-semibold leading-none text-gray-900 tracking-tight"
               style={{ color: Highlighttitecolor }}
             />
           </div>
@@ -73,7 +73,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
               delay={20}
               animateBy="words"
               direction="bottom"
-              className="text-[#666666] text-sm sm:text-base md:text-lg leading-[1.2] md:leading-relaxed max-w-xl"
+              className="text-[#666666] text-sm sm:text-sm lg:text-lg leading-[1.2] lg:leading-relaxed max-w-xl"
             />
           </div>
 
@@ -81,7 +81,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
             <button
               onClick={handleAction}
               style={{ backgroundColor: buttonColor }}
-              className="inline-flex items-center gap-2.5 hover:brightness-105 text-white px-8 py-3.5 rounded-lg text-sm sm:text-base font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 uppercase tracking-wider cursor-pointer"
+              className="inline-flex items-center gap-2.5 hover:brightness-105 text-white px-8 py-3.5 rounded-lg text-sm lg:text-base font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 uppercase tracking-wider cursor-pointer"
             >
               <span>{buttonText}</span>
             </button>
@@ -89,7 +89,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
         </div>
 
         {/* Right Column: Architectural Elevation Image */}
-        <div className="w-full h-72 sm:h-96 md:h-[420px] lg:h-[460px] overflow-hidden shadow-xl bg-gray-100 group">
+        <div className="w-full h-72 sm:h-96 md:h-[350px] lg:h-[460px] overflow-hidden shadow-xl bg-gray-100 group">
           <img
             src={imageSrc}
             alt={imageAlt}

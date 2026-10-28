@@ -446,7 +446,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
         <div
           className={
             headerClassName ||
-            'max-w-4xl mx-auto px-4 text-center flex flex-col items-center mb-10 md:mb-14'
+            'max-w-4xl mx-auto px-4 md:text-center flex flex-col items-start md:items-center mb-10 md:mb-14'
           }
         >
           {subtitle && (
@@ -465,7 +465,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
           )}
 
           {title && (
-            <div className="max-w-xl mx-auto mb-4">
+            <div className="md:max-w-xl md:mx-auto mb-4">
               <BlurText
                 text={title}
                 delay={25}
@@ -473,7 +473,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
                 direction="bottom"
                 className={
                   titleClassName ||
-                  'text-2xl sm:text-4xl md:text-[38px] font-semibold text-black leading-[1.2] tracking-tight justify-start md:justify-center flex-wrap'
+                  'text-xl sm:text-2xl lg:text-[38px] font-semibold text-black leading-[1.2] tracking-tight justify-start md:justify-center flex-wrap'
                 }
               />
               {highlightTitle && (
@@ -482,7 +482,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
                   delay={25}
                   animateBy="words"
                   direction="bottom"
-                  className={`text-2xl sm:text-4xl md:text-[38px] font-semibold leading-[1.2] tracking-tight justify-start md:justify-center flex-wrap`}
+                  className={`text-xl sm:text-2xl lg:text-[38px] font-semibold leading-[1.2] tracking-tight justify-start md:justify-center flex-wrap`}
                   style={{ color: highlightTitleColor }}
                 />
               )}
@@ -490,7 +490,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
           )}
 
           {description && (
-            <div className="max-w-2xl sm:max-w-4xl mx-auto mb-8 px-2">
+            <div className="md:max-w-4xl md:mx-auto mb-8 md:px-2">
               <BlurText
                 text={description}
                 delay={15}
@@ -498,20 +498,19 @@ export const ExploreDetailsSection: React.FC<ExploreDetailsSectionProps> = ({
                 direction="bottom"
                 className={
                   descriptionClassName ||
-                  'text-[#929292] text-sm sm:text-lg md:text-xl leading-relaxed justify-start md:justify-center flex-wrap'
+                  'text-[#929292] text-sm md:text-base lg:text-xl leading-relaxed justify-start md:justify-center flex-wrap'
                 }
               />
             </div>
           )}
 
           {showButton && (
-            <div>
+            <div className="w-full flex justify-start md:justify-center">
               <button
                 onClick={handleBrochureClick}
                 style={{ backgroundColor: buttonColor, color: buttonTextColor }}
                 className={
-                  buttonClassName ||
-                  'px-8 py-3.5 rounded-[3px] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-200 shadow-sm hover:shadow hover:brightness-105 active:scale-95 cursor-pointer'
+                  'flex justify-start md:justify-center px-8 py-3.5 rounded-[3px] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-200 shadow-sm hover:shadow hover:brightness-105 active:scale-95 cursor-pointer'
                 }
               >
                 {buttonText}

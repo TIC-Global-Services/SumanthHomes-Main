@@ -138,7 +138,7 @@ const OngoingDevelopment = ({
             delay={30}
             animateBy="words"
             direction="bottom"
-            className="text-3xl sm:text-4xl md:text-[40px] font-semibold text-black tracking-tight justify-center"
+            className="text-2xl sm:text-3xl lg:text-[40px] font-semibold text-black tracking-tight justify-center"
           />
         </div>
       )}
