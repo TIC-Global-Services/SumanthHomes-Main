@@ -1,11 +1,46 @@
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 
 export const Footer = () => {
 
     const textMaskRef = useRef(null);
+    const containerRef = useRef(null);
+    const textSpanRef = useRef(null);
+    const [fontSize, setFontSize] = useState(null);
 
+    useEffect(() => {
+        const fitText = () => {
+            if (!containerRef.current || !textSpanRef.current) return;
+            // On mobile screens (< 768px), keep standard responsive styles
+            if (window.innerWidth < 768) {
+                setFontSize(null);
+                return;
+            }
+            const containerWidth = containerRef.current.clientWidth;
+            if (containerWidth <= 0) return;
 
+            // Measure the exact text width at a normalized 100px test size
+            const el = textSpanRef.current;
+            const prevSize = el.style.fontSize;
+            el.style.fontSize = '100px';
+            const measuredWidth = el.getBoundingClientRect().width;
+            el.style.fontSize = prevSize;
 
+            if (measuredWidth > 0) {
+                // Calculate mathematically exact font size to match containerWidth precisely
+                const targetSize = (containerWidth / measuredWidth) * 100;
+                setFontSize(targetSize);
+            }
+        };
+
+        fitText();
+
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(fitText);
+        }
+
+        window.addEventListener("resize", fitText);
+        return () => window.removeEventListener("resize", fitText);
+    }, []);
 
     const handleMouseEnter = (e) => {
 
@@ -40,10 +75,14 @@ export const Footer = () => {
         pb-7 md:pb-7
         '>
 
-                    <div className='
+                    <div 
+                        ref={containerRef}
+                        className='
             w-full 
             flex 
             relative 
+            items-center
+            justify-center
             text-center
             pb-8 
              '>
@@ -54,7 +93,9 @@ export const Footer = () => {
                             style={{
                                 WebkitMaskImage: 'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, .9) 1%, transparent 10%)',
                                 maskImage: 'radial-gradient(circle at var(--x) var(--y), rgba(0,0,0, 0.9) 1%, transparent 10%)',
-                                opacity: 'var(--opacity, 0)'
+                                opacity: 'var(--opacity, 0)',
+                                fontSize: fontSize ? `${fontSize}px` : undefined,
+                                lineHeight: fontSize ? 0.95 : undefined,
                             }}
                             className='
                     absolute
@@ -65,20 +106,25 @@ export const Footer = () => {
                     bg-clip-text
                     text-center
                     font-extrabold text-transparent 
-                    text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-[9rem]
+                    text-6xl
+                    md:whitespace-nowrap
                     mt-4 md:mt-auto
-                    '> SUMANTH HOMES
-                        </h2>
+                    '><span className="inline-block whitespace-nowrap">SUMANTH HOMES</span></h2>
 
-                        <h2 className='
+                        <h2 
+                            style={{
+                                fontSize: fontSize ? `${fontSize}px` : undefined,
+                                lineHeight: fontSize ? 0.95 : undefined,
+                            }}
+                            className='
                     w-full
                     text-center
                     font-extrabold text-[#A7A7A7] 
-                    text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-[9rem]
+                    text-6xl
+                    md:whitespace-nowrap
                     hover:cursor-default
                     mt-4 md:mt-0
-                    '> SUMANTH HOMES
-                        </h2>
+                    '><span ref={textSpanRef} className="inline-block whitespace-nowrap">SUMANTH HOMES</span></h2>
 
 
                     </div>
@@ -104,24 +150,24 @@ export const Footer = () => {
                             <p className='
                 font-normal
                 md:text-left
-                text-sm md:text-xs xl:text-sm'>Villa No.3, Lotus Serene Villas, <br />Near Autonagar, Renigunta Road, Tirupati</p>
+                text-sm md:text-base xl:text-lg'>Villa No.3, Lotus Serene Villas, <br />Near Autonagar, Renigunta Road, Tirupati</p>
 
                         </div>
 
-                        <div className='text-center mb-6'>
+                        <div className='text-right mb-6'>
 
                             <a href="tel:+91 8220 637727">
                                 <p className='
                     hover:scale-110
                 font-medium
-                text-sm xl:text-sm md:text-xs'>+91 8220 637727</p>
+                text-sm xl:text-lg md:text-base'>+91 8220 637727</p>
                             </a>
 
-                            <a href="https:info@domain.com" target="_blank">
+                            <a href="https:info@sumanthhomes.com" target="_blank">
                                 <p className='
                     hover:scale-110
                 font-medium 
-                text-sm xl:text-sm md:text-xs'>info@domain.com</p>
+                text-sm xl:text-lg md:text-base'>info@sumanthhomes.com</p>
                             </a>
 
 
@@ -141,9 +187,9 @@ export const Footer = () => {
 
                             <a href="https://www.theinternetcompany.one/" target="_blank">
                                 <p className='
-                        hover:scale-110
+                        
                         font-normal
-                        text-xs md:text-xs'>Designed & Developed by TIC Global Services</p>
+                        text-xs md:text-lg'>Designed & Developed by TIC Global Services</p>
                             </a>
 
 
@@ -155,7 +201,7 @@ export const Footer = () => {
 
                             <p className='
                         font-normal 
-                        text-xs md:text-xs'>@2025 Sumanth Homes. All Rights Reserved</p>
+                        text-xs md:text-lg'>@2025 Sumanth Homes. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>

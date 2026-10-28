@@ -6,6 +6,19 @@ import { OngoingProjectCard } from "./sub-componenets/OngoingProjectCard"
 import '../../assets/styles/titleStyle.css';
 import { motion } from "motion/react"
 import BlurText from "../../utils/BlurText"
+import { exploreItems as lotusExploreItems } from "../lotus-vilas-phase-2/exploreDetails"
+import { exploreItems as urbanscapesExploreItems } from "../Project/exploreDetails"
+
+// Respective image lists for each project card (Hero image + Explore detail images)
+const lotusImages = [
+  Prj1BgImage,
+  ...lotusExploreItems.map((item) => item.image).filter(Boolean),
+];
+
+const urbanscapesImages = [
+  Prj2BgImage,
+  ...urbanscapesExploreItems.map((item) => item.image).filter(Boolean),
+];
 
 const ongoingProjects = [
   {
@@ -13,6 +26,7 @@ const ongoingProjects = [
     badge: 'RECENT PROJECTS',
     theme: 'black', // 'black' | 'dark' | 'white' | 'light'
     bgImage: Prj1BgImage,
+    images: lotusImages,
     miniHeader: 'Premium Living Spaces',
     mainHeader: 'LOTUS SERENE VILLAS',
     description: 'Expanding our legacy, Lotus Serene Phase 2 offers 31 contemporary villas with a clubhouse, green spaces, and lifestyle comforts in Tirupati.',
@@ -25,6 +39,7 @@ const ongoingProjects = [
     badge: 'RECENT PROJECTS',
     theme: 'white', // 'black' | 'dark' | 'white' | 'light'
     bgImage: Prj2BgImage,
+    images: urbanscapesImages,
     miniHeader: 'A work in motion',
     mainHeader: 'URBANSCAPES',
     description: 'Urbanscapes is a contemporary Hi - Rise Building in Tirupati. We aim to building a beautiful 2 & 3 BHK gated community with fully loaded amenities.',
@@ -35,13 +50,6 @@ const ongoingProjects = [
 ];
 
 export const OurProjectsSection = () => {
-  const scrollTo = (targetId) => {
-    const el = document.getElementById(targetId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="w-full mt-[120px] md:mt-[120px]">
       <motion.div className="mb-[30px] md:mb-[60px]">
@@ -63,19 +71,8 @@ export const OurProjectsSection = () => {
       </motion.div>
 
       <div className="flex flex-col gap-10 md:gap-16 w-full">
-        {ongoingProjects.map((project, idx) => (
-          <OngoingProjectCard
-            key={project.id}
-            {...project}
-            onPrev={() => {
-              const prevIdx = idx > 0 ? idx - 1 : ongoingProjects.length - 1;
-              scrollTo(ongoingProjects[prevIdx].id);
-            }}
-            onNext={() => {
-              const nextIdx = idx < ongoingProjects.length - 1 ? idx + 1 : 0;
-              scrollTo(ongoingProjects[nextIdx].id);
-            }}
-          />
+        {ongoingProjects.map((project) => (
+          <OngoingProjectCard key={project.id} {...project} />
         ))}
       </div>
     </div>

@@ -153,7 +153,7 @@ const SHValues = () => {
       {/* 2. SH Values Section */}
       <section className="py-10 sm:py-14 md:py-16 lg:py-20 w-full overflow-hidden font-manrope">
         {/* Top Layout: Left Column & Right Cards */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 items-start w-full">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-6 items-start w-full">
           {/* Left Text Column */}
           <div className="w-full lg:w-[36%] xl:w-[33%] flex-shrink-0 pt-0.5">
             {/* Red Tag / Mini Title */}
@@ -176,7 +176,7 @@ const SHValues = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
               viewport={{ once: true }}
-              className="text-[#737373] text-[14px] sm:text-[15px] font-normal leading-[1.7] max-w-[390px]"
+              className="text-[#737373] text-[14px] sm:text-lg font-normal leading-[1.7] "
             >
               At Sumanth Homes, we believe a home should be thoughtfully designed, carefully built, and made to last. From the materials we choose to the way we manage each project, we focus on quality, transparency, and attention to detail—creating spaces that feel considered, comfortable, and truly yours.
             </motion.p>

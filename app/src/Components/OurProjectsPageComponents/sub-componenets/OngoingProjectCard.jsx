@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const OngoingProjectCard = ({
@@ -6,6 +6,7 @@ export const OngoingProjectCard = ({
   badge = 'RECENT PROJECTS',
   theme = 'dark', // 'dark' | 'black' | 'light' | 'white'
   bgImage,
+  images = [],
   miniHeader,
   mainHeader,
   description,
@@ -17,6 +18,43 @@ export const OngoingProjectCard = ({
 }) => {
   const navigate = useNavigate();
   const isDark = theme === 'dark' || theme === 'black';
+
+  // Normalize image list (fallback to bgImage if array is empty)
+  const imageList =
+    Array.isArray(images) && images.length > 0
+      ? images
+      : bgImage
+        ? [bgImage]
+        : [];
+
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  // Manual Previous Control
+  const handlePrev = (e) => {
+    if (e) e.stopPropagation();
+    if (imageList.length <= 1) return;
+    setCurrentIdx((prev) => (prev > 0 ? prev - 1 : imageList.length - 1));
+    if (onPrev) onPrev(e);
+  };
+
+  // Manual Next Control
+  const handleNext = (e) => {
+    if (e) e.stopPropagation();
+    if (imageList.length <= 1) return;
+    setCurrentIdx((prev) => (prev < imageList.length - 1 ? prev + 1 : 0));
+    if (onNext) onNext(e);
+  };
+
+  // Auto-change image every 10 seconds (resets timer when user manually changes)
+  useEffect(() => {
+    if (imageList.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev < imageList.length - 1 ? prev + 1 : 0));
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(timer);
+  }, [currentIdx, imageList.length]);
 
   const handleNavigate = (e) => {
     if (e) e.stopPropagation();
@@ -31,18 +69,25 @@ export const OngoingProjectCard = ({
           DESKTOP VERSION (Matches Desktop Screenshot)
           ========================================= */}
       <div className="hidden md:block relative w-full h-[440px] lg:h-[520px] xl:h-[580px] overflow-hidden bg-neutral-900 shadow-lg">
-        {/* Main Background Image */}
-        <div className="w-full h-full overflow-hidden">
-          <img
-            src={bgImage}
-            alt={mainHeader}
-            className="w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-700 ease-out"
-          />
+        {/* Main Background Image Slideshow with smooth crossfade */}
+        <div className="w-full h-full relative overflow-hidden">
+          {imageList.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`${mainHeader} view ${idx + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-1000 ease-in-out hover:scale-105 ${
+                idx === currentIdx
+                  ? 'opacity-100 z-10 pointer-events-auto'
+                  : 'opacity-0 z-0 pointer-events-none'
+              }`}
+            />
+          ))}
         </div>
 
         {/* Top-Left Red Ribbon Badge */}
         {badge && (
-          <div className="absolute top-0 left-0 bg-[#A60000] z-20 w-11 lg:w-12 h-44 lg:h-52 flex items-center justify-center shadow-lg">
+          <div className="absolute top-0 left-0 bg-[#A60000] z-20 w-11 lg:w-12 h-44 lg:h-52 flex items-center justify-center shadow-lg pointer-events-none">
             <span className="text-white font-manrope font-bold text-[10px] lg:text-xs tracking-[2.5px] uppercase whitespace-nowrap rotate-90 select-none">
               {badge}
             </span>
@@ -51,12 +96,13 @@ export const OngoingProjectCard = ({
 
         {/* Bottom-Right Overlay Area with Buttons + Themed Card */}
         <div className="absolute bottom-0 right-0 z-20 flex items-end">
-          {/* Switcher Buttons (Stacked on the left of the card) */}
+          {/* Switcher Buttons (Stacked on the left of the card: controls the images) */}
           <div className="flex flex-col flex-shrink-0">
-            {/* Top Button - Diagonal Up-Right Arrow */}
+            {/* Top Button - Diagonal Up-Right Arrow (Previous Image) */}
             <button
-              onClick={onPrev || handleNavigate}
-              aria-label="Previous Project"
+              type="button"
+              onClick={handlePrev}
+              aria-label="Previous project image"
               className="w-10 h-10 lg:w-12 lg:h-12 bg-[#191919] hover:bg-[#252525] active:bg-[#A60000] border-b border-[#2d2d2d] flex items-center justify-center cursor-pointer transition-colors group"
             >
               <svg
@@ -76,10 +122,11 @@ export const OngoingProjectCard = ({
               </svg>
             </button>
 
-            {/* Bottom Button - Diagonal Down-Left Arrow */}
+            {/* Bottom Button - Diagonal Down-Left Arrow (Next Image) */}
             <button
-              onClick={onNext || handleNavigate}
-              aria-label="Next Project"
+              type="button"
+              onClick={handleNext}
+              aria-label="Next project image"
               className="w-10 h-10 lg:w-12 lg:h-12 bg-[#191919] hover:bg-[#252525] active:bg-[#A60000] flex items-center justify-center cursor-pointer transition-colors group"
             >
               <svg
@@ -108,6 +155,7 @@ export const OngoingProjectCard = ({
                 : 'bg-white text-black shadow-xl'
             }`}
           >
+
             {/* Logo or Text Headers */}
             {logoImage ? (
               <div
@@ -186,26 +234,69 @@ export const OngoingProjectCard = ({
             : 'bg-white border-neutral-100 text-black'
         }`}
       >
-        {/* Top Image Container */}
+        {/* Top Image Container with Slideshow */}
         <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-900">
-          <img
-            src={bgImage}
-            alt={mainHeader}
-            className="w-full h-full object-cover object-center"
-          />
+          {imageList.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`${mainHeader} view ${idx + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-1000 ease-in-out ${
+                idx === currentIdx
+                  ? 'opacity-100 z-10 pointer-events-auto'
+                  : 'opacity-0 z-0 pointer-events-none'
+              }`}
+            />
+          ))}
 
           {/* Top-Left Red Ribbon */}
           {badge && (
-            <div className="absolute top-0 left-0 bg-[#A60000] z-10 w-9 h-36 flex items-center justify-center shadow-md">
+            <div className="absolute top-0 left-0 bg-[#A60000] z-20 w-9 h-36 flex items-center justify-center shadow-md pointer-events-none">
               <span className="text-white font-manrope font-bold text-[10px] tracking-[2px] uppercase whitespace-nowrap rotate-90 select-none">
                 {badge}
               </span>
             </div>
           )}
 
+          {/* Mobile Arrow Controls in Top-Right */}
+          {imageList.length > 1 && (
+            <div className="absolute top-3 right-3 z-30 flex items-center gap-1 bg-black/60 backdrop-blur-sm p-1 rounded-sm">
+              <button
+                type="button"
+                onClick={handlePrev}
+                aria-label="Previous project image"
+                className="w-7 h-7 flex items-center justify-center bg-[#191919] hover:bg-[#A60000] active:bg-[#A60000] text-white rounded-xs transition-colors"
+              >
+                <svg width="11" height="11" viewBox="0 0 15 15" fill="none">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M15.0008 0.625C15.0008 0.45924 14.9349 0.300269 14.8177 0.183058C14.7005 0.0658481 14.5415 0 14.3758 0H6.87579C6.71003 0 6.55106 0.0658481 6.43385 0.183058C6.31664 0.300269 6.25079 0.45924 6.25079 0.625C6.25079 0.79076 6.31664 0.949731 6.43385 1.06694C6.55106 1.18415 6.71003 1.25 6.87579 1.25H12.867L0.183289 13.9325C0.125179 13.9906 0.0790843 14.0596 0.0476354 14.1355C0.0161866 14.2114 0 14.2928 0 14.375C0 14.4572 0.0161866 14.5386 0.0476354 14.6145C0.0790843 14.6904 0.125179 14.7594 0.183289 14.8175C0.241399 14.8756 0.310386 14.9217 0.38631 14.9532C0.462234 14.9846 0.54361 15.0008 0.625789 15.0008C0.707969 15.0008 0.789344 14.9846 0.865269 14.9532C0.941193 14.9217 1.01018 14.8756 1.06829 14.8175L13.7508 2.13375V8.125C13.7508 8.29076 13.8166 8.44973 13.9338 8.56694C14.0511 8.68415 14.21 8.75 14.3758 8.75C14.5415 8.75 14.7005 8.68415 14.8177 8.56694C14.9349 8.44973 15.0008 8.29076 15.0008 8.125V0.625Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={handleNext}
+                aria-label="Next project image"
+                className="w-7 h-7 flex items-center justify-center bg-[#191919] hover:bg-[#A60000] active:bg-[#A60000] text-white rounded-xs transition-colors"
+              >
+                <svg width="12" height="12" viewBox="0 0 20 20" fill="none">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M2.5 16.8748C2.5 17.0406 2.56585 17.1995 2.68306 17.3168C2.80027 17.434 2.95924 17.4998 3.125 17.4998H10.625C10.7908 17.4998 10.9497 17.434 11.0669 17.3168C11.1842 17.1995 11.25 17.0406 11.25 16.8748C11.25 16.7091 11.1842 16.5501 11.0669 16.4329C10.9497 16.3157 10.7908 16.2498 10.625 16.2498H4.63375L17.3175 3.56731C17.4349 3.44995 17.5008 3.29078 17.5008 3.12481C17.5008 2.95884 17.4349 2.79967 17.3175 2.68231C17.2001 2.56495 17.041 2.49902 16.875 2.49902C16.709 2.49902 16.5499 2.56495 16.4325 2.68231L3.75 15.3661V9.37481C3.75 9.20905 3.68415 9.05008 3.56694 8.93287C3.44973 8.81566 3.29076 8.74981 3.125 8.74981C2.95924 8.74981 2.80027 8.81566 2.68306 8.93287C2.56585 9.05008 2.5 9.20905 2.5 9.37481V16.8748Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
+
           {/* Overlaid Logo in Bottom-Center of Image */}
           {logoImage && (
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 w-full px-6 flex justify-center pointer-events-none">
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 w-full px-6 flex justify-center pointer-events-none">
               <img
                 src={logoImage}
                 alt={mainHeader}
