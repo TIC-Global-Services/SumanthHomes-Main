@@ -18,7 +18,7 @@ export interface DiscoverSectionProps {
   contactUrl?: string
   brochureUrl?: string
   document?: string
-  documentUrl?: string
+  
   onButtonClick?: () => void
   onDownload?: () => void
   className?: string
@@ -40,13 +40,13 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
   contactUrl = '/contact',
   brochureUrl,
   document: documentProp,
-  documentUrl,
+  
   onButtonClick,
   onDownload,
   className = ''
 }) => {
   const navigate = useNavigate()
-  const activeBrochure = brochureUrl || documentUrl || documentProp
+  const activeBrochure = brochureUrl || documentProp
 
   // Brochure button click handler matching ExploreDetailsSection
   const handleBrochureClick = () => {
