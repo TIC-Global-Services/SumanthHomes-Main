@@ -104,10 +104,10 @@ export const lotusSereneSpecifications: SpecificationItem[] = [
 ]
 
 /**
- * Specifications data for Pearl Abode
+ * Specifications data for Pearl aode
  * Uses gold circular icons from /pearlaode/specification/
  */
-export const pearlAbodeSpecifications: SpecificationItem[] = [
+export const pearlaodeSpecifications: SpecificationItem[] = [
   {
     id: 1,
     title: 'Internal Finishes',

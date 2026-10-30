@@ -14,7 +14,7 @@ export const SITE_METADATA = {
     description:
       'Sumanth Homes is a premier real estate developer in Tirupati delivering premium 2 & 3 BHK apartments, luxury gated community villas, and commercial spaces with timeless architecture and Vaastu compliance.',
     keywords:
-      'Sumanth Homes, Tirupati real estate, luxury villas Tirupati, 2 BHK apartments Tirupati, 3 BHK apartments Tirupati, Lotus Serene Villas, Urbanscapes, Pearl Abode, gated community Tirupati, property developer Tirupati',
+      'Sumanth Homes, Tirupati real estate, luxury villas Tirupati, 2 BHK apartments Tirupati, 3 BHK apartments Tirupati, Lotus Serene Villas, Urbanscapes, Pearl aode, gated community Tirupati, property developer Tirupati',
     author: 'Sumanth Homes',
     type: 'website',
   },
@@ -38,7 +38,7 @@ export const SITE_METADATA = {
     '/projects': {
       title: 'Our Projects | Luxury Villas & High-Rise Living by Sumanth Homes',
       description:
-        'Explore ongoing and completed residential and commercial projects by Sumanth Homes in Tirupati: Lotus Serene Villas, Urbanscapes, Pearl Abode, Garuda Gateway, and more.',
+        'Explore ongoing and completed residential and commercial projects by Sumanth Homes in Tirupati: Lotus Serene Villas, Urbanscapes, Pearl aode, Garuda Gateway, and more.',
       keywords:
         'Sumanth Homes projects, ongoing projects Tirupati, completed villas Tirupati, new residential apartments, Lotus Serene Phase 2, Urbanscapes, Garuda Gateway',
       canonical: '/projects',
@@ -75,13 +75,13 @@ export const SITE_METADATA = {
         'Lotus Serene Villas Phase 1, completed villas Tirupati, Sumanth Homes villa projects, gated communities Renigunta Road',
       canonical: '/lotus-villas-phase-1',
     },
-    '/pearl-abode': {
-      title: 'Pearl Abode | Premium Modern Apartments by Sumanth Homes',
+    '/pearl-aode': {
+      title: 'Pearl aode | Premium Modern Apartments by Sumanth Homes',
       description:
-        'Pearl Abode presents thoughtfully crafted residential apartments with state-of-the-art amenities, high-quality finishes, and convenient connectivity in Tirupati.',
+        'Pearl aode presents thoughtfully crafted residential apartments with state-of-the-art amenities, high-quality finishes, and convenient connectivity in Tirupati.',
       keywords:
-        'Pearl Abode Tirupati, Pearl Abode apartments, Sumanth Homes residential, luxury flats Tirupati',
-      canonical: '/pearl-abode',
+        'Pearl aode Tirupati, Pearl aode apartments, Sumanth Homes residential, luxury flats Tirupati',
+      canonical: '/pearl-aode',
     },
     '/kbr-brindavanam': {
       title: 'KBR Brindavanam | Serene Residential Living in Tirupati',

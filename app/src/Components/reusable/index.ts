@@ -60,5 +60,5 @@ export type { CommunitySectionProps, CommunityMediaItem } from './CommunitySecti
 export { ExploreDetailsSection, defaultExploreItems, CARD_SIZES } from './ExploreDetailsSection'
 export type { ExploreDetailsSectionProps, ExploreCardItem, CardSize } from './ExploreDetailsSection'
 
-export { lotusSereneSpecifications, pearlAbodeSpecifications } from '../../utils/specificationsData'
+export { lotusSereneSpecifications, pearlaodeSpecifications } from '../../utils/specificationsData'
 

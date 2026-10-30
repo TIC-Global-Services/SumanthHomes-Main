@@ -5,8 +5,8 @@ const Showreel: React.FC = () => {
   return (
     <ShowreelSection
       thumbnailSrc="/loutus-phase-1/lotus-community-reel-thunb.jpg"
-      thumbnailAlt="Pearl Abode Showreel"
-      title="Pearl Abode Showreel"
+      thumbnailAlt="Pearl aode Showreel"
+      title="Pearl aode Showreel"
       buttonText="Watch Showreel"
       accentColor="#144234"
     />

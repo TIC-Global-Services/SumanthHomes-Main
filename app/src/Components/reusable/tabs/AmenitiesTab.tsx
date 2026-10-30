@@ -16,7 +16,7 @@ export const AmenitiesTab: React.FC<AmenitiesTabProps> = ({
   className = '',
 }) => {
   const location = useLocation()
-  const isPearlAbode = location.pathname.includes('/pearl-abode')
+  const isPearlaode = location.pathname.includes('/pearl-aode')
 
   if (!amenitiesImage) return null
 
@@ -26,7 +26,7 @@ export const AmenitiesTab: React.FC<AmenitiesTabProps> = ({
         <img
           src={amenitiesImage}
           alt={alt}
-          className={`w-full h-auto ${isPearlAbode ? 'max-h-[40dvh]' : 'max-h-[55dvh]'} object-contain rounded-xl`}
+          className={`w-full h-auto ${isPearlaode ? 'max-h-[40dvh]' : 'max-h-[55dvh]'} object-contain rounded-xl`}
         />
       </div>
     </div>

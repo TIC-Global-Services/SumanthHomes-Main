@@ -117,7 +117,7 @@ const DesignedFor: React.FC = () => {
             <div className="stack-card-1 absolute inset-0 w-full h-full z-10 overflow-hidden">
               <img
                 src="/pearlaode/designedfor-1.png"
-                alt="Pearl Abode - Daytime Architecture"
+                alt="Pearl aode - Daytime Architecture"
                 className="w-full h-full object-cover object-top select-none"
                 loading="eager"
               />
@@ -132,7 +132,7 @@ const DesignedFor: React.FC = () => {
             >
               <img
                 src="/pearlaode/designedfor-2.png"
-                alt="Pearl Abode - Children Play Area & Landscapes"
+                alt="Pearl aode - Children Play Area & Landscapes"
                 className="w-full h-full object-cover object-top select-none"
                 loading="lazy"
               />
@@ -147,7 +147,7 @@ const DesignedFor: React.FC = () => {
             >
               <img
                 src="/pearlaode/designedfor-3.png"
-                alt="Pearl Abode - Street View & Facade"
+                alt="Pearl aode - Street View & Facade"
                 className="w-full h-full object-cover object-top select-none"
                 loading="lazy"
               />
@@ -162,7 +162,7 @@ const DesignedFor: React.FC = () => {
             >
               <img
                 src="/pearlaode/designedfor-4.png"
-                alt="Pearl Abode - Evening Ambient Lighting"
+                alt="Pearl aode - Evening Ambient Lighting"
                 className="w-full h-full object-cover object-center select-none"
                 loading="lazy"
               />

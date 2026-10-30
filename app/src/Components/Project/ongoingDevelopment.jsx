@@ -36,11 +36,11 @@ export const defaultDevelopments = [
   },
   {
     id: 4,
-    title: 'PEARL ABODE',
+    title: 'PEARL AODE',
     bgimage: '/lotus-vila/luxury-lifetyle.jpg',
     logo: '/pearl_aode.png',
     logotitle: '',
-    link: '/pearl-abode',
+    link: '/pearl-aode',
   },
 ]
 

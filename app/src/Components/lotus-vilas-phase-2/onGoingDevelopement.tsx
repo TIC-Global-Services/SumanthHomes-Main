@@ -14,10 +14,10 @@ const developmentData = {
   developments: [
     {
       id: 1,
-      title: 'Pearl Abode',
+      title: 'Pearl aode',
       tags: ['Apartments'],
       image: '/lotus-vila/ongoing-develolpment-1.png',
-      alt: 'Sri Vasantha Pearl Abode Apartment Elevation'
+      alt: 'Sri Vasantha Pearl aode Apartment Elevation'
     },
     {
       id: 2,

@@ -85,6 +85,7 @@ const ExploreDetails = (props) => {
       buttonText={buttonText}
       buttonColor={buttonColor}
       buttonTextColor={buttonTextColor}
+      brochureUrl="/Lotus-serena-villas-phase-2-brochure.pdf"
       items={props.items || props.exploreItems || exploreItems}
       {...props}
     />

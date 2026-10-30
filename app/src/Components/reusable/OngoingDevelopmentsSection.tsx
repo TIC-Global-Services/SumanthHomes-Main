@@ -21,11 +21,11 @@ export interface OngoingDevelopmentsSectionProps {
 export const defaultOngoingItems: OngoingDevelopmentItem[] = [
   {
     id: 1,
-    title: 'Pearl Abode',
+    title: 'Pearl aode',
     tag: 'Apartments',
     image: '/lotus-vila/ongoing-develolpment-1.png',
-    alt: 'Pearl Abode - Premium Apartments by Sumanth Homes',
-    link: '/pearl-abode'
+    alt: 'Pearl aode - Premium Apartments by Sumanth Homes',
+    link: '/pearl-aode'
   },
   {
     id: 2,

@@ -33,7 +33,7 @@ const Everything: React.FC = () => {
         <div className="w-full h-72 sm:h-96 md:h-[420px] rounded-2xl overflow-hidden shadow-xl bg-gray-200 group">
           <img
             src="/pearlaode/designedfor-3.png"
-            alt="Pearl Abode - Everything You Need, All in One Place"
+            alt="Pearl aode - Everything You Need, All in One Place"
             className="w-full h-full object-cover transition-transform duration-700 ease-out scale-105"
           />
         </div>

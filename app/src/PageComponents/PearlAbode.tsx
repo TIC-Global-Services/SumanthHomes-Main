@@ -12,14 +12,14 @@ import OngoingDevelopment from '../Components/Project/ongoingDevelopment'
 import Community from '../Components/PearlAode/community'
 import Discover from '../Components/PearlAode/discover'
 
-const PearlAbode: React.FC = () => {
+const Pearlaode: React.FC = () => {
   return (
     <div className="w-full bg-[#fbfbfb] min-h-screen" style={{
-        backgroundImage: "url('/pearl-adode-bg.png')",
-        backgroundRepeat: 'repeat',
-        backgroundSize: '1200px auto',
-        backgroundPosition: 'top center',
-      }}>
+      backgroundImage: "url('/pearl-adode-bg.png')",
+      backgroundRepeat: 'repeat',
+      backgroundSize: '1200px auto',
+      backgroundPosition: 'top center',
+    }}>
       <ScrollToTop />
       {/* 1. Hero Section */}
       <Hero />
@@ -38,4 +38,4 @@ const PearlAbode: React.FC = () => {
   )
 }
 
-export default PearlAbode
+export default Pearlaode

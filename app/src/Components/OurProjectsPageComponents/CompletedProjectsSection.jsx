@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ScrollTrigger, gsap, TextPlugin } from 'gsap/all'
 import { CardButtons } from '../../sub-components/CardButtons'
 import '../../assets/styles/titleStyle.css';
-import {motion, useScroll} from "motion/react"
+import { motion, useScroll } from "motion/react"
 import { SlideUpAnimationBlur } from '../../utils/SlideUpAnimationBlur'
 import BlurText from '../../utils/BlurText'
 import { useSwipeable } from 'react-swipeable'
@@ -22,21 +22,21 @@ export const CompletedProjectsSection = () => {
 
   const titleRef = useRef(null);
   const tl = useRef(null);
-  const cardSectionRef = useRef(null);  
+  const cardSectionRef = useRef(null);
   const [frame, setFrame] = useState(1);
-  
-  useEffect(()=>{
-    tl.current = gsap.timeline();
-  },[]);
 
-  
+  useEffect(() => {
+    tl.current = gsap.timeline();
+  }, []);
+
+
 
   const CompletedProjectsCards = [
     {
-      mainText: 'Pearl Abode',
+      mainText: 'Pearl aode',
       subText: 'Apartments',
       image: Image1,
-      link: '/pearl-abode',
+      link: '/pearl-aode',
     },
     {
       mainText: 'Lotus Serene Villas',
@@ -69,30 +69,30 @@ export const CompletedProjectsSection = () => {
       link: '/kbr-brindavanam',
     },
   ]
-  
+
   const maxFrame = CompletedProjectsCards.length;
 
-  const swipeLeft = ()=>{
-    if(frame != maxFrame){
-      if(tl.current.isActive()) return;
+  const swipeLeft = () => {
+    if (frame != maxFrame) {
+      if (tl.current.isActive()) return;
 
-      setFrame(frame+1);
-      tl.current.to(cardSectionRef.current, {x:`-=${window.innerWidth}`});
+      setFrame(frame + 1);
+      tl.current.to(cardSectionRef.current, { x: `-=${window.innerWidth}` });
     }
   }
 
-  const swipeRight = ()=>{
-    if(frame != 1){
-      if(tl.current.isActive()) return;
+  const swipeRight = () => {
+    if (frame != 1) {
+      if (tl.current.isActive()) return;
 
-      setFrame(frame-1);
-      tl.current.to(cardSectionRef.current, {x:`+=${window.innerWidth}`});
+      setFrame(frame - 1);
+      tl.current.to(cardSectionRef.current, { x: `+=${window.innerWidth}` });
     }
   }
 
   const handler = useSwipeable({
-    onSwipedLeft:()=>swipeLeft(),
-    onSwipedRight:()=>swipeRight()
+    onSwipedLeft: () => swipeLeft(),
+    onSwipedRight: () => swipeRight()
   })
 
 
@@ -101,11 +101,11 @@ export const CompletedProjectsSection = () => {
     mt-[60px] md:mt-[120px]'>
 
       <BlurText
-              text="Completed Projects"
-              delay={120}
-              animateBy="words"
-              direction="bottom"
-               ref={titleRef}
+        text="Completed Projects"
+        delay={120}
+        animateBy="words"
+        direction="bottom"
+        ref={titleRef}
         className='
         flex justify-center items-center
         text-center
@@ -114,40 +114,40 @@ export const CompletedProjectsSection = () => {
         text-2xl md:text-4xl
         mb-[10px] md:mb-[50px]
         '
-            />
+      />
 
 
-        <div
+      <div
         {...handler}
         className='overflow-hidden md:overflow-scroll w-full'
 
         style={{
-          scrollbarWidth:'none'
+          scrollbarWidth: 'none'
         }}
-        >
+      >
 
-          <div ref={cardSectionRef}  className='
+        <div ref={cardSectionRef} className='
         flex flex-nowrap gap-10 md:grid grid-cols-3 md:gap-4'
 
         >
 
           {
-            CompletedProjectsCards.map((data, id)=>(
+            CompletedProjectsCards.map((data, id) => (
               <GridCard2 key={id} mainText={data.mainText} subText={data.subText} Image={data.image} link={data.link} />
             ))
           }
 
-          </div>
-
         </div>
 
-        <div className='md:hidden w-full flex justify-center items-start gap-2'>
-          {
-            CompletedProjectsCards.map((data, id)=>(
-              <div className={`h-2 w-2 md:w-3 md:h-3 border-0 rounded-full ${(id+1) == frame ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`} key={id}></div>
-            ))
-          }
-        </div>
+      </div>
+
+      <div className='md:hidden w-full flex justify-center items-start gap-2'>
+        {
+          CompletedProjectsCards.map((data, id) => (
+            <div className={`h-2 w-2 md:w-3 md:h-3 border-0 rounded-full ${(id + 1) == frame ? 'bg-[#737373]' : 'bg-[#D9D9D9]'}`} key={id}></div>
+          ))
+        }
+      </div>
 
     </div>
   )
